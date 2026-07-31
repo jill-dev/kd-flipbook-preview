@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KD Auctions — Catalog</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../brand/brand.css" />
+<link rel="stylesheet" href="viewer.css" />
+</head>
+<body class="kd-page">
+
+  <header class="kd-topbar">
+    <div class="kd-topbar-left">
+      <img src="../brand/logo-dark.png" alt="KD Auctions" class="kd-topbar-logo" />
+      <span class="kd-topbar-title" id="auctionTitle">Loading catalog…</span>
+    </div>
+    <div class="kd-topbar-right">
+      <a class="kd-btn kd-btn-ghost" id="bidNowLink" href="#" target="_blank" rel="noopener">Bid Now</a>
+    </div>
+  </header>
+
+  <main class="kd-stage">
+    <button class="kd-arrow kd-arrow-left" id="prevBtn" aria-label="Previous page">&#10094;</button>
+    <div class="kd-book-wrap">
+      <div class="kd-book-loading" id="loading">Loading catalog…</div>
+      <div class="kd-book" id="book" style="visibility:hidden;"></div>
+    </div>
+    <button class="kd-arrow kd-arrow-right" id="nextBtn" aria-label="Next page">&#10095;</button>
+  </main>
+
+  <div class="kd-thumbrail" id="thumbRail" hidden></div>
+
+  <footer class="kd-bottombar">
+    <button class="kd-icon-btn" id="thumbsBtn" title="Page thumbnails">&#9638; Pages</button>
+    <div class="kd-bottombar-center">
+      <button class="kd-icon-btn" id="zoomOutBtn" title="Zoom out">&#8722;</button>
+      <span class="kd-page-counter"><span id="pageNum">1</span> / <span id="pageCount">1</span></span>
+      <button class="kd-icon-btn" id="zoomInBtn" title="Zoom in">&#43;</button>
+      <button class="kd-icon-btn" id="fullscreenBtn" title="Fullscreen">&#9974;</button>
+    </div>
+    <div class="kd-bottombar-right">
+      <button class="kd-icon-btn" id="shareBtn" title="Copy link">&#128279; Share</button>
+      <a class="kd-icon-btn" id="downloadBtn" href="#" title="Download PDF" download>&#8595; PDF</a>
+    </div>
+  </footer>
+
+  <script src="vendor/page-flip.browser.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>

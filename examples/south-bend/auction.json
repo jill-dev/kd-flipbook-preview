@@ -1,0 +1,40 @@
+{
+  "slug": "south-bend",
+  "title": "Online Only Auction",
+  "subtitle": "Dual Location: Indiana/Florida — Surplus Citizen CNC Swiss Machines, Edge & Iemca Barfeeders",
+  "badge": "CNC & Machine Tools",
+  "closing": {
+    "label": "Lots Start Closing",
+    "day": "Tuesday, June 02, 2026",
+    "time": "10:00 AM CT"
+  },
+  "inspection": "By Appointment Only",
+  "locations": [
+    "South Bend, Indiana 46628",
+    "Winter Springs, FL 32708"
+  ],
+  "contact": {
+    "name": "Aaron Levine",
+    "email": "service@kdauctions.com",
+    "phone": "480.455.3910"
+  },
+  "bidUrl": "https://www.bidspotter.com",
+  "siteUrl": "https://www.kdauctions.com/auctions/south-bend-indiana-winter-springs-florida",
+  "finderFee": "Need to sell your shop or business assets? Know someone who does? Call us @ (480) 455-3910 — we pay great finder’s fees!",
+  "featuredLots": [
+    { "lot": 100, "name": "2014 Citizen Miyano BNA-42GTY", "sub": "CNC Swiss Lathe", "photo": "photos/lot-100.jpg" },
+    { "lot": 103, "name": "2007 Citizen Cincom M32-V (3M5)", "sub": "CNC Swiss Lathe", "photo": "photos/lot-103.jpg" },
+    { "lot": 106, "name": "2006 Citizen Cincom M16 Type III", "sub": "CNC Swiss Lathe", "photo": "photos/lot-106.jpg" },
+    { "lot": 104, "name": "2007 Iemca Prodigy 551E", "sub": "Barloader", "photo": "photos/lot-104.jpg" },
+    { "lot": 112, "name": "2018 Edge Technologies Patriot 338", "sub": "Barloader", "photo": "photos/lot-112.jpg" },
+    { "lot": 200, "name": "2005 Citizen C16 VI", "sub": "CNC Swiss Style Turning Center", "photo": "photos/lot-200.jpg" },
+    { "lot": 101, "name": "2004 Citizen Cincom M32 Type III", "sub": "CNC Swiss Lathe", "photo": "photos/lot-101.jpg" },
+    { "lot": 105, "name": "2003 Iemca Genius 120", "sub": "Barloader", "photo": "photos/lot-105.jpg" }
+  ],
+  "lotsPerPage": 6,
+  "measurementId": null,
+  "logo": {
+    "dark": "../../brand/logo-dark.png",
+    "light": "../../brand/logo-light.png"
+  }
+}
