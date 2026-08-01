@@ -97,6 +97,16 @@ if (!contactName || !contactPhone) {
   );
 }
 
+// For the tracking-sheet "Rep" column, Jill wants the actual salesman/
+// salesmen listed by first name even when the email itself says "US" for a
+// mixed campaign (the email's contact line still needs one line/number).
+const repsInvolved = new Set(machines.map((m) => m.repInitials).filter(Boolean));
+const trackingRep = [...repsInvolved]
+  .map((initials) => (salesTeam[initials]?.name || initials).split(" ")[0])
+  .map((first) => first.charAt(0) + first.slice(1).toLowerCase())
+  .join(", ");
+console.log(`Tracking sheet Rep: ${trackingRep || "(none found)"}`);
+
 // --- header fields ---
 replaceText($, "[EMAIL_SUBJECT_LINE]", `${machines.map((m) => m.yearMakeModel).join(", ")} - ${campaign.headline}`);
 replaceText($, "[CAMPAIGN_NAME]", campaign.campaignName || slug);

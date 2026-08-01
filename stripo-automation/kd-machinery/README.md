@@ -120,6 +120,30 @@ product link) is pulled live from kdmachinery.com by ref # — no manual
 copy/paste, and no image-upload step, since the photo is already a real
 hosted URL from the product page.
 
+## Tracking sheet
+
+Jill tracks every campaign in a Google Sheet (two tabs: "HTML's Sent" —
+Email Name / Rep / Subject Line; "Inventory Sent Out" — REF # / Year, Make,
+Model / Date / HTML Name). There's no tool access to append rows to an
+*existing* Sheet (Google Drive connector here is read/search/create-new-file
+only, no cell/row edit) — so after every `generate-machinery-email.js` run,
+give Jill a ready-to-paste row for both tabs using:
+- Email Name / HTML Name: `output/<slug>.html`'s filename
+- Subject Line: that file's `<title>`
+- Rep: the generator's own "Tracking sheet Rep" console line — always
+  first name(s), comma-joined if a campaign spans multiple salesmen (Jill
+  wants named reps listed even on campaigns where the email itself falls
+  back to "US" as the contact)
+- REF # / Year, Make, Model: from campaign.json / the console lookup log
+
+A new tracking sheet ("KD Machinery HTML Tracking",
+`1CyUh76yzq02QhMOp8KB5J5AOVZL6oB0VmTJVxWwEKes`) was created 2026-08-01 with
+the "HTML's Sent" tab seeded for every real campaign so far. Google Drive's
+`create_file` will convert an uploaded CSV into a real populated Sheet (not
+just an empty spreadsheet) — useful for seeding, but still can't *update*
+an existing file afterward, so this only works for a one-time seed, not
+ongoing appends.
+
 ## Not yet handled
 
 - Spec/feature lines are auto-grouped from WooCommerce's product attributes
