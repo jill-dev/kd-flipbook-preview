@@ -41,8 +41,19 @@ design, colors, and fonts.
 - `generate-machinery-email.js` — the generator. Clones whichever master's
   machine card as many times as needed and fills every card automatically
   via `lookup-machine.js`.
+- `sales-team.json` — maps each salesman's 2-letter initials (WooCommerce's
+  "assigned rep" field, e.g. "NK", "MB") to their name + direct line, for
+  auto-detecting the contact line. Includes an `"US"` fallback entry (main
+  line) for campaigns whose machines belong to different salesmen. Source:
+  Jill's Company Directory — only office direct lines are here, no mobile
+  numbers or emails (this file is committed to the repo; the full directory
+  PDF is not — see below).
 - `campaigns/example-1machine-style/`, `campaigns/example-newer-style/` —
   working examples built from real kdmachinery.com listings.
+- `campaigns/fabrication-inventory/`, `cnc-lathes/`,
+  `haas-vertical-machining-centers/`, and 10 more — real category-inventory
+  blasts (one salesman's full ref-# list per category, no per-machine
+  headline/status, just a category title) built 2026-08-01.
 
 ## Make a new campaign
 
@@ -84,6 +95,18 @@ design, colors, and fonts.
    - Tall/vertical product photos are automatically narrowed to 420px wide
      and centered (detected from the photo's own dimensions — nothing to
      set). Landscape photos are untouched.
+   - `status` is optional — if omitted, the status badge row is removed
+     entirely (rather than showing an empty pill), and its top spacing
+     shifts onto the machine name so the card doesn't look cramped.
+   - `contactName`/`contactPhone` are optional — if omitted, they're
+     auto-detected from `sales-team.json` using each machine's WooCommerce
+     "assigned rep" field. If every machine in the campaign belongs to the
+     same salesman, that person becomes the contact; if the machines belong
+     to different salesmen (or an unrecognized rep code), the contact falls
+     back to `"US"` / the main line (480.922.1674) — per Jill's rule.
+   - Ref #s that return "not found" (sold or pulled from the site since the
+     salesman sent the list) are skipped with a console note, not treated
+     as an error — the campaign still runs with whatever's left.
    - Any number of entries in `machines`.
 3. Run:
    ```
@@ -117,3 +140,11 @@ hosted URL from the product page.
   requested but not built — instead, a "▶ Watch Video" button/link is
   added under the photo automatically when the listing has a video. Revisit
   if Jill wants the stamped-icon look specifically rather than a button.
+  (A ready-made "Video ▶" pill graphic showed up in `images/` — could be
+  composited in later if the button isn't enough.)
+- `images/Company Directory 2026.pdf` (everyone's mobile numbers + emails
+  across KD Machinery/Treger Financial/Quick Turn Financial) is
+  intentionally **not** committed — this repo is public on GitHub.
+  `.gitignore`'d by filename pattern so it can't be added by accident.
+  `sales-team.json` carries only the subset actually needed (name + office
+  direct line, same info already shown publicly in these emails).

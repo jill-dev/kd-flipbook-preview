@@ -1,0 +1,19 @@
+{
+  "style": "1machine",
+  "headline": "TIMESAVERS INVENTORY",
+  "campaignName": "timesavers-inventory",
+  "machines": [
+    {
+      "refNumber": "8078131"
+    },
+    {
+      "refNumber": "8078274"
+    },
+    {
+      "refNumber": "8078002"
+    },
+    {
+      "refNumber": "8078616"
+    }
+  ]
+}

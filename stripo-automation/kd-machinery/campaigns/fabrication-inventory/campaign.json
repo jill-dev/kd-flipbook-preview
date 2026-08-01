@@ -1,0 +1,25 @@
+{
+  "style": "1machine",
+  "headline": "FABRICATION INVENTORY",
+  "campaignName": "fabrication-inventory",
+  "machines": [
+    {
+      "refNumber": "8078021"
+    },
+    {
+      "refNumber": "8077926"
+    },
+    {
+      "refNumber": "8078127"
+    },
+    {
+      "refNumber": "8078549"
+    },
+    {
+      "refNumber": "8078120"
+    },
+    {
+      "refNumber": "8078003"
+    }
+  ]
+}

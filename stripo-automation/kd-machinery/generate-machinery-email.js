@@ -9,8 +9,8 @@
 //     "style": "1machine" | "newer",
 //     "headline": "MUST MOVE!!",
 //     "subheadline": "Once in a lifetime deal",   // only used by "newer" style
-//     "contactName": "SEAN REID",
-//     "contactPhone": "480.212.0570",
+//     "contactName": "SEAN REID",  // optional -- omit to auto-detect from the machines' assigned salesman (see sales-team.json); falls back to "US" / main line if machines belong to different reps
+//     "contactPhone": "480.212.0570",  // optional, same auto-detect rule as contactName
 //     "campaignName": "must-move",
 //     "specPriority": ["Table Width", "Table Length", "Spindle Horsepower", "Tool Changer"],  // optional: reorder spec lines to lead with these
 //     "immediateNeeds": { "heading": "IMMEDIATE NEEDS!!!!", "items": ["...", "..."] },  // optional -- whole card removed if not given
@@ -31,6 +31,7 @@ import { dirname, join } from "node:path";
 import { lookupMachine, splitAttrLines, prioritizeAttrLines } from "./lookup-machine.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const salesTeam = JSON.parse(readFileSync(join(__dirname, "sales-team.json"), "utf8"));
 
 const slug = process.argv[2];
 if (!slug) {
@@ -57,16 +58,43 @@ const html = readFileSync(join(__dirname, masterFile), "utf8");
 const $ = load(html, { decodeEntities: false });
 
 // --- look up every machine before touching the DOM ---
+// Some ref #s may have sold or been pulled off the site since the salesman
+// sent the list -- skip those instead of aborting the whole campaign.
 console.log(`Looking up ${campaign.machines.length} machine(s) on kdmachinery.com...`);
 const machines = [];
+const skipped = [];
 for (const m of campaign.machines) {
   const data = await lookupMachine(m.refNumber);
   if (!data) {
-    console.error(`Ref # ${m.refNumber} was not found on kdmachinery.com. Aborting.`);
-    process.exit(1);
+    skipped.push(m.refNumber);
+    console.log(`  [${m.refNumber}] NOT FOUND -- skipping (sold or removed from the site)`);
+    continue;
   }
   machines.push({ ...data, status: m.status || "", pricing: m.pricing || "normal" });
   console.log(`  [${data.refNumber}] ${data.yearMakeModel} - $${data.price}`);
+}
+if (machines.length === 0) {
+  console.error("None of the ref #s in this campaign were found. Aborting.");
+  process.exit(1);
+}
+
+// --- auto-detect the contact if not explicitly given: if every found
+// machine belongs to the same salesman, use their name + direct line;
+// otherwise (mixed reps, or an unrecognized rep code) fall back to "US"
+// and the main line. ---
+let contactName = campaign.contactName;
+let contactPhone = campaign.contactPhone;
+if (!contactName || !contactPhone) {
+  const reps = new Set(machines.map((m) => m.repInitials).filter(Boolean));
+  const rep = reps.size === 1 ? salesTeam[[...reps][0]] : null;
+  const resolved = rep || salesTeam.US;
+  contactName = contactName || resolved.name;
+  contactPhone = contactPhone || resolved.directLine;
+  console.log(
+    reps.size === 1 && rep
+      ? `Contact auto-detected: ${resolved.name} (${resolved.directLine})`
+      : `Contact auto-detected: mixed or unrecognized reps (${[...reps].join(", ") || "none"}) -- using "${resolved.name}" / ${resolved.directLine}`
+  );
 }
 
 // --- header fields ---
@@ -76,8 +104,8 @@ replaceText($, "[EMAIL_HEADLINE]", campaign.headline || "");
 if (campaign.style === "newer") {
   replaceText($, "[EMAIL_SUBHEADLINE]", campaign.subheadline || "");
 }
-replaceText($, "[CONTACT_NAME]", campaign.contactName || "");
-replaceText($, "[CONTACT_PHONE]", campaign.contactPhone || "");
+replaceText($, "[CONTACT_NAME]", contactName || "");
+replaceText($, "[CONTACT_PHONE]", contactPhone || "");
 
 // --- immediate needs card (optional -- remove the whole section if unused) ---
 if (campaign.immediateNeeds) {
@@ -136,7 +164,20 @@ allCardRows.forEach(($row, i) => {
   replaceHtmlIn($row, "[PRICE_DISPLAY]", priceDisplay(m));
   replaceTextIn($row, "[MACHINE_1_SPECS]", specsText);
   if (campaign.style === "1machine") {
-    replaceTextIn($row, "[MACHINE_1_STATUS]", m.status);
+    // no status phrase for this machine -- drop the badge row rather than
+    // show an empty blue pill, and move its top spacing onto the name row
+    // so the card doesn't look cramped underneath the photo
+    // .closest("tr") from the status <p> would stop at the small badge
+    // table's own single-row <tr>, not the outer card row -- go via the
+    // outer "esd-block-text" td first.
+    const $statusRow = $row.find('p:contains("[MACHINE_1_STATUS]")').closest("td.esd-block-text").closest("tr");
+    if (m.status) {
+      replaceTextIn($row, "[MACHINE_1_STATUS]", m.status);
+    } else {
+      const $nameTd = $statusRow.next("tr").find("td.esd-block-text").first();
+      $nameTd.attr("style", $nameTd.attr("style").replace("padding:0 20px;", "padding:18px 20px 0;"));
+      $statusRow.remove();
+    }
     replaceTextIn($row, "[MACHINE_1_FEATURES]", featuresText);
   }
 

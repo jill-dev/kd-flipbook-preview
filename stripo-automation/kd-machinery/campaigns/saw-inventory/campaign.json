@@ -1,0 +1,13 @@
+{
+  "style": "1machine",
+  "headline": "SAW INVENTORY",
+  "campaignName": "saw-inventory",
+  "machines": [
+    {
+      "refNumber": "8077442"
+    },
+    {
+      "refNumber": "8078619"
+    }
+  ]
+}

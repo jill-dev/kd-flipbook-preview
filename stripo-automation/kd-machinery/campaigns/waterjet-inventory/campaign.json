@@ -1,0 +1,25 @@
+{
+  "style": "1machine",
+  "headline": "WATERJET INVENTORY",
+  "campaignName": "waterjet-inventory",
+  "machines": [
+    {
+      "refNumber": "8076825"
+    },
+    {
+      "refNumber": "8077572"
+    },
+    {
+      "refNumber": "8078670"
+    },
+    {
+      "refNumber": "8078001"
+    },
+    {
+      "refNumber": "8078061"
+    },
+    {
+      "refNumber": "8077538"
+    }
+  ]
+}

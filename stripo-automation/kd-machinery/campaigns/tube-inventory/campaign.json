@@ -1,0 +1,13 @@
+{
+  "style": "1machine",
+  "headline": "TUBE INVENTORY",
+  "campaignName": "tube-inventory",
+  "machines": [
+    {
+      "refNumber": "8072529"
+    },
+    {
+      "refNumber": "8072530"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_comment": "Maps WooCommerce 'inventory_rep' initials to the salesman name + direct line shown as the contact on marketing emails (same info already used publicly in KD Machinery's real templates -- office direct lines only, no mobile numbers or emails). Source: Jill's Company Directory 2026. Update here if reps change.",
+  "AL": { "name": "AARON LEVINE", "directLine": "480.212.0786" },
+  "BD": { "name": "BAILEY DAVIS", "directLine": "480.212.0778" },
+  "BS": { "name": "BLAKE SPIEKERMAN", "directLine": "480.212.0782" },
+  "BT": { "name": "BRANDON TREGER", "directLine": "480.212.0575" },
+  "EQ": { "name": "ERVEY QUIJADA", "directLine": "480.212.0789" },
+  "GF": { "name": "GARRY FROST", "directLine": "480.212.0775" },
+  "JB": { "name": "JEFF BRIESE", "directLine": "480.212.0578" },
+  "JD": { "name": "JOSH MEADOWS", "directLine": "480.212.0577" },
+  "MB": { "name": "MIKE BASHAM", "directLine": "480.212.0586" },
+  "NK": { "name": "NICK KIRBY", "directLine": "480.212.0571" },
+  "PL": { "name": "PETER LENSTROHM", "directLine": "480.212.0576" },
+  "SR": { "name": "SEAN REID", "directLine": "480.212.0570" },
+  "SB": { "name": "SCOTT BALDWIN", "directLine": "480.212.0583" },
+  "TT": { "name": "SHANNON TREGER", "directLine": "480.212.0772" },
+  "SL": { "name": "STEVE LINK", "directLine": "480.212.0572" },
+  "TK": { "name": "TODD KUHN", "directLine": "480.565.1808" },
+  "TB": { "name": "TRAVIS BUTTERLY", "directLine": "480.212.0774" },
+  "WM": { "name": "WILL MULLIKIN", "directLine": "480.212.0585" },
+  "WB": { "name": "WYATT BLAKE", "directLine": "435.659.4390" },
+  "US": { "name": "US", "directLine": "480.922.1674" }
+}

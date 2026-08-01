@@ -1,0 +1,31 @@
+{
+  "style": "1machine",
+  "headline": "CNC LATHES",
+  "campaignName": "cnc-lathes",
+  "machines": [
+    {
+      "refNumber": "8077733"
+    },
+    {
+      "refNumber": "8078256"
+    },
+    {
+      "refNumber": "8077912"
+    },
+    {
+      "refNumber": "8077997"
+    },
+    {
+      "refNumber": "8078150"
+    },
+    {
+      "refNumber": "8078277"
+    },
+    {
+      "refNumber": "8078376"
+    },
+    {
+      "refNumber": "8078291"
+    }
+  ]
+}

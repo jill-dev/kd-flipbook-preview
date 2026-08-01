@@ -1,0 +1,16 @@
+{
+  "style": "1machine",
+  "headline": "CMM INVENTORY",
+  "campaignName": "cmm-inventory",
+  "machines": [
+    {
+      "refNumber": "8078006"
+    },
+    {
+      "refNumber": "8077647"
+    },
+    {
+      "refNumber": "8078410"
+    }
+  ]
+}

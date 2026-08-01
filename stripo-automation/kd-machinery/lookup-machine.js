@@ -67,6 +67,9 @@ export async function lookupMachine(refNumber) {
     // srcset (its resized-variant filenames encode "WIDTHxHEIGHT", no need
     // to fetch/decode the image itself).
     isPortrait: detectPortrait(product.images?.[0]?.srcset),
+    // 2-letter salesman initials (e.g. "NK", "MB") -- used to auto-fill the
+    // contact line when a whole campaign's machines belong to one rep.
+    repInitials: meta.inventory_rep || "",
   };
 }
 
