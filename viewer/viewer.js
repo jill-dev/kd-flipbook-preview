@@ -27,6 +27,7 @@
   let pageFlip = null;
   let zoom = 1;
   let manifest = null;
+  let suppressNextFlipTrack = false;
 
   // ── Analytics ─────────────────────────────────────────────────────────
   // Standalone prototype: no real GA4 Measurement ID is wired in, so events
@@ -95,9 +96,23 @@
       width: PAGE_W,
       height: PAGE_H,
       size: 'stretch',
-      minWidth: 180,
+      // minWidth/minHeight also decide a width threshold (2x minWidth) below
+      // which the library forces single-page "portrait" mode; keeping it low
+      // let it flip into double-page "spread" mode on any normal-width
+      // window and silently render each page at half size. Set close to
+      // maxWidth so it always treats this as a single-page book.
+      //
+      // Don't raise maxWidth past the page's native 1000x1294 to get a
+      // "bigger" book: minWidth also becomes a hard CSS floor on the
+      // rendered size (the library forces it via inline style), so pushing
+      // both up to allow bigger-than-native rendering on large monitors
+      // instead forces overflow/clipping on completely ordinary window
+      // sizes — confirmed by testing at 1600x1000, ostensibly a big window,
+      // where the book still only has ~665px to work with once the chrome
+      // (topbar/bottombar/padding) is subtracted, well under a 900px floor.
+      minWidth: 500,
       maxWidth: PAGE_W,
-      minHeight: 233,
+      minHeight: 647,
       maxHeight: PAGE_H,
       maxShadowOpacity: 0.4,
       showCover: true,
@@ -108,8 +123,16 @@
 
     pageFlip.loadFromHTML(document.querySelectorAll('.kd-page-el'));
 
+    // page-flip resizes its page elements on its own schedule — notably,
+    // pageFlip.update() (called when the thumbnail sidebar opens/closes,
+    // see below) applies its resize asynchronously rather than immediately,
+    // so watching #book alone isn't enough to catch every size change.
+    // Watch the actual page element so --kd-page-scale always tracks
+    // whatever page-flip decides its real rendered size is, whenever that
+    // settles.
     const resizeObserver = new ResizeObserver(applyPageScale);
     resizeObserver.observe(bookEl);
+    resizeObserver.observe(document.querySelector('.kd-page-el'));
 
     pageFlip.on('init', () => {
       loadingEl.style.display = 'none';
@@ -123,6 +146,14 @@
 
     pageFlip.on('flip', () => {
       updatePageUI();
+      // pageFlip.update() (called below when the thumbnail sidebar toggles)
+      // fires this same 'flip' event internally even though the page didn't
+      // actually change — confirmed via testing. Don't log a page_turn for
+      // that; only for a real navigation.
+      if (suppressNextFlipTrack) {
+        suppressNextFlipTrack = false;
+        return;
+      }
       trackEvent('page_turn', { page: pageFlip.getCurrentPageIndex() + 1 });
     });
 
@@ -143,9 +174,16 @@
   }
 
   function applyPageScale() {
-    const firstPage = bookEl.querySelector('.kd-page-el');
-    if (!firstPage) return;
-    const scale = firstPage.clientWidth ? firstPage.clientWidth / PAGE_W : 0.26;
+    // page-flip only keeps the currently-shown page at real size — every
+    // other page collapses to width 0 / display:none. Querying "the first
+    // .kd-page-el" (as opposed to specifically the visible one) used to work
+    // only by accident, because this only ever ran once, on init, while page
+    // 1 (first in DOM order) still happened to be the one on screen.
+    // Confirmed via testing: navigate away from page 1 and it stops being
+    // true, so search for whichever page actually has real width instead.
+    const activePage = Array.from(bookEl.querySelectorAll('.kd-page-el')).find((el) => el.clientWidth > 0);
+    if (!activePage) return;
+    const scale = activePage.clientWidth / PAGE_W;
     bookEl.style.setProperty('--kd-page-scale', scale);
   }
 
@@ -192,6 +230,16 @@
 
   thumbsBtn.addEventListener('click', () => {
     thumbRail.hidden = !thumbRail.hidden;
+    // The thumbnail rail is now a real flex sibling of the book (a collapsible
+    // side panel, not an overlay), so showing/hiding it can change how much
+    // width the book actually has. page-flip doesn't watch for that on its
+    // own — ask it to re-measure. (--kd-page-scale then gets recomputed by
+    // the ResizeObserver above once the resize actually lands — it's
+    // asynchronous, not immediate, so don't assume it's done right here.)
+    if (pageFlip) {
+      suppressNextFlipTrack = true;
+      pageFlip.update();
+    }
   });
 
   zoomInBtn.addEventListener('click', () => setZoom(Math.min(zoom + 0.2, 1.8)));

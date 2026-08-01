@@ -1,0 +1,58 @@
+{
+  "slug": "portland",
+  "title": "Complete Closure of a CNC Prototype & Production Machining Company",
+  "subtitle": "Form Factory, Inc. — Portland, Oregon — Haas CNC Machining Centers, Band Saws & Complete Shop Support Equipment",
+  "badge": "CNC & Machine Tools",
+  "closing": {
+    "label": "Lots Start Closing",
+    "day": "Thursday, August 20, 2026",
+    "time": "10:00 AM PT"
+  },
+  "inspection": "By Appointment Only",
+  "locations": [
+    "Portland, Oregon 97202"
+  ],
+  "contact": {
+    "name": "KD Auctions",
+    "email": "service@kdauctions.com",
+    "phone": "480.455.3910"
+  },
+  "bidUrl": "https://www.bidspotter.com/en-us/auction-catalogues/kda/catalogue-id-kd-auc10067",
+  "siteUrl": "https://www.kdauctions.com/auctions/complete-closure-of-a-cnc-prototype--production-machining-company-form-factory-inc",
+  "finderFee": "Need to sell your shop or business assets? Know someone who does? Call us @ (480) 455-3910 — we pay great finder’s fees!",
+  "featuredLots": [
+    { "lot": 27, "name": "2007 Haas VF-3D CNC Vertical Machining Center", "sub": "20HP Vector Dual Drive, 10,000 RPM", "photo": "photos/lot-27.JPG" },
+    { "lot": 30, "name": "2005 Haas VF-2D 4-Axis CNC Vertical Machining Center", "sub": "CNC Vertical Machining Center", "photo": "photos/lot-30.JPG" },
+    { "lot": 32, "name": "2004 Haas VF-1D CNC Vertical Machining Center", "sub": "CNC Vertical Machining Center", "photo": "photos/lot-32.JPG" },
+    { "lot": 75, "name": "2020 Chicago Pneumatics QRS-10TM120", "sub": "10-HP Rotary Screw Air Compressor", "photo": "photos/lot-75.JPG" },
+    { "lot": 19, "name": "2007 Wilton 3410 Horizontal Band Saw", "sub": "7\" x 12\" Capacity", "photo": "photos/lot-19.JPG" },
+    { "lot": 20, "name": "Jet J-8201K Vertical Band Saw", "sub": "14\" Capacity", "photo": "photos/lot-20.JPG" },
+    { "lot": 21, "name": "Ryobi BS904G Vertical Band Saw", "sub": "9\" Capacity", "photo": "photos/lot-21.JPG" },
+    { "lot": 16, "name": "Central Hydraulics 01666 Shop Press", "sub": "6-Ton Manual Hydraulic", "photo": "photos/lot-16.JPG" }
+  ],
+  "lotsPerPage": 6,
+  "saleInfo": {
+    "bannerPhoto": "brand/hero-cover.jpg",
+    "buyersPremium": "18% BP for all purchases. All Sales will be conducted in US Dollars.",
+    "paymentDeadline": "All items must be paid for within 24 hours of closing of the sale. No Exceptions.",
+    "internationalBidders": "Attention All International Bidders: In order to bid on this sale a refundable deposit of $3,000.00 US Dollars will be required via bank wire in order to be approved to bid online with this sale. If you are unsuccessful in the auction, you will be refunded your deposit within 24 hours post-auction. Should you be successful at the sale the deposit will be applied to your balance due and any excess funds will be refunded.",
+    "salesTax": "*** Sales Tax will be added to all transactions. If you are tax exempt please fax your exemption certificate to (480) 455-3911 or email: service@kdauctions.com before bidding.",
+    "location": "3417 SE 21st Avenue, Portland, OR 97202",
+    "removalDates": "TBD",
+    "removalWarning": "Please do not wait until the last day to pick up your purchases. We will consider all items abandoned if they remain onsite past the deadline.",
+    "onsiteContact": { "name": "To Be Announced", "phone": "" },
+    "machineryNotes": "Customers are responsible for prepping, draining fluids, and locking and blocking all machinery for removal. KD Auctions will not be responsible for any onsite loading of machinery or other items. Unless an item can be carried by hand a rigger must be hired to move your items, no exceptions.",
+    "riggers": [],
+    "serviceTech": "To Be Announced",
+    "truckingCompanies": [
+      { "name": "Bedrock Logistics", "contact": "Andrew Davis", "phone": "469-440-9506" },
+      { "name": "Northwest Shippers", "contact": "Linda Hoskins", "phone": "253-875-2755" },
+      { "name": "Armstrong Transport", "contact": "TJ Orton", "phone": "541-414-6649" },
+      { "name": "Action Transportation", "contact": "Sam Mowry", "phone": "541-494-1127" },
+      { "name": "Abba Freight", "contact": "Stone Mattingly", "phone": "541-690-3409" },
+      { "name": "Finemark Inc", "contact": "Millisa Nwokolo", "phone": "260-918-1973" }
+    ],
+    "footerTagline": "Auctions, Liquidations, Appraisals, and Consulting Services"
+  },
+  "measurementId": null
+}

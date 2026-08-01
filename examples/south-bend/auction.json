@@ -32,6 +32,23 @@
     { "lot": 105, "name": "2003 Iemca Genius 120", "sub": "Barloader", "photo": "photos/lot-105.jpg" }
   ],
   "lotsPerPage": 6,
+  "saleInfo": {
+    "bannerPhoto": "brand/hero-cover.jpg",
+    "buyersPremium": "18% BP for all purchases. All Sales will be conducted in US Dollars.",
+    "paymentDeadline": "All items must be paid within 24 hours of closing of the sale. No Exceptions.",
+    "internationalBidders": "Attention All International Bidders: In order to bid on this sale a refundable deposit of $3,000.00 US Dollars will be required via bank wire in order to be approved to bid online with this sale. If you are unsuccessful in the auction, you will be refunded your deposit within 24 hours post-auction. Should you be successful at the sale the deposit will be applied to your balance due and any excess funds will be refunded.",
+    "salesTax": "*** Sales Tax will be added to all transactions. If you are tax exempt please fax your exemption certificate to (480) 455-3911 or email: service@kdauctions.com before bidding",
+    "location": "406 N Gray Street Caldwell, Texas 77836",
+    "removalDates": "By Appointment Only",
+    "removalWarning": "Please do not wait until the last day to pick up your purchases. We will consider your items abandoned if they remain onsite past the deadline.",
+    "onsiteContact": { "name": "Aaron Levine", "phone": "480-371-9009" },
+    "machineryNotes": "Customers are responsible for prepping, draining fluids, and locking and blocking all machinery for removal. KD Auctions will not be responsible for any onsite loading of machinery or other items.",
+    "riggers": [
+      { "name": "Billor McDowell Machine Tools Sales & Service", "email": "info@billor.com", "phone": "(972) 465-3608" },
+      { "name": "All Pro Machinery Movers", "phone": "713-454-0505" }
+    ],
+    "footerTagline": "Auctions, Liquidations, Appraisals, and Consulting Services"
+  },
   "measurementId": null,
   "logo": {
     "dark": "../../brand/logo-dark.png",

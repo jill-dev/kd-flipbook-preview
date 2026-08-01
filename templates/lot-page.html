@@ -10,8 +10,8 @@
   .sheet { width: 1000px; height: 1294px; position: relative; overflow: hidden; }
   .inner { padding: 30px 44px 90px; }
   .head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
-  .head img { height: 30px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
-  .head .meta { text-align: right; font-family: var(--kd-font-primary); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-grey); }
+  .head img { height: 30px; width: auto; opacity: 0.9; }
+  .head .meta { text-align: right; font-family: var(--kd-font-primary); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-grey); }
   .head .meta b { color: var(--kd-yellow); }
   .titlebar { margin: 18px 0 22px; }
   .titlebar h2 { margin: 0; font-size: 22px; }
@@ -29,13 +29,16 @@
   }
   .photo { width: 150px; padding-right: 20px !important; }
   .photo img { width: 150px; height: 112px; object-fit: cover; border-radius: 6px; border: 1px solid var(--kd-line); display: block; }
-  .desc { font-family: var(--kd-font-secondary); font-size: 13px; line-height: 1.55; color: #e4e4e2; padding-right: 8px !important; }
+  .desc { font-family: var(--kd-font-secondary); font-size: 14.5px; line-height: 1.5; color: #e4e4e2; padding-right: 8px !important; }
+  .bid { width: 92px; text-align: right; white-space: nowrap; }
+  .bid a { font-family: var(--kd-font-primary); font-weight: 700; font-size: 12.5px; letter-spacing: 0.5px; color: var(--kd-yellow); text-decoration: none; }
+  .bid a:hover { text-decoration: underline; }
   .footer {
     position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 44px 22px; display: flex; align-items: center; justify-content: space-between;
     border-top: 1px solid var(--kd-line); background: var(--kd-bg);
   }
-  .footer .site { font-family: var(--kd-font-primary); font-weight: 800; font-size: 13px; letter-spacing: 1.5px; color: var(--kd-yellow); }
-  .footer .page { font-family: var(--kd-font-primary); font-weight: 600; font-size: 11px; color: var(--kd-grey); }
+  .footer .site { font-family: var(--kd-font-primary); font-weight: 800; font-size: 14px; letter-spacing: 1.5px; color: var(--kd-yellow); }
+  .footer .page { font-family: var(--kd-font-primary); font-weight: 600; font-size: 12px; color: var(--kd-grey); }
 </style>
 </head>
 <body>
@@ -43,7 +46,7 @@
     <div class="kd-gradient-bar"></div>
     <div class="inner">
       <div class="head">
-        <img src="{{logo.dark}}" alt="KD Auctions" />
+        <a href="https://www.kdauctions.com" target="_blank" rel="noopener"><img src="{{logo.light}}" alt="KD Auctions" /></a>
         <div class="meta"><b>{{closing.label}}:</b> {{closing.day}} · {{closing.time}}</div>
       </div>
       <div class="titlebar">
@@ -52,18 +55,19 @@
       <table class="lots">
         {{#each lots}}
         {{#if locationChanged}}
-        <tr class="location-row"><td colspan="3"><div class="location">{{location}}</div></td></tr>
+        <tr class="location-row"><td colspan="4"><div class="location">{{location}}</div></td></tr>
         {{/if}}
         <tr id="lot-{{lot}}" data-kd-track="lot_view" data-lot="{{lot}}">
           <td class="lotnum">#{{lot}}</td>
           {{#if photo}}<td class="photo"><img src="{{photo}}" alt="Lot {{lot}}" /></td>{{else}}<td class="photo"></td>{{/if}}
           <td class="desc">{{description}}</td>
+          <td class="bid"><a href="{{#if bidUrl}}{{bidUrl}}{{else}}{{../bidUrl}}{{/if}}" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="{{lot}}">Bid Now &#8594;</a></td>
         </tr>
         {{/each}}
       </table>
     </div>
     <div class="footer">
-      <span class="site">KDAUCTIONS.COM</span>
+      <a class="site" href="https://www.kdauctions.com" target="_blank" rel="noopener" style="text-decoration:none;">KDAUCTIONS.COM</a>
       <span class="page">Page {{pageNumber}} of {{pageCount}}</span>
     </div>
   </div>
