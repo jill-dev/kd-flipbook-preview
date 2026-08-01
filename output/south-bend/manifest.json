@@ -1,0 +1,17 @@
+{
+  "slug": "south-bend",
+  "title": "Online Only Auction",
+  "siteUrl": "https://www.kdauctions.com/auctions/south-bend-indiana-winter-springs-florida",
+  "measurementId": null,
+  "pages": [
+    "pages/01-cover.html",
+    "pages/02-sale-info.html",
+    "pages/03-lots-1.html",
+    "pages/04-lots-2.html",
+    "pages/05-lots-3.html",
+    "pages/06-lots-4.html",
+    "pages/07-lots-5.html",
+    "pages/08-lots-6.html",
+    "pages/09-closing.html"
+  ]
+}

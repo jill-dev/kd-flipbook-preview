@@ -1,0 +1,63 @@
+/* KD Auctions brand tokens — shared by generated catalog pages and the flipbook viewer chrome. */
+:root {
+  --kd-black: #222222;
+  --kd-bg: #1a1a1a;
+  --kd-panel: #222222;
+  --kd-panel-2: #2d2d2b;
+  --kd-grey: #b3b3b3;
+  --kd-grey-2: #d4d4d4;
+  --kd-yellow: #ddb305;
+  --kd-yellow-grey: #595753;
+  --kd-yellow-dark: #a08538;
+  --kd-yellow-light: #e5c67e;
+  --kd-line: #3a3a38;
+
+  --kd-font-primary: 'Montserrat', Arial, Helvetica, sans-serif;
+  /* Gibson is KD's licensed secondary brand font — no webfont file was supplied,
+     so body copy falls back to a free, similarly humanist grotesque until KD
+     provides licensed Gibson .woff2 files (see README). */
+  --kd-font-secondary: 'Work Sans', 'Montserrat', Arial, Helvetica, sans-serif;
+
+  --kd-gradient: linear-gradient(90deg, var(--kd-yellow-grey) 0%, var(--kd-yellow-dark) 30%, var(--kd-yellow) 62%, var(--kd-yellow-light) 100%);
+}
+
+.kd-page {
+  font-family: var(--kd-font-secondary);
+  background: var(--kd-bg);
+  color: #e8e8e6;
+}
+
+.kd-eyebrow {
+  font-family: var(--kd-font-primary);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--kd-yellow);
+}
+
+.kd-heading {
+  font-family: var(--kd-font-primary);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--kd-yellow);
+  letter-spacing: 2px;
+}
+
+.kd-gradient-bar {
+  height: 5px;
+  background: var(--kd-gradient);
+}
+
+.kd-btn {
+  display: inline-block;
+  background-color: var(--kd-yellow);
+  color: var(--kd-black) !important;
+  font-family: var(--kd-font-primary);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 9px 20px;
+  border-radius: 7px;
+  font-size: 12px;
+}

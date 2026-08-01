@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; background: var(--kd-bg); overflow: hidden; }
+body { display: flex; flex-direction: column; }
+
+/* ── Top bar ───────────────────────────────────────────── */
+.kd-topbar {
+  height: 60px; flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px; background: #141414; border-bottom: 3px solid var(--kd-yellow);
+}
+.kd-topbar-left { display: flex; align-items: center; gap: 16px; min-width: 0; }
+.kd-topbar-logo { height: 30px; width: auto; flex: 0 0 auto; }
+.kd-topbar-title {
+  font-family: var(--kd-font-primary); font-weight: 700; font-size: 13px; letter-spacing: 0.5px;
+  color: #e8e8e6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.kd-topbar-right { flex: 0 0 auto; }
+.kd-btn-ghost { padding: 8px 18px; font-size: 11px; }
+
+/* ── Stage ─────────────────────────────────────────────── */
+.kd-stage {
+  flex: 1 1 auto; display: flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 0; position: relative; padding: 12px; overflow: hidden;
+}
+.kd-book-wrap {
+  position: relative; height: 100%; max-height: 100%; display: flex; align-items: center; justify-content: center;
+  flex: 0 1 auto; aspect-ratio: 1000 / 1294; overflow: hidden;
+}
+.kd-book { position: relative; overflow: hidden; }
+.kd-book-loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-family: var(--kd-font-primary); color: var(--kd-grey); font-size: 13px; letter-spacing: 1px; text-transform: uppercase;
+}
+
+/* Catalog pages are fixed 1000x1294px documents (see generate.js). Iframes
+   don't auto-scale their content, so each iframe renders at native size and
+   is scaled down with a CSS transform to fit whatever size page-flip gives
+   the page element (see --kd-page-scale, set by viewer.js). */
+.kd-page-el { background: var(--kd-bg); overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); position: relative; }
+.kd-page-el iframe {
+  width: 1000px; height: 1294px; border: 0; display: block; background: var(--kd-bg);
+  transform: scale(var(--kd-page-scale, 0.26)); transform-origin: top left;
+}
+/* Kept narrow (< the ~44px/4.4% inner margin every page template uses) so
+   this never sits on top of real content — e.g. the per-lot "Bid Now" links,
+   which live right at the page edge and would otherwise be unclickable. */
+.kd-edge-zone {
+  position: absolute; top: 0; bottom: 0; width: 3.5%; z-index: 5; cursor: pointer; background: transparent;
+}
+.kd-edge-zone.left { left: 0; }
+.kd-edge-zone.right { right: 0; }
+
+.kd-arrow {
+  flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--kd-yellow-grey);
+  background: rgba(45,45,43,0.7); color: var(--kd-yellow); font-size: 16px; cursor: pointer;
+}
+.kd-arrow:hover { background: var(--kd-yellow); color: var(--kd-black); }
+.kd-arrow:disabled { opacity: 0.25; cursor: default; background: rgba(45,45,43,0.7); color: var(--kd-yellow); }
+
+/* ── Bottom bar ────────────────────────────────────────── */
+.kd-bottombar {
+  flex: 0 0 auto; height: 56px; display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px; background: #141414; border-top: 1px solid var(--kd-line);
+}
+.kd-bottombar-center { display: flex; align-items: center; gap: 14px; }
+.kd-icon-btn {
+  background: none; border: none; color: var(--kd-grey-2); font-family: var(--kd-font-primary);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; padding: 6px 10px;
+  border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+}
+.kd-icon-btn:hover { background: rgba(221,179,5,0.12); color: var(--kd-yellow); }
+.kd-page-counter { font-family: var(--kd-font-primary); font-size: 12px; color: #e8e8e6; min-width: 60px; text-align: center; }
+
+/* ── Thumbnail rail ────────────────────────────────────────
+   A collapsible side panel (not an overlay) — it's a normal flex child of
+   .kd-stage, so toggling it via the "Pages" button actually shrinks/grows
+   the space available to the book, instead of floating on top of it. */
+.kd-thumbrail {
+  flex: 0 0 auto; width: 100px; height: 100%; background: #141414;
+  border-left: 1px solid var(--kd-line); display: flex; flex-direction: column; align-items: center;
+  gap: 8px; padding: 10px 0; overflow-y: auto; overflow-x: hidden;
+}
+/* the [hidden] attribute alone loses to the same-specificity `display: flex`
+   above (author styles win cascade ties) — force it explicitly instead. */
+.kd-thumbrail[hidden] { display: none; }
+.kd-thumb {
+  flex: 0 0 auto; width: 80px; aspect-ratio: 1000 / 1294; border-radius: 4px; overflow: hidden; cursor: pointer;
+  border: 2px solid transparent; background: #0f0f0f; position: relative;
+}
+.kd-thumb.active { border-color: var(--kd-yellow); }
+.kd-thumb iframe { width: 1000px; height: 1294px; transform: scale(0.08); transform-origin: top left; border: 0; pointer-events: none; }
+.kd-thumb .num {
+  position: absolute; bottom: 2px; right: 4px; font-family: var(--kd-font-primary); font-size: 9px; color: var(--kd-yellow);
+  background: rgba(0,0,0,0.6); padding: 1px 4px; border-radius: 3px;
+}
+
+@media (max-width: 720px) {
+  .kd-topbar-title { display: none; }
+  .kd-arrow { width: 34px; height: 34px; font-size: 13px; }
+  .kd-bottombar { padding: 0 8px; }
+  .kd-icon-btn span.label { display: none; }
+}
