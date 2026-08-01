@@ -1,0 +1,23 @@
+{
+  "style": "1machine",
+  "headline": "BLOW MOLDER INVENTORY",
+  "contactName": "NICK KIRBY",
+  "contactPhone": "480.212.0571",
+  "campaignName": "blow-molders-nk",
+  "immediateNeeds": {
+    "heading": "IMMEDIATE NEEDS!!!!",
+    "items": [
+      "Accumulator Blow Molder, Dual Heads 15 lb. OR LARGER SHOT SIZE!",
+      "Uniloy Reciprocating Screw Blow Molders, W/Side-shift for Gallons, 2.5 Gallons & 5-Gallons",
+      "Ossberger Press Blow Molders",
+      "Dual Sided Shuttle Machine for 1.5 - 2 Gallon W/Side-View Stripping Capabilities",
+      "40(+) Horsepower Granulators"
+    ]
+  },
+  "machines": [
+    { "refNumber": "8076742", "status": "REDUCED PRICING OR BEST OFFER!!!! — 150 lb. SHOT SIZE!!!", "pricing": "offer" },
+    { "refNumber": "8078890", "status": "JUST IN!!! — DUAL 8 LB. HEADS!!!" },
+    { "refNumber": "8078790", "status": "JUST IN!!!!" },
+    { "refNumber": "8078707", "status": "JUST IN & INCLUDES ALL THE DOWNSTREAM!!!" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "style": "1machine",
+  "headline": "CNC ROUTER INVENTORY",
+  "contactName": "NICK KIRBY",
+  "contactPhone": "480.212.0571",
+  "campaignName": "cnc-routers-nk",
+  "specPriority": ["Table Width", "Table Length", "Spindle Horsepower", "Tool Changer"],
+  "immediateNeeds": {
+    "heading": "IMMEDIATE NEED FOR THE FOLLOWING:",
+    "items": [
+      "5-Axis DMS, Thermwood, CMS & Quintax CNC Routers",
+      "3-Axis CR Onsrud & Komo CNC Routers"
+    ]
+  },
+  "machines": [
+    { "refNumber": "8078471", "status": "REDUCED PRICING OBO!!! — LIKE NEW!!!!", "pricing": "offer" },
+    { "refNumber": "8078588", "status": "LIKE NEW CONDITION!!!!" },
+    { "refNumber": "8078311", "status": "STILL AVAILABLE & UNDER POWER!!!" }
+  ]
+}

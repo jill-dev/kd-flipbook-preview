@@ -1,0 +1,13 @@
+{
+  "style": "newer",
+  "headline": "CNC LATHE BLOWOUT",
+  "subheadline": "MUST MOVE!!",
+  "contactName": "SEAN REID",
+  "contactPhone": "480.212.0570",
+  "campaignName": "lathe-blowout-test",
+  "machines": [
+    { "refNumber": "8078654" },
+    { "refNumber": "8078645" },
+    { "refNumber": "8078650" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "style": "1machine",
+  "headline": "MAKE AN OFFER",
+  "contactName": "MIKE BASHAM",
+  "contactPhone": "480.212.0586",
+  "campaignName": "dmg-mori-nhx6300-offer",
+  "machines": [
+    { "refNumber": "8078017", "status": "MAKE AN OFFER!!", "pricing": "offer" }
+  ]
+}

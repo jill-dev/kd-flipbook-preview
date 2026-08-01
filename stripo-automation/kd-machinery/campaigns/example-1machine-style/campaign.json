@@ -1,0 +1,12 @@
+{
+  "style": "1machine",
+  "headline": "MUST MOVE!!",
+  "contactName": "SEAN REID",
+  "contactPhone": "480.212.0570",
+  "campaignName": "must-move-test",
+  "machines": [
+    { "refNumber": "8078645", "status": "UNDER POWER!!" },
+    { "refNumber": "8078650", "status": "GREAT DEAL!!" },
+    { "refNumber": "8078860", "status": "SPOTLESS!!" }
+  ]
+}
