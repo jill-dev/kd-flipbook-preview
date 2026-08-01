@@ -1,0 +1,13 @@
+{
+  "name": "stripo-automation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "list": "node list-templates.js",
+    "fetch-master": "node fetch-master.js",
+    "generate": "node generate-email.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
