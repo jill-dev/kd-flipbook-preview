@@ -12,6 +12,7 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { load } from "cheerio";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -43,15 +44,15 @@ export async function lookupMachine(refNumber) {
   const attrs = (product.attributes || []).filter(
     (a) => !["Year", "Make", "Model"].includes(a.name)
   );
-  const attrLines = attrs.map((a) => `${a.name} ${a.options.join(", ")}`);
+  const attrLines = attrs.map((a) => decodeEntities(`${a.name} ${a.options.join(", ")}`));
 
   const meta = {};
   for (const m of product.meta_data || []) meta[m.key] = m.value;
 
   return {
     refNumber: product.sku,
-    yearMakeModel: product.name,
-    type: stripHtml(product.short_description),
+    yearMakeModel: decodeEntities(product.name),
+    type: decodeEntities(stripHtml(product.short_description)),
     price: product.price,
     photoUrl: product.images?.[0]?.src || "",
     linkUrl: product.permalink,
@@ -139,6 +140,21 @@ export function prioritizeAttrLines(attrLines, priorityTerms) {
 
 function stripHtml(s) {
   return (s || "").replace(/<[^>]+>/g, "").trim();
+}
+
+// WooCommerce's CMS-authored text (short_description, attribute values)
+// often contains literal HTML entities as source text -- e.g. a salesman
+// typing 6.5' gets auto-converted by WordPress into "6.5&#8242;" (the prime
+// mark). generate-machinery-email.js inserts these strings as plain text
+// nodes, which cheerio then re-escapes on serialization ("&" -> "&amp;"),
+// turning "&#8242;" into the literal text "&amp;#8242;" on the page instead
+// of rendering as ′. Decoding entities here (once, at the source) so every
+// downstream consumer already has plain Unicode text fixes it for good --
+// found via Jill's screenshot showing "6.5&#8242; x 13.1&#8242; CNC
+// Waterjet" instead of 6.5′ x 13.1′.
+function decodeEntities(s) {
+  if (!s) return s;
+  return load(`<div>${s}</div>`).text();
 }
 
 // CLI usage: node lookup-machine.js 8078645

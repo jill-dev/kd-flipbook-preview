@@ -184,6 +184,26 @@ ongoing appends.
   (zero leftover placeholders, balanced tags, no `/embed/` links left,
   portrait widths spot-checked against real WordPress media dimensions).
 
+## Bug found and fixed after Jill sent the batch through Pardot for team review (2026-08-02, later same day)
+
+- **Literal `&#8242;` (and similar) showing up on the page** instead of
+  rendering as the character it represents (found on a waterjet's "6.5'
+  x 13.1'" dimensions, which should render with prime marks: 6.5′ x
+  13.1′). Root cause: WordPress auto-converts typed `'`/`"` characters in
+  CMS text (like `short_description`) into literal HTML entities in its
+  stored source (`6.5&#8242;`) — that's normal and correct *as HTML
+  source*. But `generate-machinery-email.js` inserts field values as
+  plain **text node** data, which cheerio then re-escapes `&` on
+  serialization, turning the already-encoded `&#8242;` into the literal
+  text `&amp;#8242;` on the page. Fixed at the source in
+  lookup-machine.js: a new `decodeEntities()` helper (parses the string
+  through cheerio with entity decoding *on*, unlike the main document
+  parse which uses `decodeEntities: false`) is applied to `yearMakeModel`,
+  `type`, and every `attrLines` entry, so by the time text reaches the
+  generator it's already plain Unicode — nothing left to double-escape.
+  All 16 real campaigns regenerated and re-verified (zero `&amp;#`
+  occurrences anywhere).
+
 ## Not yet handled
 
 - Spec/feature lines are auto-grouped from WooCommerce's product attributes
