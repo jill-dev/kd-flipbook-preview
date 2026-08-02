@@ -14,12 +14,17 @@ function hopsToDiv(hops, target = "div") {
   return hops === 0 ? `+${target}` : `+${"*+".repeat(hops)}${target}`;
 }
 
-export function buildCarouselTd(photoUrls, { width = 320, height = 240 } = {}) {
+// Returns { style, td }. `style` is the bare <style>...</style> block and
+// MUST be placed in <head> — Pardot (and most ESP paste/merge pipelines)
+// strip <style> tags that live in <body>, which silently kills every
+// show/hide rule the carousel depends on. `td` is the carousel's structural
+// markup only, with no embedded <style>.
+export function buildCarousel(photoUrls, { width = 320, height = 240 } = {}) {
   const photos = photoUrls.length ? photoUrls : [`https://placehold.co/${width}x${height}/2d2d2b/ddb305?text=Equipment+Photo`];
   const n = photos.length;
 
   const ampSlides = photos
-    .map((url, i) => `<div class="slide-${i + 1}">\n          <div><amp-img src="${url}" layout="responsive" alt="" title="" height="${height}" width="${width}"></amp-img></div>\n      </div>`)
+    .map((url, i) => `<div class="slide-${i + 1}">\n          <div><amp-img src="${url}" layout="responsive" object-fit="cover" alt="" title="" height="${height}" width="${width}"></amp-img></div>\n      </div>`)
     .join("");
 
   const ampSelector = photos
@@ -77,18 +82,10 @@ export function buildCarouselTd(photoUrls, { width = 320, height = 240 } = {}) {
   const nextLabels = photos.map((_, i) => `<label for="${CAROUSEL_ID}-input-${i + 1}" class="carousel-next carousel-next-${i + 1}"></label>`).join("");
 
   const imageDivs = photos
-    .map((url, i) => `<div class="carousel-image carousel-image-${i + 1}"><img src="${url}" style="display:block;width:${width}px;max-width:100%;height:auto;" width="${width}" border="0" alt=""></div>`)
+    .map((url, i) => `<div class="carousel-image carousel-image-${i + 1}" style="width:${width}px;height:${height}px;overflow:hidden;"><img src="${url}" style="display:block;width:${width}px;height:${height}px;max-width:100%;object-fit:cover;" width="${width}" height="${height}" border="0" alt=""></div>`)
     .join("");
 
-  return `<td align="left" class="esd-block-amp-carousel">
-                <amp-carousel height="${height}" width="${width}" id="${AMP_ID}" on="slideChange:${AMP_ID}-selector.toggle(index=event.index, value=true)" controls layout="responsive" type="slides" class="es-visible-amp-html-only">
-                    ${ampSlides}
-                </amp-carousel><div class="carousel-preview es-visible-amp-html-only">
-          <amp-selector layout="container" id="${AMP_ID}-selector" on="select:${AMP_ID}.goToSlide(index=event.targetOption)">
-              ${ampSelector}
-          </amp-selector>
-      </div>
-            <div id="htmlfallback" class="es-visible-simple-html-only"><style type="text/css">
+  const style = `<style type="text/css">
       input.fallback_ctrl:checked~.container {
         display: block !important;
       }
@@ -244,5 +241,17 @@ export function buildCarouselTd(photoUrls, { width = 320, height = 240 } = {}) {
           display: none !important;
         }
       }
-    </style><!--[if !mso]><!--><input type="checkbox" id="fallback_ctrl" class="fallback_ctrl" style="display:none !important;mso-hide:all;" checked><!--<![endif]--><!-- FALLBACK --><div id="fallback" class="fallback fallback-7559"><table width="100%" cellpadding="0" cellspasing="0"><tbody><tr align="center"><td class="es-p5b"><a><img src="${fallbackMainImg}" alt="" width="${width}" class="adapt-img es-fallback-slide"></a></td></tr><tr><td align="center"><table cellpadding="0" cellspasing="0" class="es-table-not-adapt es-fallback-thumbnail" align="center" style="text-align:center"><tbody><tr>${fallbackThumbs}</tr></tbody></table></td></tr></tbody></table></div><!-- /FALLBACK --><!-- INTERACTIVE ELEMENT --><!--[if !mso]><!--><div class="container" style="display:none;mso-hide:all;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%"><tbody><tr><td align="center">${inputs}<div style="display:table;width:100%;table-layout:fixed;text-align:center;font-size:0px">${thumbnails}<table class="carousel-content ${CAROUSEL_ID}-content" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding:0;Margin:0;padding-bottom:5px"><div class="carousel-previous-container">${prevLabels}</div><div>${imageDivs}</div><div class="carousel-next-container">${nextLabels}</div></td></tr></tbody></table></div></td></tr></tbody></table></div><!--<![endif]--><!-- /INTERACTIVE ELEMENT --></div></td>`;
+    </style>`;
+
+  const td = `<td align="left" class="esd-block-amp-carousel">
+                <amp-carousel height="${height}" width="${width}" id="${AMP_ID}" on="slideChange:${AMP_ID}-selector.toggle(index=event.index, value=true)" controls layout="responsive" type="slides" class="es-visible-amp-html-only">
+                    ${ampSlides}
+                </amp-carousel><div class="carousel-preview es-visible-amp-html-only">
+          <amp-selector layout="container" id="${AMP_ID}-selector" on="select:${AMP_ID}.goToSlide(index=event.targetOption)">
+              ${ampSelector}
+          </amp-selector>
+      </div>
+            <div id="htmlfallback" class="es-visible-simple-html-only"><!--[if !mso]><!--><input type="checkbox" id="fallback_ctrl" class="fallback_ctrl" style="display:none !important;mso-hide:all;" checked><!--<![endif]--><!-- FALLBACK --><div id="fallback" class="fallback fallback-7559"><table width="100%" cellpadding="0" cellspasing="0"><tbody><tr align="center"><td class="es-p5b" style="width:${width}px;height:${height}px;overflow:hidden;"><a><img src="${fallbackMainImg}" alt="" width="${width}" height="${height}" style="object-fit:cover;height:${height}px;" class="adapt-img es-fallback-slide"></a></td></tr><tr><td align="center"><table cellpadding="0" cellspasing="0" class="es-table-not-adapt es-fallback-thumbnail" align="center" style="text-align:center"><tbody><tr>${fallbackThumbs}</tr></tbody></table></td></tr></tbody></table></div><!-- /FALLBACK --><!-- INTERACTIVE ELEMENT --><!--[if !mso]><!--><div class="container" style="display:none;mso-hide:all;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%"><tbody><tr><td align="center">${inputs}<div style="display:table;width:100%;table-layout:fixed;text-align:center;font-size:0px">${thumbnails}<table class="carousel-content ${CAROUSEL_ID}-content" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding:0;Margin:0;padding-bottom:5px"><div class="carousel-previous-container">${prevLabels}</div><div>${imageDivs}</div><div class="carousel-next-container">${nextLabels}</div></td></tr></tbody></table></div></td></tr></tbody></table></div><!--<![endif]--><!-- /INTERACTIVE ELEMENT --></div></td>`;
+
+  return { style, td };
 }

@@ -14,7 +14,7 @@ import { load } from "cheerio";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { buildCarouselTd } from "./carousel.js";
+import { buildCarousel } from "./carousel.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE_SLOTS = 14;
@@ -112,7 +112,9 @@ slots.forEach((el, i) => {
 // diffing a round-trip) ---
 let finalHtml = $.html();
 const carouselPhotos = auction.carouselPhotos && auction.carouselPhotos.length ? auction.carouselPhotos : lots.map((l) => l.PhotoUrl).filter(Boolean);
-finalHtml = spliceCarousel(finalHtml, buildCarouselTd(carouselPhotos));
+const carousel = buildCarousel(carouselPhotos);
+finalHtml = spliceCarousel(finalHtml, carousel.td);
+finalHtml = spliceIntoHead(finalHtml, carousel.style);
 
 mkdirSync(join(__dirname, "output"), { recursive: true });
 const outPath = join(__dirname, "output", `${slug}.html`);
@@ -147,6 +149,19 @@ function spliceCarousel(html, replacementTd) {
     process.exit(1);
   }
   return html.slice(0, start) + replacementTd + html.slice(end);
+}
+
+// Puts the carousel's <style> block just before </head> — must be a real
+// <head> style tag (not embedded in <body>) or Pardot's HTML sanitizer
+// strips it and every carousel show/hide rule silently breaks.
+function spliceIntoHead(html, styleBlock) {
+  const closeHead = "</head>";
+  const idx = html.indexOf(closeHead);
+  if (idx === -1) {
+    console.error("Could not find </head> in master.html to insert the carousel style block. Aborting.");
+    process.exit(1);
+  }
+  return html.slice(0, idx) + styleBlock + html.slice(idx);
 }
 
 function setText($, selector, value) {
