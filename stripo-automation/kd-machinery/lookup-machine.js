@@ -63,29 +63,52 @@ export async function lookupMachine(refNumber) {
     // sometimes a full <iframe src="..."> embed blob -- normalize to a URL.
     videoUrl: extractVideoUrl(meta.product_videos_0_video),
     // Tall/vertical product photos look oversized at the card's full
-    // width, so the generator narrows those -- detected from the WordPress
-    // srcset (its resized-variant filenames encode "WIDTHxHEIGHT", no need
-    // to fetch/decode the image itself).
-    isPortrait: detectPortrait(product.images?.[0]?.srcset),
+    // width, so the generator narrows those. Originally detected from the
+    // srcset's resized-variant filenames ("-WIDTHxHEIGHT.ext"), but that's
+    // missing/unreliable for some images (Jill found several vertical
+    // photos that stayed at full width) -- the WP media endpoint returns
+    // the image's real width/height directly, no guessing.
+    isPortrait: await detectPortrait(product.images?.[0]?.id, WOOCOMMERCE_URL, auth),
     // 2-letter salesman initials (e.g. "NK", "MB") -- used to auto-fill the
     // contact line when a whole campaign's machines belong to one rep.
     repInitials: meta.inventory_rep || "",
   };
 }
 
+// The raw field is wildly inconsistent across listings -- a plain
+// youtube.com/watch?v= or youtu.be/ link, a full <iframe src="..."> embed
+// blob (sometimes with stray leading characters, e.g. a typo'd "t" before
+// the tag), or a youtube.com/shorts/ link. Whatever the source, extracting
+// just the video ID and rebuilding a plain "watch?v=" URL is what actually
+// works when someone clicks it in an email -- youtube.com/embed/VIDEO_ID
+// is meant for <iframe> embedding, not for people to click directly, and
+// behaves inconsistently (no YouTube app deep-link, stripped-down player)
+// when opened as a normal link. This was Jill's "some videos not working,
+// looks like the embedded-code ones" report, confirmed by auditing every
+// real listing's raw field: iframe-derived entries were the only ones
+// producing /embed/ links, everything else already used /watch?v= or
+// youtu.be/.
 function extractVideoUrl(raw) {
   if (!raw) return "";
-  const iframeMatch = raw.match(/src=["']([^"']+)["']/);
-  const url = iframeMatch ? iframeMatch[1] : raw.trim();
+  const iframeSrcMatch = raw.match(/src=["']([^"']+)["']/);
+  const url = iframeSrcMatch ? iframeSrcMatch[1] : raw.trim();
+
+  const idMatch =
+    url.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/);
+  if (idMatch) return `https://www.youtube.com/watch?v=${idMatch[1]}`;
+
   return url.startsWith("http") ? url : "";
 }
 
-function detectPortrait(srcset) {
-  if (!srcset) return false;
-  const match = srcset.match(/-(\d+)x(\d+)\.\w+/);
-  if (!match) return false;
-  const [, width, height] = match;
-  return Number(height) > Number(width);
+async function detectPortrait(imageId, wooCommerceUrl, auth) {
+  if (!imageId) return false;
+  const res = await fetch(`${wooCommerceUrl}/wp-json/wp/v2/media/${imageId}`, {
+    headers: { Authorization: `Basic ${auth}` },
+  });
+  if (!res.ok) return false;
+  const media = await res.json();
+  const { width, height } = media.media_details || {};
+  return Boolean(width && height && height > width);
 }
 
 // Splits attrLines into two continuous, comma-joined strings (no forced

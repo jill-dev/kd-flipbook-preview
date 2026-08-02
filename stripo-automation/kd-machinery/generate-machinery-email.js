@@ -108,8 +108,13 @@ const trackingRep = [...repsInvolved]
 console.log(`Tracking sheet Rep: ${trackingRep || "(none found)"}`);
 
 // --- header fields ---
+// utm_campaign matches the file name (Jill's own established convention);
+// utm_content is set per-link below (ref # for a listing, "ref-video" for
+// its video button) so she can tell which specific machine/link got
+// clicked, not just which campaign.
+const campaignSlug = campaign.campaignName || slug;
 replaceText($, "[EMAIL_SUBJECT_LINE]", `${machines.map((m) => m.yearMakeModel).join(", ")} - ${campaign.headline}`);
-replaceText($, "[CAMPAIGN_NAME]", campaign.campaignName || slug);
+replaceText($, "[CAMPAIGN_NAME]", campaignSlug);
 replaceText($, "[EMAIL_HEADLINE]", campaign.headline || "");
 if (campaign.style === "newer") {
   replaceText($, "[EMAIL_SUBHEADLINE]", campaign.subheadline || "");
@@ -158,7 +163,7 @@ allCardRows.forEach(($row, i) => {
   const $videoLink = $row.find('a[href="[MACHINE_1_VIDEO_URL]"]');
 
   $row.find("img").attr("src", m.photoUrl).attr("alt", m.yearMakeModel);
-  $row.find("a").not($videoLink).attr("href", m.linkUrl);
+  $row.find("a").not($videoLink).attr("href", withUtm(m.linkUrl, campaignSlug, m.refNumber));
 
   // tall/vertical photos look oversized at the card's full width -- narrow
   // them and center them in their cell instead
@@ -194,7 +199,7 @@ allCardRows.forEach(($row, i) => {
   // video callout: fill it in if this machine has a video, otherwise
   // remove the whole row so no dead "Watch Video" button ever ships.
   if (m.videoUrl) {
-    $videoLink.attr("href", m.videoUrl);
+    $videoLink.attr("href", withUtm(m.videoUrl, campaignSlug, `${m.refNumber}-video`));
   } else {
     $videoLink.closest("tr").remove();
   }
@@ -204,6 +209,24 @@ mkdirSync(join(__dirname, "output"), { recursive: true });
 const outPath = join(__dirname, "output", `${slug}.html`);
 writeFileSync(outPath, $.html());
 console.log(`Wrote ${outPath} (${machines.length} machine${machines.length === 1 ? "" : "s"}, style=${campaign.style})`);
+
+// Adds Jill's standard UTM params to a live (non-templated) link -- the
+// generic nav links (logo, contact, sell-your-machines...) already have
+// utm_campaign baked into the master HTML, but the per-machine links
+// (photo/name/price/video) point at whatever kdmachinery.com or YouTube
+// URL came back from the lookup, so those need it added here instead.
+function withUtm(url, campaignSlug, content) {
+  try {
+    const u = new URL(url);
+    u.searchParams.set("utm_source", "pardot");
+    u.searchParams.set("utm_medium", "email");
+    u.searchParams.set("utm_campaign", campaignSlug);
+    u.searchParams.set("utm_content", content);
+    return u.toString();
+  } catch {
+    return url; // malformed URL -- leave it alone rather than break the link
+  }
+}
 
 function formatPrice(raw) {
   const n = Number(raw);

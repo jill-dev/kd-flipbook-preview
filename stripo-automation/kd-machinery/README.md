@@ -107,6 +107,10 @@ design, colors, and fonts.
    - Ref #s that return "not found" (sold or pulled from the site since the
      salesman sent the list) are skipped with a console note, not treated
      as an error — the campaign still runs with whatever's left.
+   - Every per-machine link (photo, name, price) and the video button get
+     `utm_source=pardot&utm_medium=email&utm_campaign=<campaignName or file
+     name>&utm_content=<ref#>` (`<ref#>-video` for the video button) added
+     automatically — no campaign.json field needed, this is always on.
    - Any number of entries in `machines`.
 3. Run:
    ```
@@ -143,6 +147,42 @@ the "HTML's Sent" tab seeded for every real campaign so far. Google Drive's
 just an empty spreadsheet) — useful for seeding, but still can't *update*
 an existing file afterward, so this only works for a one-time seed, not
 ongoing appends.
+
+## Bugs found and fixed after Jill ran a real batch through Pardot (2026-08-02)
+
+- **Vertical photos inconsistently sized**: the original portrait/landscape
+  detection parsed WordPress's `srcset` string for a `-WIDTHxHEIGHT.ext`
+  resized-variant filename, which is missing or unreliable for some images.
+  Switched to calling `wp/v2/media/{imageId}` (the image's own WordPress
+  attachment ID, already present in WooCommerce's product data) for the
+  *real* width/height — confirmed exact and reliable. `detectPortrait()` in
+  lookup-machine.js is now async and takes the image ID + auth instead of
+  guessing from a filename string.
+- **Some video links didn't work — "the embedded-code ones"**: confirmed by
+  auditing every real listing's raw video field. kdmachinery.com stores a
+  video two different ways depending on how a salesman entered it: a plain
+  `youtube.com/watch?v=`/`youtu.be/` link (always worked), or a full
+  `<iframe src="youtube.com/embed/VIDEO_ID">` embed blob (didn't). The fix
+  isn't extraction (that already worked) — `youtube.com/embed/VIDEO_ID` is
+  meant for `<iframe>` embedding, not for a person to click directly, and
+  behaves inconsistently as a plain link (no YouTube app deep-link,
+  stripped-down player). `extractVideoUrl()` now pulls the video ID out of
+  *any* of the four formats seen in real data (watch?v=, youtu.be/,
+  embed/, shorts/) and always rebuilds a plain `youtube.com/watch?v=ID`
+  link, regardless of source format.
+- **No UTM tracking on the actual machine links**: the generic nav links
+  (logo, contact, sell-your-machines, financing) already had
+  `utm_campaign` baked into the master templates, but the links people
+  actually click — photo, name, price, video button — had none. Added a
+  `withUtm()` helper in generate-machinery-email.js: `utm_source=pardot`,
+  `utm_medium=email`, `utm_campaign=<file name>` (Jill's own established
+  convention), `utm_content=<ref#>` (or `<ref#>-video`) so she can tell
+  which specific machine/link got clicked, not just which campaign. Also
+  switched the master templates' existing `utm_source` from `newsletter`
+  to `pardot` to match her actual platform.
+- All 16 real campaigns regenerated and re-verified against these fixes
+  (zero leftover placeholders, balanced tags, no `/embed/` links left,
+  portrait widths spot-checked against real WordPress media dimensions).
 
 ## Not yet handled
 
