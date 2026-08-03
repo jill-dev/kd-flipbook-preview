@@ -268,6 +268,21 @@ has near-zero visual effect on a full-width block child) — untested in
 practice since no real campaign has used the "newer" style yet, but
 clearly the same underlying bug. All 16 real campaigns regenerated.
 
+**Update**: that "round 2" fix was chasing a bug that didn't exist —
+verified with an actual headless-Chromium render (`npx playwright
+screenshot`, playwright already available via `npx` in this environment)
+that the type line was already rendering centered correctly. What Jill's
+team actually meant was broader: they want the **whole card** centered
+(name, type, Specifications label+text, Features label+text), matching
+the Ref #/price row which was already centered — not just the type line.
+Confirmed with Jill directly before making the change (her screenshots of
+the actual rendered file, opened plain in Chrome/Edge with no Stripo
+involved, showed the type line correctly centered — the real ask was
+about the other rows). Added `align="center"`/`text-align:center` to the
+name row and both Specifications/Features rows (label and content
+paragraphs) in master-1machine.html. All 16 campaigns regenerated, one
+spot-checked via a real browser screenshot to confirm.
+
 ## Not yet handled
 
 - Spec/feature lines are auto-grouped from WooCommerce's product attributes
