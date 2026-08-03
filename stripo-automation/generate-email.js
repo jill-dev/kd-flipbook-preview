@@ -34,7 +34,7 @@ const $ = load(html, { decodeEntities: false });
 
 // --- single-value header/footer fields ---
 setText($, 'p:contains("SURPLUS EQUIPMENT FOR A PRECISION")', auction.subtitle);
-setText($, 'p:contains("By Appointment Only")', auction.inspectionNote);
+setHtml($, 'p:contains("By Appointment Only")', breakBeforeLastWord(auction.inspectionNote));
 setHtml($, 'p:contains("Tuesday, August 18, 2026")', formatClosingDateTime(auction.closingDateTime));
 setText($, 'p:contains("3216 Industry Drive")', auction.location);
 
@@ -184,16 +184,63 @@ function setHtml($, selector, value) {
   el.html(value);
 }
 
+// The info card's date column is narrow, so the day-of-week and month are
+// always abbreviated to maximize the chance the date fits on one line
+// (e.g. "Thursday, August 20, 2026" -> "Thu, Aug 20, 2026") — a standing
+// design rule, not a one-off for a specific auction.
+function abbreviateDate(datePart) {
+  const DAY_ABBREV = {
+    Sunday: "Sun",
+    Monday: "Mon",
+    Tuesday: "Tue",
+    Wednesday: "Wed",
+    Thursday: "Thu",
+    Friday: "Fri",
+    Saturday: "Sat",
+  };
+  const MONTH_ABBREV = {
+    January: "Jan",
+    February: "Feb",
+    March: "Mar",
+    April: "Apr",
+    May: "May",
+    June: "Jun",
+    July: "Jul",
+    August: "Aug",
+    September: "Sep",
+    October: "Oct",
+    November: "Nov",
+    December: "Dec",
+  };
+  let out = datePart;
+  for (const [full, abbrev] of Object.entries(DAY_ABBREV)) out = out.replace(full, abbrev);
+  for (const [full, abbrev] of Object.entries(MONTH_ABBREV)) out = out.replace(full, abbrev);
+  return out;
+}
+
 // Splits "Thursday, August 20, 2026 · 10:00 AM PT" onto two lines (date,
-// then time) and glues the last word (timezone) to the time with a
-// non-breaking space, so it never wraps onto its own line.
+// then time), abbreviating the day/month to save space, and glues the
+// last word (timezone) to the time with a non-breaking space, so it never
+// wraps onto its own line.
 function formatClosingDateTime(value) {
   if (!value) return value;
   const parts = value.split(" · ");
   if (parts.length !== 2) return value;
   const [datePart, timePart] = parts;
   const gluedTime = timePart.replace(/ (\S+)$/, "&nbsp;$1");
-  return `${datePart}<br>${gluedTime}`;
+  return `${abbreviateDate(datePart)}<br>${gluedTime}`;
+}
+
+// Breaks a short value onto two lines before its last word (e.g. "By
+// Appointment Only" -> "By Appointment<br>Only") so it wraps at a sensible
+// word boundary instead of however the narrow info-card column happens to
+// wrap it. Only kicks in for values actually likely to need it.
+function breakBeforeLastWord(value, threshold = 14) {
+  if (!value) return value;
+  if (value.length <= threshold) return value;
+  const lastSpace = value.lastIndexOf(" ");
+  if (lastSpace === -1) return value;
+  return `${value.slice(0, lastSpace)}<br>${value.slice(lastSpace + 1)}`;
 }
 
 function parseCsv(text) {
