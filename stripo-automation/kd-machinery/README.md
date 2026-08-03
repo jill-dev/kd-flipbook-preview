@@ -248,6 +248,26 @@ ongoing appends.
   one-off manual price changes not yet reflected in WooCommerce (e.g. "can
   we lower this one to $9,999?").
 
+## Type-line centering, round 2 (2026-08-02, after team review of the actual sent emails)
+
+Jill's team said the type line still didn't look centered even after the
+earlier fix. Checked the actual generated HTML directly (not just the
+template source) — `text-align:center` was genuinely present on that
+paragraph. Since the raw file is provably correct, whatever's dropping it
+is happening downstream (most likely Stripo's Import → From HTML step
+normalizing the pasted HTML into its own block model, which may not
+preserve every inline CSS property on a text block it doesn't have a
+matching config for). Can't test Stripo's import behavior directly from
+here, so hardened the fix instead of just re-asserting it: added the
+legacy `align="center"` attribute directly on the `<p>` itself (in
+addition to keeping `text-align:center`) — a second, more explicit
+alignment signal that's more likely to survive an HTML-to-blocks import.
+Also found and fixed the same gap in master-newer.html's type line, which
+had *no* `text-align:center` at all (only a `td align="center"`, which
+has near-zero visual effect on a full-width block child) — untested in
+practice since no real campaign has used the "newer" style yet, but
+clearly the same underlying bug. All 16 real campaigns regenerated.
+
 ## Not yet handled
 
 - Spec/feature lines are auto-grouped from WooCommerce's product attributes
