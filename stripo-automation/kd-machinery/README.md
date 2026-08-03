@@ -24,7 +24,15 @@ design, colors, and fonts.
 
 - Primary: `#32adfb` (light blue), `#222222` (black), `#cbcbcb` (grey)
 - Secondary: `#525759` (blue-grey), `#377493` (darker blue), `#80CCF2` (lighter blue)
-- Fonts: Montserrat (primary), Gibson (secondary)
+- Fonts: Montserrat is the brand's primary font. The font-family fallback
+  stack is `Montserrat, Arial, Helvetica, sans-serif` — **not** Gibson
+  or 'Gill Sans MT' (removed 2026-08-03, see below). Gmail doesn't
+  reliably load custom web fonts in email at all, so recipients are
+  almost always seeing a fallback font regardless; Gibson/Gill Sans MT
+  are unlikely to be installed on a given machine, so which fallback a
+  recipient actually saw depended on their local fonts — inconsistent and
+  unpredictable. Arial/Helvetica are safe, universal, and render
+  identically for everyone.
 
 ## Files
 
@@ -282,6 +290,25 @@ about the other rows). Added `align="center"`/`text-align:center` to the
 name row and both Specifications/Features rows (label and content
 paragraphs) in master-1machine.html. All 16 campaigns regenerated, one
 spot-checked via a real browser screenshot to confirm.
+
+## Font fallback fixed after a recipient-to-recipient rendering difference (2026-08-03)
+
+Jill and her boss both view emails in Gmail on Windows, but one of them
+saw missing space around punctuation in dense spec text that the other
+didn't. Since it was the *same* email client on the *same* OS, ruled out
+a client-rendering-engine explanation (e.g. Outlook's Word engine, a
+well-known category of email rendering quirk, didn't apply here since
+neither uses Outlook). Most likely explanation: Gmail doesn't reliably
+load custom web fonts in HTML email, so both were already seeing a
+fallback font — just not necessarily the *same* one, since the fallback
+chain included `Gibson` and `'Gill Sans MT'`, neither a font most
+machines have installed; whichever font (if any) happens to be present
+locally determines what actually renders, independent of which email
+client is used. Fixed by simplifying the fallback chain in both master
+templates to `Montserrat, Arial, Helvetica, sans-serif` — dropping Gibson
+and Gill Sans MT entirely so every recipient, regardless of what's
+installed on their machine, lands on the same safe, universal fallback.
+All 16 real campaigns regenerated and reverified.
 
 ## Not yet handled
 
