@@ -106,7 +106,15 @@ design, colors, and fonts.
      back to `"US"` / the main line (480.922.1674) — per Jill's rule.
    - Ref #s that return "not found" (sold or pulled from the site since the
      salesman sent the list) are skipped with a console note, not treated
-     as an error — the campaign still runs with whatever's left.
+     as an error — the campaign still runs with whatever's left. Same for
+     ref #s whose WooCommerce **status** isn't `in_stock` or `available`
+     (e.g. `sold`, `invoiced`, `unavailable`, `draft`) — checked
+     automatically, no campaign.json field needed. Attribute values equal
+     to `N/A` are also dropped automatically (salesmen use "N/A" for a
+     required-but-unknown field, e.g. "Table Width N/A" — that whole line
+     is skipped rather than shown).
+   - `price` (optional per machine): overrides the live WooCommerce price,
+     e.g. for a one-off discount that isn't in the system yet.
    - Every per-machine link (photo, name, price) and the video button get
      `utm_source=pardot&utm_medium=email&utm_campaign=<campaignName or file
      name>&utm_content=<ref#>` (`<ref#>-video` for the video button) added
@@ -203,6 +211,42 @@ ongoing appends.
   generator it's already plain Unicode — nothing left to double-escape.
   All 16 real campaigns regenerated and re-verified (zero `&amp;#`
   occurrences anywhere).
+
+## More fixes from team feedback after a real send (2026-08-02, third round)
+
+- **"N/A" spec lines** (salesmen type "N/A" into a required WordPress field
+  they don't have data for, e.g. "Table Width N/A") are now filtered out at
+  the source in lookup-machine.js — that attribute is dropped entirely
+  rather than shown.
+- **"Features:" section now sourced specifically from WooCommerce's
+  "Equipped With" attribute**, not a generic trailing slice of whatever
+  attributes happened to come last. Previously a machine with lots of specs
+  (e.g. the Bertsch 100-10, 18 attributes) could get real spec data
+  (Voltage, Weight, Horsepower) shoved into "Features" along with a
+  redundant "Equipped With:" label baked into the text itself, since
+  WooCommerce's attribute name literally *is* "Equipped With:". Fixed by
+  extracting that attribute specifically in lookup-machine.js
+  (`featuresText`), excluding it from `attrLines` (used for
+  Specifications). If a machine has no "Equipped With" attribute (or it's
+  N/A), the whole "Features:" row is removed instead of shown empty — same
+  pattern as the optional status badge, including shifting the bottom
+  padding onto the Specifications row so the card doesn't end abruptly.
+- **TYPE line was left-aligned instead of centered** in
+  `master-1machine.html` (master-newer.html already centered it) — added
+  `align="center"` / `text-align:center` to match.
+- **WooCommerce listing-status filtering**: some sold/invoiced/unavailable
+  machines were making it into HTMLs. Confirmed the right field is
+  `product.status` (values seen: `in_stock`, `available`, `sold`,
+  `invoiced`) — distinct from WordPress's own draft/publish status, which
+  this site doesn't use for this purpose at all (every listing stays a WP
+  "draft" regardless of real sale status, per Jill). Only `in_stock` and
+  `available` are treated as sellable; everything else is skipped
+  automatically like a not-found ref #, logged with the actual status
+  found. This caught several more sold/invoiced machines beyond the ones
+  Jill had specifically flagged.
+- **Per-machine price override** (`"price"` in campaign.json) added for
+  one-off manual price changes not yet reflected in WooCommerce (e.g. "can
+  we lower this one to $9,999?").
 
 ## Not yet handled
 

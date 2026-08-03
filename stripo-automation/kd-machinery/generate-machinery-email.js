@@ -16,19 +16,28 @@
 //     "immediateNeeds": { "heading": "IMMEDIATE NEEDS!!!!", "items": ["...", "..."] },  // optional -- whole card removed if not given
 //     "machines": [
 //       { "refNumber": "8078645", "status": "UNDER POWER!!", "pricing": "offer" },  // status only used by "1machine" style; pricing: "normal" (default) | "offer" (strikethrough + MAKE AN OFFER)
+//       { "refNumber": "8078650", "price": "9999" },  // optional -- overrides the live WooCommerce price (e.g. a one-off discount that isn't in the system yet)
 //       { "refNumber": "8078650" }
 //     ]
 //   }
 // Each machine's "Watch Video" button is added/removed automatically based
 // on whether kdmachinery.com has a video for that listing -- no campaign.json
-// field needed for it.
+// field needed for it. Ref #s whose WooCommerce status isn't "in_stock" or
+// "available" (sold/invoiced/unavailable/draft/etc.) are skipped
+// automatically, same as a not-found ref #.
 // Writes: output/<campaign-slug>.html
 
 import { load } from "cheerio";
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { lookupMachine, splitAttrLines, prioritizeAttrLines } from "./lookup-machine.js";
+import { lookupMachine, prioritizeAttrLines } from "./lookup-machine.js";
+
+// Only these WooCommerce listing statuses are safe to feature in an email --
+// everything else (sold, invoiced, unavailable, draft, pending review, ...)
+// gets skipped like a not-found ref #. Whitelist rather than blacklist since
+// Jill named exactly these two as "good to sell."
+const SELLABLE_STATUSES = ["in_stock", "available"];
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const salesTeam = JSON.parse(readFileSync(join(__dirname, "sales-team.json"), "utf8"));
@@ -70,7 +79,17 @@ for (const m of campaign.machines) {
     console.log(`  [${m.refNumber}] NOT FOUND -- skipping (sold or removed from the site)`);
     continue;
   }
-  machines.push({ ...data, status: m.status || "", pricing: m.pricing || "normal" });
+  if (!SELLABLE_STATUSES.includes(data.status)) {
+    skipped.push(m.refNumber);
+    console.log(`  [${m.refNumber}] status="${data.status}" -- skipping (not for sale)`);
+    continue;
+  }
+  machines.push({
+    ...data,
+    price: m.price || data.price, // optional manual override, e.g. a one-off discount
+    status: m.status || "", // Jill's per-machine badge phrase, unrelated to WooCommerce's listing status above
+    pricing: m.pricing || "normal",
+  });
   console.log(`  [${data.refNumber}] ${data.yearMakeModel} - $${data.price}`);
 }
 if (machines.length === 0) {
@@ -153,14 +172,25 @@ const allCardRows = $(`img[alt="${anchorAlt}"]`)
 allCardRows.forEach(($row, i) => {
   const m = machines[i];
   const orderedAttrs = prioritizeAttrLines(m.attrLines, campaign.specPriority);
-  // "1machine" style keeps a separate Features section (~75% of attrs to
-  // Specifications, the rest to Features); "newer" has no Features section,
-  // so all attrs flow into one continuous Specifications block.
-  const [specsText, featuresText] = splitAttrLines(orderedAttrs, campaign.style === "1machine" ? 0.75 : 1);
+  // "1machine" style has a dedicated "Features:" section sourced only from
+  // WooCommerce's "Equipped With" attribute (m.featuresText); everything
+  // else is Specifications. "newer" style has no separate section (no
+  // [MACHINE_1_FEATURES] token in that template at all), so Equipped With
+  // just folds back into one continuous Specifications block instead.
+  const specsText =
+    campaign.style === "1machine"
+      ? orderedAttrs.join(", ")
+      : [...orderedAttrs, m.featuresText].filter(Boolean).join(", ");
+  const featuresText = m.featuresText; // only consumed below for "1machine" style
 
-  // capture the video link before the generic href overwrite below would
-  // clobber its placeholder href and make it unfindable
+  // capture every row/cell whose placeholder token is about to get
+  // replaced with real text below -- once that happens, a
+  // `:contains("[TOKEN]")` search can no longer find it (this bit us
+  // once already with the video link's href getting clobbered first)
   const $videoLink = $row.find('a[href="[MACHINE_1_VIDEO_URL]"]');
+  const $specsTd = $row.find('p:contains("[MACHINE_1_SPECS]")').closest("td.esd-block-text").first();
+  const $statusRow = $row.find('p:contains("[MACHINE_1_STATUS]")').closest("td.esd-block-text").closest("tr");
+  const $featuresRow = $row.find('p:contains("[MACHINE_1_FEATURES]")').closest("td.esd-block-text").closest("tr");
 
   $row.find("img").attr("src", m.photoUrl).attr("alt", m.yearMakeModel);
   $row.find("a").not($videoLink).attr("href", withUtm(m.linkUrl, campaignSlug, m.refNumber));
@@ -182,10 +212,6 @@ allCardRows.forEach(($row, i) => {
     // no status phrase for this machine -- drop the badge row rather than
     // show an empty blue pill, and move its top spacing onto the name row
     // so the card doesn't look cramped underneath the photo
-    // .closest("tr") from the status <p> would stop at the small badge
-    // table's own single-row <tr>, not the outer card row -- go via the
-    // outer "esd-block-text" td first.
-    const $statusRow = $row.find('p:contains("[MACHINE_1_STATUS]")').closest("td.esd-block-text").closest("tr");
     if (m.status) {
       replaceTextIn($row, "[MACHINE_1_STATUS]", m.status);
     } else {
@@ -193,7 +219,17 @@ allCardRows.forEach(($row, i) => {
       $nameTd.attr("style", $nameTd.attr("style").replace("padding:0 20px;", "padding:18px 20px 0;"));
       $statusRow.remove();
     }
-    replaceTextIn($row, "[MACHINE_1_FEATURES]", featuresText);
+
+    // no "Equipped With" attribute for this machine -- drop the whole
+    // "Features:" row rather than show an empty section, and move its
+    // bottom padding onto the Specifications row so the card doesn't end
+    // abruptly right after the spec text.
+    if (featuresText) {
+      replaceTextIn($row, "[MACHINE_1_FEATURES]", featuresText);
+    } else {
+      $specsTd.attr("style", $specsTd.attr("style").replace("padding:0 20px;", "padding:0 20px 14px;"));
+      $featuresRow.remove();
+    }
   }
 
   // video callout: fill it in if this machine has a video, otherwise

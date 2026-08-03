@@ -3,11 +3,12 @@
 // WOOCOMMERCE_CONSUMER_KEY, WOOCOMMERCE_CONSUMER_SECRET in .env.
 //
 // Returns raw attrLines (Year/Make/Model excluded -- already folded into
-// the name) rather than pre-grouped spec lines, since the two templates
-// split them differently (master-1machine.html wants 3 spec lines + a
-// separate features paragraph; master-newer.html wants 3 combined spec
-// lines and no features section) -- grouping happens per-template in each
-// generator via groupAttrLines() below.
+// the name, "Equipped With" excluded -- returned separately as
+// featuresText) rather than pre-grouped spec lines, since the two
+// templates use them differently (master-1machine.html has a separate
+// "Features:" section sourced only from "Equipped With"; master-newer.html
+// has no separate section, so featuresText gets folded back into one
+// continuous block in the generator).
 
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -41,9 +42,25 @@ export async function lookupMachine(refNumber) {
   const [product] = await res.json();
   if (!product) return null;
 
-  const attrs = (product.attributes || []).filter(
-    (a) => !["Year", "Make", "Model"].includes(a.name)
+  // Salesmen type "N/A" into a required-but-unknown attribute rather than
+  // leaving it blank -- filter those out so "Table Width N/A" never shows.
+  const isNA = (val) => val.trim().toLowerCase() === "n/a";
+
+  const rawAttrs = (product.attributes || []).filter(
+    (a) => !["Year", "Make", "Model"].includes(a.name) && !isNA(a.options.join(", "))
   );
+
+  // "Equipped With" is WooCommerce's actual attribute name for what the
+  // front-end labels "Features:" -- pull it out as its own field instead
+  // of guessing where "specs" end and "features" begin. If it's missing
+  // or N/A, featuresText comes back empty and the generator removes the
+  // whole "Features:" section rather than showing it blank.
+  const equippedWithIndex = rawAttrs.findIndex(
+    (a) => a.name.replace(/:$/, "").trim().toLowerCase() === "equipped with"
+  );
+  const featuresText =
+    equippedWithIndex === -1 ? "" : decodeEntities(rawAttrs[equippedWithIndex].options.join(", "));
+  const attrs = rawAttrs.filter((_, i) => i !== equippedWithIndex);
   const attrLines = attrs.map((a) => decodeEntities(`${a.name} ${a.options.join(", ")}`));
 
   const meta = {};
@@ -54,9 +71,16 @@ export async function lookupMachine(refNumber) {
     yearMakeModel: decodeEntities(product.name),
     type: decodeEntities(stripHtml(product.short_description)),
     price: product.price,
+    // WooCommerce's custom listing-status field (e.g. "in_stock",
+    // "available", "sold", "invoiced") -- distinct from WordPress's own
+    // publish/draft status, which Jill's team doesn't use for this at all
+    // (every listing stays a WP "draft" regardless of sale status). The
+    // generator only proceeds for "in_stock"/"available".
+    status: (product.status || "").toLowerCase(),
     photoUrl: product.images?.[0]?.src || "",
     linkUrl: product.permalink,
     attrLines,
+    featuresText,
     // WooCommerce stores a YouTube link here when the listing has a video
     // (confirmed via meta_data key "product_videos_0_video") -- lets us
     // auto-detect "this machine has a video" instead of Jill telling us.
@@ -110,16 +134,6 @@ async function detectPortrait(imageId, wooCommerceUrl, auth) {
   const media = await res.json();
   const { width, height } = media.media_details || {};
   return Boolean(width && height && height > width);
-}
-
-// Splits attrLines into two continuous, comma-joined strings (no forced
-// line breaks within either one -- Jill asked for the spec text to read as
-// one flowing block instead of choppy <br>-separated chunks). `ratio` is
-// the fraction of attrLines that goes into the first ("Specifications")
-// string; the rest goes into the second ("Features").
-export function splitAttrLines(attrLines, ratio) {
-  const cut = Math.ceil(attrLines.length * ratio);
-  return [attrLines.slice(0, cut).join(", "), attrLines.slice(cut).join(", ")];
 }
 
 // Reorders attrLines so any attribute whose name matches one of

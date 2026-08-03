@@ -4,13 +4,8 @@
   "campaignName": "waterjets-under-15k",
   "machines": [
     {
-      "refNumber": "8075563"
-    },
-    {
-      "refNumber": "8075383"
-    },
-    {
-      "refNumber": "8076783"
+      "refNumber": "8075563",
+      "price": "9999"
     }
   ]
 }
