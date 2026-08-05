@@ -24,7 +24,16 @@
     padding: 7px 16px; border-radius: 20px;
   }
   .headline {
-    margin: 24px 0 8px; font-size: 56px; line-height: 1.05; text-align: center;
+    /* Font-size itself is unchanged from the original design -- this got
+       bigger purely as a side effect of the page rendering at a larger
+       overall scale now (the whole point of the height reduction), same as
+       everything else on the page. Team feedback: at the new scale, the
+       original 56px reads as too dominant/shouty relative to everything
+       around it, unlike the body text (which got an intentional bump on
+       top of the scale increase and reads fine) -- sized down to
+       compensate specifically for that scale increase, landing close to
+       its original on-screen weight. */
+    margin: 24px 0 8px; font-size: 46px; line-height: 1.1; text-align: center;
   }
   .subtitle {
     text-align: center; font-family: var(--kd-font-primary); font-weight: 700; font-size: 16px;
