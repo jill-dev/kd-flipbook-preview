@@ -30,7 +30,18 @@ body { display: flex; flex-direction: column; }
   position: relative; max-height: 100%; max-width: 100%; display: flex; align-items: center; justify-content: center;
   flex: 0 1 auto; aspect-ratio: 1000 / 1100; overflow: hidden;
 }
-.kd-book { position: relative; overflow: hidden; }
+/* Transparent, added over the book only while zoomed in (see
+   ensurePanOverlay() in viewer.js) -- the visible page content is an
+   <iframe>, and pointer events landing on an iframe's own rendered content
+   never reach listeners in this parent document at all, so this overlay is
+   what actually receives the drag-to-pan/pinch-to-zoom gestures. touch-
+   action:none stops the browser's own native touch handling (scroll/zoom)
+   from competing with it for the same touches. */
+.kd-pan-overlay {
+  position: absolute; inset: 0; z-index: 20; touch-action: none; cursor: grab;
+}
+.kd-pan-overlay:active { cursor: grabbing; }
+.kd-book { position: relative; overflow: hidden; transform-origin: center center; }
 .kd-book-loading {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
   font-family: var(--kd-font-primary); color: var(--kd-grey); font-size: 13px; letter-spacing: 1px; text-transform: uppercase;

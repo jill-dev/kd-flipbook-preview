@@ -251,12 +251,134 @@
     }
   });
 
-  zoomInBtn.addEventListener('click', () => setZoom(Math.min(zoom + 0.2, 1.8)));
-  zoomOutBtn.addEventListener('click', () => setZoom(Math.max(zoom - 0.2, 0.6)));
-  function setZoom(z) {
-    zoom = z;
-    bookEl.style.transform = `scale(${zoom})`;
+  // ── Zoom + pan ──────────────────────────────────────────────────────────
+  // `bookEl.style.transform = scale()` alone (the old implementation) was
+  // effectively a dead button: .kd-stage/.kd-book-wrap/.kd-book all clip
+  // overflow (needed for the normal fit-to-screen view), and a CSS
+  // transform doesn't change an element's layout size, so there was no way
+  // to actually reach the parts that scaled off the edge.
+  //
+  // Deliberately not relying on the browser's native pinch-zoom either --
+  // confirmed the real embed (a position:fixed modal on kdauctions.com) is
+  // a well-known case where native mobile pinch-zoom doesn't reliably pan
+  // afterward. This implements drag-to-pan itself instead.
+  //
+  // First attempt at this listened for pointer events directly on
+  // .kd-book-wrap -- confirmed via real event-dispatch testing (not
+  // assumed) that this never fires: the visible page content is a same-
+  // origin <iframe> (see .kd-page-el), and a click/touch landing on
+  // content INSIDE an iframe is dispatched into that iframe's OWN document,
+  // full stop -- it does not bubble into the parent page's DOM at all, by
+  // basic web platform design, regardless of capture phase or
+  // stopPropagation. So the pan/pinch logic needs to run on something that
+  // actually lives in THIS document, on top of the iframe.
+  //
+  // Fix: a transparent overlay, added only while zoom > 1 (removed again at
+  // zoom 1), sitting above the iframe and catching all pointer events
+  // itself. Scoping it to "only while zoomed" (rather than always present)
+  // is deliberate -- at the default zoom, nothing should get in the way of
+  // normal in-page links (e.g. a lot's "Bid Now") or whatever swipe
+  // handling page-flip does on its own; the trade-off (can't click through
+  // to a link while zoomed in) is the same one most image/PDF viewers make.
+  const ZOOM_MIN = 1;
+  const ZOOM_MAX = 3;
+  let panX = 0;
+  let panY = 0;
+  let panOverlay = null;
+
+  function applyZoomTransform() {
+    bookEl.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
   }
+
+  // Keeps the zoomed book from being dragged so far that it leaves a gap
+  // between its edge and the wrap's edge on the other side.
+  function clampPan() {
+    const wrap = bookWrapEl.getBoundingClientRect();
+    const extraX = (wrap.width * (zoom - 1)) / 2;
+    const extraY = (wrap.height * (zoom - 1)) / 2;
+    panX = Math.max(-extraX, Math.min(extraX, panX));
+    panY = Math.max(-extraY, Math.min(extraY, panY));
+  }
+
+  function ensurePanOverlay() {
+    if (panOverlay) return;
+    panOverlay = document.createElement('div');
+    panOverlay.className = 'kd-pan-overlay';
+    bookWrapEl.appendChild(panOverlay);
+
+    const activePointers = new Map();
+    let dragStart = null;
+    let pinchStartDist = null;
+    let pinchStartZoom = 1;
+
+    function pointerList() { return [...activePointers.values()]; }
+    function pointerDistance(pts) { return Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y); }
+
+    panOverlay.addEventListener('pointerdown', (e) => {
+      activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (activePointers.size === 2) {
+        // A 2nd finger landing mid-drag turns this into a pinch -- drop any
+        // single-pointer capture from the first one, it'd otherwise keep
+        // routing that pointer's move events here as if still dragging.
+        if (dragStart) { try { panOverlay.releasePointerCapture(dragStart.pointerId); } catch { /* already released */ } }
+        dragStart = null;
+        pinchStartDist = pointerDistance(pointerList());
+        pinchStartZoom = zoom;
+      } else if (activePointers.size === 1) {
+        dragStart = { x: e.clientX, y: e.clientY, panX, panY, pointerId: e.pointerId };
+        // setPointerCapture keeps receiving this pointer's move/up events
+        // even if it drifts outside the overlay's bounds mid-drag -- only
+        // valid for a pointer that's actually down (single-finger case),
+        // and synthetic/edge-case pointers can still reject it, so this
+        // stays best-effort rather than something a real drag depends on.
+        try { panOverlay.setPointerCapture(e.pointerId); } catch { /* not critical */ }
+      }
+    });
+
+    panOverlay.addEventListener('pointermove', (e) => {
+      if (!activePointers.has(e.pointerId)) return;
+      activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+      if (activePointers.size === 2 && pinchStartDist) {
+        setZoom(pinchStartZoom * (pointerDistance(pointerList()) / pinchStartDist));
+      } else if (activePointers.size === 1 && dragStart) {
+        panX = dragStart.panX + (e.clientX - dragStart.x);
+        panY = dragStart.panY + (e.clientY - dragStart.y);
+        clampPan();
+        applyZoomTransform();
+      }
+    });
+
+    function endPointer(e) {
+      activePointers.delete(e.pointerId);
+      if (activePointers.size < 2) pinchStartDist = null;
+      if (activePointers.size < 1) dragStart = null;
+    }
+    panOverlay.addEventListener('pointerup', endPointer);
+    panOverlay.addEventListener('pointercancel', endPointer);
+    panOverlay.addEventListener('dblclick', () => setZoom(ZOOM_MIN));
+  }
+
+  function removePanOverlay() {
+    if (!panOverlay) return;
+    panOverlay.remove();
+    panOverlay = null;
+  }
+
+  function setZoom(z) {
+    zoom = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, z));
+    if (zoom === ZOOM_MIN) { panX = 0; panY = 0; }
+    clampPan();
+    applyZoomTransform();
+    bookWrapEl.classList.toggle('kd-zoomed', zoom > ZOOM_MIN);
+    zoomOutBtn.disabled = zoom <= ZOOM_MIN;
+    zoomInBtn.disabled = zoom >= ZOOM_MAX;
+    if (zoom > ZOOM_MIN) ensurePanOverlay();
+    else removePanOverlay();
+  }
+
+  zoomInBtn.addEventListener('click', () => setZoom(zoom + 0.5));
+  zoomOutBtn.addEventListener('click', () => setZoom(zoom - 0.5));
 
   fullscreenBtn.addEventListener('click', () => {
     if (document.fullscreenElement) {
