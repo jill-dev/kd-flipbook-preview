@@ -22,7 +22,12 @@ body { display: flex; flex-direction: column; }
   min-height: 0; position: relative; padding: 12px; overflow: hidden;
 }
 .kd-book-wrap {
-  position: relative; height: 100%; max-height: 100%; display: flex; align-items: center; justify-content: center;
+  /* max-height/max-width (not a definite height) let the aspect-ratio box
+     shrink to whichever of the two is tighter — on narrow phone screens
+     that's width, not height. A definite `height: 100%` here would size the
+     box from height alone and let it overflow off the sides of the screen
+     with no way to shrink (that was the mobile overflow/cropping bug). */
+  position: relative; max-height: 100%; max-width: 100%; display: flex; align-items: center; justify-content: center;
   flex: 0 1 auto; aspect-ratio: 1000 / 1294; overflow: hidden;
 }
 .kd-book { position: relative; overflow: hidden; }

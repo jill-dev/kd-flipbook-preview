@@ -6,6 +6,7 @@
   const outputBase = `../output/${slug}`;
 
   const bookEl = document.getElementById('book');
+  const bookWrapEl = document.querySelector('.kd-book-wrap');
   const loadingEl = document.getElementById('loading');
   const titleEl = document.getElementById('auctionTitle');
   const pageNumEl = document.getElementById('pageNum');
@@ -92,27 +93,29 @@
       bookEl.appendChild(pageEl);
     });
 
+    // minWidth/minHeight decide a width threshold (2x minWidth) below which
+    // the library forces single-page "portrait" mode, AND become a hard CSS
+    // floor it forces via inline style on the book element — so a fixed
+    // 500/647 (fine on desktop) forces the book wider than the screen on any
+    // phone under ~500px, which then just gets cropped by .kd-book-wrap's
+    // overflow:hidden. Measure the actual space .kd-book-wrap has right now
+    // (already correctly fit-to-screen by its CSS, see viewer.css) and use
+    // that as the floor instead, capped at the page's native 1000x1294 so it
+    // never upscales past native res on large monitors either. Since the
+    // floor is then always ~equal to the real available width, "e < 2x
+    // minWidth" stays true regardless of device size, so this still always
+    // renders single-page rather than flipping into a double-page spread.
+    const wrapBox = bookWrapEl.getBoundingClientRect();
+    const fitWidth = Math.min(PAGE_W, Math.max(200, Math.floor(wrapBox.width)));
+    const fitHeight = Math.min(PAGE_H, Math.max(260, Math.floor(wrapBox.height)));
+
     pageFlip = new St.PageFlip(bookEl, {
       width: PAGE_W,
       height: PAGE_H,
       size: 'stretch',
-      // minWidth/minHeight also decide a width threshold (2x minWidth) below
-      // which the library forces single-page "portrait" mode; keeping it low
-      // let it flip into double-page "spread" mode on any normal-width
-      // window and silently render each page at half size. Set close to
-      // maxWidth so it always treats this as a single-page book.
-      //
-      // Don't raise maxWidth past the page's native 1000x1294 to get a
-      // "bigger" book: minWidth also becomes a hard CSS floor on the
-      // rendered size (the library forces it via inline style), so pushing
-      // both up to allow bigger-than-native rendering on large monitors
-      // instead forces overflow/clipping on completely ordinary window
-      // sizes — confirmed by testing at 1600x1000, ostensibly a big window,
-      // where the book still only has ~665px to work with once the chrome
-      // (topbar/bottombar/padding) is subtracted, well under a 900px floor.
-      minWidth: 500,
+      minWidth: fitWidth,
       maxWidth: PAGE_W,
-      minHeight: 647,
+      minHeight: fitHeight,
       maxHeight: PAGE_H,
       maxShadowOpacity: 0.4,
       showCover: true,
