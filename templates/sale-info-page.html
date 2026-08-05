@@ -76,10 +76,12 @@
             <p class="label">International Bidders</p>
             <p class="body">{{linkify saleInfo.internationalBidders}}</p>
           </div>
+          {{#if saleInfo.salesTax}}
           <div class="block">
             <p class="label">Sales Tax</p>
             <p class="body">{{linkify saleInfo.salesTax}}</p>
           </div>
+          {{/if}}
         </div>
         <div class="col">
           <div class="block">
