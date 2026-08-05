@@ -87,6 +87,50 @@ function chunk(arr, size) {
   return out;
 }
 
+// lotsPerPage alone isn't safe: a lot with an unusually long description
+// (some real KD Auctions lots run 500+ characters of spec dump) can wrap to
+// 8-10 lines and blow well past a fixed row count's height budget, silently
+// clipping the rest of that page's rows off-screen (verified: a real,
+// already-published south-bend page was already doing this in production
+// before this existed at all -- overflowing by 71px even at the old, taller
+// page size). Pack lots per page by an actual measured height budget,
+// treating lotsPerPage as a maximum-per-page cap on top of that, not a
+// guarantee. Row-height numbers below are calibrated against real rendered
+// output (see templates/lot-page.html's .desc styling) -- deliberately
+// biased to slightly OVER-estimate height (safer to break to a new page a
+// little early than to risk clipping real lot content).
+const LOT_TABLE_BUDGET = 890; // px available for <table class="lots"> within the page's .inner (measured)
+const LOT_ROW_MIN_HEIGHT = 123; // photo-bound row height (short/no description)
+const LOT_ROW_DESC_CHARS_PER_PX = 1 / 0.46; // calibrated from real rendered rows
+const LOT_ROW_DESC_OFFSET = 20;
+const LOCATION_BADGE_HEIGHT = 60;
+
+function estimateLotRowHeight(description) {
+  const len = (description || '').length;
+  const descBound = len / LOT_ROW_DESC_CHARS_PER_PX - LOT_ROW_DESC_OFFSET;
+  return Math.max(LOT_ROW_MIN_HEIGHT, descBound);
+}
+
+function packLotsIntoPages(lots, maxPerPage) {
+  const pages = [];
+  let current = [];
+  let currentHeight = 0;
+  for (const lot of lots) {
+    const rowHeight = estimateLotRowHeight(lot.description) + (lot.locationChanged ? LOCATION_BADGE_HEIGHT : 0);
+    const wouldOverflow = current.length > 0 && currentHeight + rowHeight > LOT_TABLE_BUDGET;
+    const wouldExceedCap = current.length >= maxPerPage;
+    if (wouldOverflow || wouldExceedCap) {
+      pages.push(current);
+      current = [];
+      currentHeight = 0;
+    }
+    current.push(lot);
+    currentHeight += rowHeight;
+  }
+  if (current.length) pages.push(current);
+  return pages;
+}
+
 async function main() {
   const exampleArg = process.argv[2];
   if (!exampleArg) {
@@ -142,7 +186,7 @@ async function main() {
 
   // Lot pages
   const lotPageTpl = loadTemplate('lot-page');
-  const lotChunks = chunk(lots, auction.lotsPerPage || 6);
+  const lotChunks = packLotsIntoPages(lots, auction.lotsPerPage || 6);
   lotChunks.forEach((lotsOnPage, idx) => {
     const pageNumber = idx + 1;
     const html = lotPageTpl({

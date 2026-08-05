@@ -28,7 +28,7 @@ body { display: flex; flex-direction: column; }
      box from height alone and let it overflow off the sides of the screen
      with no way to shrink (that was the mobile overflow/cropping bug). */
   position: relative; max-height: 100%; max-width: 100%; display: flex; align-items: center; justify-content: center;
-  flex: 0 1 auto; aspect-ratio: 1000 / 1294; overflow: hidden;
+  flex: 0 1 auto; aspect-ratio: 1000 / 1100; overflow: hidden;
 }
 .kd-book { position: relative; overflow: hidden; }
 .kd-book-loading {
@@ -42,7 +42,7 @@ body { display: flex; flex-direction: column; }
    the page element (see --kd-page-scale, set by viewer.js). */
 .kd-page-el { background: var(--kd-bg); overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); position: relative; }
 .kd-page-el iframe {
-  width: 1000px; height: 1294px; border: 0; display: block; background: var(--kd-bg);
+  width: 1000px; height: 1100px; border: 0; display: block; background: var(--kd-bg);
   transform: scale(var(--kd-page-scale, 0.26)); transform-origin: top left;
 }
 /* Kept narrow (< the ~44px/4.4% inner margin every page template uses) so
@@ -88,11 +88,11 @@ body { display: flex; flex-direction: column; }
    above (author styles win cascade ties) — force it explicitly instead. */
 .kd-thumbrail[hidden] { display: none; }
 .kd-thumb {
-  flex: 0 0 auto; width: 80px; aspect-ratio: 1000 / 1294; border-radius: 4px; overflow: hidden; cursor: pointer;
+  flex: 0 0 auto; width: 80px; aspect-ratio: 1000 / 1100; border-radius: 4px; overflow: hidden; cursor: pointer;
   border: 2px solid transparent; background: #0f0f0f; position: relative;
 }
 .kd-thumb.active { border-color: var(--kd-yellow); }
-.kd-thumb iframe { width: 1000px; height: 1294px; transform: scale(0.08); transform-origin: top left; border: 0; pointer-events: none; }
+.kd-thumb iframe { width: 1000px; height: 1100px; transform: scale(0.08); transform-origin: top left; border: 0; pointer-events: none; }
 .kd-thumb .num {
   position: absolute; bottom: 2px; right: 4px; font-family: var(--kd-font-primary); font-size: 9px; color: var(--kd-yellow);
   background: rgba(0,0,0,0.6); padding: 1px 4px; border-radius: 3px;
@@ -100,7 +100,13 @@ body { display: flex; flex-direction: column; }
 
 @media (max-width: 720px) {
   .kd-topbar-title { display: none; }
-  .kd-arrow { width: 34px; height: 34px; font-size: 13px; }
+  /* The prev/next arrows plus their gaps eat ~25-30% of a phone's width --
+     on a screen that narrow, every pixel reclaimed here goes straight into
+     making the book (and its text) bigger. Page navigation still works via
+     the tap-to-flip edge zones on the page itself (see .kd-edge-zone) and
+     page-flip's own built-in swipe support -- neither depends on these
+     buttons being visible, so hiding them costs no functionality here. */
+  .kd-arrow { display: none; }
   .kd-bottombar { padding: 0 8px; }
   .kd-icon-btn span.label { display: none; }
 }

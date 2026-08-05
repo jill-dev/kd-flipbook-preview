@@ -23,7 +23,13 @@
   const bidNowLink = document.getElementById('bidNowLink');
 
   const PAGE_W = 1000;
-  const PAGE_H = 1294;
+  // Was 1294 (portrait-ish, 1000:1294) -- on a typical wide-but-short browser
+  // window or phone screen, that shape forces the book to be height-
+  // constrained, rendering everything (including all body text) at a much
+  // smaller scale than the available width would otherwise allow. 1100
+  // keeps every template's actual content comfortably on-page (verified,
+  // see templates/*.html) while meaningfully closing that gap.
+  const PAGE_H = 1100;
 
   let pageFlip = null;
   let zoom = 1;
