@@ -9,6 +9,30 @@ This is a **standalone prototype** — it runs on your own computer for now,
 not yet plugged into the live kdauctions.com site (that's the next phase,
 once we're happy with the design and have access to that codebase).
 
+## October 2026 rebuild: readability
+
+The first version was shelved because the text was too small to read. The
+cause: pages were 1000x1100 portrait with 16px text and 150px thumbnails, and
+the viewer shrank each page to ~55-70% to fit a normal screen, so lot
+descriptions showed at about 9-11px. What changed:
+
+- **Landscape pages (1400x900)** shaped like a screen, so the viewer barely
+  shrinks them (~84% on a 1440x900 laptop, ~100% on a 1080p monitor).
+- **Lot cards, 3 across, 2 rows**: big photo with a yellow LOT # badge and a
+  Bid button, and 22px description text underneath, about 18-19px on screen
+  versus 11px before.
+- **Nothing ever gets cut off**: generate.js measures every description with
+  the real fonts and only puts two rows on a page when they fit, then sizes
+  the photos to use the space. `check-pages.js` re-opens every page afterwards
+  and flags anything that runs off the page.
+- **Lot List & Search** in the viewer: a scrolling list of every lot with
+  big text, searchable (e.g. "Mazak", "CMM", "vise"). It opens by default on
+  phones, where any flipbook page is too small to read.
+- **Go to lot #** box, clickable featured lots on the cover, and shareable
+  links that open on a lot: `viewer/index.html?auction=logan#lot-170`
+- Fonts (Montserrat + Work Sans) are now bundled in `brand/fonts/`, so pages
+  look the same everywhere, including offline and in the PDF.
+
 ## See it working
 
 1. Open a terminal in this folder (`flipbook-system/`)
@@ -30,8 +54,10 @@ For a new auction, you need three things in a new folder under `examples/`
 1. **`auction.json`** — the auction's details: title, subtitle, closing
    date/time, locations, contact info, the Bid Now link, and which lots to
    feature on the cover. Plain text file, just edit the values.
-2. **`lots.csv`** — your lot list, with exactly these columns:
-   `Lot #, Location, Photo, Description`
+2. **`lots.csv`** — your lot list, with these columns:
+   `Lot #, Location, Photo, Title, Description`
+   (`Title` is optional; it's used for the search box only. The cards show
+   `Description`.)
    - `Location` — only needed if the sale spans more than one site (like
      South Bend/Winter Springs); leave it blank/same for a single-location
      sale.
@@ -44,6 +70,10 @@ For a new auction, you need three things in a new folder under `examples/`
      the cell.
 3. **`photos/`** — the actual image files referenced by `lots.csv`, plus any
    extra photos used in `auction.json`'s `featuredLots` for the cover.
+
+For Logan, `lots.csv` was made straight from the Lot List Master Form
+(Lot # / TITLE / Description columns) and the photos are the `_first photos`
+folder (`1.jpg`, `2.jpg`, ...), one main photo per lot.
 
 Then generate it:
 
@@ -93,10 +123,13 @@ That builds `output/<slug>/` — the HTML pages, a `manifest.json`, and
 ```
 flipbook-system/
   brand/              KD logos, brand.css (colors/fonts), track.js (click tracking)
-  templates/          cover.html, lot-page.html, closing-page.html — the "fillable" templates
-  generate.js         auction.json + lots.csv -> output/<slug>/pages/*.html
+  templates/          cover.html, sale-info-page.html, lot-page.html, closing-page.html
+  generate.js         auction.json + lots.csv -> output/<slug>/pages/*.html (+ runs the page check)
+  check-pages.js      opens every generated page and reports anything cut off / missing photos
+  browser.js          shared headless-Chrome launcher (set KD_CHROMIUM_PATH to use a different Chrome)
   export-pdf.js       output/<slug>/pages -> output/<slug>/catalog.pdf
   viewer/             the page-flip viewer app (index.html/viewer.js/viewer.css)
-  examples/south-bend/  a real example, built from actual KD Auctions data
+  examples/logan/     Logan, UT 84321: 511 lots, rebuilt with the new readable layout
+  examples/south-bend/, examples/portland/  older examples (regenerate to get the new layout)
   output/             generated results (not checked in — regenerate anytime)
 ```

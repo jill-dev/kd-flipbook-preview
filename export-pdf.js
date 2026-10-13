@@ -8,7 +8,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { chromium } = require('playwright');
+const launchBrowser = require('./browser');
 const { PDFDocument } = require('pdf-lib');
 
 async function main() {
@@ -27,18 +27,24 @@ async function main() {
     process.exit(1);
   }
 
-  const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1000, height: 1294 } });
+  // Page size comes from the manifest generate.js wrote (1400x900 landscape now)
+  const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'output', auction.slug, 'manifest.json'), 'utf8'));
+  const W = manifest.pageWidth || 1000;
+  const H = manifest.pageHeight || 1100;
+
+  const browser = await launchBrowser();
+  const page = await browser.newPage({ viewport: { width: W, height: H } });
 
   const merged = await PDFDocument.create();
   for (const file of files) {
     const fileUrl = 'file://' + path.join(pagesDir, file).replace(/\\/g, '/');
     await page.goto(fileUrl, { waitUntil: 'networkidle' });
-    const pdfBytes = await page.pdf({ width: '1000px', height: '1294px', printBackground: true, margin: { top: 0, bottom: 0, left: 0, right: 0 } });
+    await page.evaluate(() => document.fonts.ready);
+    const pdfBytes = await page.pdf({ width: `${W}px`, height: `${H}px`, printBackground: true, margin: { top: 0, bottom: 0, left: 0, right: 0 } });
     const doc = await PDFDocument.load(pdfBytes);
     const [copiedPage] = await merged.copyPages(doc, [0]);
     merged.addPage(copiedPage);
-    console.log('  +', file);
+    process.stdout.write('.');
   }
 
   await browser.close();

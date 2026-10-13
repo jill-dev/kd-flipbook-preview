@@ -2,23 +2,24 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
 <link rel="stylesheet" href="../../../brand/brand.css" />
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
   .sheet {
-    width: 1000px; height: 1100px; position: relative; overflow: hidden;
+    width: 1400px; height: 900px; position: relative; overflow: hidden;
     display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
     background: radial-gradient(120% 90% at 50% 100%, #262624 0%, var(--kd-bg) 55%);
   }
-  img.logo { height: 90px; width: auto; margin-bottom: 26px; }
-  h2 { font-size: 30px; margin: 0 0 14px; }
-  p.tag { font-family: var(--kd-font-primary); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--kd-grey); font-size: 15px; margin: 0 0 40px; }
+  img.logo { height: 110px; width: auto; margin-bottom: 26px; }
+  h2 { font-size: 42px; margin: 0 0 14px; }
+  p.tag { font-family: var(--kd-font-primary); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--kd-grey); font-size: 19px; margin: 0 0 40px; }
   .cta { margin-bottom: 46px; }
-  .contact { font-family: var(--kd-font-secondary); color: var(--kd-grey-2); font-size: 16px; line-height: 1.8; }
+  .contact { font-family: var(--kd-font-secondary); color: var(--kd-grey-2); font-size: 22px; line-height: 1.7; }
   .contact b { color: #fff; }
-  .site { margin-top: 30px; font-family: var(--kd-font-primary); font-weight: 900; font-size: 24px; letter-spacing: 2px; color: var(--kd-yellow); }
+  .site { margin-top: 30px; font-family: var(--kd-font-primary); font-weight: 900; font-size: 30px; letter-spacing: 2px; color: var(--kd-yellow); }
+  .kd-btn.big { font-size: 20px; padding: 16px 36px; border-radius: 10px; }
 </style>
 </head>
 <body>
@@ -27,7 +28,7 @@
     <h2 class="kd-heading">See the Full Catalog Online</h2>
     <p class="tag">Bid from anywhere &mdash; every lot, every photo, every detail</p>
     <div class="cta">
-      <a class="kd-btn" href="{{bidUrl}}" target="_blank" rel="noopener" data-kd-track="bid_now">Bid Now &#8594;</a>
+      <a class="kd-btn big" href="{{bidUrl}}" target="_blank" rel="noopener" data-kd-track="bid_now">Bid Now &#8594;</a>
     </div>
     <div class="contact">
       <b>{{contact.name}}</b><br />

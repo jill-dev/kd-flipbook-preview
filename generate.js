@@ -11,18 +11,21 @@ const path = require('path');
 const Handlebars = require('handlebars');
 const { parse } = require('csv-parse/sync');
 const sharp = require('sharp');
+const { pathToFileURL } = require('url');
 
 // Source photos (phone camera exports, etc.) commonly run 3000-4000px wide
 // and several MB each, but nothing in these templates ever displays a photo
 // wider than the page itself (1000px) — full-size originals only bloat page
 // load time and catalog.pdf (a 75-lot auction's PDF hit ~780MB before this).
 // Downscale + re-compress on the way into output/, once, here.
-const PHOTO_MAX_WIDTH = 1600;
+// Lot cards show photos at most ~430px wide; 900px covers high-DPI screens
+// and viewer zoom while keeping the page loads and catalog.pdf a sane size.
+const PHOTO_MAX_WIDTH = 900;
 
 async function copyPhotoResized(srcPath, destPath) {
   const ext = path.extname(srcPath).toLowerCase();
-  let img = sharp(srcPath).rotate().resize({ width: PHOTO_MAX_WIDTH, withoutEnlargement: true });
-  if (ext === '.jpg' || ext === '.jpeg') img = img.jpeg({ quality: 82 });
+  let img = sharp(srcPath).rotate().resize({ width: PHOTO_MAX_WIDTH, height: PHOTO_MAX_WIDTH, fit: 'inside', withoutEnlargement: true });
+  if (ext === '.jpg' || ext === '.jpeg') img = img.jpeg({ quality: 78, mozjpeg: true });
   else if (ext === '.png') img = img.png({ quality: 82 });
   await img.toFile(destPath);
 }
@@ -52,19 +55,22 @@ function loadTemplate(name) {
 function loadLots(csvPath, lotLinks) {
   const raw = fs.readFileSync(csvPath, 'utf8');
   const rows = parse(raw, { columns: true, skip_empty_lines: true, trim: true });
-  let prevLocation = null;
   return rows.map((row) => {
-    const location = row['Location'] || '';
-    // Blank Location = single-location sale — never show the location badge.
-    const locationChanged = location !== '' && location !== prevLocation;
-    prevLocation = location;
-    const photo = row['Photo'] ? `../photos/${row['Photo']}` : '';
+    const location = (row['Location'] || '').trim();
+    // Blank Location = single-location sale — never show the location tag.
+    // Multi-location sales tag every card (cards are read individually,
+    // not as a running list, so "first of a new location" isn't enough).
+    const showLocation = location !== '';
+    const photoFile = (row['Photo'] || '').trim();
+    const photo = photoFile ? `../photos/${photoFile}` : '';
     return {
       lot: row['Lot #'],
       location,
-      locationChanged,
+      showLocation,
       photo,
-      description: row['Description'] || '',
+      photoFile,
+      title: (row['Title'] || '').replace(/\s+/g, ' ').trim(),
+      description: (row['Description'] || row['Title'] || '').replace(/\s+/g, ' ').trim(),
       // Direct link to this lot's own listing (e.g. on BidSpotter), when we
       // have one — falls back to the auction's general bidUrl in the template.
       bidUrl: lotLinks[row['Lot #']] || null,
@@ -81,53 +87,96 @@ function loadLotLinks(exampleDir) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+// ── Page geometry ───────────────────────────────────────────────────────
+// Landscape pages sized like a screen, so the viewer barely has to shrink
+// them (the old 1000x1100 portrait pages got scaled to ~55-70% on a normal
+// monitor, which is why the text read as tiny). Keep these in sync with
+// templates/*.html (.sheet width/height) -- they're also written into
+// manifest.json so the viewer and export-pdf.js pick them up automatically.
+const PAGE_W = 1400;
+const PAGE_H = 900;
+
+// Lot page layout numbers (must match templates/lot-page.html).
+const LOT_COLS = 3;
+const CARD_W = Math.floor((PAGE_W - 36 * 2 - 22 * (LOT_COLS - 1)) / LOT_COLS); // grid padding + column gaps
+const GRID_BUDGET = PAGE_H - 5 - 68 - 50 - 18 - 12; // gradient bar, header, footer, grid top padding, breathing room
+const ROW_GAP = 18;
+const CARD_CHROME = 3 + 2; // photo's yellow bottom border + card border
+const PHOTO_MAX_TWO_ROWS = 285;
+const PHOTO_MIN_TWO_ROWS = 165; // below this, photos get too small -- give the row its own page instead
+const PHOTO_MAX_ONE_ROW = 360;
+
+// Measure every lot's description block at the real card width with the
+// real (bundled) fonts in a headless browser -- exact, so nothing can ever
+// get clipped. Falls back to a conservative estimate if Playwright/Chromium
+// isn't available on this machine.
+async function measureDescriptions(lots) {
+  const tpl = fs.readFileSync(path.join(__dirname, 'templates', 'lot-page.html'), 'utf8');
+  const pageCss = tpl.match(/<style>([\s\S]*?)<\/style>/)[1];
+  const body = lots.map((l, i) =>
+    `<div class="card" style="width:${CARD_W}px"><div class="desc" data-i="${i}">${
+      l.showLocation ? `<span class="loc">${Handlebars.escapeExpression(l.location)}</span><br />` : ''
+    }${Handlebars.escapeExpression(l.description)}</div></div>`).join('');
+  // Written next to brand/ and loaded as a real file (not setContent) so the
+  // bundled fonts actually load -- measuring with a fallback font is wrong.
+  const measureFile = path.join(__dirname, 'brand', '_measure.html');
+  const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="brand.css"><style>${pageCss}</style></head><body class="kd-page">${body}</body></html>`;
+  fs.writeFileSync(measureFile, html);
+  let browser;
+  try {
+    browser = await require('./browser')();
+    const page = await browser.newPage();
+    await page.goto(pathToFileURL(measureFile).href, { waitUntil: 'load' });
+    await page.evaluate(() => document.fonts.ready);
+    const fontsOk = await page.evaluate(() => document.fonts.check('500 22px "Work Sans"'));
+    if (!fontsOk) throw new Error('brand fonts did not load');
+    const heights = await page.$$eval('.desc', (els) => els.map((e) => Math.ceil(e.getBoundingClientRect().height)));
+    console.log(`Measured ${heights.length} lot descriptions.`);
+    return heights;
+  } catch (err) {
+    console.warn('! Could not measure text in a browser (' + err.message.split('\n')[0] + ') -- using a safe estimate instead.');
+    return lots.map((l) => {
+      const chars = l.description.length + (l.showLocation ? 40 : 0);
+      const lines = Math.max(1, Math.ceil(chars / 28)); // deliberately pessimistic (~33 fit in practice)
+      return 28 + lines * 32;
+    });
+  } finally {
+    if (browser) await browser.close();
+    fs.rmSync(measureFile, { force: true });
+  }
+}
+
+// Zero-padded to 3 digits so files sort in page order even past 99 pages
+// (with 2 digits, "100-..." sorted before "11-..." in the PDF export).
+const pageName = (n) => String(n).padStart(3, '0');
+
 function chunk(arr, size) {
   const out = [];
   for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
   return out;
 }
 
-// lotsPerPage alone isn't safe: a lot with an unusually long description
-// (some real KD Auctions lots run 500+ characters of spec dump) can wrap to
-// 8-10 lines and blow well past a fixed row count's height budget, silently
-// clipping the rest of that page's rows off-screen (verified: a real,
-// already-published south-bend page was already doing this in production
-// before this existed at all -- overflowing by 71px even at the old, taller
-// page size). Pack lots per page by an actual measured height budget,
-// treating lotsPerPage as a maximum-per-page cap on top of that, not a
-// guarantee. Row-height numbers below are calibrated against real rendered
-// output (see templates/lot-page.html's .desc styling) -- deliberately
-// biased to slightly OVER-estimate height (safer to break to a new page a
-// little early than to risk clipping real lot content).
-const LOT_TABLE_BUDGET = 890; // px available for <table class="lots"> within the page's .inner (measured)
-const LOT_ROW_MIN_HEIGHT = 123; // photo-bound row height (short/no description)
-const LOT_ROW_DESC_CHARS_PER_PX = 1 / 0.46; // calibrated from real rendered rows
-const LOT_ROW_DESC_OFFSET = 20;
-const LOCATION_BADGE_HEIGHT = 60;
-
-function estimateLotRowHeight(description) {
-  const len = (description || '').length;
-  const descBound = len / LOT_ROW_DESC_CHARS_PER_PX - LOT_ROW_DESC_OFFSET;
-  return Math.max(LOT_ROW_MIN_HEIGHT, descBound);
-}
-
-function packLotsIntoPages(lots, maxPerPage) {
+// Lots go into rows of 3 (in lot order), and each page holds two rows when
+// their text leaves room for decent-sized photos, otherwise one row. The
+// photo height is then stretched/shrunk per page to use the space exactly.
+function packRowsIntoPages(lots, heights) {
+  const rows = chunk(lots.map((l, i) => ({ ...l, descH: heights[i] })), LOT_COLS)
+    .map((r) => ({ lots: r, textH: Math.max(...r.map((l) => l.descH)) }));
   const pages = [];
-  let current = [];
-  let currentHeight = 0;
-  for (const lot of lots) {
-    const rowHeight = estimateLotRowHeight(lot.description) + (lot.locationChanged ? LOCATION_BADGE_HEIGHT : 0);
-    const wouldOverflow = current.length > 0 && currentHeight + rowHeight > LOT_TABLE_BUDGET;
-    const wouldExceedCap = current.length >= maxPerPage;
-    if (wouldOverflow || wouldExceedCap) {
-      pages.push(current);
-      current = [];
-      currentHeight = 0;
+  for (let i = 0; i < rows.length; i++) {
+    const a = rows[i];
+    const b = rows[i + 1];
+    if (b) {
+      const photo = Math.floor((GRID_BUDGET - ROW_GAP - a.textH - b.textH) / 2 - CARD_CHROME);
+      if (photo >= PHOTO_MIN_TWO_ROWS) {
+        pages.push({ lots: [...a.lots, ...b.lots], photoHeight: Math.min(PHOTO_MAX_TWO_ROWS, photo) });
+        i++;
+        continue;
+      }
     }
-    current.push(lot);
-    currentHeight += rowHeight;
+    const photo = Math.floor(GRID_BUDGET - a.textH - CARD_CHROME);
+    pages.push({ lots: a.lots, photoHeight: Math.max(120, Math.min(PHOTO_MAX_ONE_ROW, photo)) });
   }
-  if (current.length) pages.push(current);
   return pages;
 }
 
@@ -172,37 +221,43 @@ async function main() {
 
   // Cover page
   const coverTpl = loadTemplate('cover');
-  fs.writeFileSync(path.join(outDir, '01-cover.html'), coverTpl(auction));
-  pages.push({ file: '01-cover.html', kind: 'cover' });
+  fs.writeFileSync(path.join(outDir, `${pageName(1)}-cover.html`), coverTpl(auction));
+  pages.push({ file: `${pageName(1)}-cover.html`, kind: 'cover' });
 
   // Important sale info page (terms, removal logistics, riggers) — always
   // page 2, right after the cover — optional
   if (auction.saleInfo) {
     const saleInfoTpl = loadTemplate('sale-info-page');
-    const saleInfoFile = `${String(pages.length + 1).padStart(2, '0')}-sale-info.html`;
+    const saleInfoFile = `${pageName(pages.length + 1)}-sale-info.html`;
     fs.writeFileSync(path.join(outDir, saleInfoFile), saleInfoTpl(auction));
     pages.push({ file: saleInfoFile, kind: 'sale-info' });
   }
 
   // Lot pages
   const lotPageTpl = loadTemplate('lot-page');
-  const lotChunks = packLotsIntoPages(lots, auction.lotsPerPage || 6);
-  lotChunks.forEach((lotsOnPage, idx) => {
+  const heights = await measureDescriptions(lots);
+  const lotPages = packRowsIntoPages(lots, heights);
+  const lotPageIndex = {}; // lot # -> 0-based page index in the flipbook
+  lotPages.forEach((pg, idx) => {
     const pageNumber = idx + 1;
     const html = lotPageTpl({
       ...auction,
-      lots: lotsOnPage,
+      lots: pg.lots,
+      photoHeight: pg.photoHeight,
+      firstLot: pg.lots[0].lot,
+      lastLot: pg.lots[pg.lots.length - 1].lot,
       pageNumber,
-      pageCount: lotChunks.length,
+      pageCount: lotPages.length,
     });
-    const fname = `${String(pages.length + 1).padStart(2, '0')}-lots-${pageNumber}.html`;
+    pg.lots.forEach((l) => { lotPageIndex[l.lot] = pages.length; });
+    const fname = `${pageName(pages.length + 1)}-lots-${pageNumber}.html`;
     fs.writeFileSync(path.join(outDir, fname), html);
     pages.push({ file: fname, kind: 'lots' });
   });
 
   // Closing page
   const closingTpl = loadTemplate('closing-page');
-  const closingFile = `${String(pages.length + 1).padStart(2, '0')}-closing.html`;
+  const closingFile = `${pageName(pages.length + 1)}-closing.html`;
   fs.writeFileSync(path.join(outDir, closingFile), closingTpl(auction));
   pages.push({ file: closingFile, kind: 'closing' });
 
@@ -212,7 +267,12 @@ async function main() {
   const srcPhotos = path.join(exampleDir, 'photos');
   if (fs.existsSync(srcPhotos)) {
     for (const f of fs.readdirSync(srcPhotos)) {
-      await copyPhotoResized(path.join(srcPhotos, f), path.join(outPhotos, f));
+      const src = path.join(srcPhotos, f);
+      const dest = path.join(outPhotos, f);
+      if (!/\.(jpe?g|png|webp)$/i.test(f)) continue;
+      // Skip photos already resized on an earlier run (big time saver on 500-lot sales)
+      if (fs.existsSync(dest) && fs.statSync(dest).mtimeMs >= fs.statSync(src).mtimeMs) continue;
+      await copyPhotoResized(src, dest);
     }
   }
 
@@ -222,14 +282,42 @@ async function main() {
     title: auction.title,
     siteUrl: auction.siteUrl,
     measurementId: auction.measurementId,
+    bidUrl: auction.bidUrl,
+    pageWidth: PAGE_W,
+    pageHeight: PAGE_H,
     pages: pages.map((p) => `pages/${p.file}`),
+    // For the viewer's "Go to lot" box and the searchable lot list
+    lots: lots.map((l) => ({
+      lot: l.lot,
+      title: l.title && l.title !== l.description ? l.title : undefined, // searched, not shown
+      description: l.description,
+      location: l.location || undefined,
+      photo: l.photoFile ? `photos/${l.photoFile}` : null,
+      bidUrl: l.bidUrl || undefined,
+      page: lotPageIndex[l.lot],
+    })),
   };
   fs.writeFileSync(
     path.join(__dirname, 'output', auction.slug, 'manifest.json'),
     JSON.stringify(manifest, null, 2)
   );
 
+  const twoRow = lotPages.filter((p) => p.lots.length > LOT_COLS).length;
+  console.log(`${lots.length} lots on ${lotPages.length} lot pages (${twoRow} with 6 lots, ${lotPages.length - twoRow} with 3 or fewer).`);
   console.log(`Generated ${pages.length} pages for "${auction.slug}" -> output/${auction.slug}/`);
+
+  // Final safety check: open every page and make sure nothing got cut off
+  try {
+    const problems = await require('./check-pages')(auction.slug);
+    if (problems.length) {
+      console.warn(`\n! ${problems.length} layout problem(s):\n  ` + problems.join('\n  '));
+      process.exitCode = 1;
+    } else {
+      console.log('Checked every page: nothing cut off, all photos present.');
+    }
+  } catch (err) {
+    console.warn('(Skipped the page check -- no headless browser available: ' + err.message.split('\n')[0] + ')');
+  }
 }
 
 main().catch((err) => {

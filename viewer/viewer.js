@@ -22,14 +22,16 @@
   const downloadBtn = document.getElementById('downloadBtn');
   const bidNowLink = document.getElementById('bidNowLink');
 
-  const PAGE_W = 1000;
+  // Page size now comes from manifest.json (generate.js writes it) -- these
+  // are just the defaults for older outputs that predate that.
+  let PAGE_W = 1000;
   // Was 1294 (portrait-ish, 1000:1294) -- on a typical wide-but-short browser
   // window or phone screen, that shape forces the book to be height-
   // constrained, rendering everything (including all body text) at a much
   // smaller scale than the available width would otherwise allow. 1100
   // keeps every template's actual content comfortably on-page (verified,
   // see templates/*.html) while meaningfully closing that gap.
-  const PAGE_H = 1100;
+  let PAGE_H = 1100;
 
   let pageFlip = null;
   let zoom = 1;
@@ -74,7 +76,18 @@
 
   function init(data) {
     titleEl.textContent = data.title || 'KD Auctions Catalog';
-    bidNowLink.href = data.siteUrl || '#';
+    document.title = (data.title ? data.title + ' — ' : '') + 'KD Auctions Catalog';
+    bidNowLink.href = data.bidUrl || data.siteUrl || '#';
+    if (data.pageWidth && data.pageHeight) {
+      PAGE_W = data.pageWidth;
+      PAGE_H = data.pageHeight;
+    }
+    const rootStyle = document.documentElement.style;
+    rootStyle.setProperty('--kd-page-w', PAGE_W + 'px');
+    rootStyle.setProperty('--kd-page-h', PAGE_H + 'px');
+    rootStyle.setProperty('--kd-page-ratio', `${PAGE_W} / ${PAGE_H}`);
+    rootStyle.setProperty('--kd-thumb-scale', (THUMB_W / PAGE_W).toString());
+    buildLotIndex(data);
 
     data.pages.forEach((pagePath, i) => {
       const pageEl = document.createElement('div');
@@ -151,6 +164,14 @@
       updatePageUI();
       buildThumbnails(data);
       trackEvent('flipbook_open', { pageCount: data.pages.length });
+      // Shared links like viewer/index.html?auction=logan#lot-150 open
+      // straight to that lot.
+      const m = location.hash.match(/^#lot-(.+)$/);
+      if (m) goToLot(decodeURIComponent(m[1]), { instant: true });
+      // Phones: a flipbook page is never going to be comfortable to read on
+      // a ~390px-wide screen, so open the scrolling lot list by default
+      // (the flipbook is one tap away).
+      if (window.matchMedia('(max-width: 720px)').matches && lotsList.length) openLotList();
     });
 
     pageFlip.on('flip', () => {
@@ -213,6 +234,7 @@
       thumb.className = 'kd-thumb';
       thumb.dataset.index = i;
       const iframe = document.createElement('iframe');
+      iframe.loading = 'lazy';
       iframe.src = `${outputBase}/${pagePath}`;
       thumb.appendChild(iframe);
       const num = document.createElement('span');
@@ -233,6 +255,8 @@
 
   document.addEventListener('keydown', (e) => {
     if (!pageFlip) return;
+    if (e.target.closest && e.target.closest('input')) return;
+    if (!lotPanel.hidden) { if (e.key === 'Escape') closeLotList(); return; }
     if (e.key === 'ArrowLeft') pageFlip.flipPrev();
     if (e.key === 'ArrowRight') pageFlip.flipNext();
   });
@@ -398,6 +422,143 @@
         setTimeout(() => (shareBtn.textContent = original), 1500);
       })
       .catch(() => {});
+  });
+
+  // ── Lot index: "Go to lot" box + searchable lot list ───────────────────
+  // With 500+ lots, flipping page by page to find one machine is painful.
+  // manifest.lots (written by generate.js) maps every lot to its page.
+  const THUMB_W = 124;
+  let lotsList = [];
+  const lotByNumber = new Map();
+  const lotPanel = document.getElementById('lotPanel');
+  const lotSearch = document.getElementById('lotSearch');
+  const lotResults = document.getElementById('lotResults');
+  const lotCount = document.getElementById('lotCount');
+  const lotListBtn = document.getElementById('lotListBtn');
+  const lotPanelClose = document.getElementById('lotPanelClose');
+  const gotoForm = document.getElementById('gotoForm');
+  const gotoInput = document.getElementById('gotoInput');
+
+  function buildLotIndex(data) {
+    lotsList = data.lots || [];
+    lotsList.forEach((l) => lotByNumber.set(String(l.lot).toLowerCase(), l));
+    if (!lotsList.length) {
+      lotListBtn.hidden = true;
+      gotoForm.hidden = true;
+    }
+  }
+
+  function goToLot(lotNo, opts = {}) {
+    const lot = lotByNumber.get(String(lotNo).trim().toLowerCase().replace(/^#/, ''));
+    if (!lot || lot.page == null || !pageFlip) return false;
+    closeLotList();
+    if (opts.instant) pageFlip.turnToPage(lot.page);
+    else pageFlip.flip(lot.page);
+    if (opts.instant) updatePageUI();
+    highlightLot(lot);
+    trackEvent('lot_jump', { lot: lot.lot });
+    return true;
+  }
+
+  // Briefly outline the lot's card on its page so the eye lands on it.
+  function highlightLot(lot) {
+    const pageEl = bookEl.querySelector(`.kd-page-el[data-page-index="${lot.page}"] iframe`);
+    if (!pageEl) return;
+    const flash = () => {
+      try {
+        const card = pageEl.contentDocument && pageEl.contentDocument.getElementById('lot-' + lot.lot);
+        if (!card) return;
+        card.style.transition = 'box-shadow 0.3s, border-color 0.3s';
+        card.style.boxShadow = '0 0 0 4px #ddb305, 0 0 30px rgba(221,179,5,0.55)';
+        card.style.borderColor = '#ddb305';
+        setTimeout(() => { card.style.boxShadow = ''; card.style.borderColor = ''; }, 2200);
+      } catch (err) { /* cross-origin (shouldn't happen) -- skip the flash */ }
+    };
+    if (pageEl.contentDocument && pageEl.contentDocument.readyState === 'complete' && pageEl.contentDocument.getElementById('lot-' + lot.lot)) setTimeout(flash, 650);
+    else pageEl.addEventListener('load', () => setTimeout(flash, 300), { once: true });
+  }
+
+  gotoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const v = gotoInput.value.trim();
+    if (!v) return;
+    if (goToLot(v)) {
+      gotoInput.value = '';
+      gotoInput.blur();
+    } else {
+      gotoInput.classList.add('kd-shake');
+      setTimeout(() => gotoInput.classList.remove('kd-shake'), 500);
+    }
+  });
+
+  let listRendered = false;
+  function renderLotList(filter) {
+    const q = (filter || '').trim().toLowerCase();
+    const words = q.split(/\s+/).filter(Boolean);
+    const matches = lotsList.filter((l) => {
+      if (!words.length) return true;
+      const hay = (`lot ${l.lot} ` + (l.title || '') + ' ' + l.description + ' ' + (l.location || '')).toLowerCase();
+      return words.every((w) => hay.includes(w)) || String(l.lot).toLowerCase() === q.replace(/^#|^lot\s*/, '');
+    });
+    lotCount.textContent = words.length ? `${matches.length} of ${lotsList.length} lots` : `${lotsList.length} lots`;
+    const frag = document.createDocumentFragment();
+    matches.forEach((l) => {
+      const row = document.createElement('div');
+      row.className = 'kd-lotrow';
+      const bid = l.bidUrl || (manifest && (manifest.bidUrl || manifest.siteUrl)) || '#';
+      row.innerHTML =
+        `<button class="kd-lotrow-main" type="button">` +
+          (l.photo ? `<img loading="lazy" src="${outputBase}/${l.photo}" alt="" />` : `<span class="kd-lotrow-noimg"></span>`) +
+          `<span class="kd-lotrow-text"><span class="kd-lotrow-no">LOT ${escapeHtml(l.lot)}</span>` +
+          (l.location ? `<span class="kd-lotrow-loc">${escapeHtml(l.location)}</span>` : '') +
+          `<span class="kd-lotrow-desc">${escapeHtml(l.description)}</span></span>` +
+        `</button>` +
+        `<a class="kd-lotrow-bid" href="${escapeHtml(bid)}" target="_blank" rel="noopener">Bid &#8594;</a>`;
+      row.querySelector('.kd-lotrow-main').addEventListener('click', () => goToLot(l.lot));
+      row.querySelector('.kd-lotrow-bid').addEventListener('click', () => trackEvent('lot_click', { lot: l.lot, from: 'list' }));
+      frag.appendChild(row);
+    });
+    if (!matches.length) {
+      const empty = document.createElement('p');
+      empty.className = 'kd-lot-empty';
+      empty.textContent = 'No lots match that search.';
+      frag.appendChild(empty);
+    }
+    lotResults.replaceChildren(frag);
+    listRendered = true;
+  }
+
+  function escapeHtml(v) {
+    return String(v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function openLotList() {
+    if (!listRendered) renderLotList(lotSearch.value);
+    lotPanel.hidden = false;
+    lotListBtn.classList.add('active');
+    if (!window.matchMedia('(max-width: 720px)').matches) lotSearch.focus();
+    trackEvent('lot_list_open', {});
+  }
+  function closeLotList() {
+    lotPanel.hidden = true;
+    lotListBtn.classList.remove('active');
+  }
+
+  lotListBtn.addEventListener('click', () => (lotPanel.hidden ? openLotList() : closeLotList()));
+  lotPanelClose.addEventListener('click', closeLotList);
+  let searchTimer = null;
+  lotSearch.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => renderLotList(lotSearch.value), 120);
+  });
+  lotSearch.addEventListener('keydown', (e) => {
+    // Enter on an exact lot number jumps straight there
+    if (e.key === 'Enter' && goToLot(lotSearch.value.replace(/^lot\s*/i, ''))) lotSearch.value = '';
+  });
+
+  // Featured-lot cards on the cover (inside the page iframe) ask to jump
+  window.addEventListener('message', (e) => {
+    if (e.data && e.data.kdFlipbookGoto != null) goToLot(e.data.kdFlipbookGoto);
   });
 
   downloadBtn.addEventListener('click', () => trackEvent('pdf_download', {}));

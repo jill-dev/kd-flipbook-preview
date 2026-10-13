@@ -13,7 +13,13 @@ body { display: flex; flex-direction: column; }
   font-family: var(--kd-font-primary); font-weight: 700; font-size: 13px; letter-spacing: 0.5px;
   color: #e8e8e6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.kd-topbar-right { flex: 0 0 auto; }
+.kd-topbar-right { flex: 0 0 auto; display: flex; align-items: center; gap: 12px; }
+.kd-list-btn {
+  font-family: var(--kd-font-primary); font-weight: 800; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase;
+  color: var(--kd-yellow); background: transparent; border: 1.5px solid var(--kd-yellow); border-radius: 7px; padding: 8px 14px; cursor: pointer;
+}
+.kd-list-btn:hover, .kd-list-btn.active { background: var(--kd-yellow); color: var(--kd-black); }
+.kd-list-btn[hidden] { display: none; }
 .kd-btn-ghost { padding: 8px 18px; font-size: 11px; }
 
 /* ── Stage ─────────────────────────────────────────────── */
@@ -28,7 +34,7 @@ body { display: flex; flex-direction: column; }
      box from height alone and let it overflow off the sides of the screen
      with no way to shrink (that was the mobile overflow/cropping bug). */
   position: relative; max-height: 100%; max-width: 100%; display: flex; align-items: center; justify-content: center;
-  flex: 0 1 auto; aspect-ratio: 1000 / 1100; overflow: hidden;
+  flex: 0 1 auto; aspect-ratio: var(--kd-page-ratio, 1000 / 1100); overflow: hidden;
 }
 /* Transparent, added over the book only while zoomed in (see
    ensurePanOverlay() in viewer.js) -- the visible page content is an
@@ -53,7 +59,7 @@ body { display: flex; flex-direction: column; }
    the page element (see --kd-page-scale, set by viewer.js). */
 .kd-page-el { background: var(--kd-bg); overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.5); position: relative; }
 .kd-page-el iframe {
-  width: 1000px; height: 1100px; border: 0; display: block; background: var(--kd-bg);
+  width: var(--kd-page-w, 1000px); height: var(--kd-page-h, 1100px); border: 0; display: block; background: var(--kd-bg);
   transform: scale(var(--kd-page-scale, 0.26)); transform-origin: top left;
 }
 /* Kept narrow (< the ~44px/4.4% inner margin every page template uses) so
@@ -80,18 +86,63 @@ body { display: flex; flex-direction: column; }
 .kd-bottombar-center { display: flex; align-items: center; gap: 14px; }
 .kd-icon-btn {
   background: none; border: none; color: var(--kd-grey-2); font-family: var(--kd-font-primary);
-  font-size: 12px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; padding: 6px 10px;
+  font-size: 14px; font-weight: 600; letter-spacing: 0.5px; cursor: pointer; padding: 6px 10px;
   border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
 }
 .kd-icon-btn:hover { background: rgba(221,179,5,0.12); color: var(--kd-yellow); }
-.kd-page-counter { font-family: var(--kd-font-primary); font-size: 12px; color: #e8e8e6; min-width: 60px; text-align: center; }
+.kd-page-counter { font-family: var(--kd-font-primary); font-size: 14px; color: #e8e8e6; min-width: 60px; text-align: center; }
+
+/* ── Go to lot ─────────────────────────────────────────── */
+.kd-goto { display: flex; align-items: center; gap: 2px; margin-right: 10px; }
+.kd-goto[hidden] { display: none; }
+.kd-goto input {
+  width: 118px; height: 34px; padding: 0 10px; border-radius: 7px; border: 1px solid var(--kd-yellow-grey);
+  background: #222; color: #fff; font-family: var(--kd-font-primary); font-weight: 700; font-size: 14px;
+}
+.kd-goto input::placeholder { color: #8d8d8a; font-weight: 600; }
+.kd-goto input:focus { outline: none; border-color: var(--kd-yellow); }
+.kd-shake { animation: kd-shake 0.4s; border-color: #d9534f !important; }
+@keyframes kd-shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+/* ── Lot list panel ──────────────────────────────────────
+   Covers the stage. A plain, scrolling, searchable list of every lot with
+   big readable text -- the default view on phones, one click away on
+   desktop. Tapping a lot flips the book to it. */
+.kd-lotpanel { position: absolute; inset: 0; z-index: 40; background: var(--kd-bg); display: flex; flex-direction: column; }
+.kd-lotpanel[hidden] { display: none; }
+.kd-lotpanel-head { flex: 0 0 auto; display: flex; align-items: center; gap: 14px; padding: 14px 20px; border-bottom: 1px solid var(--kd-line); background: #161616; }
+.kd-lotsearch {
+  flex: 1 1 auto; min-width: 0; height: 46px; padding: 0 16px; border-radius: 9px; border: 1.5px solid var(--kd-yellow-grey);
+  background: #232323; color: #fff; font-family: var(--kd-font-secondary); font-weight: 500; font-size: 18px;
+}
+.kd-lotsearch:focus { outline: none; border-color: var(--kd-yellow); }
+.kd-lotcount { flex: 0 0 auto; font-family: var(--kd-font-primary); font-weight: 700; font-size: 14px; color: var(--kd-grey); white-space: nowrap; }
+.kd-lotpanel-close {
+  flex: 0 0 auto; height: 46px; padding: 0 16px; border-radius: 9px; border: none; cursor: pointer;
+  background: var(--kd-yellow); color: var(--kd-black); font-family: var(--kd-font-primary); font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.kd-lotresults { flex: 1 1 auto; overflow-y: auto; padding: 12px 20px 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(520px, 1fr)); gap: 10px 14px; align-content: start; grid-auto-rows: max-content; }
+.kd-lotrow { display: flex; align-items: stretch; min-height: max-content; background: var(--kd-panel-2); border: 1px solid var(--kd-line); border-radius: 10px; overflow: hidden; }
+.kd-lotrow:hover { border-color: var(--kd-yellow-grey); }
+.kd-lotrow-main { flex: 1 1 auto; min-width: 0; display: flex; gap: 14px; align-items: flex-start; padding: 10px; background: none; border: none; color: inherit; text-align: left; cursor: pointer; }
+.kd-lotrow-main img, .kd-lotrow-noimg { flex: 0 0 auto; width: 150px; height: 104px; object-fit: cover; border-radius: 6px; background: #111; display: block; }
+.kd-lotrow-text { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.kd-lotrow-no { font-family: var(--kd-font-primary); font-weight: 900; font-size: 16px; color: var(--kd-yellow); letter-spacing: 0.5px; }
+.kd-lotrow-loc { font-family: var(--kd-font-primary); font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--kd-grey); }
+.kd-lotrow-desc { font-family: var(--kd-font-secondary); font-weight: 500; font-size: 18px; line-height: 1.32; color: #f2f2f0; overflow-wrap: anywhere; }
+.kd-lotrow-bid {
+  flex: 0 0 auto; display: flex; align-items: center; padding: 0 16px; border-left: 1px solid var(--kd-line);
+  font-family: var(--kd-font-primary); font-weight: 800; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; color: var(--kd-yellow); text-decoration: none;
+}
+.kd-lotrow-bid:hover { background: var(--kd-yellow); color: var(--kd-black); }
+.kd-lot-empty { font-family: var(--kd-font-secondary); font-size: 18px; color: var(--kd-grey); padding: 30px 0; }
 
 /* ── Thumbnail rail ────────────────────────────────────────
    A collapsible side panel (not an overlay) — it's a normal flex child of
    .kd-stage, so toggling it via the "Pages" button actually shrinks/grows
    the space available to the book, instead of floating on top of it. */
 .kd-thumbrail {
-  flex: 0 0 auto; width: 100px; height: 100%; background: #141414;
+  flex: 0 0 auto; width: 148px; height: 100%; background: #141414;
   border-left: 1px solid var(--kd-line); display: flex; flex-direction: column; align-items: center;
   gap: 8px; padding: 10px 0; overflow-y: auto; overflow-x: hidden;
 }
@@ -99,11 +150,11 @@ body { display: flex; flex-direction: column; }
    above (author styles win cascade ties) — force it explicitly instead. */
 .kd-thumbrail[hidden] { display: none; }
 .kd-thumb {
-  flex: 0 0 auto; width: 80px; aspect-ratio: 1000 / 1100; border-radius: 4px; overflow: hidden; cursor: pointer;
+  flex: 0 0 auto; width: 124px; aspect-ratio: var(--kd-page-ratio, 1000 / 1100); border-radius: 4px; overflow: hidden; cursor: pointer;
   border: 2px solid transparent; background: #0f0f0f; position: relative;
 }
 .kd-thumb.active { border-color: var(--kd-yellow); }
-.kd-thumb iframe { width: 1000px; height: 1100px; transform: scale(0.08); transform-origin: top left; border: 0; pointer-events: none; }
+.kd-thumb iframe { width: var(--kd-page-w, 1000px); height: var(--kd-page-h, 1100px); transform: scale(var(--kd-thumb-scale, 0.124)); transform-origin: top left; border: 0; pointer-events: none; }
 .kd-thumb .num {
   position: absolute; bottom: 2px; right: 4px; font-family: var(--kd-font-primary); font-size: 9px; color: var(--kd-yellow);
   background: rgba(0,0,0,0.6); padding: 1px 4px; border-radius: 3px;
@@ -120,4 +171,22 @@ body { display: flex; flex-direction: column; }
   .kd-arrow { display: none; }
   .kd-bottombar { padding: 0 8px; }
   .kd-icon-btn span.label { display: none; }
+  .kd-topbar { padding: 0 10px; }
+  .kd-list-btn span { display: none; }
+  .kd-list-btn { padding: 8px 12px; font-size: 16px; }
+  .kd-goto input { width: 92px; }
+  #zoomOutBtn, #zoomInBtn, #fullscreenBtn, #thumbsBtn, #shareBtn { display: none; }
+  .kd-bottombar-center { gap: 6px; }
+  .kd-lotpanel-head { padding: 10px; gap: 8px; flex-wrap: wrap; }
+  .kd-lotsearch { font-size: 17px; height: 44px; flex-basis: 100%; }
+  .kd-lotcount { flex: 1; }
+  .kd-lotpanel-close { height: 38px; font-size: 12px; }
+  .kd-lotresults { grid-template-columns: 1fr; padding: 10px 10px 30px; }
+  .kd-lotrow { flex-direction: column; }
+  .kd-lotrow-main { flex: 0 0 auto; flex-direction: column; align-items: stretch; padding: 0; gap: 0; }
+  .kd-lotrow-main img, .kd-lotrow-noimg { width: 100%; height: auto; aspect-ratio: 16 / 10; border-radius: 0; }
+  .kd-lotrow-text { padding: 10px 14px 4px; }
+  .kd-lotrow-no { font-size: 18px; }
+  .kd-lotrow-desc { font-size: 19px; }
+  .kd-lotrow-bid { border-left: none; border-top: 1px solid var(--kd-line); padding: 12px 14px; justify-content: center; font-size: 15px; }
 }

@@ -1,0 +1,94 @@
+{
+  "slug": "logan",
+  "title": "Complete Closure of a Custom CNC Contract Machining Company",
+  "subtitle": "Logan, Utah — Late Model Mazak 5-Axis Variaxis & VCC Machining Centers, Mazak HCN-5000 Palletech Horizontal Cell, Mazak & Fadal CNC Verticals, Mori Seiki & Mazak CNC Lathes, CMMs & Hundreds of Lots of Tooling",
+  "badge": "CNC & Machine Tools",
+  "closing": {
+    "label": "Lots Begin Closing",
+    "day": "Tuesday, November 17, 2026",
+    "time": "10:00 AM MT"
+  },
+  "inspection": "Monday, November 16, 2026, 8:00 AM – 4:00 PM MT, or earlier by appointment",
+  "locations": [
+    "844 W 400 N, Logan, UT 84321"
+  ],
+  "contact": {
+    "name": "KD Auctions",
+    "email": "service@kdauctions.com",
+    "phone": "480.455.3910"
+  },
+  "bidUrl": "https://www.kdauctions.com",
+  "siteUrl": "https://www.kdauctions.com",
+  "finderFee": "Want to sell your shop or business assets? Know someone who does? Call us at (480) 455-3910. We pay great finder’s fees!",
+  "featuredLots": [
+    {
+      "lot": 253,
+      "name": "(2) Mazak HCN-5000 Palletech",
+      "sub": "12-Pallet Horizontal Machining Cell",
+      "photo": "photos/253.jpg"
+    },
+    {
+      "lot": 203,
+      "name": "2020 Mazak Variaxis i-300 AWC",
+      "sub": "5-Axis Machining Center",
+      "photo": "photos/203.jpg"
+    },
+    {
+      "lot": 151,
+      "name": "2018 Mazak VTC-300C",
+      "sub": "Vertical Machining Center",
+      "photo": "photos/151.jpg"
+    },
+    {
+      "lot": 293,
+      "name": "2013 Mazak VCC 5X 20K",
+      "sub": "5-Axis Machining Center",
+      "photo": "photos/293.jpg"
+    },
+    {
+      "lot": 160,
+      "name": "2011 Mazak Variaxis 500-5X-II",
+      "sub": "5-Axis Machining Center",
+      "photo": "photos/160.jpg"
+    },
+    {
+      "lot": 402,
+      "name": "2013 Mori Seiki NLX2500SY/700",
+      "sub": "CNC Turning Center",
+      "photo": "photos/402.jpg"
+    },
+    {
+      "lot": 85,
+      "name": "2025 Wenzel LH 107",
+      "sub": "Coordinate Measuring Machine",
+      "photo": "photos/85.jpg"
+    },
+    {
+      "lot": 300,
+      "name": "2023 Universal Robots UR10e",
+      "sub": "Collaborative Robot",
+      "photo": "photos/300.jpg"
+    }
+  ],
+  "lotsPerPage": 5,
+  "saleInfo": {
+    "bannerPhoto": "brand/hero-cover.jpg",
+    "buyersPremium": "18% BP for all purchases. All Sales will be conducted in US Dollars.",
+    "paymentDeadline": "All items must be paid for within 24 hours of closing of the sale. No Exceptions.",
+    "internationalBidders": "A refundable deposit of $3,000.00 US Dollars via bank wire is required to be approved to bid online with this sale. If unsuccessful, your deposit will be refunded within 24 hours post-auction. If successful, the deposit will be applied to your balance due and any excess funds refunded.",
+    "location": "844 W 400 N, Logan, UT 84321",
+    "removalDates": "Wed., Nov. 18 – Tue., Nov. 24, 2026\nMon., Nov. 30 – Fri., Dec. 11, 2026",
+    "removalWarning": "Please do not wait until the last day to pick up your purchases. Items remaining onsite past the deadline will be considered abandoned.",
+    "onsiteContact": {
+      "name": "To Be Announced",
+      "phone": ""
+    },
+    "machineryNotes": "Customers are responsible for prepping, draining fluids, and locking and blocking all machinery for removal. KD Auctions will not be responsible for any onsite loading of machinery or other items.",
+    "riggers": [],
+    "serviceTech": "To Be Announced",
+    "truckingCompanies": [],
+    "footerTagline": "Auctions, Liquidations, Appraisals, and Consulting Services",
+    "salesTax": "Sales Tax will be added to all transactions. If you are tax exempt please fax your exemption certificate to (480) 455-3911 or email service@kdauctions.com before bidding. Utah requires sales tax unless the buyer provides a valid resale certificate or other accepted exemption (Utah accepts out-of-state resale certificates, including the MTC Uniform or SST Certificate). Utah's manufacturing exemption applies only to qualifying equipment used in a Utah manufacturing facility (Form TC-721). Items removed from Utah by a third-party common carrier are generally exempt, provided neither you nor your agent takes possession in Utah; items hauled on the buyer's own trucks are taxable. Exemption certificates must be submitted prior to invoicing and are subject to review and approval."
+  },
+  "measurementId": null
+}

@@ -2,57 +2,35 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
 <link rel="stylesheet" href="../../../brand/brand.css" />
 <style>
+  /* Landscape sale info page, 1400x900, sized for reading on screen. */
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
-  .sheet { width: 1000px; height: 1100px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
-  .banner { position: relative; height: 180px; flex: 0 0 auto; }
-  .banner img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.5); }
-  .banner::after {
-    content: ''; position: absolute; inset: 0; z-index: 1;
-    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.75) 100%);
-  }
-  .banner .logo { position: absolute; top: 22px; left: 32px; height: 38px; width: auto; z-index: 2; }
-  .banner .site { position: absolute; bottom: 16px; right: 32px; z-index: 2; font-family: var(--kd-font-primary); font-weight: 900; font-size: 18px; letter-spacing: 2px; color: var(--kd-yellow); }
-  .inner { flex: 1 1 auto; padding: 20px 56px 0; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 22px; }
-  h1.heading { text-align: center; font-size: 30px; margin: 0; }
-  .cols { display: flex; gap: 44px; }
-  .col { flex: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-  .block .label {
-    font-family: var(--kd-font-primary); font-weight: 800; font-size: 12.5px; letter-spacing: 1.5px;
-    text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 5px;
-  }
-  .block .body { font-family: var(--kd-font-secondary); font-size: 15.5px; line-height: 1.5; color: var(--kd-grey-2); margin: 0; }
-  .callout {
-    background: var(--kd-panel-2); border: 1px solid var(--kd-yellow-grey); border-radius: 8px;
-    padding: 12px 15px; font-family: var(--kd-font-secondary); font-weight: 700; font-size: 15.5px;
-    line-height: 1.45; color: #fff;
-  }
-  .contacts {
-    border-top: 1px solid var(--kd-line); padding-top: 16px;
-  }
-  .contacts .heading2 {
-    font-family: var(--kd-font-primary); font-weight: 800; font-size: 12.5px; letter-spacing: 1.5px;
-    text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 12px;
-  }
-  .contacts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 16px; }
-  .ccard { background: var(--kd-panel-2); border: 1px solid var(--kd-line); border-radius: 8px; padding: 10px 13px; }
-  .ccard .clabel {
-    font-family: var(--kd-font-primary); font-weight: 800; font-size: 10.5px; letter-spacing: 1px;
-    text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 3px;
-  }
-  .ccard .cname { font-family: var(--kd-font-primary); font-weight: 700; font-size: 14px; color: #fff; margin: 0 0 2px; line-height: 1.3; }
-  .ccard .cinfo { font-family: var(--kd-font-secondary); font-size: 13px; color: var(--kd-grey); margin: 0; line-height: 1.3; }
-  .footer {
-    flex: 0 0 auto; margin-top: 14px; padding: 12px 56px; text-align: center;
-    background: var(--kd-black); border-top: 3px solid var(--kd-yellow);
-  }
-  .footer p {
-    margin: 0; font-family: var(--kd-font-primary); font-weight: 800; font-size: 14px;
-    letter-spacing: 2.5px; text-transform: uppercase; color: #fff;
-  }
+  .sheet { width: 1400px; height: 900px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .banner { position: relative; height: 112px; flex: 0 0 auto; }
+  .banner > img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.42); }
+  .banner .logo { filter: none; position: absolute; top: 50%; left: 40px; transform: translateY(-50%); height: 56px; width: auto; z-index: 2; }
+  .banner h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; margin: 0; font-size: 34px; white-space: nowrap; }
+  .banner .site { position: absolute; top: 50%; right: 40px; transform: translateY(-50%); z-index: 2; font-family: var(--kd-font-primary); font-weight: 900; font-size: 20px; letter-spacing: 2px; color: var(--kd-yellow); text-decoration: none; }
+  .inner { flex: 1 1 auto; min-height: 0; padding: 22px 40px 0; display: flex; flex-direction: column; gap: 18px; }
+  .cols { display: flex; gap: 34px; flex: 1 1 auto; min-height: 0; }
+  .col { flex: 1; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .block .label { font-family: var(--kd-font-primary); font-weight: 800; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 4px; }
+  .block .body { font-family: var(--kd-font-secondary); font-weight: 500; font-size: 17.5px; line-height: 1.42; color: #ececea; margin: 0; }
+  .block .body.big { font-family: var(--kd-font-primary); font-weight: 700; font-size: 20px; color: #fff; line-height: 1.35; }
+  .callout { background: var(--kd-panel-2); border: 1px solid var(--kd-yellow-grey); border-left: 5px solid var(--kd-yellow); border-radius: 8px; padding: 12px 16px; font-family: var(--kd-font-secondary); font-weight: 700; font-size: 17.5px; line-height: 1.4; color: #fff; }
+  .contacts { border-top: 1px solid var(--kd-line); padding-top: 12px; margin-top: 2px; }
+  .contacts .heading2 { font-family: var(--kd-font-primary); font-weight: 800; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 10px; }
+  .contacts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 12px; }
+  .ccard { background: var(--kd-panel-2); border: 1px solid var(--kd-line); border-radius: 8px; padding: 10px 14px; }
+  .ccard .clabel { font-family: var(--kd-font-primary); font-weight: 800; font-size: 12.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 3px; }
+  .ccard .cname { font-family: var(--kd-font-primary); font-weight: 700; font-size: 17px; color: #fff; margin: 0 0 2px; line-height: 1.3; }
+  .ccard .cinfo { font-family: var(--kd-font-secondary); font-weight: 500; font-size: 15.5px; color: var(--kd-grey-2); margin: 0; line-height: 1.3; }
+  .footer { flex: 0 0 auto; margin-top: 16px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--kd-black); border-top: 3px solid var(--kd-yellow); }
+  .footer p { margin: 0; font-family: var(--kd-font-primary); font-weight: 800; font-size: 16px; letter-spacing: 2.5px; text-transform: uppercase; color: #fff; }
+  a { color: var(--kd-yellow-light); }
 </style>
 </head>
 <body>
@@ -60,11 +38,11 @@
     <div class="banner">
       <img src="{{saleInfo.bannerPhoto}}" alt="" />
       <a href="https://www.kdauctions.com" target="_blank" rel="noopener"><img class="logo" src="{{logo.light}}" alt="KD Auctions" /></a>
-      <a class="site" href="https://www.kdauctions.com" target="_blank" rel="noopener" style="text-decoration:none;">KDAUCTIONS.COM</a>
+      <h1 class="kd-heading">Important Sale Information</h1>
+      <a class="site" href="https://www.kdauctions.com" target="_blank" rel="noopener">KDAUCTIONS.COM</a>
     </div>
     <div class="kd-gradient-bar"></div>
     <div class="inner">
-      <h1 class="heading kd-heading">Important Sale Information</h1>
       <div class="cols">
         <div class="col">
           <div class="block">
@@ -76,64 +54,66 @@
             <p class="label">International Bidders</p>
             <p class="body">{{linkify saleInfo.internationalBidders}}</p>
           </div>
+        </div>
+        <div class="col">
           {{#if saleInfo.salesTax}}
           <div class="block">
             <p class="label">Sales Tax</p>
             <p class="body">{{linkify saleInfo.salesTax}}</p>
           </div>
           {{/if}}
-        </div>
-        <div class="col">
-          <div class="block">
-            <p class="label">Location</p>
-            <p class="body">{{saleInfo.location}}</p>
-          </div>
-          <div class="block">
-            <p class="label">Removal Dates</p>
-            <p class="body">{{saleInfo.removalDates}}</p>
-          </div>
-          <div class="callout">{{linkify saleInfo.removalWarning}}</div>
           <div class="block">
             <p class="label">Machinery Removal Notes</p>
             <p class="body">{{linkify saleInfo.machineryNotes}}</p>
           </div>
         </div>
-      </div>
-      <div class="contacts">
-        <p class="heading2">Onsite Contacts &amp; Logistics</p>
-        <div class="contacts-grid">
-          <div class="ccard">
-            <p class="clabel">Onsite Removal Contact</p>
-            <p class="cname">{{saleInfo.onsiteContact.name}}</p>
-            {{#if saleInfo.onsiteContact.phone}}<p class="cinfo"><a href="{{tel saleInfo.onsiteContact.phone}}" style="color:inherit;">{{saleInfo.onsiteContact.phone}}</a></p>{{/if}}
+        <div class="col">
+          <div class="block">
+            <p class="label">Inspection Location</p>
+            <p class="body big">{{saleInfo.location}}</p>
           </div>
-          {{#if saleInfo.riggers}}
-          {{#each saleInfo.riggers}}
-          <div class="ccard">
-            <p class="clabel">Local Rigger</p>
-            <p class="cname">{{name}}</p>
-            <p class="cinfo">{{#if email}}<a href="mailto:{{email}}" style="color:inherit;">{{email}}</a> &middot; {{/if}}<a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
+          <div class="block">
+            <p class="label">Removal Dates</p>
+            <p class="body big" style="white-space: pre-line;">{{saleInfo.removalDates}}</p>
           </div>
-          {{/each}}
-          {{else}}
-          <div class="ccard">
-            <p class="clabel">Local Rigger</p>
-            <p class="cname">To Be Announced</p>
+          <div class="callout">{{linkify saleInfo.removalWarning}}</div>
+          <div class="contacts">
+            <p class="heading2">Onsite Contacts &amp; Logistics</p>
+            <div class="contacts-grid">
+              <div class="ccard">
+                <p class="clabel">Onsite Removal Contact</p>
+                <p class="cname">{{saleInfo.onsiteContact.name}}</p>
+                {{#if saleInfo.onsiteContact.phone}}<p class="cinfo"><a href="{{tel saleInfo.onsiteContact.phone}}" style="color:inherit;">{{saleInfo.onsiteContact.phone}}</a></p>{{/if}}
+              </div>
+              {{#if saleInfo.riggers}}
+              {{#each saleInfo.riggers}}
+              <div class="ccard">
+                <p class="clabel">Local Rigger</p>
+                <p class="cname">{{name}}</p>
+                <p class="cinfo">{{#if email}}<a href="mailto:{{email}}" style="color:inherit;">{{email}}</a> &middot; {{/if}}<a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
+              </div>
+              {{/each}}
+              {{else}}
+              <div class="ccard">
+                <p class="clabel">Local Rigger</p>
+                <p class="cname">To Be Announced</p>
+              </div>
+              {{/if}}
+              {{#if saleInfo.serviceTech}}
+              <div class="ccard">
+                <p class="clabel">Service Tech</p>
+                <p class="cname">{{saleInfo.serviceTech}}</p>
+              </div>
+              {{/if}}
+              {{#each saleInfo.truckingCompanies}}
+              <div class="ccard">
+                <p class="clabel">Trucking</p>
+                <p class="cname">{{name}}</p>
+                <p class="cinfo">{{contact}} &middot; <a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
+              </div>
+              {{/each}}
+            </div>
           </div>
-          {{/if}}
-          {{#if saleInfo.serviceTech}}
-          <div class="ccard">
-            <p class="clabel">Service Tech</p>
-            <p class="cname">{{saleInfo.serviceTech}}</p>
-          </div>
-          {{/if}}
-          {{#each saleInfo.truckingCompanies}}
-          <div class="ccard">
-            <p class="clabel">Trucking</p>
-            <p class="cname">{{name}}</p>
-            <p class="cinfo">{{contact}} &middot; <a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
-          </div>
-          {{/each}}
         </div>
       </div>
     </div>
