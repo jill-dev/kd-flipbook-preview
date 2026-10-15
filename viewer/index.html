@@ -4,7 +4,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>KD Auctions — Catalog</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../brand/brand.css" />
 <link rel="stylesheet" href="viewer.css" />
 </head>
@@ -18,6 +17,7 @@
       <span class="kd-topbar-title" id="auctionTitle">Loading catalog…</span>
     </div>
     <div class="kd-topbar-right">
+      <button class="kd-list-btn" id="lotListBtn" type="button">&#9776; <span>Lot List &amp; Search</span></button>
       <a class="kd-btn kd-btn-ghost" id="bidNowLink" href="#" target="_blank" rel="noopener">Bid Now</a>
     </div>
   </header>
@@ -30,11 +30,23 @@
     </div>
     <button class="kd-arrow kd-arrow-right" id="nextBtn" aria-label="Next page">&#10095;</button>
     <div class="kd-thumbrail" id="thumbRail" hidden></div>
+    <section class="kd-lotpanel" id="lotPanel" hidden aria-label="Lot list">
+      <div class="kd-lotpanel-head">
+        <input id="lotSearch" class="kd-lotsearch" type="search" placeholder="Search lots, e.g. Mazak, CMM, vise, or a lot #" autocomplete="off" />
+        <span class="kd-lotcount" id="lotCount"></span>
+        <button class="kd-lotpanel-close" id="lotPanelClose" type="button">&#10005; <span>Back to Flipbook</span></button>
+      </div>
+      <div class="kd-lotresults" id="lotResults"></div>
+    </section>
   </main>
 
   <footer class="kd-bottombar">
     <button class="kd-icon-btn" id="thumbsBtn" title="Page thumbnails">&#9638; Pages</button>
     <div class="kd-bottombar-center">
+      <form class="kd-goto" id="gotoForm" autocomplete="off">
+        <input id="gotoInput" type="text" inputmode="numeric" placeholder="Go to lot #" aria-label="Go to lot number" />
+        <button type="submit" class="kd-icon-btn">Go</button>
+      </form>
       <button class="kd-icon-btn" id="zoomOutBtn" title="Zoom out">&#8722;</button>
       <span class="kd-page-counter"><span id="pageNum">1</span> / <span id="pageCount">1</span></span>
       <button class="kd-icon-btn" id="zoomInBtn" title="Zoom in">&#43;</button>

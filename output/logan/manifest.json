@@ -1,0 +1,4488 @@
+{
+  "slug": "logan",
+  "title": "Complete Closure of a Custom CNC Contract Machining Company",
+  "siteUrl": "https://www.kdauctions.com",
+  "measurementId": null,
+  "bidUrl": "https://www.kdauctions.com",
+  "pageWidth": 1400,
+  "pageHeight": 900,
+  "pages": [
+    "pages/001-cover.html",
+    "pages/002-sale-info.html",
+    "pages/003-lots-1.html",
+    "pages/004-lots-2.html",
+    "pages/005-lots-3.html",
+    "pages/006-lots-4.html",
+    "pages/007-lots-5.html",
+    "pages/008-lots-6.html",
+    "pages/009-lots-7.html",
+    "pages/010-lots-8.html",
+    "pages/011-lots-9.html",
+    "pages/012-lots-10.html",
+    "pages/013-lots-11.html",
+    "pages/014-lots-12.html",
+    "pages/015-lots-13.html",
+    "pages/016-lots-14.html",
+    "pages/017-lots-15.html",
+    "pages/018-lots-16.html",
+    "pages/019-lots-17.html",
+    "pages/020-lots-18.html",
+    "pages/021-lots-19.html",
+    "pages/022-lots-20.html",
+    "pages/023-lots-21.html",
+    "pages/024-lots-22.html",
+    "pages/025-lots-23.html",
+    "pages/026-lots-24.html",
+    "pages/027-lots-25.html",
+    "pages/028-lots-26.html",
+    "pages/029-lots-27.html",
+    "pages/030-lots-28.html",
+    "pages/031-lots-29.html",
+    "pages/032-lots-30.html",
+    "pages/033-lots-31.html",
+    "pages/034-lots-32.html",
+    "pages/035-lots-33.html",
+    "pages/036-lots-34.html",
+    "pages/037-lots-35.html",
+    "pages/038-lots-36.html",
+    "pages/039-lots-37.html",
+    "pages/040-lots-38.html",
+    "pages/041-lots-39.html",
+    "pages/042-lots-40.html",
+    "pages/043-lots-41.html",
+    "pages/044-lots-42.html",
+    "pages/045-lots-43.html",
+    "pages/046-lots-44.html",
+    "pages/047-lots-45.html",
+    "pages/048-lots-46.html",
+    "pages/049-lots-47.html",
+    "pages/050-lots-48.html",
+    "pages/051-lots-49.html",
+    "pages/052-lots-50.html",
+    "pages/053-lots-51.html",
+    "pages/054-lots-52.html",
+    "pages/055-lots-53.html",
+    "pages/056-lots-54.html",
+    "pages/057-lots-55.html",
+    "pages/058-lots-56.html",
+    "pages/059-lots-57.html",
+    "pages/060-lots-58.html",
+    "pages/061-lots-59.html",
+    "pages/062-lots-60.html",
+    "pages/063-lots-61.html",
+    "pages/064-lots-62.html",
+    "pages/065-lots-63.html",
+    "pages/066-lots-64.html",
+    "pages/067-lots-65.html",
+    "pages/068-lots-66.html",
+    "pages/069-lots-67.html",
+    "pages/070-lots-68.html",
+    "pages/071-lots-69.html",
+    "pages/072-lots-70.html",
+    "pages/073-lots-71.html",
+    "pages/074-lots-72.html",
+    "pages/075-lots-73.html",
+    "pages/076-lots-74.html",
+    "pages/077-lots-75.html",
+    "pages/078-lots-76.html",
+    "pages/079-lots-77.html",
+    "pages/080-lots-78.html",
+    "pages/081-lots-79.html",
+    "pages/082-lots-80.html",
+    "pages/083-lots-81.html",
+    "pages/084-lots-82.html",
+    "pages/085-lots-83.html",
+    "pages/086-lots-84.html",
+    "pages/087-lots-85.html",
+    "pages/088-lots-86.html",
+    "pages/089-lots-87.html",
+    "pages/090-lots-88.html",
+    "pages/091-lots-89.html",
+    "pages/092-lots-90.html",
+    "pages/093-lots-91.html",
+    "pages/094-lots-92.html",
+    "pages/095-lots-93.html",
+    "pages/096-lots-94.html",
+    "pages/097-lots-95.html",
+    "pages/098-lots-96.html",
+    "pages/099-lots-97.html",
+    "pages/100-lots-98.html",
+    "pages/101-lots-99.html",
+    "pages/102-lots-100.html",
+    "pages/103-lots-101.html",
+    "pages/104-lots-102.html",
+    "pages/105-lots-103.html",
+    "pages/106-lots-104.html",
+    "pages/107-lots-105.html",
+    "pages/108-lots-106.html",
+    "pages/109-lots-107.html",
+    "pages/110-lots-108.html",
+    "pages/111-lots-109.html",
+    "pages/112-lots-110.html",
+    "pages/113-lots-111.html",
+    "pages/114-lots-112.html",
+    "pages/115-lots-113.html",
+    "pages/116-lots-114.html",
+    "pages/117-lots-115.html",
+    "pages/118-lots-116.html",
+    "pages/119-lots-117.html",
+    "pages/120-lots-118.html",
+    "pages/121-lots-119.html",
+    "pages/122-lots-120.html",
+    "pages/123-lots-121.html",
+    "pages/124-lots-122.html",
+    "pages/125-lots-123.html",
+    "pages/126-lots-124.html",
+    "pages/127-lots-125.html",
+    "pages/128-lots-126.html",
+    "pages/129-lots-127.html",
+    "pages/130-lots-128.html",
+    "pages/131-lots-129.html",
+    "pages/132-closing.html"
+  ],
+  "lots": [
+    {
+      "lot": "1",
+      "title": "(2) 4-Tier Adjustable Steel Racks",
+      "description": "(2) 4-Tier Adjustable Steel Racks, 77\" x 24\" x 72\", One with Caster Wheels",
+      "photo": "photos/1.jpg",
+      "page": 2
+    },
+    {
+      "lot": "2",
+      "title": "3-Section Steel Shelving",
+      "description": "3-Section Steel Shelving, 209\" x 20\" x 72\"",
+      "photo": "photos/2.jpg",
+      "page": 2
+    },
+    {
+      "lot": "3",
+      "title": "(2) Mitutoyo Absolute 6\" Digital Calipers",
+      "description": "Mitutoyo Absolute Digimatic AOS 6\" Digital Caliper & Mitutoyo Absolute Coolant Proof 6\" Digital Caliper",
+      "photo": "photos/3.jpg",
+      "page": 2
+    },
+    {
+      "lot": "4",
+      "title": "(2) New Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "description": "(2) New in Box Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "photo": "photos/4.jpg",
+      "page": 2
+    },
+    {
+      "lot": "5",
+      "title": "(2) Mitutoyo Absolute 6\" Digital Calipers",
+      "description": "Mitutoyo Absolute Digimatic AOS 6\" Digital Caliper & Mitutoyo Absolute Coolant Proof 6\" Digital Caliper",
+      "photo": "photos/5.jpg",
+      "page": 2
+    },
+    {
+      "lot": "6",
+      "description": "(2) Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "photo": "photos/6.jpg",
+      "page": 2
+    },
+    {
+      "lot": "7",
+      "title": "(2) New Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "description": "(2) New in Box Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "photo": "photos/7.jpg",
+      "page": 3
+    },
+    {
+      "lot": "8",
+      "title": "(2) New Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "description": "(2) New in Box Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "photo": "photos/8.jpg",
+      "page": 3
+    },
+    {
+      "lot": "9",
+      "title": "Mitutoyo 6\" Digital Caliper & 0\"-1\" Digital Micrometer",
+      "description": "Mitutoyo Absolute Coolant Proof 6\" Digital Caliper & Mitutoyo 0\"-1\" Digital Micrometer #293-765-30",
+      "photo": "photos/9.jpg",
+      "page": 3
+    },
+    {
+      "lot": "10",
+      "title": "Mitutoyo 0-3\" Micrometer Set",
+      "description": "Mitutoyo 0\"-1\", 1\"-2\" & 2\"-3\" Micrometer Set",
+      "photo": "photos/10.jpg",
+      "page": 3
+    },
+    {
+      "lot": "11",
+      "title": "Mitutoyo 0-3\" Micrometer Set",
+      "description": "Mitutoyo 0\"-1\", 1\"-2\" & 2\"-3\" Micrometer Set",
+      "photo": "photos/11.jpg",
+      "page": 3
+    },
+    {
+      "lot": "12",
+      "description": "Mitutoyo #129-131 0\"-4\" Depth Micrometer",
+      "photo": "photos/12.jpg",
+      "page": 3
+    },
+    {
+      "lot": "13",
+      "title": "(3) Micrometers - Mitutoyo, SPI & Aerospace",
+      "description": "Mitutoyo 5\"-6\" Micrometer, SPI 0\"-1\" Thread Micrometer & Aerospace 1\"-2\" Micrometer",
+      "photo": "photos/13.jpg",
+      "page": 4
+    },
+    {
+      "lot": "14",
+      "title": "(3) Mitutoyo Blade Micrometers, 1\"-4\"",
+      "description": "Mitutoyo 1\"-2\", 2\"-3\" & 3\"-4\" Blade Micrometers",
+      "photo": "photos/14.jpg",
+      "page": 4
+    },
+    {
+      "lot": "15",
+      "title": "(2) Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "description": "(2) Mitutoyo Absolute Coolant Proof 6\" Digital Calipers, (1) New in Box",
+      "photo": "photos/15.jpg",
+      "page": 4
+    },
+    {
+      "lot": "16",
+      "title": "(3) Thread Micrometers - SPI, Starrett & Mitutoyo",
+      "description": "SPI 0\"-1\" Thread Micrometer, Starrett 1\"-2\" Thread Micrometer & Mitutoyo 3\"-4\" Thread Micrometer",
+      "photo": "photos/16.jpg",
+      "page": 4
+    },
+    {
+      "lot": "17",
+      "description": "Mitutoyo 0\"-1\" Micrometer & SPI 0\"-1\" Point Micrometer",
+      "photo": "photos/17.jpg",
+      "page": 4
+    },
+    {
+      "lot": "18",
+      "title": "(3) Anvil Micrometers - SPI & Mitutoyo",
+      "description": "SPI 0.09\"-1\" Mechanical V-Anvil Micrometer, SPI 0\"-1\" Multi-Anvil Micrometer & Mitutoyo 0\"-1\" Multi-Anvil Micrometer",
+      "photo": "photos/18.jpg",
+      "page": 4
+    },
+    {
+      "lot": "19",
+      "title": "(2) 0\"-6\" Depth Micrometer Sets - Standard & Starrett",
+      "description": "Standard 0\"-6\" Depth Micrometer Set & Starrett 0\"-6\" Depth Micrometer Set #449",
+      "photo": "photos/19.jpg",
+      "page": 5
+    },
+    {
+      "lot": "20",
+      "description": "(3) Starrett 0\"-6\" Depth Micrometers",
+      "photo": "photos/20.jpg",
+      "page": 5
+    },
+    {
+      "lot": "21",
+      "title": "(2) Starrett #823B Inside Micrometer Sets",
+      "description": "(2) Starrett #823B Inside Micrometer Sets, 1-1/2\" to 12\" Range",
+      "photo": "photos/21.jpg",
+      "page": 5
+    },
+    {
+      "lot": "22",
+      "title": "(3) Mitutoyo Micrometers - Point, Digital & Disc",
+      "description": "Mitutoyo Point Micrometer #126-138, Mitutoyo 0\"-1\" Digital Micrometer & Mitutoyo 0\"-1\" Disc Micrometer",
+      "photo": "photos/22.jpg",
+      "page": 5
+    },
+    {
+      "lot": "23",
+      "description": "Mitutoyo 0\"-1\" Thread Micrometer & SPI 0\"-1\" Anvil Micrometer",
+      "photo": "photos/23.jpg",
+      "page": 5
+    },
+    {
+      "lot": "24",
+      "title": "Starrett 2\"-6\" Micrometers",
+      "description": "Starrett 2\"-3\", 3\"-4\", 4\"-5\" & 5\"-6\" Micrometers",
+      "photo": "photos/24.jpg",
+      "page": 5
+    },
+    {
+      "lot": "25",
+      "title": "Starrett 0\"-6\" Micrometer Set",
+      "description": "Starrett 0\"-1\", 1\"-2\", 2\"-3\", 3\"-4\", 4\"-5\" & 5\"-6\" Micrometer Set",
+      "photo": "photos/25.jpg",
+      "page": 6
+    },
+    {
+      "lot": "26",
+      "title": "Aerospace 0\"-6\" Micrometers",
+      "description": "Aerospace 0\"-1\", 2\"-3\", 3\"-4\", 4\"-5\" & 5\"-6\" Micrometers",
+      "photo": "photos/26.jpg",
+      "page": 6
+    },
+    {
+      "lot": "27",
+      "title": "Mitutoyo 3\"-7\" OD Micrometers",
+      "description": "Mitutoyo 3\"-4\", 4\"-5\", 5\"-6\" & 6\"-7\" OD Micrometers in Boxes",
+      "photo": "photos/27.jpg",
+      "page": 6
+    },
+    {
+      "lot": "28",
+      "title": "Starrett #224 6\"-12\" OD Micrometer Set",
+      "description": "Starrett #224 6\"-12\" OD Micrometer Set in Box",
+      "photo": "photos/28.jpg",
+      "page": 6
+    },
+    {
+      "lot": "29",
+      "title": "(10) Mitutoyo & NSK Large OD Micrometers, 7-22\"",
+      "description": "Mitutoyo & NSK OD Micrometers, including NSK 7\"-8\", Mitutoyo 7\"-8\", 9\"-10\", 10\"-11\", 11\"-12\", 12\"-13\", 13\"-14\", (2) 12\"-16\" & 21\"-22\"",
+      "photo": "photos/29.jpg",
+      "page": 6
+    },
+    {
+      "lot": "30",
+      "title": "(3) Inside Bore Micrometers - SPI & Mitutoyo",
+      "description": "SPI .50\"-.65\", SPI .65\"-.80\" & Mitutoyo .65\"-.80\" Mechanical Inside Bore Micrometers, with SPI Extension",
+      "photo": "photos/30.jpg",
+      "page": 6
+    },
+    {
+      "lot": "31",
+      "title": "SPI & Mitutoyo Inside Bore Micrometers, 1.0\"-1.6\"",
+      "description": "SPI 1.0\"-1.2\" & Mitutoyo 1.2\"-1.6\" Mechanical Inside Bore Micrometers, with (4) Setting Rings: 1.1875\", .99996\", 1.3125\" & 1.0625\"",
+      "photo": "photos/31.jpg",
+      "page": 7
+    },
+    {
+      "lot": "32",
+      "title": "(2) Brown & Sharpe Inside Bore Micrometers, 1.6\"-2.4\"",
+      "description": "Brown & Sharpe 1.600\"-2.000\" & 2.000\"-2.400\" Inside Bore Micrometers, with Ringmaster 1.6250\" & 1.5625\" Setting Rings",
+      "photo": "photos/32.jpg",
+      "page": 7
+    },
+    {
+      "lot": "33",
+      "title": "Mitutoyo 2.8\"-3.2\" Inside Bore Micrometer",
+      "description": "Mitutoyo 2.8\"-3.2\" Inside Bore Micrometer, with SPI Ringmaster 2.79998\" Setting Ring",
+      "photo": "photos/33.jpg",
+      "page": 7
+    },
+    {
+      "lot": "34",
+      "title": "Brown & Sharpe 3.2\"-3.6\" Inside Bore Micrometer",
+      "description": "Brown & Sharpe 3.2\"-3.6\" Inside Bore Micrometer, with SPI Ringmaster 3.59993\" Setting Ring",
+      "photo": "photos/34.jpg",
+      "page": 7
+    },
+    {
+      "lot": "35",
+      "title": "(4) Starrett & Brown & Sharpe OD Micrometers, 1\"-4\"",
+      "description": "Starrett 1\"-2\", Brown & Sharpe 2\"-3\", Starrett 2\"-3\" & Brown & Sharpe 3\"-4\" Outside Micrometers",
+      "photo": "photos/35.jpg",
+      "page": 7
+    },
+    {
+      "lot": "36",
+      "description": "Mitutoyo 24\" Inside/Outside Caliper in Box",
+      "photo": "photos/36.jpg",
+      "page": 7
+    },
+    {
+      "lot": "37",
+      "description": "Starrett 26\" Inside/Outside Caliper in Box",
+      "photo": "photos/37.jpg",
+      "page": 8
+    },
+    {
+      "lot": "38",
+      "title": "Fowler 24\" Inside/Outside Caliper in Box",
+      "description": "Fowler 24\" Inside/Outside Caliper in Box, with Standard 12\" Inside/Outside Caliper",
+      "photo": "photos/38.jpg",
+      "page": 8
+    },
+    {
+      "lot": "39",
+      "title": "Brown & Sharpe 25\" & Starrett 12\" Inside/Outside Calipers",
+      "description": "Brown & Sharpe 25\" Inside/Outside Caliper in Box & Starrett 12\" Inside/Outside Caliper",
+      "photo": "photos/39.jpg",
+      "page": 8
+    },
+    {
+      "lot": "40",
+      "title": "Starrett 14\" & Mitutoyo OD/ID Calipers in Boxes",
+      "description": "Starrett 14\" OD/ID Caliper in Box & Mitutoyo OD/ID Caliper in Box",
+      "photo": "photos/40.jpg",
+      "page": 8
+    },
+    {
+      "lot": "41",
+      "title": "Mitutoyo 1\"-2\" OD Thread Micrometer Set & Brown & Sharpe 4\"-5\" OD Micrometer",
+      "description": "Mitutoyo 1\"-2\" OD Thread Micrometer Set (Incomplete) & Brown & Sharpe 4\"-5\" OD Micrometer",
+      "photo": "photos/41.jpg",
+      "page": 8
+    },
+    {
+      "lot": "42",
+      "description": "Mitutoyo #192-112 18\" Height Gage",
+      "photo": "photos/42.jpg",
+      "page": 8
+    },
+    {
+      "lot": "43",
+      "description": "Mitutoyo #192-112 18\" Height Gage",
+      "photo": "photos/43.jpg",
+      "page": 9
+    },
+    {
+      "lot": "44",
+      "description": "Aerospace 40\" OD/ID Caliper in Box",
+      "photo": "photos/44.jpg",
+      "page": 9
+    },
+    {
+      "lot": "45",
+      "title": "Large Box of 1/2\" & Larger Thread Gages",
+      "description": "Large Box of 1/2\" or Larger Thread Gages",
+      "photo": "photos/45.jpg",
+      "page": 9
+    },
+    {
+      "lot": "46",
+      "description": "Large Box of 3/4\" & Larger Thread Gages",
+      "photo": "photos/46.jpg",
+      "page": 9
+    },
+    {
+      "lot": "47",
+      "title": "Box of 1/2\" & Smaller Thread Gages",
+      "description": "Box of 1/2\" or Smaller Thread Gages",
+      "photo": "photos/47.jpg",
+      "page": 9
+    },
+    {
+      "lot": "48",
+      "title": "Box of 1/2\" & Larger Thread Gages",
+      "description": "Box of 1/2\" or Larger Thread Gages",
+      "photo": "photos/48.jpg",
+      "page": 9
+    },
+    {
+      "lot": "49",
+      "title": "Large Box of Assorted Thread Gages & Thread Ring Gages",
+      "description": "Large Box of Small, Medium & Large Thread Gages, STI & Others, with Assorted Thread Ring Gages",
+      "photo": "photos/49.jpg",
+      "page": 10
+    },
+    {
+      "lot": "50",
+      "title": "Large Box of Assorted Size Thread Gages",
+      "description": "Large Box of Assorted Size Thread Gages, STI & Others",
+      "photo": "photos/50.jpg",
+      "page": 10
+    },
+    {
+      "lot": "51",
+      "title": "SPI & Insize 6\" Digital Calipers & Mitutoyo 0\"-1\" Digital Micrometer",
+      "description": "SPI 6\" Digital OD/ID Caliper, Insize 6\" Digital OD/ID Caliper & Mitutoyo 0\"-1\" Digital Micrometer",
+      "photo": "photos/51.jpg",
+      "page": 10
+    },
+    {
+      "lot": "52",
+      "title": "Large Box of 1\" & Larger Thread Ring Gages",
+      "description": "Large Box of 1\" or Larger Thread Ring Gages",
+      "photo": "photos/52.jpg",
+      "page": 10
+    },
+    {
+      "lot": "53",
+      "title": "Large Box of 7/8\" & Smaller Thread Ring Gages",
+      "description": "Large Box of 7/8\" or Smaller Thread Ring Gages",
+      "photo": "photos/53.jpg",
+      "page": 10
+    },
+    {
+      "lot": "54",
+      "title": "New 2\"-6\" Dial Bore Gage Set, Inside & Depth Micrometers",
+      "description": "New 2\"-6\" Dial Bore Gage Set, The Central Tool Company #80A & #81A Inside Micrometers & Starrett 4\"-12\" Depth Micrometer, Mostly Complete",
+      "photo": "photos/54.jpg",
+      "page": 10
+    },
+    {
+      "lot": "55",
+      "title": "Box of 1-2-3 Blocks, 2-4-6 Block & V-Blocks",
+      "description": "Box of 1-2-3 Blocks, 2-4-6 Block & Assorted V-Blocks with Clamps",
+      "photo": "photos/55.jpg",
+      "page": 11
+    },
+    {
+      "lot": "56",
+      "title": "Box of 1-2-3 Blocks & V-Blocks",
+      "description": "Box of 1-2-3 Blocks, Assorted Size V-Blocks & Others",
+      "photo": "photos/56.jpg",
+      "page": 11
+    },
+    {
+      "lot": "57",
+      "title": "Box of Precision Levels - Starrett, Fowler & SPI",
+      "description": "Box with L.S. Starrett 12\" Precision Machinist Level, L.S. Starrett 8\" Precision Machinist Level, Fowler Mini-Mag Digital Level & SPI-Tronic Pro 360 Digital Level",
+      "photo": "photos/57.jpg",
+      "page": 11
+    },
+    {
+      "lot": "58",
+      "title": "Hilger & Watts TB5-2 8\" Precision Square Box Level",
+      "description": "Hilger & Watts TB5-2 8\" Precision Square Box Level, S/N 165163, in Box",
+      "photo": "photos/58.jpg",
+      "page": 11
+    },
+    {
+      "lot": "59",
+      "title": "Box of Sine Bars",
+      "description": "Box of Assorted Size Sine Bars, including (2) Micro 1\" x 5\" Sine Bars, 1\" x 10\" Sine Bar & 2\" x 5\" Sine Bar",
+      "photo": "photos/59.jpg",
+      "page": 11
+    },
+    {
+      "lot": "60",
+      "title": "Box of Chamfer Gages - Accupro & Starrett",
+      "description": "Box of Assorted Degree Chamfer Gages, including (2) Accupro Gold Chamfer Gages, 0-90 Degree & 90-127 Degree, & Starrett 90-127 Degree Chamfer Gage",
+      "photo": "photos/60.jpg",
+      "page": 11
+    },
+    {
+      "lot": "61",
+      "title": "Box of Precision Ball Gages",
+      "description": "Box of Assorted Size Precision Ball Gages",
+      "photo": "photos/61.jpg",
+      "page": 12
+    },
+    {
+      "lot": "62",
+      "title": "Box of Radius Gage Sets, Telescoping Gages & Small Hole Gages",
+      "description": "Box with Radius Gage Sets, Telescoping Gages & Small Hole Gages",
+      "photo": "photos/62.jpg",
+      "page": 12
+    },
+    {
+      "lot": "63",
+      "description": "Box of Assorted Size Radius Gage Sets",
+      "photo": "photos/63.jpg",
+      "page": 12
+    },
+    {
+      "lot": "64",
+      "description": "Box of Assorted Size Radius Gage Sets",
+      "photo": "photos/64.jpg",
+      "page": 12
+    },
+    {
+      "lot": "65",
+      "description": "Box of Assorted Size Machinist Squares",
+      "photo": "photos/65.jpg",
+      "page": 12
+    },
+    {
+      "lot": "66",
+      "title": "Box of Precision Measuring Tools - Dial Caliper Gage, Groove Gage & Indicator",
+      "description": "Box of Precision Measuring Tools, including Dial Caliper Gage, Indi-Cal Groove Bore Caliper & Dial Indicator with Bridge Base",
+      "photo": "photos/66.jpg",
+      "page": 12
+    },
+    {
+      "lot": "67",
+      "title": "Mitutoyo #118-107 0\"-1\" Deep Throat Sheet Metal Micrometer",
+      "description": "Mitutoyo #118-107 0\"-1\" Deep Throat / Sheet Metal Micrometer, in Box",
+      "photo": "photos/67.jpg",
+      "page": 13
+    },
+    {
+      "lot": "68",
+      "title": "Erick Miracle Point Model 900 Protractor & Meylan Hand Tachometer",
+      "description": "Erick Miracle Point Model 900 Magnetic Base Protractor & Meylan Chronometric Hand Tachometer",
+      "photo": "photos/68.jpg",
+      "page": 13
+    },
+    {
+      "lot": "69",
+      "title": "Mitutoyo Bevel Protractor, Starrett Thickness Gage & N.C.K Dial Caliper Gage",
+      "description": "Mitutoyo 6\" Universal Bevel Protractor #187-904, Starrett 1015A Series Portable Dial Thickness Gage & N.C.K Internal Dial Caliper Gage",
+      "photo": "photos/69.jpg",
+      "page": 13
+    },
+    {
+      "lot": "70",
+      "title": "Starrett & Mitutoyo Micrometer Setting Standards, 1\"-25\"",
+      "description": "Starrett & Mitutoyo Micrometer Setting Standard Set, 1\"-11\", with 16\", 17\", 18\", 19\" & 25\" Standards",
+      "photo": "photos/70.jpg",
+      "page": 13
+    },
+    {
+      "lot": "71",
+      "title": "Mitutoyo #516-930 & Brown & Sharpe Gage Block Sets",
+      "description": "Mitutoyo Gage Block Set #516-930, .0625\"-2.0\", Grade 2, S/N 971459 & Brown & Sharpe 1\"-4\" Gage Block Set, Mostly Complete",
+      "photo": "photos/71.jpg",
+      "page": 13
+    },
+    {
+      "lot": "72",
+      "title": "(2) Gage Block Sets - CEJ Sweden Jo Blocks & Grade B",
+      "description": "CEJ Sweden Jo Blocks Gage Block Set .10005-4\", Model ES 1, Grade A+, S/N 813453 & Grade B Gage Block Set .050\"-4\", Mostly Complete",
+      "photo": "photos/72.jpg",
+      "page": 13
+    },
+    {
+      "lot": "73",
+      "title": "Mitutoyo & Starrett Micrometers & Dial Indicator",
+      "description": "Mitutoyo Dial Indicator, Mitutoyo 0\"-1\" Digital Micrometer, Mitutoyo 0\"-1\" Pin Micrometer Set, (2) Starrett 0\"-1\" Micrometers & Mitutoyo Depth Micrometer",
+      "photo": "photos/73.jpg",
+      "page": 14
+    },
+    {
+      "lot": "74",
+      "title": "Mitutoyo Surftest SJ-210 Portable Surface Roughness Tester",
+      "description": "Mitutoyo Surftest SJ-210 Series Portable Surface Roughness Tester #178-561-12A, S/N 512072305, with Surf-Check Roughness Standards & Mitutoyo #178-602 Precision Reference Specimen",
+      "photo": "photos/74.jpg",
+      "page": 14
+    },
+    {
+      "lot": "75",
+      "title": "Trimos V4-400 16\" Electronic Height Gage",
+      "description": "Fowler Trimos V4-400 16\" (407mm) Electronic Height Gage, S/N 18056402",
+      "photo": "photos/75.jpg",
+      "page": 14
+    },
+    {
+      "lot": "76",
+      "title": "Accupro Rockwell Hardness Tester",
+      "description": "Accupro #06534051 Rockwell Hardness Tester, S/N 0160, with Hardness Test Blocks",
+      "photo": "photos/76.jpg",
+      "page": 14
+    },
+    {
+      "lot": "77",
+      "title": "Keyence IM-7030 Image Dimension Measuring System",
+      "description": "Keyence IM-7030 Image Dimension Measuring System, S/N 3C020159, with PC Controller & Software",
+      "photo": "photos/77.jpg",
+      "page": 14
+    },
+    {
+      "lot": "78",
+      "title": "Andonstar ADSM302 / Vividia HM-302 5\" 1080P Digital Microscope",
+      "description": "Andonstar ADSM302 / Vividia HM-302 5\" 1080P Digital Microscope, with Remote",
+      "photo": "photos/78.jpg",
+      "page": 14
+    },
+    {
+      "lot": "79",
+      "title": "Andonstar ADSM302 / Vividia HM-302 5\" 1080P Digital Microscope",
+      "description": "Andonstar ADSM302 / Vividia HM-302 5\" 1080P Digital Microscope, with Remote",
+      "photo": "photos/79.jpg",
+      "page": 15
+    },
+    {
+      "lot": "80",
+      "title": "Trimos V4-700 28\" Electronic Height Gage",
+      "description": "Fowler Trimos V4-700 28\" (711mm) Electronic Height Gage, S/N 15041512",
+      "photo": "photos/80.jpg",
+      "page": 15
+    },
+    {
+      "lot": "81",
+      "title": "Pink Granite Surface Plate 48\" x 36\" x 3\", Grade A, on Rolling Stand",
+      "description": "Pink Granite Surface Plate 48\" x 36\" x 3\", Grade A, on Heavy Duty Rolling Stand",
+      "photo": "photos/81.jpg",
+      "page": 15
+    },
+    {
+      "lot": "82",
+      "title": "Verisurf VA8 v1 Master 3D Gage Portable Measuring Arm, 2020",
+      "description": "Verisurf VA8 v1 Master 3D Gage Portable Measuring Arm, S/N 8312-6-10016-UC, 2020",
+      "photo": "photos/82.jpg",
+      "page": 15
+    },
+    {
+      "lot": "83",
+      "title": "Mitutoyo Bright-M BRT-M710 CMM, S/N BF000044, 2000",
+      "description": "Mitutoyo Bright-M BRT-M710 Coordinate Measuring Machine, S/N BF000044, 2000, with X-Axis Measuring Range: 27.6\" (700 mm), Y-Axis Measuring Range: 39.4\" (1,000 mm), Z-Axis Measuring Range: 23.6\" (600 mm), Renishaw MH20i Probe Head & Controller",
+      "photo": "photos/83.jpg",
+      "page": 16
+    },
+    {
+      "lot": "84",
+      "title": "Plus & Minus Pin Gage Sets in Drawers - Vermont & Others",
+      "description": "Plus & Minus Pin Gage Sets in Drawers, Vermont & Others, .011\"-.060\", .079\"-.232\", .251\"-.500\", .501\"-.625\" & .626\"-.750\", with Miscellaneous Pin Gages (Located in QC Room)",
+      "photo": "photos/84.jpg",
+      "page": 16
+    },
+    {
+      "lot": "85",
+      "title": "Wenzel LH 107 CMM, S/N 2510104 (New 2025)",
+      "description": "Wenzel LH 107 Coordinate Measuring Machine, S/N 2510104 (New 2025), with 90\" x 54\" Table Size, 1,000mm X-Axis Travel, 1,500mm Y-Axis Travel, 700mm Z-Axis Travel, 6-Station Probe Changer, Renishaw UCC T5 & Renishaw SPA3-2 Drivers, Renishaw PH20 Probe, Assorted Probes, HT20 Joystick Control",
+      "photo": "photos/85.jpg",
+      "page": 17
+    },
+    {
+      "lot": "86",
+      "description": "(4) Renishaw R-QLPC-13300300-12-6 Threaded Inspection Plates",
+      "photo": "photos/86.jpg",
+      "page": 17
+    },
+    {
+      "lot": "87",
+      "title": "Renishaw M6 Clamping Kit",
+      "description": "Renishaw M6 Clamping Kit in Case",
+      "photo": "photos/87.jpg",
+      "page": 17
+    },
+    {
+      "lot": "88",
+      "title": "Renishaw M6 Clamping Kit",
+      "description": "Renishaw M6 Clamping Kit in Case",
+      "photo": "photos/88.jpg",
+      "page": 17
+    },
+    {
+      "lot": "89",
+      "description": "(2) Mitutoyo Absolute Coolant Proof 6\" Digital Calipers",
+      "photo": "photos/89.jpg",
+      "page": 18
+    },
+    {
+      "lot": "90",
+      "title": "Box of Magnetic Indicator Stands with Dial Indicators",
+      "description": "Box of Assorted Magnetic Indicator Stands, Noga & Anytime, with Mitutoyo Dial Indicators & Brown & Sharpe Dial Indicator",
+      "photo": "photos/90.jpg",
+      "page": 18
+    },
+    {
+      "lot": "91",
+      "title": "Starrett #199 15\" Master Precision Level",
+      "description": "Starrett #199 15\" Master Precision Level, in Box",
+      "photo": "photos/91.jpg",
+      "page": 18
+    },
+    {
+      "lot": "92",
+      "description": "Precision Granite 12\" x 12\" x 3\" Black Granite Surface Plate, Grade A",
+      "photo": "photos/92.jpg",
+      "page": 18
+    },
+    {
+      "lot": "93",
+      "title": "Fairbanks 100-Lb. Counting Scale & Cen-Tech 110-Lb. Shipping Scale",
+      "description": "Fairbanks 100-Lb. Capacity Counting Scale & Cen-Tech 110-Lb. Capacity Shipping Scale",
+      "photo": "photos/93.jpg",
+      "page": 18
+    },
+    {
+      "lot": "94",
+      "title": "(2) Mitutoyo 6\" Digital Calipers, 8\" Caliper & MHC Coaxial Indicator",
+      "description": "(2) Mitutoyo Absolute Coolant Proof 6\" Digital Calipers, Standard 0-8\" Caliper & MHC Coaxial Centering Indicator",
+      "photo": "photos/94.jpg",
+      "page": 18
+    },
+    {
+      "lot": "95",
+      "description": "(3) Refractometers & Peak Scale Loupe",
+      "photo": "photos/95.jpg",
+      "page": 19
+    },
+    {
+      "lot": "96",
+      "description": "(2) Heavy Duty Wood Top Rolling Tables, 23-1/2\" x 41-1/2\" x 28-1/2\"",
+      "photo": "photos/96.jpg",
+      "page": 19
+    },
+    {
+      "lot": "97",
+      "title": "MSC Pin Gage Sets .011\"-.250\" with SPI Go/No-Go Holders",
+      "description": "MSC Pin Gage Set .011\"-.060\", Mostly Complete & .061\"-.250\" Pin Gage Set, with SPI Go/No-Go Holders",
+      "photo": "photos/97.jpg",
+      "page": 19
+    },
+    {
+      "lot": "98",
+      "title": "Pin Gage Set .251\"-.500\" with SPI Go/No-Go Holders",
+      "description": "Pin Gage Set .251\"-.500\", with SPI Go/No-Go Pin Gage Holders",
+      "photo": "photos/98.jpg",
+      "page": 19
+    },
+    {
+      "lot": "99",
+      "title": "Fowler Gage Block Set & Pin Gages",
+      "description": "Fowler Gage Block Set .1000\"-4\", Mostly Complete & Assorted Pin Gages .571\"-.625\", Incomplete",
+      "photo": "photos/99.jpg",
+      "page": 19
+    },
+    {
+      "lot": "100",
+      "title": "Pin Gage Set .063\"-.588\"",
+      "description": "Pin Gage Set .063\"-.588\", Incomplete",
+      "photo": "photos/100.jpg",
+      "page": 19
+    },
+    {
+      "lot": "101",
+      "title": "Pin Gage Set .626\"-.832\"",
+      "description": "Pin Gage Set .626\"-.832\", Mostly Complete",
+      "photo": "photos/101.jpg",
+      "page": 20
+    },
+    {
+      "lot": "102",
+      "description": "Pin Gage Set .835\"-1.006\"",
+      "photo": "photos/102.jpg",
+      "page": 20
+    },
+    {
+      "lot": "103",
+      "title": "Mazak VCN-410A CNC Vertical Machining Center, S/N 160144, 2002",
+      "description": "Mazak VCN-410A CNC Vertical Machining Center, S/N 160144, 2002, with 35.43\" x 16.14\" Table Size, 1,100-Lbs. Max. Table Load, 22.05\" X-Axis Travel, 16.14\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25/20-HP (30 min/cont.) Spindle Motor, 30-Position Side-Mount Automatic Tool Changer, 1,417-IPM Rapid Traverse (X/Y/Z), Renishaw Probe & Tool Setter, Chip Conveyor, Mazatrol Fusion 640M Nexus CNC Control",
+      "photo": "photos/103.jpg",
+      "page": 20
+    },
+    {
+      "lot": "104",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks & Others",
+      "photo": "photos/104.jpg",
+      "page": 21
+    },
+    {
+      "lot": "105",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks & Others",
+      "photo": "photos/105.jpg",
+      "page": 21
+    },
+    {
+      "lot": "106",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/106.jpg",
+      "page": 21
+    },
+    {
+      "lot": "107",
+      "description": "Parlec 6\" Machine Vise",
+      "photo": "photos/107.jpg",
+      "page": 21
+    },
+    {
+      "lot": "108",
+      "title": "Fadal VMC 4020A CNC Vertical Machining Center, S/N 12000101601, 2000",
+      "description": "Fadal VMC 4020A CNC Vertical Machining Center, 2000, S/N 12000101601, with 47.94\" x 20\" Table Size, 1,500-Lbs. Max. Table Load, 40\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 4\" - 24\" Spindle Nose to Table, CT 40 Spindle Taper, 15-HP (22.5-HP Peak on HT) Spindle Motor, 20-Position Automatic Tool Changer, 4th Axis Wired, Cool Power, Fadal Multi Processor CNC Control (Rotary Table Not Included)",
+      "photo": "photos/108.jpg",
+      "page": 22
+    },
+    {
+      "lot": "109",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Lyndex & Others",
+      "photo": "photos/109.jpg",
+      "page": 22
+    },
+    {
+      "lot": "110",
+      "title": "(20) CT 40 ER-16 & ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 & ER-32 Collet Tool Holders, Techniks, Kingston & Others",
+      "photo": "photos/110.jpg",
+      "page": 22
+    },
+    {
+      "lot": "111",
+      "description": "Kurt 3600V 6\" Machine Vise",
+      "photo": "photos/111.jpg",
+      "page": 22
+    },
+    {
+      "lot": "112",
+      "description": "Kurt 3600V 6\" Machine Vise",
+      "photo": "photos/112.jpg",
+      "page": 23
+    },
+    {
+      "lot": "113",
+      "title": "Fadal VH65 4th Axis Rotary Table",
+      "description": "Fadal VH65 4th Axis Rotary Table, with 6\" 3-Jaw Chuck",
+      "photo": "photos/113.jpg",
+      "page": 23
+    },
+    {
+      "lot": "114",
+      "title": "Fadal VMC 3016 CNC Vertical Machining Center, S/N 9803616, 1998",
+      "description": "Fadal VMC 3016 CNC Vertical Machining Center, S/N 9803616, 1998, with 39\" x 16\" Table Size, 1,000-Lbs. Max. Table Load, 30\" X-Axis Travel, 16\" Y-Axis Travel, 20\" Z-Axis Travel, CT 40 Spindle Taper, 15-HP Spindle Motor, 20-Position Automatic Tool Changer, Fadal CNC 88HS Control",
+      "photo": "photos/114.jpg",
+      "page": 23
+    },
+    {
+      "lot": "115",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Parlec, Techniks, Kennametal & Others",
+      "photo": "photos/115.jpg",
+      "page": 24
+    },
+    {
+      "lot": "116",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks & Others",
+      "photo": "photos/116.jpg",
+      "page": 24
+    },
+    {
+      "lot": "117",
+      "description": "Kurt 3600 V 6\" Machine Vise",
+      "photo": "photos/117.jpg",
+      "page": 24
+    },
+    {
+      "lot": "118",
+      "description": "Kurt 3600 V 6\" Machine Vise",
+      "photo": "photos/118.jpg",
+      "page": 24
+    },
+    {
+      "lot": "119",
+      "title": "Mazak Nexus 510C CNC Vertical Machining Center, S/N 180322, 2005",
+      "description": "Mazak Nexus 510C CNC Vertical Machining Center, 2005, S/N 180322, with 51.2\" x 21.6\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), Remote Jog, Renishaw Probe & Tool Setter, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Fusion 640M Nexus CNC Control",
+      "photo": "photos/119.jpg",
+      "page": 25
+    },
+    {
+      "lot": "120",
+      "title": "(20) CT 40 ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32 Collet Tool Holders, Techniks, Command, Rego-Fix & Others",
+      "photo": "photos/120.jpg",
+      "page": 25
+    },
+    {
+      "lot": "121",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks & Others",
+      "photo": "photos/121.jpg",
+      "page": 25
+    },
+    {
+      "lot": "122",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/122.jpg",
+      "page": 25
+    },
+    {
+      "lot": "123",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/123.jpg",
+      "page": 26
+    },
+    {
+      "lot": "124",
+      "title": "Mazak VCN-510C-II CNC Vertical Machining Center, S/N 195484, 2007",
+      "description": "Mazak VCN-510C-II CNC Vertical Machining Center, 2007, S/N 195484, with 51.18\" x 21.65\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20.08\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), 4th Axis Wired, Remote Jog, Renishaw Probe, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Matrix Nexus CNC Control",
+      "photo": "photos/124.jpg",
+      "page": 26
+    },
+    {
+      "lot": "125",
+      "title": "(20) CT 40 ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32 Collet Tool Holders, Techniks & Others",
+      "photo": "photos/125.jpg",
+      "page": 27
+    },
+    {
+      "lot": "126",
+      "title": "(20) CT 40 ER-32 & ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32 & ER-16 Collet Tool Holders, Rego-Fix, Techniks, Erickson & Dorian",
+      "photo": "photos/126.jpg",
+      "page": 27
+    },
+    {
+      "lot": "127",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/127.jpg",
+      "page": 27
+    },
+    {
+      "lot": "128",
+      "description": "Kurt D688 6\" Machine Vise",
+      "photo": "photos/128.jpg",
+      "page": 27
+    },
+    {
+      "lot": "129",
+      "title": "Mazak 8\" 4th Axis Rotary Table with Accessories",
+      "description": "Mazak 8\"/203mm 4th Axis Rotary Table, with 4th Axis Accessories & Parts",
+      "photo": "photos/129.jpg",
+      "page": 27
+    },
+    {
+      "lot": "130",
+      "title": "Mazak VCN-510C-II CNC Vertical Machining Center, S/N 240683, 2012",
+      "description": "Mazak VCN-510C-II CNC Vertical Machining Center, S/N 240683, 2012, with 51.18\" x 21.65\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20.08\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), Renishaw Probing, Renishaw OTS, Remote Jog, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Matrix Nexus CNC Control",
+      "photo": "photos/130.jpg",
+      "page": 28
+    },
+    {
+      "lot": "131",
+      "title": "(20) CT 40 ER-16 & ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 & ER-32 Collet Tool Holders, Parlec, Techniks & Others",
+      "photo": "photos/131.jpg",
+      "page": 28
+    },
+    {
+      "lot": "132",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Briney, Erickson & Others",
+      "photo": "photos/132.jpg",
+      "page": 28
+    },
+    {
+      "lot": "133",
+      "description": "Kurt 6\" Machine Vise 3600V",
+      "photo": "photos/133.jpg",
+      "page": 28
+    },
+    {
+      "lot": "134",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/134.jpg",
+      "page": 29
+    },
+    {
+      "lot": "135",
+      "title": "Mazak VCN-510C CNC Vertical Machining Center, S/N 168230, 2003",
+      "description": "Mazak VCN-510C CNC Vertical Machining Center, S/N 168230, 2003, with 51.2\" x 21.6\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25-HP Spindle Motor, 30-Position Automatic Tool Changer, Automatic Pallet Changer, 1,417-IPM Rapid Traverse (X/Y/Z), Remote Jog, Chip Auger, Mazatrol Fusion 640M Nexus CNC Control (BAD AMP)",
+      "photo": "photos/135.jpg",
+      "page": 29
+    },
+    {
+      "lot": "136",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Erickson, Lyndex & Others",
+      "photo": "photos/136.jpg",
+      "page": 30
+    },
+    {
+      "lot": "137",
+      "title": "(20) CT 40 ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32 Collet Tool Holders, Techniks, Command & Others",
+      "photo": "photos/137.jpg",
+      "page": 30
+    },
+    {
+      "lot": "138",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/138.jpg",
+      "page": 30
+    },
+    {
+      "lot": "139",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/139.jpg",
+      "page": 30
+    },
+    {
+      "lot": "140",
+      "title": "Mazak VCN-510C-II CNC Vertical Machining Center, S/N 217690, 2010",
+      "description": "Mazak VCN-510C-II CNC Vertical Machining Center, S/N 217690, 2010, with 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20.08\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), Renishaw Probing, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Remote Jog, Chip Conveyor, Mazatrol Matrix Nexus CNC Control",
+      "photo": "photos/140.jpg",
+      "page": 31
+    },
+    {
+      "lot": "141",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Briney & Others",
+      "photo": "photos/141.jpg",
+      "page": 31
+    },
+    {
+      "lot": "142",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Parlec, Techniks & Others",
+      "photo": "photos/142.jpg",
+      "page": 31
+    },
+    {
+      "lot": "143",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/143.jpg",
+      "page": 31
+    },
+    {
+      "lot": "144",
+      "description": "Kurt DX6 Crossover 6\" Vise",
+      "photo": "photos/144.jpg",
+      "page": 32
+    },
+    {
+      "lot": "145",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/145.jpg",
+      "page": 32
+    },
+    {
+      "lot": "146",
+      "title": "Mazak VCN-430B CNC Vertical Machining Center, S/N 266153, 2015",
+      "description": "Mazak VCN-430B CNC Vertical Machining Center, S/N 266153, 2015, with 43.31\" x 16.93\" Table Size, 1,764-Lbs. Max. Table Weight Capacity, 30.0\" X-Axis Travel, 16.93\" Y-Axis Travel, 20.08\" Z-Axis Travel, 25-HP Spindle Motor, 1,654-IPM Rapid Traverse Rates (X/Y/Z), 0.04 - 315-IPM Cutting Feed Rate, 12,000-RPM Spindle, CT 40, Renishaw Probing, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Matrix Nexus 2 Control",
+      "photo": "photos/146.jpg",
+      "page": 32
+    },
+    {
+      "lot": "147",
+      "title": "(20) CT 40 ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32 Collet Tool Holders, Techniks, Erickson & Others",
+      "photo": "photos/147.jpg",
+      "page": 33
+    },
+    {
+      "lot": "148",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, GS & Others",
+      "photo": "photos/148.jpg",
+      "page": 33
+    },
+    {
+      "lot": "149",
+      "description": "Kurt DX6 Crossover 6\" Vise",
+      "photo": "photos/149.jpg",
+      "page": 33
+    },
+    {
+      "lot": "150",
+      "description": "Kurt DX6 Crossover 6\" Vise",
+      "photo": "photos/150.jpg",
+      "page": 33
+    },
+    {
+      "lot": "151",
+      "title": "Mazak VTC-300C CNC Vertical Machining Center, S/N 291757, 2018",
+      "description": "Mazak VTC-300C CNC Vertical Machining Center, S/N 291757, 2018, with 12,000-RPM Spindle Speed, 78.74\" x 30\" Table Size, 3,300-Lbs. Max. Table Load, 65.35\" X-Axis Travel, 30\" Y-Axis Travel, 26\" Z-Axis Travel, 7.09\" - 33.07\" Spindle Nose to Table, CT 40 Spindle Taper, 48-Position Automatic Tool Changer, 25/15-HP (5 min/30 min) Spindle Motor, ATC 24 Tools Std., 1,181-IPM Rapid Traverse (X/Y/Z), Mazak Superflow V8-A1000 1,000-PSI Through Spindle Coolant, P-Cool, Remote Jog, Chip Conveyor, Mazatrol Matrix Nexus 2 CNC Control",
+      "photo": "photos/151.jpg",
+      "page": 34
+    },
+    {
+      "lot": "152",
+      "title": "(20) CT 40 ER-32 Collet Tool Holders & Boring Bar Holder",
+      "description": "(20) CT 40 Assorted Size ER-32 Collet Tool Holders & Boring Bar Holder, Techniks, Parlec & Others",
+      "photo": "photos/152.jpg",
+      "page": 34
+    },
+    {
+      "lot": "153",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks",
+      "photo": "photos/153.jpg",
+      "page": 34
+    },
+    {
+      "lot": "154",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/154.jpg",
+      "page": 34
+    },
+    {
+      "lot": "155",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/155.jpg",
+      "page": 35
+    },
+    {
+      "lot": "156",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/156.jpg",
+      "page": 35
+    },
+    {
+      "lot": "157",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/157.jpg",
+      "page": 35
+    },
+    {
+      "lot": "158",
+      "description": "Kurt D688 6\" Machine Vise",
+      "photo": "photos/158.jpg",
+      "page": 35
+    },
+    {
+      "lot": "159",
+      "description": "Kurt D675 6\" Machine Vise",
+      "photo": "photos/159.jpg",
+      "page": 35
+    },
+    {
+      "lot": "160",
+      "title": "Mazak Variaxis 500-5X-II 5-Axis CNC Machining Center, S/N 234428, 2011",
+      "description": "Mazak Variaxis 500-5X-II 5-Axis CNC Machining Center, S/N 234428, 2011, with 12,000-RPM Spindle, 80-Position Automatic Tool Changer, CT 40, (2) Rotary Pallets, Mazak Superflow V8A/1000 1,000-PSI Through Spindle Coolant, Probing, Chip Conveyor, Mazatrol Matrix CNC Control",
+      "photo": "photos/160.jpg",
+      "page": 36
+    },
+    {
+      "lot": "161",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Kennametal & Rego-Fix",
+      "photo": "photos/161.jpg",
+      "page": 36
+    },
+    {
+      "lot": "162",
+      "title": "(20) CT 40 ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32 Collet Tool Holders, Parlec, Techniks & Others",
+      "photo": "photos/162.jpg",
+      "page": 36
+    },
+    {
+      "lot": "163",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, Accupro, GS, Click Fit & Others",
+      "photo": "photos/163.jpg",
+      "page": 36
+    },
+    {
+      "lot": "164",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/164.jpg",
+      "page": 37
+    },
+    {
+      "lot": "165",
+      "description": "Kurt D688 6\" Machine Vise",
+      "photo": "photos/165.jpg",
+      "page": 37
+    },
+    {
+      "lot": "166",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/166.jpg",
+      "page": 37
+    },
+    {
+      "lot": "167",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/167.jpg",
+      "page": 37
+    },
+    {
+      "lot": "168",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/168.jpg",
+      "page": 37
+    },
+    {
+      "lot": "169",
+      "description": "Kurt D688 6\" Machine Vise",
+      "photo": "photos/169.jpg",
+      "page": 37
+    },
+    {
+      "lot": "170",
+      "title": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 294631 (New 2018)",
+      "description": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 294631 (New 2018), with 13.78\" X-Axis Travel, 21.65\" Y-Axis Travel, 20.08\" Z-Axis Travel, -120 to +30 Deg. A-Axis Tilt, 360 Deg. C-Axis Rotation, 13.78\" Dia. x 12.4\" H, 135-Lbs. Max. Workpiece, 145-Position Automatic Tool Changer, 18,000-RPM Spindle Speed, CT 40 Spindle Taper, 30-HP Spindle Motor, 4.33\" - 24.41\" Table Top to Spindle Nose, 40-Station Pallet Changer, Mazak Superflow T8/1000 1,000-PSI High Pressure Coolant, Remote Jog, Mazak Smooth AWC CNC Control",
+      "photo": "photos/170.jpg",
+      "page": 38
+    },
+    {
+      "lot": "171",
+      "title": "(20) HSK 63 Boring Bar Tool Holders",
+      "description": "(20) HSK 63 Assorted Size Boring Bar Tool Holders, Guhring, Techniks & RedLine",
+      "photo": "photos/171.jpg",
+      "page": 38
+    },
+    {
+      "lot": "172",
+      "title": "(20) HSK 63 ER-32 Collet Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-32 Collet Tool Holders, Techniks & RedLine",
+      "photo": "photos/172.jpg",
+      "page": 38
+    },
+    {
+      "lot": "173",
+      "title": "(20) HSK 63 Boring Bar Tool Holders",
+      "description": "(20) HSK 63 Assorted Size Boring Bar Tool Holders, Techniks & RedLine",
+      "photo": "photos/173.jpg",
+      "page": 38
+    },
+    {
+      "lot": "174",
+      "title": "(20) HSK 63 ER-16 Collet Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-16 Collet Tool Holders, RedLine, Techniks & Others",
+      "photo": "photos/174.jpg",
+      "page": 39
+    },
+    {
+      "lot": "175",
+      "title": "(20) HSK 63 ER-16 Collet Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-16 Collet Tool Holders, Techniks & RedLine",
+      "photo": "photos/175.jpg",
+      "page": 39
+    },
+    {
+      "lot": "176",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/176.jpg",
+      "page": 39
+    },
+    {
+      "lot": "177",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/177.jpg",
+      "page": 39
+    },
+    {
+      "lot": "178",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/178.jpg",
+      "page": 39
+    },
+    {
+      "lot": "179",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/179.jpg",
+      "page": 39
+    },
+    {
+      "lot": "180",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/180.jpg",
+      "page": 40
+    },
+    {
+      "lot": "181",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/181.jpg",
+      "page": 40
+    },
+    {
+      "lot": "182",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/182.jpg",
+      "page": 40
+    },
+    {
+      "lot": "183",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/183.jpg",
+      "page": 40
+    },
+    {
+      "lot": "184",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/184.jpg",
+      "page": 40
+    },
+    {
+      "lot": "185",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/185.jpg",
+      "page": 40
+    },
+    {
+      "lot": "186",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/186.jpg",
+      "page": 41
+    },
+    {
+      "lot": "187",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/187.jpg",
+      "page": 41
+    },
+    {
+      "lot": "188",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/188.jpg",
+      "page": 41
+    },
+    {
+      "lot": "189",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/189.jpg",
+      "page": 41
+    },
+    {
+      "lot": "190",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/190.jpg",
+      "page": 41
+    },
+    {
+      "lot": "191",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/191.jpg",
+      "page": 41
+    },
+    {
+      "lot": "192",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/192.jpg",
+      "page": 42
+    },
+    {
+      "lot": "193",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/193.jpg",
+      "page": 42
+    },
+    {
+      "lot": "194",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/194.jpg",
+      "page": 42
+    },
+    {
+      "lot": "195",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/195.jpg",
+      "page": 42
+    },
+    {
+      "lot": "196",
+      "description": "(2) Schunk Kontec KSC 80 Vises, with Custom 6\" Jaws",
+      "photo": "photos/196.jpg",
+      "page": 42
+    },
+    {
+      "lot": "197",
+      "description": "(2) Schunk Kontec KSC 80 Vises, with Custom 6\" Jaws",
+      "photo": "photos/197.jpg",
+      "page": 42
+    },
+    {
+      "lot": "198",
+      "description": "(2) Schunk Kontec KSC 80 Vises, with Custom 6\" Jaws",
+      "photo": "photos/198.jpg",
+      "page": 43
+    },
+    {
+      "lot": "199",
+      "description": "(2) Schunk Kontec KSC 80 Vises, with Custom 6\" Jaws",
+      "photo": "photos/199.jpg",
+      "page": 43
+    },
+    {
+      "lot": "200",
+      "description": "(2) Schunk Kontec KSC 80 Vises, with Custom 6\" Jaws",
+      "photo": "photos/200.jpg",
+      "page": 43
+    },
+    {
+      "lot": "201",
+      "description": "(18) 5\" x 3\" x 2-1/4\" Aluminum Soft Jaws for Schunk Vises",
+      "photo": "photos/201.jpg",
+      "page": 43
+    },
+    {
+      "lot": "202",
+      "description": "(24) 5\" x 3\" x 2-1/4\" Aluminum Soft Jaws for Schunk Vises",
+      "photo": "photos/202.jpg",
+      "page": 43
+    },
+    {
+      "lot": "203",
+      "title": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 306887 (New 2020)",
+      "description": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 306887 (New 2020), with 13.78\" X-Axis Travel, 21.65\" Y-Axis Travel, 20.08\" Z-Axis Travel, -120 to +30 Deg. A-Axis Tilt, 360 Deg. C-Axis Rotation, 13.78\" Dia. x 12.4\" H, 135-Lbs. Max. Workpiece, 145-Position Automatic Tool Changer, 18,000-RPM Spindle Speed, CT 40 Spindle Taper, 30-HP Spindle Motor, 4.33\" - 24.41\" Table Top to Spindle Nose, 40-Station Pallet Changer, Mazak Superflow T8/1000 1,000-PSI High Pressure Coolant, Remote Jog, Mazak Smooth AWC CNC Control",
+      "photo": "photos/203.jpg",
+      "page": 44
+    },
+    {
+      "lot": "204",
+      "title": "(20) HSK 63 ER-32 Collet Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-32 Collet Tool Holders, Techniks & RedLine",
+      "photo": "photos/204.jpg",
+      "page": 44
+    },
+    {
+      "lot": "205",
+      "title": "(20) HSK 63 ER-16 Collet Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-16 Collet Tool Holders, Techniks & RedLine",
+      "photo": "photos/205.jpg",
+      "page": 44
+    },
+    {
+      "lot": "206",
+      "title": "(20) HSK 63 Boring Bar Tool Holders",
+      "description": "(20) HSK 63 Assorted Size Boring Bar Tool Holders, Techniks & RedLine",
+      "photo": "photos/206.jpg",
+      "page": 44
+    },
+    {
+      "lot": "207",
+      "title": "(20) HSK 63 ER-16 Collet Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-16 Collet Tool Holders, Techniks & RedLine",
+      "photo": "photos/207.jpg",
+      "page": 45
+    },
+    {
+      "lot": "208",
+      "title": "(20) HSK 63 ER-16 & ER-32 Collet Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-16 & ER-32 Collet Tool Holders, Techniks & RedLine",
+      "photo": "photos/208.jpg",
+      "page": 45
+    },
+    {
+      "lot": "209",
+      "title": "(20) HSK 63 ER-16 Collet Tool Holders & Boring Bar Tool Holders",
+      "description": "(20) HSK 63 Assorted Size ER-16 Collet Tool Holders & Boring Bar Tool Holders, Techniks & RedLine",
+      "photo": "photos/209.jpg",
+      "page": 45
+    },
+    {
+      "lot": "210",
+      "title": "(4) HSK 63 Holders - Rego-Fix PG 25 & Techniks with Coolant Through Drills",
+      "description": "(4) HSK 63 Holders, including (2) Rego-Fix PG 25 Pressure Fit Collet Tool Holders & (2) Techniks HSK 63 Holders with Insert Coolant Through Drills",
+      "photo": "photos/210.jpg",
+      "page": 45
+    },
+    {
+      "lot": "211",
+      "title": "(4) HSK 63 Holders - RedLine & Techniks Shell Mill & Rego-Fix PG 25",
+      "description": "(4) HSK 63 Holders, including (3) RedLine & Techniks Shell Mill Tool Holders & (1) Rego-Fix PG 25 Pressure Fit Collet Holder with Through Coolant Drill",
+      "photo": "photos/211.jpg",
+      "page": 45
+    },
+    {
+      "lot": "212",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/212.jpg",
+      "page": 45
+    },
+    {
+      "lot": "213",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/213.jpg",
+      "page": 46
+    },
+    {
+      "lot": "214",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/214.jpg",
+      "page": 46
+    },
+    {
+      "lot": "215",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/215.jpg",
+      "page": 46
+    },
+    {
+      "lot": "216",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/216.jpg",
+      "page": 46
+    },
+    {
+      "lot": "217",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/217.jpg",
+      "page": 46
+    },
+    {
+      "lot": "218",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/218.jpg",
+      "page": 46
+    },
+    {
+      "lot": "219",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/219.jpg",
+      "page": 47
+    },
+    {
+      "lot": "220",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/220.jpg",
+      "page": 47
+    },
+    {
+      "lot": "221",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/221.jpg",
+      "page": 47
+    },
+    {
+      "lot": "222",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/222.jpg",
+      "page": 47
+    },
+    {
+      "lot": "223",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/223.jpg",
+      "page": 47
+    },
+    {
+      "lot": "224",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/224.jpg",
+      "page": 47
+    },
+    {
+      "lot": "225",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws",
+      "photo": "photos/225.jpg",
+      "page": 48
+    },
+    {
+      "lot": "226",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/226.jpg",
+      "page": 48
+    },
+    {
+      "lot": "227",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/227.jpg",
+      "page": 48
+    },
+    {
+      "lot": "228",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/228.jpg",
+      "page": 48
+    },
+    {
+      "lot": "229",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/229.jpg",
+      "page": 48
+    },
+    {
+      "lot": "230",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/230.jpg",
+      "page": 48
+    },
+    {
+      "lot": "231",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/231.jpg",
+      "page": 49
+    },
+    {
+      "lot": "232",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises with Custom Jaws",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with Custom 6\" Jaws & 3\" Serrated Jaws",
+      "photo": "photos/232.jpg",
+      "page": 49
+    },
+    {
+      "lot": "233",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/233.jpg",
+      "page": 49
+    },
+    {
+      "lot": "234",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/234.jpg",
+      "page": 49
+    },
+    {
+      "lot": "235",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, with 3\" Serrated Jaws",
+      "photo": "photos/235.jpg",
+      "page": 49
+    },
+    {
+      "lot": "236",
+      "title": "(2) Raptor RWP-502 Vises with 4\" Serrated Jaws",
+      "description": "(2) Raptor RWP-502 Vises, with 4\" Serrated Jaws",
+      "photo": "photos/236.jpg",
+      "page": 49
+    },
+    {
+      "lot": "237",
+      "title": "(2) Schunk Kontec KSC 80 Self-Centering Vises",
+      "description": "(2) Schunk Kontec KSC 80 Self-Centering Vises, (1) with No Jaws & (1) with Custom Jaws",
+      "photo": "photos/237.jpg",
+      "page": 50
+    },
+    {
+      "lot": "238",
+      "title": "Schunk Kontec KSC 125 Vise on Riser Plate Fixture",
+      "description": "Schunk Kontec KSC 125 Vise, with 5\" Schunk Serrated Jaws, on Riser Plate Fixture",
+      "photo": "photos/238.jpg",
+      "page": 50
+    },
+    {
+      "lot": "239",
+      "title": "(4) Schunk KTR 160 Top Jaw Blanks",
+      "description": "(4) Schunk KTR 160 Top Jaw Blanks, Drilled with Tongue, Groove & Mounting Holes, with 3\" Jaws & Custom 6\" Jaws",
+      "photo": "photos/239.jpg",
+      "page": 50
+    },
+    {
+      "lot": "240",
+      "description": "(24) 5\" x 2\" x 3\" Aluminum Soft Jaws for Schunk Vises",
+      "photo": "photos/240.jpg",
+      "page": 50
+    },
+    {
+      "lot": "241",
+      "description": "(24) 5\" x 2\" x 3\" Aluminum Soft Jaws for Schunk Vises",
+      "photo": "photos/241.jpg",
+      "page": 50
+    },
+    {
+      "lot": "242",
+      "title": "(10) Aluminum Soft Jaws for Schunk Vises",
+      "description": "(10) Aluminum Soft Jaws for Schunk Vises, including (4) 5\" x 3\" x 2-1/4\" & (6) 5\" x 2\" x 3\"",
+      "photo": "photos/242.jpg",
+      "page": 50
+    },
+    {
+      "lot": "243",
+      "description": "Huot HSK 63 Rolling Tool Cart, 90-Tool Capacity",
+      "photo": "photos/243.jpg",
+      "page": 51
+    },
+    {
+      "lot": "244",
+      "title": "Mazak Nexus 510C-II CNC Vertical Machining Center, S/N 219683, 2010",
+      "description": "Mazak Nexus 510C-II CNC Vertical Machining Center, S/N 219683, 2010, with 51.18\" x 21.65\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20.08\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), 4th Axis Wired, Remote Jog, Renishaw Probing, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Mazatrol Matrix Nexus CNC Control",
+      "photo": "photos/244.jpg",
+      "page": 51
+    },
+    {
+      "lot": "245",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Dorian Tool & Others",
+      "photo": "photos/245.jpg",
+      "page": 52
+    },
+    {
+      "lot": "246",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, GS & Haas",
+      "photo": "photos/246.jpg",
+      "page": 52
+    },
+    {
+      "lot": "247",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/247.jpg",
+      "page": 52
+    },
+    {
+      "lot": "248",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/248.jpg",
+      "page": 52
+    },
+    {
+      "lot": "249",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/249.jpg",
+      "page": 52
+    },
+    {
+      "lot": "250",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/250.jpg",
+      "page": 52
+    },
+    {
+      "lot": "251",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/251.jpg",
+      "page": 53
+    },
+    {
+      "lot": "252",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/252.jpg",
+      "page": 53
+    },
+    {
+      "lot": "253",
+      "title": "Mazak Palletech Manufacturing Cell with Nexus 5000-III & HCN-5000 Horizontal Machining Centers, S/N 283419 / 261619, 2017/2015",
+      "description": "Mazak Palletech Manufacturing Cell, with 2015 Mazak Nexus 5000-III CNC Horizontal Machining Center & 2017 Mazak HCN-5000 Horizontal Machining Center, S/N 283419 / 261619, 2017/2015, with 19.69\" x 19.69\" (500 mm) Pallet Size, 1,543-Lbs. Max. Pallet Load, 28.74\" X-Axis Travel, 28.74\" Y-Axis Travel, 31.5\" Z-Axis Travel, CT 40, 120-Position Automatic Tool Changers, 12-Pallet Palletech Flexible Manufacturing Systems, Mazak Smooth G Control (2017), Mazak Mazatrol Matrix Nexus 2 Control (2015) (NO TOMBSTONES/FIXTURES/VISES)",
+      "photo": "photos/253.jpg",
+      "page": 53
+    },
+    {
+      "lot": "254",
+      "description": "Leave Industrial 500mm 2-Sided Tombstone",
+      "photo": "photos/254.jpg",
+      "page": 54
+    },
+    {
+      "lot": "255",
+      "description": "Leave Industrial 500mm 4-Sided Tombstone",
+      "photo": "photos/255.jpg",
+      "page": 54
+    },
+    {
+      "lot": "256",
+      "title": "Kurt 6\" Cluster Tower 500mm Tombstone with (4) Double Vises",
+      "description": "Kurt 6\" Cluster Tower 500mm 4-Sided Tombstone, with (4) Kurt 6\" Double Vises",
+      "photo": "photos/256.jpg",
+      "page": 54
+    },
+    {
+      "lot": "257",
+      "title": "Leave Industrial 500mm 2-Sided Tombstone with (2) Kurt 6\" Machine Vises",
+      "description": "500mm 2-Sided Tombstone, with (2) Kurt 6\" Machine Vises",
+      "photo": "photos/257.jpg",
+      "page": 54
+    },
+    {
+      "lot": "258",
+      "description": "Leave Industrial 500mm 4-Sided Tombstone with (2) Kurt 6\" Machine Vises",
+      "photo": "photos/258.jpg",
+      "page": 54
+    },
+    {
+      "lot": "259",
+      "title": "Kurt 6\" Cluster Tower 500mm Tombstone with (4) Double Vises",
+      "description": "Kurt 6\" Cluster Tower 500mm Tombstone, with (4) Kurt 6\" Double Vises",
+      "photo": "photos/259.jpg",
+      "page": 54
+    },
+    {
+      "lot": "260",
+      "title": "Leave Industrial 500mm 4-Sided Tombstone with (8) Schunk Kontec KSC 80 Self-Centering Vises",
+      "description": "Leave Industrial 500mm 4-Sided Tombstone, with (8) Schunk Kontec KSC 80 Self-Centering Vises with 3\" Schunk Serrated Jaws",
+      "photo": "photos/260.jpg",
+      "page": 55
+    },
+    {
+      "lot": "261",
+      "description": "Leave Industrial 500mm 4-Sided Tombstone with (8) Schunk Kontec KSC 80 Self-Centering Vises",
+      "photo": "photos/261.jpg",
+      "page": 55
+    },
+    {
+      "lot": "262",
+      "description": "500mm Custom Pallet Riser Fixture",
+      "photo": "photos/262.jpg",
+      "page": 55
+    },
+    {
+      "lot": "263",
+      "title": "Kurt 6\" Cluster Tower 500mm Tombstone with (4) Double Vises",
+      "description": "Kurt 6\" Cluster Tower 500mm Tombstone, with (4) Kurt 6\" Double Vises",
+      "photo": "photos/263.jpg",
+      "page": 55
+    },
+    {
+      "lot": "264",
+      "title": "Kurt 6\" Cluster Tower 500mm Tombstone with (4) Double Vises",
+      "description": "Kurt 6\" Cluster Tower 500mm Tombstone, with (4) Kurt 6\" Double Vises",
+      "photo": "photos/264.jpg",
+      "page": 55
+    },
+    {
+      "lot": "265",
+      "title": "Kurt 6\" Cluster Tower 500mm Tombstone with (4) Double Vises",
+      "description": "Kurt 6\" Cluster Tower 500mm Tombstone, with (4) Kurt 6\" Double Vises",
+      "photo": "photos/265.jpg",
+      "page": 55
+    },
+    {
+      "lot": "265A",
+      "title": "Mazak Palletech 2-Position Modular Extension System, with (2) Pallets, Frame Extension",
+      "description": "Mazak Palletech 2-Position Modular Extension System, with (2) 500mm Pallets, Frame Extension",
+      "photo": "photos/265A.jpg",
+      "page": 56
+    },
+    {
+      "lot": "266",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks & Others",
+      "photo": "photos/266.jpg",
+      "page": 56
+    },
+    {
+      "lot": "267",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, GS & Others",
+      "photo": "photos/267.jpg",
+      "page": 56
+    },
+    {
+      "lot": "268",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Parlec, Accupro & Others",
+      "photo": "photos/268.jpg",
+      "page": 56
+    },
+    {
+      "lot": "269",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Valenite, Techniks, GS & Others",
+      "photo": "photos/269.jpg",
+      "page": 56
+    },
+    {
+      "lot": "270",
+      "title": "(20) CT 40 ER-16 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 Collet Tool Holders, Techniks, Briney & Others",
+      "photo": "photos/270.jpg",
+      "page": 56
+    },
+    {
+      "lot": "271",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, Valenite, Kennametal & Others",
+      "photo": "photos/271.jpg",
+      "page": 57
+    },
+    {
+      "lot": "272",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, Kennametal, GS & Others",
+      "photo": "photos/272.jpg",
+      "page": 57
+    },
+    {
+      "lot": "273",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Seco, Techniks, Valenite & Others",
+      "photo": "photos/273.jpg",
+      "page": 57
+    },
+    {
+      "lot": "274",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, Valenite, Kennametal & Others",
+      "photo": "photos/274.jpg",
+      "page": 57
+    },
+    {
+      "lot": "275",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/275.jpg",
+      "page": 57
+    },
+    {
+      "lot": "276",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/276.jpg",
+      "page": 57
+    },
+    {
+      "lot": "277",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/277.jpg",
+      "page": 58
+    },
+    {
+      "lot": "278",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/278.jpg",
+      "page": 58
+    },
+    {
+      "lot": "279",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/279.jpg",
+      "page": 58
+    },
+    {
+      "lot": "280",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/280.jpg",
+      "page": 58
+    },
+    {
+      "lot": "281",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/281.jpg",
+      "page": 58
+    },
+    {
+      "lot": "282",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/282.jpg",
+      "page": 58
+    },
+    {
+      "lot": "283",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/283.jpg",
+      "page": 59
+    },
+    {
+      "lot": "284",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/284.jpg",
+      "page": 59
+    },
+    {
+      "lot": "285",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/285.jpg",
+      "page": 59
+    },
+    {
+      "lot": "286",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/286.jpg",
+      "page": 59
+    },
+    {
+      "lot": "287",
+      "title": "Mazak VCC 5X 20K 5-Axis CNC Machining Center, S/N 245607, 2012",
+      "description": "Mazak VCC 5X 20K 5-Axis CNC Machining Center, S/N 245607, 2012, with 20.49\" X-Axis Travel, 16.95\" Y-Axis Travel, 20.04\" Z-Axis Travel, 5-Axis Trunnion Table (A-Axis Tilt / C-Axis 360 Deg.), 25.7\" x 15.7\" Table Size, 20,000-RPM Spindle Speed, CT 40 Spindle Taper, 30-Position Automatic Tool Changer, 4th & 5th Axis Wired, Renishaw Probing, Renishaw OTS, Remote Jog, Dual Chip Conveyors, Mazatrol Matrix 2 CNC Control",
+      "photo": "photos/287.jpg",
+      "page": 60
+    },
+    {
+      "lot": "288",
+      "title": "(20) CT 40 ER-32, ER-16 & Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32, ER-16 & Boring Bar Tool Holders, Lyndex, Techniks, Parlec, Richmill, Valenite & Rego-Fix",
+      "photo": "photos/288.jpg",
+      "page": 60
+    },
+    {
+      "lot": "289",
+      "title": "(6) CT 40 ER-32, ER-16 & Boring Bar Tool Holders",
+      "description": "(6) CT 40 Assorted Size ER-32, ER-16 & Boring Bar Tool Holders, GS, Techniks & Parlec",
+      "photo": "photos/289.jpg",
+      "page": 60
+    },
+    {
+      "lot": "290",
+      "title": "(6) CT 40 ER-32, Boring Bar & Erickson Hydro Force Holders",
+      "description": "(6) CT 40 Assorted Size ER-32 Collet Tool Holders, Boring Bar Tool Holders & Erickson Hydro Force Collet Holder, with Assorted Other Tooling",
+      "photo": "photos/290.jpg",
+      "page": 60
+    },
+    {
+      "lot": "291",
+      "description": "Kurt 4\" Machine Vise",
+      "photo": "photos/291.jpg",
+      "page": 61
+    },
+    {
+      "lot": "292",
+      "description": "Box of Vise Speed Handles",
+      "photo": "photos/292.jpg",
+      "page": 61
+    },
+    {
+      "lot": "293",
+      "title": "Mazak VCC 5X 20K 5-Axis CNC Machining Center, S/N 244322, 2013",
+      "description": "Mazak VCC 5X 20K 5-Axis CNC Machining Center, S/N 244322, 2013, with 20,000-RPM Spindle, 20.49\" X-Axis Travel, 16.95\" Y-Axis Travel, 20.04\" Z-Axis Travel, 5-Axis Trunnion Table (A-Axis Tilt / C-Axis 360 Deg.), 25.7\" x 15.7\" Table Size, CT 40 Spindle Taper, 30-Position Automatic Tool Changer, New(er) Spindle, 4th & 5th Axis Wired, Renishaw Probing, Renishaw OTS, Remote Jog, Dual Chip Conveyors, Mazatrol Matrix 2 Control",
+      "photo": "photos/293.jpg",
+      "page": 61
+    },
+    {
+      "lot": "294",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Valenite, Techniks & Others",
+      "photo": "photos/294.jpg",
+      "page": 62
+    },
+    {
+      "lot": "295",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, Kennametal, GS & Others",
+      "photo": "photos/295.jpg",
+      "page": 62
+    },
+    {
+      "lot": "296",
+      "title": "(6) CT 40 Boring Bar Tool Holders with Through Coolant Insert Drill",
+      "description": "(6) CT 40 Assorted Size Boring Bar Tool Holders, with Through Coolant Insert Drill & Other Tooling, Techniks, Valenite & Kennametal",
+      "photo": "photos/296.jpg",
+      "page": 62
+    },
+    {
+      "lot": "297",
+      "description": "Kurt 4\" Machine Vise",
+      "photo": "photos/297.jpg",
+      "page": 62
+    },
+    {
+      "lot": "298",
+      "description": "Box of Vise Speed Handles & Kurt Torque Handle",
+      "photo": "photos/298.jpg",
+      "page": 62
+    },
+    {
+      "lot": "299",
+      "title": "Mazak VCC 5X 20K 5-Axis CNC Machining Center, S/N 246732, 2013",
+      "description": "Mazak VCC 5X 20K 5-Axis CNC Machining Center, S/N 246732, 2013, with 20,000-RPM Spindle, 5-Axis Trunnion Table, Plumbed Air Through Table, Auto Door, Robot Interface Option, Renishaw Probing, Renishaw OTS, Remote Jog, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Schunk KSP3 160 Vise & Schunk S5A-65 / 160 Jaws, Mazatrol Matrix 2 Control",
+      "photo": "photos/299.jpg",
+      "page": 63
+    },
+    {
+      "lot": "300",
+      "title": "Universal Robots UR10e Collaborative Robot, S/N 20235201604, 2023",
+      "description": "Universal Robots UR10e Collaborative Robot, S/N 20235201604, 2023, 27.5-Lb. Max Payload, 51.2\" Max Reach, on In-Position Technologies Production Tables, with Dual Schunk EGU 50-MB-M-B Part Pickers (ID#1491535) & Flexxbotics Drive(Last Connected to Lot 299)",
+      "photo": "photos/300.jpg",
+      "page": 63
+    },
+    {
+      "lot": "301",
+      "title": "(20) CT 40 ER-16, ER-32 & Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16, ER-32 & Boring Bar Tool Holders, Techniks, Valenite, Kingston, Parlec & Others",
+      "photo": "photos/301.jpg",
+      "page": 64
+    },
+    {
+      "lot": "302",
+      "title": "(18) CT 40 Rego-Fix & Schunk Pressure Fit Collet Tool Holders",
+      "description": "(18) CT 40 Assorted Size Rego-Fix & Schunk Pressure Fit Collet Tool Holders",
+      "photo": "photos/302.jpg",
+      "page": 64
+    },
+    {
+      "lot": "303",
+      "title": "Rego-Fix powRgrip PGC 2506 Pressure Fit Collet System",
+      "description": "Rego-Fix powRgrip PGC 2506 Pressure Fit Collet System, with Assorted Size PG 25 Collets",
+      "photo": "photos/303.jpg",
+      "page": 64
+    },
+    {
+      "lot": "304",
+      "title": "(10) CT 40 Boring Bar, Drill Chuck & Collet Tool Holders",
+      "description": "(10) CT 40 Assorted Size Boring Bar, Jacobs Chuck Style & Collet Tool Holders, with Coolant Through Insert Boring Mills, Parlec, Techniks, Lyndex & Others",
+      "photo": "photos/304.jpg",
+      "page": 64
+    },
+    {
+      "lot": "305",
+      "title": "(7) Large CT 40 Boring Bar Tool Holders with Coolant Through Tooling",
+      "description": "(7) Large CT 40 Assorted Size Boring Bar Tool Holders, with Through Coolant Insert Boring Bar Drills & Insert End Mills",
+      "photo": "photos/305.jpg",
+      "page": 64
+    },
+    {
+      "lot": "306",
+      "title": "(5) CT 40 Boring Bar Tool Holders with Coolant Through End Mill & Drill",
+      "description": "(5) CT 40 Assorted Size Boring Bar Tool Holders, with 1-3/4\" 6-Flute Coolant Through End Mill & Coolant Through Insert Drill, Valenite, Lyndex & Techniks",
+      "photo": "photos/306.jpg",
+      "page": 64
+    },
+    {
+      "lot": "307",
+      "title": "(9) CT 40 Boring Bar Tool Holders with Insert Drills & Boring Bars",
+      "description": "(9) CT 40 Assorted Size Boring Bar Tool Holders, with Assorted Insert Drills & Insert Boring Bars, Mostly Coolant Through",
+      "photo": "photos/307.jpg",
+      "page": 65
+    },
+    {
+      "lot": "308",
+      "title": "(4) CT 40 Shell Mill & Boring Bar Tool Holders with Coolant Through Shell Mills",
+      "description": "(4) CT 40 Assorted Size Shell Mill & Boring Bar Tool Holders, with Coolant Through Shell Mills",
+      "photo": "photos/308.jpg",
+      "page": 65
+    },
+    {
+      "lot": "309",
+      "title": "(4) CT 40 Holders with Coolant Through Face Mills",
+      "description": "(4) CT 40 Assorted Size Boring Bar & Shell Mill Tool Holders, with (3) 1\" 3-Flute Through Coolant Face Mills & (1) 2\" 6-Flute Through Coolant Face Mill, Haas, GS & Techniks",
+      "photo": "photos/309.jpg",
+      "page": 65
+    },
+    {
+      "lot": "310",
+      "title": "(2) CT 40 Boring Bar Fly Cutters with Blades",
+      "description": "(2) CT 40 Boring Bar Fly Cutters, with Blades",
+      "photo": "photos/310.jpg",
+      "page": 65
+    },
+    {
+      "lot": "311",
+      "title": "(4) CT 40 Shell Mill Tool Holders with Mitsubishi 3\" Face Mills",
+      "description": "(4) CT 40 Shell Mill Tool Holders, with (4) 3\" Mitsubishi 6-Flute Through Coolant Insert Face Mills",
+      "photo": "photos/311.jpg",
+      "page": 65
+    },
+    {
+      "lot": "312",
+      "title": "(4) CT 40 Shell Mill Tool Holders with Mitsubishi 3\" Shell Mills",
+      "description": "(4) CT 40 Shell Mill Tool Holders, with (3) 3\" Mitsubishi 6-Flute Through Coolant Insert Shell Mills & (1) 3\" Mitsubishi 6-Flute Standard Insert Shell Mill",
+      "photo": "photos/312.jpg",
+      "page": 65
+    },
+    {
+      "lot": "313",
+      "title": "(4) CT 40 Shell Mill Tool Holders with Mitsubishi 3\" Face Mills",
+      "description": "(4) CT 40 Shell Mill Tool Holders, Accupro & Techniks, with (4) 3\" Mitsubishi 6-Flute Through Coolant Insert Face Mills",
+      "photo": "photos/313.jpg",
+      "page": 66
+    },
+    {
+      "lot": "314",
+      "title": "(4) CT 40 Shell Mill Tool Holders with 3\" Insert Shell Mills",
+      "description": "(4) CT 40 Assorted Size Shell Mill Tool Holders, Valenite, Accupro & Techniks, with (4) 3\" 5-Flute Insert Shell Mills",
+      "photo": "photos/314.jpg",
+      "page": 66
+    },
+    {
+      "lot": "315",
+      "title": "(5) CT 40 Shell Mill Tool Holders with Ingersoll & Iscar Shell Mills",
+      "description": "(5) CT 40 Assorted Size Shell Mill Tool Holders, Haas & Techniks, with (3) 2\" 4-Flute Ingersoll Through Coolant Insert Shell Mills & (1) 2\" 6-Flute Iscar Through Coolant Shell Mill",
+      "photo": "photos/315.jpg",
+      "page": 66
+    },
+    {
+      "lot": "316",
+      "title": "(3) Large CT 40 Shell Mill Tool Holders with 4\" Iscar Face Mills",
+      "description": "(3) Large CT 40 Shell Mill Tool Holders, Command & Valenite, with 4\" 5-Flute & 4\" 6-Flute Iscar Through Coolant Insert Face Mills & 4\" 11-Flute Iscar Insert Face Mill",
+      "photo": "photos/316.jpg",
+      "page": 66
+    },
+    {
+      "lot": "317",
+      "title": "(4) CT 40 Shell Mill Tool Holders with Mitsubishi 2\" Shell Mills",
+      "description": "(4) CT 40 Assorted Size Shell Mill Tool Holders, Parlec, Techniks & Haas, with (4) Mitsubishi 2\" 5-Flute Through Coolant Shell Mills",
+      "photo": "photos/317.jpg",
+      "page": 66
+    },
+    {
+      "lot": "318",
+      "title": "(5) CT 40 Shell Mill Tool Holders with Iscar & Ingersoll Shell Mills",
+      "description": "(5) CT 40 Assorted Size Shell Mill Tool Holders, Haas & Erickson, with (1) 2\" 6-Flute Iscar Through Coolant Insert Shell Mill & (3) 2\" 5-Flute Iscar & Ingersoll Through Coolant Insert Shell Mills",
+      "photo": "photos/318.jpg",
+      "page": 66
+    },
+    {
+      "lot": "319",
+      "title": "(4) CT 40 Shell Mill Tool Holders with Mitsubishi 2\" Shell Mills",
+      "description": "(4) CT 40 Assorted Size Shell Mill Tool Holders, Haas, Parlec, Erickson & Techniks, with 2\" 5-Flute Mitsubishi Insert Shell Mills",
+      "photo": "photos/319.jpg",
+      "page": 67
+    },
+    {
+      "lot": "320",
+      "title": "(4) CT 40 Shell Mill Tool Holders with Mitsubishi, Seco & Kennametal Shell Mills",
+      "description": "(4) CT 40 Assorted Size Shell Mill Tool Holders, Techniks, Accupro & Erickson, with (2) 3\" 4-Flute Mitsubishi Insert Shell Mills, Seco 2\" 4-Flute Through Coolant Insert Shell Mill & Kennametal 2\" 5-Flute Through Coolant Insert Shell Mill",
+      "photo": "photos/320.jpg",
+      "page": 67
+    },
+    {
+      "lot": "321",
+      "title": "(4) CT 40 Shell Mill & Boring Bar Tool Holders with Insert Shell Mills",
+      "description": "(4) CT 40 Assorted Size Shell Mill & Boring Bar Tool Holders, Haas & Accupro, with (3) 1\" 3-Flute Insert Shell Mills & (1) 2\" 6-Flute Iscar Through Coolant Insert Shell Mill",
+      "photo": "photos/321.jpg",
+      "page": 67
+    },
+    {
+      "lot": "322",
+      "title": "(2) CT 40 Wohlhaupter Tool Holders, with Multi Bore Boring Heads",
+      "description": "(2) CT 40 Wohlhaupter Tool Holders, with Multi Bore Boring Heads, including #464035 4005/27 12 & #353005 Balanced 0595/24 7, .12-8.19\", with Prime Bore Kit",
+      "photo": "photos/322.jpg",
+      "page": 68
+    },
+    {
+      "lot": "323",
+      "title": "(4) CT 40 Tool Holders - Boring Bar, Fly Cutter & Indexable",
+      "description": "(4) CT 40 Assorted Tool Holders, including Boring Bar, Fly Cutter & Indexable Holder",
+      "photo": "photos/323.jpg",
+      "page": 68
+    },
+    {
+      "lot": "324",
+      "title": "(4) CT 40 Boring Bar & Shell Mill Tool Holders with Tooling",
+      "description": "(4) CT 40 Boring Bar & Shell Mill Tool Holders, with (2) 3\" 6-Flute & 5-Flute Mitsubishi & Other Through Coolant Insert Shell Mills, (1) 2\" Ingersoll 4-Flute Through Coolant Insert Shell Mill & (1) 1\" 2-Flute Through Coolant Insert Boring Bar",
+      "photo": "photos/324.jpg",
+      "page": 68
+    },
+    {
+      "lot": "325",
+      "title": "(4) Universal FH 3D-Sensors with CT 40 Holders",
+      "description": "Box of (4) Universal FH 3D-Sensors, with CT 40 Holders",
+      "photo": "photos/325.jpg",
+      "page": 68
+    },
+    {
+      "lot": "326",
+      "description": "EWS Group Command CT Test Bar in Box",
+      "photo": "photos/326.jpg",
+      "page": 68
+    },
+    {
+      "lot": "327",
+      "title": "(2) Renishaw OTS Tool Setters, (1) New in Box",
+      "description": "(2) Renishaw OTS Tool Setters, (1) New in Box & (1) Condition Unknown",
+      "photo": "photos/327.jpg",
+      "page": 68
+    },
+    {
+      "lot": "328",
+      "title": "Box of Inspection Tools & Indicators with Renishaw OTS",
+      "description": "Box of Assorted Inspection Tools & Indicators, including Renishaw OTS Tool Setter (Condition Unknown), New Mitutoyo 513-402-10E Dial Test Indicator, Techniks CT 40 Holder with Pin Gage, SPI Probe Gage & (2) Dial Indicators",
+      "photo": "photos/328.jpg",
+      "page": 69
+    },
+    {
+      "lot": "329",
+      "description": "Box of Vise Speed Handles & Kurt Torque Handle",
+      "photo": "photos/329.jpg",
+      "page": 69
+    },
+    {
+      "lot": "330",
+      "description": "Large Lot of Assorted Vise Stops",
+      "photo": "photos/330.jpg",
+      "page": 69
+    },
+    {
+      "lot": "331",
+      "description": "Box of 1-5/8\" Parallels",
+      "photo": "photos/331.jpg",
+      "page": 69
+    },
+    {
+      "lot": "332",
+      "description": "Box of 1-1/8\" Parallels",
+      "photo": "photos/332.jpg",
+      "page": 69
+    },
+    {
+      "lot": "333",
+      "description": "Box of 1-3/8\" Parallels",
+      "photo": "photos/333.jpg",
+      "page": 69
+    },
+    {
+      "lot": "334",
+      "description": "Box of 5/8\" & 7/8\" Parallels",
+      "photo": "photos/334.jpg",
+      "page": 70
+    },
+    {
+      "lot": "335",
+      "description": "Box of 1-1/2\" Parallels",
+      "photo": "photos/335.jpg",
+      "page": 70
+    },
+    {
+      "lot": "336",
+      "description": "Box of 3/4\" & 1/2\" Parallels",
+      "photo": "photos/336.jpg",
+      "page": 70
+    },
+    {
+      "lot": "337",
+      "description": "Box of 1-9/16\" Parallels",
+      "photo": "photos/337.jpg",
+      "page": 70
+    },
+    {
+      "lot": "338",
+      "description": "Box of 1\" Parallels",
+      "photo": "photos/338.jpg",
+      "page": 70
+    },
+    {
+      "lot": "339",
+      "title": "(2) Boxes of MHC Precision Parallels",
+      "description": "(2) Boxes of MHC Precision Parallels, Incomplete",
+      "photo": "photos/339.jpg",
+      "page": 70
+    },
+    {
+      "lot": "340",
+      "title": "(3) Boxes of Assorted Size Parallels",
+      "description": "(3) Boxes of Assorted Size Parallels, Mostly Complete",
+      "photo": "photos/340.jpg",
+      "page": 71
+    },
+    {
+      "lot": "341",
+      "description": "Kurt 4\" Machine Vise",
+      "photo": "photos/341.jpg",
+      "page": 71
+    },
+    {
+      "lot": "342",
+      "description": "Kitagawa TS 250 RN Tailstock",
+      "photo": "photos/342.jpg",
+      "page": 71
+    },
+    {
+      "lot": "343",
+      "description": "Kitagawa TS 200 RN-1 Tailstock",
+      "photo": "photos/343.jpg",
+      "page": 71
+    },
+    {
+      "lot": "344",
+      "description": "Huot Toolscoot 48-Tool CT 40 Rolling Tool Cart",
+      "photo": "photos/344.jpg",
+      "page": 71
+    },
+    {
+      "lot": "345",
+      "description": "Huot Toolscoot 48-Tool CT 40 Rolling Tool Cart",
+      "photo": "photos/345.jpg",
+      "page": 71
+    },
+    {
+      "lot": "346",
+      "description": "Huot Toolscoot 48-Tool CT 40 Rolling Tool Cart",
+      "photo": "photos/346.jpg",
+      "page": 72
+    },
+    {
+      "lot": "347",
+      "description": "Huot Toolscoot 48-Tool CT 40 Rolling Tool Cart",
+      "photo": "photos/347.jpg",
+      "page": 72
+    },
+    {
+      "lot": "348",
+      "title": "Huot Toolscoot CT 40 Rolling Tool Cart, (25) Tool Holders",
+      "description": "Huot Toolscoot CT 40 Rolling Tool Cart, with (25) CT 40 Tool Placement Holders",
+      "photo": "photos/348.jpg",
+      "page": 72
+    },
+    {
+      "lot": "349",
+      "description": "Huot 24-Tool CT 40 Table Top Tool Organizer",
+      "photo": "photos/349.jpg",
+      "page": 72
+    },
+    {
+      "lot": "350",
+      "title": "(51) ER-32 Collets in Plastic Tray Organizer",
+      "description": "(51) Assorted Size ER-32 Collets, in Plastic Tray Organizer",
+      "photo": "photos/350.jpg",
+      "page": 72
+    },
+    {
+      "lot": "351",
+      "title": "(128) ER-16 Collets in Plastic Tray Organizer",
+      "description": "(128) Assorted Size ER-16 Collets, in Plastic Tray Organizer",
+      "photo": "photos/351.jpg",
+      "page": 72
+    },
+    {
+      "lot": "352",
+      "title": "(51) ER-32 Collets in Plastic Tray Organizer",
+      "description": "(51) Assorted Size ER-32 Collets, in Plastic Tray Organizer",
+      "photo": "photos/352.jpg",
+      "page": 73
+    },
+    {
+      "lot": "353",
+      "title": "(110) Kennametal / Erickson 200DA Double Angle Collets",
+      "description": "(110) Assorted Size Kennametal / Erickson 200DA Double Angle Collets",
+      "photo": "photos/353.jpg",
+      "page": 73
+    },
+    {
+      "lot": "354",
+      "title": "(51) ER-32 Collets in Plastic Tray Organizer",
+      "description": "(51) Assorted Size ER-32 Collets, in Plastic Tray Organizer",
+      "photo": "photos/354.jpg",
+      "page": 73
+    },
+    {
+      "lot": "355",
+      "title": "Collet Organizer with (27) ER-32 & (60) ER-16 Collets",
+      "description": "Collet Organizer, with (27) Assorted Size ER-32 Collets & (60) Assorted Size ER-16 Collets",
+      "photo": "photos/355.jpg",
+      "page": 73
+    },
+    {
+      "lot": "356",
+      "title": "Collet Organizer with ER-16, ER-32 & DA180 Collets",
+      "description": "Collet Organizer, with Assorted ER-16, ER-32 & DA180 Collets",
+      "photo": "photos/356.jpg",
+      "page": 73
+    },
+    {
+      "lot": "357",
+      "description": "Lot of New & Used ER-16 & ER-32 Collets",
+      "photo": "photos/357.jpg",
+      "page": 73
+    },
+    {
+      "lot": "358",
+      "title": "Haas VF-8/40 CNC Vertical Machining Center, S/N 1067474, 2008",
+      "description": "Haas VF-8/40 CNC Vertical Machining Center, S/N 1067474, 2008, with 64\" x 36\" Table Size, 4,000-Lbs. Max. Table Load, 64\" X-Axis Travel, 40\" Y-Axis Travel, 30\" Z-Axis Travel, 4\" - 34\" Spindle Nose to Table, CT 40 Spindle Taper, 600-IPM Rapid Traverse, HIL, 20-HP 2-Speed Gear Drive, 10,000-RPM Spindle, TSC, WIPS, P-Cool, 24-Position Side-Mount Automatic Tool Changer with Tooling, Chip Auger, Riser Fixture Table Plate, Haas CNC Control",
+      "photo": "photos/358.jpg",
+      "page": 74
+    },
+    {
+      "lot": "359",
+      "title": "(20) CT 40 ER-32 Collet Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-32 Collet Tool Holders, Techniks & Others",
+      "photo": "photos/359.jpg",
+      "page": 74
+    },
+    {
+      "lot": "360",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Lyndex, Techniks & Others",
+      "photo": "photos/360.jpg",
+      "page": 74
+    },
+    {
+      "lot": "361",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Valenite, Parlec, Lyndex, Techniks & Others",
+      "photo": "photos/361.jpg",
+      "page": 74
+    },
+    {
+      "lot": "362",
+      "title": "Pallet of Fixture Plates & Right Angle Squares",
+      "description": "Pallet Full of Assorted Size Fixture Plates & Right Angle Squares",
+      "photo": "photos/362.jpg",
+      "page": 75
+    },
+    {
+      "lot": "363",
+      "title": "Pallet of Fixture Plates & Right Angle Squares",
+      "description": "Pallet Full of Assorted Size Fixture Plates & Right Angle Squares",
+      "photo": "photos/363.jpg",
+      "page": 75
+    },
+    {
+      "lot": "364",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/364.jpg",
+      "page": 75
+    },
+    {
+      "lot": "365",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/365.jpg",
+      "page": 75
+    },
+    {
+      "lot": "366",
+      "title": "Fadal VMC 4020 CNC Vertical Machining Center, S/N 9803617, 1998",
+      "description": "Fadal VMC 4020 CNC Vertical Machining Center, S/N 9803617, 1998, with 47.94\" x 20\" Table Size, 1,500-Lbs. Max. Table Load, 40\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 4\" - 24\" Spindle Nose to Table, CT 40 Spindle Taper, 15-HP Spindle Motor, 20-Position Automatic Tool Changer with Tooling, Fadal CNC 88HS Control",
+      "photo": "photos/366.jpg",
+      "page": 76
+    },
+    {
+      "lot": "367",
+      "title": "(20) CT 40 ER-16 & ER-20 Tool Holders",
+      "description": "(20) CT 40 Assorted Size ER-16 & ER-20 Tool Holders, Techniks, Lyndex & Others",
+      "photo": "photos/367.jpg",
+      "page": 76
+    },
+    {
+      "lot": "368",
+      "title": "(20) CT 40 Boring Bar Tool Holders",
+      "description": "(20) CT 40 Assorted Size Boring Bar Tool Holders, Techniks, Command & GS",
+      "photo": "photos/368.jpg",
+      "page": 76
+    },
+    {
+      "lot": "369",
+      "title": "(20) CT 40 ER-32, ER-20 & Boring Bar Tool Holders with Tooling",
+      "description": "(20) CT 40 Assorted Size ER-32, ER-20 & Boring Bar Tool Holders, with Tooling",
+      "photo": "photos/369.jpg",
+      "page": 76
+    },
+    {
+      "lot": "370",
+      "title": "(11) CT 40 Tool Holders - Boring Bar, Drill Chuck, Saw & 3D Sensor",
+      "description": "(11) CT 40 Assorted Style Tool Holders, Haas & Fadal Pull Studs, including Boring Bar, Jacobs Chuck Style, Saw Holder, Universal FH 3D Sensor & Others",
+      "photo": "photos/370.jpg",
+      "page": 77
+    },
+    {
+      "lot": "371",
+      "title": "(7) CT 40 Shell Mill Tool Holders with Insert Shell Mills",
+      "description": "(7) CT 40 Assorted Size Shell Mill Tool Holders, Haas & Fadal Pull Studs, with (5) 3\" 5 & 6-Flute Insert Shell Mills, (1) 2-1/2\" 5-Flute Through Coolant Insert Shell Mill & (1) 2\" 4-Flute Insert Shell Mill",
+      "photo": "photos/371.jpg",
+      "page": 77
+    },
+    {
+      "lot": "372",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/372.jpg",
+      "page": 77
+    },
+    {
+      "lot": "373",
+      "description": "Kurt 6\" Machine Vise",
+      "photo": "photos/373.jpg",
+      "page": 77
+    },
+    {
+      "lot": "374",
+      "description": "Parlec 6\" Machine Vise",
+      "photo": "photos/374.jpg",
+      "page": 77
+    },
+    {
+      "lot": "375",
+      "description": "Parlec 6\" Machine Vise",
+      "photo": "photos/375.jpg",
+      "page": 77
+    },
+    {
+      "lot": "376",
+      "title": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops",
+      "description": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops, 42\" x 24\" x 35-1/2\", (1) with CT 40 Tool Key",
+      "photo": "photos/376.jpg",
+      "page": 78
+    },
+    {
+      "lot": "377",
+      "title": "3-Tier & 2-Tier Heavy Duty Steel Tables with Wood Tops",
+      "description": "3-Tier Heavy Duty Steel Table with Wood Tops, 52\" x 34\" x 42-1/2\" & 2-Tier Heavy Duty Steel Table with Wood Top, 42\" x 24\" x 35-1/2\", with CT 40 Tool Key",
+      "photo": "photos/377.jpg",
+      "page": 78
+    },
+    {
+      "lot": "378",
+      "title": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops",
+      "description": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops, 42\" x 24\" x 36-1/2\" & 42\" x 24\" x 35-1/2\"",
+      "photo": "photos/378.jpg",
+      "page": 78
+    },
+    {
+      "lot": "379",
+      "title": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops",
+      "description": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops, 42\" x 24\" x 42-1/2\" & 36\" x 24\" x 38\", (1) with Caster Wheels",
+      "photo": "photos/379.jpg",
+      "page": 78
+    },
+    {
+      "lot": "380",
+      "title": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops",
+      "description": "(2) 2-Tier Heavy Duty Steel Tables with Wood Tops, 42\" x 24\" x 43-1/2\" & 42\" x 24\" x 35-1/2\"",
+      "photo": "photos/380.jpg",
+      "page": 78
+    },
+    {
+      "lot": "381",
+      "title": "Jet AP-3 3-Ton Arbor Press on Rolling Cart",
+      "description": "Jet AP-3 3-Ton Arbor Press, on 2-Tier Metal Rolling Cart",
+      "photo": "photos/381.jpg",
+      "page": 78
+    },
+    {
+      "lot": "382",
+      "title": "Burgmaster 6-Station Turret Drill, S/N 6831",
+      "description": "Burgmaster Houdaille 6-Station Turret Drill, S/N 6831, with 40\" x 18\" T-Slot Table, 275 - 4,010-RPM",
+      "photo": "photos/382.jpg",
+      "page": 79
+    },
+    {
+      "lot": "383",
+      "description": "(6) 12-Station CT 40 Table Top Tool Organizers",
+      "photo": "photos/383.jpg",
+      "page": 79
+    },
+    {
+      "lot": "384",
+      "title": "Acer AGS-1020AHD 10\" x 20\" Automatic Surface Grinder, 1996",
+      "description": "Acer AGS-1020AHD 10\" x 20\" Automatic Surface Grinder, 1996, with Acer Permanent Magnetic Chuck, Dresser, Incremental Downfeed, Coolant",
+      "photo": "photos/384.jpg",
+      "page": 79
+    },
+    {
+      "lot": "385",
+      "description": "Cushman 12\" 3-Jaw Chuck",
+      "photo": "photos/385.jpg",
+      "page": 79
+    },
+    {
+      "lot": "386",
+      "title": "Bott/Kennedy 5-Drawer 2-Tier Work Table with Contents",
+      "description": "Bott/Kennedy 5-Drawer 2-Tier Work Table, 60\" x 30\" x 33-1/2\", with BT 40/CT 40 Tool Key & Contents, including Assorted Hand Tools, T-Slot Clamps & Vise Jaws",
+      "photo": "photos/386.jpg",
+      "page": 79
+    },
+    {
+      "lot": "387",
+      "title": "Central Pneumatic 40-Lb. Floor Sand Blast Cabinet",
+      "description": "Central Pneumatic 40-Lb. Floor Sand Blast Cabinet, with Bauer Cyclone Dust Collector, 5-Gallon Bucket",
+      "photo": "photos/387.jpg",
+      "page": 79
+    },
+    {
+      "lot": "388",
+      "title": "DualDraw Downdraft Work Table, S/N 104049",
+      "description": "DualDraw LLC Downdraft Air Filtration Work Table, S/N 104049, 72\" x 29\" Work Area, 38\" H, with Vented Backsplash, 208-Volt",
+      "photo": "photos/388.jpg",
+      "page": 80
+    },
+    {
+      "lot": "389",
+      "title": "Large Lot of Pneumatic Sanders & Die Grinders with New Air Hoses",
+      "description": "Large Lot of Pneumatic Orbital Sanders, Die Grinders, Angle Die Grinders & Hand Held Belt Sander, with New Air Hoses & New Husky 1/4\" Angle Die Grinder",
+      "photo": "photos/389.jpg",
+      "page": 80
+    },
+    {
+      "lot": "390",
+      "title": "Lot of Pneumatic Tools with New Hose",
+      "description": "Lot of Pneumatic Tools, including Orbital Grinder, Angle Die Grinders, Die Grinders, Air Ratchet & Air Drill, with New Hose",
+      "photo": "photos/390.jpg",
+      "page": 80
+    },
+    {
+      "lot": "391",
+      "title": "(2) Wen 6515T 1\" x 30\" Belt Sanders with 5\" Disc",
+      "description": "(2) Wen Model 6515T 1\" x 30\" Belt Sanders, with 5\" Sanding Discs",
+      "photo": "photos/391.jpg",
+      "page": 80
+    },
+    {
+      "lot": "392",
+      "title": "8-Tier Dual Sided Rolling Rack of Abrasives & Hardware",
+      "description": "8-Tier Dual Sided Rolling Rack, Full of Assorted Style & Grit Sandpaper, Sanding Tops, Sanding Reamers, Sanding Discs, Assorted Hardware & Helicoils",
+      "photo": "photos/392.jpg",
+      "page": 80
+    },
+    {
+      "lot": "393",
+      "title": "Mori Seiki NLX2500SY/700 CNC Turning Center, S/N NL254KF0212, 2011",
+      "description": "Mori Seiki NLX2500SY/700 CNC Turning Center, S/N NL254KF0212, 2011, with Sub-Spindle & Y-Axis, 36.2\" Swing Over Bed, 14.4\" Max. Turning Diameter, 27.7\" Max. Turning Length, 3.1\" Bar Capacity, 4,000-RPM, A2-8, 25-HP Main Spindle, 6,000-RPM, A2-5, 15-HP Sub-Spindle, 6\" Chuck, 10.2\" X-Axis Travel, +/- 1.97\" Y-Axis Travel, 31.3\" Z-Axis Travel, Kitagawa BB210 10\" 3-Jaw Main Chuck, ATS 730 ASH05 3J Sub-Spindle Chuck, 12-Station Turret, Live Tooling, Parts Catcher, Tool Presetter (Main), LNS Chip Conveyor, Mori Seiki MSX-853 IV Control",
+      "photo": "photos/393.jpg",
+      "page": 81
+    },
+    {
+      "lot": "394",
+      "title": "(2) ATS Workholding Collet Chucks with Adapter Plates",
+      "description": "ATS Workholding 785AF-111 S35TL-ASSY Collet Chuck (10-06-11) with Adapter Plate & ATS Workholding A5-3JTLS 730ASH05-50 3J Collet Chuck with Adapter Plate",
+      "photo": "photos/394.jpg",
+      "page": 81
+    },
+    {
+      "lot": "395",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/395.jpg",
+      "page": 81
+    },
+    {
+      "lot": "396",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/396.jpg",
+      "page": 81
+    },
+    {
+      "lot": "397",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/397.jpg",
+      "page": 82
+    },
+    {
+      "lot": "398",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/398.jpg",
+      "page": 82
+    },
+    {
+      "lot": "399",
+      "description": "Heavy Duty Steel 75-Station Rolling CT 40 Tool Cart",
+      "photo": "photos/399.jpg",
+      "page": 82
+    },
+    {
+      "lot": "400",
+      "description": "Huot Toolscoot 48-Station Rolling Tool Cart",
+      "photo": "photos/400.jpg",
+      "page": 82
+    },
+    {
+      "lot": "401",
+      "description": "Huot Toolscoot 48-Station Rolling Tool Cart",
+      "photo": "photos/401.jpg",
+      "page": 82
+    },
+    {
+      "lot": "402",
+      "title": "Mori Seiki NLX2500SY/700 CNC Turning Center, S/N NL254130963, 2013",
+      "description": "Mori Seiki NLX2500SY/700 CNC Turning Center, S/N NL254130963, 2013, with 4,000-RPM, ATS Workholding S26 Collet Chuck (Main), Kitagawa B-206 6\" 3-Jaw Chuck (Sub), 3.6\" Bore, 14.4\" Max. Diameter, 27.7\" Max. Length, 10.2\" X-Axis Travel, 31\" Z-Axis Travel, 36.2\" Swing, 12-Station Turret, Sub-Spindle & Y-Axis, Live Milling, Live Holders & Tooling, Parts Catcher, Tool Presetter (Main), Cool Blaster, LNS Chip Conveyor, DMG/Mori Seiki M730BM Control",
+      "photo": "photos/402.jpg",
+      "page": 83
+    },
+    {
+      "lot": "403",
+      "title": "Kitagawa BB210 10\" & B-206 6\" 3-Jaw Chucks",
+      "description": "Kitagawa BB210 10\" 3-Jaw Chuck & Kitagawa B-206 6\" 3-Jaw Chuck",
+      "photo": "photos/403.jpg",
+      "page": 83
+    },
+    {
+      "lot": "404",
+      "title": "Large Box of S26 Collets",
+      "description": "Large Box of Assorted Size S26 Collets",
+      "photo": "photos/404.jpg",
+      "page": 83
+    },
+    {
+      "lot": "405",
+      "title": "Large Box of S35 Collets",
+      "description": "Large Box of Assorted Size S35 Collets",
+      "photo": "photos/405.jpg",
+      "page": 83
+    },
+    {
+      "lot": "406",
+      "description": "ATS 3J Collet Nose Chuck",
+      "photo": "photos/406.jpg",
+      "page": 84
+    },
+    {
+      "lot": "407",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/407.jpg",
+      "page": 84
+    },
+    {
+      "lot": "408",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/408.jpg",
+      "page": 84
+    },
+    {
+      "lot": "409",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/409.jpg",
+      "page": 84
+    },
+    {
+      "lot": "410",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/410.jpg",
+      "page": 84
+    },
+    {
+      "lot": "411",
+      "title": "Mori Seiki NL2500MC/1250 CNC Turning Center, S/N NL251FD1953, 2006",
+      "description": "Mori Seiki NL2500MC/1250 CNC Turning Center, S/N NL251FD1953, 2006, with 36.4\" Swing Over Bed, 14\" Max. Turning Diameter, 51.1\" Distance Between Centers, 3.1\" Bar Capacity, 4,000-RPM, A2-8, 25-HP Spindle, 10.2\" X-Axis Travel, 53\" Z-Axis Travel, Kitagawa BB210 10\" 3-Jaw Chuck, Programmable Tailstock, Steady Rest, 12-Station Turret, Live Milling, Renishaw Probing, Tool Presetter, Chip Conveyor, Mori Seiki MSX-850 CNC Control",
+      "photo": "photos/411.jpg",
+      "page": 85
+    },
+    {
+      "lot": "412",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/412.jpg",
+      "page": 85
+    },
+    {
+      "lot": "413",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/413.jpg",
+      "page": 85
+    },
+    {
+      "lot": "414",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/414.jpg",
+      "page": 85
+    },
+    {
+      "lot": "415",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/415.jpg",
+      "page": 86
+    },
+    {
+      "lot": "416",
+      "title": "Box of Insert Boring Bars",
+      "description": "Box of Assorted Size Insert Boring Bars",
+      "photo": "photos/416.jpg",
+      "page": 86
+    },
+    {
+      "lot": "417",
+      "title": "Box of Insert Boring Bars",
+      "description": "Box of Assorted Size Insert Boring Bars",
+      "photo": "photos/417.jpg",
+      "page": 86
+    },
+    {
+      "lot": "418",
+      "title": "Pallet of Large Insert Boring Bars",
+      "description": "Pallet with Large Through Coolant & Standard Insert Boring Bars",
+      "photo": "photos/418.jpg",
+      "page": 86
+    },
+    {
+      "lot": "419",
+      "title": "Mori Seiki NLX2500Y/750 CNC Turning Center, S/N NL254120743, 2012",
+      "description": "Mori Seiki NLX2500Y/750 CNC Turning Center, S/N NL254120743, 2012, with 36.2\" Swing Over Bed, 14.4\" Max. Turning Diameter, 27.7\" Max. Turning Length, 3.1\" Bar Capacity, 4,000-RPM, A2-8, 25-HP Main Spindle, 12-Station BMT Turret, Live Tooling, C-Axis, 10.2\" X-Axis Travel, +/- 1.97\" Y-Axis Travel, 31.3\" Z-Axis Travel, 10\" 3-Jaw Chuck, Tailstock, Renishaw Probing, Tool Presetter, Parts Catcher, Chip Conveyor, Mori Seiki M730BM CNC Control",
+      "photo": "photos/419.jpg",
+      "page": 87
+    },
+    {
+      "lot": "420",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/420.jpg",
+      "page": 87
+    },
+    {
+      "lot": "421",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/421.jpg",
+      "page": 87
+    },
+    {
+      "lot": "422",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/422.jpg",
+      "page": 87
+    },
+    {
+      "lot": "423",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/423.jpg",
+      "page": 88
+    },
+    {
+      "lot": "424",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/424.jpg",
+      "page": 88
+    },
+    {
+      "lot": "425",
+      "title": "Box of Insert Boring Bars",
+      "description": "Box of Assorted Size Insert Boring Bars",
+      "photo": "photos/425.jpg",
+      "page": 88
+    },
+    {
+      "lot": "426",
+      "title": "Box of Insert Boring Bars",
+      "description": "Box of Assorted Size Insert Boring Bars",
+      "photo": "photos/426.jpg",
+      "page": 88
+    },
+    {
+      "lot": "427",
+      "description": "Mori Seiki KSC T32213B05 6,000-RPM Radial Live Holder",
+      "photo": "photos/427.jpg",
+      "page": 88
+    },
+    {
+      "lot": "428",
+      "description": "MT Mori Seiki 6,000-RPM Dual Axial Live Holder",
+      "photo": "photos/428.jpg",
+      "page": 88
+    },
+    {
+      "lot": "429",
+      "description": "Mori Seiki Alps Tool T32216B03 6,000-RPM Dual Axial Live Holder",
+      "photo": "photos/429.jpg",
+      "page": 89
+    },
+    {
+      "lot": "430",
+      "title": "SMW Autoblok Mario Pinto ER-40 Axial Live Holder",
+      "description": "SMW Autoblok Mario Pinto ER-40 Axial Live Holder, LT-A D60 ER40 L-R H90 MS",
+      "photo": "photos/430.jpg",
+      "page": 89
+    },
+    {
+      "lot": "431",
+      "description": "SMW Autoblok Mario Pinto ER-40 Axial Live Holder",
+      "photo": "photos/431.jpg",
+      "page": 89
+    },
+    {
+      "lot": "432",
+      "description": "Mori Seiki T32214B06 6,000-RPM Axial Live Holder",
+      "photo": "photos/432.jpg",
+      "page": 89
+    },
+    {
+      "lot": "433",
+      "description": "MT Mori Seiki 6,000-RPM Radial Live Holder",
+      "photo": "photos/433.jpg",
+      "page": 89
+    },
+    {
+      "lot": "434",
+      "description": "Mori Seiki Alps Tool T32206B02 6,000-RPM Radial Live Holder",
+      "photo": "photos/434.jpg",
+      "page": 89
+    },
+    {
+      "lot": "435",
+      "title": "WTO 420132010-60 6,000-RPM Radial Live Holder",
+      "description": "WTO 420132010-60 6,000-RPM Radial Live Holder, S/N K15-01418-1.03",
+      "photo": "photos/435.jpg",
+      "page": 90
+    },
+    {
+      "lot": "436",
+      "description": "Mori Seiki KSC T32213B05 6,000-RPM Radial Live Holder",
+      "photo": "photos/436.jpg",
+      "page": 90
+    },
+    {
+      "lot": "437",
+      "description": "Mori Seiki KSC T32213A02 5,000-RPM Radial Live Holder",
+      "photo": "photos/437.jpg",
+      "page": 90
+    },
+    {
+      "lot": "438",
+      "title": "Mazak QTS-250M CNC Lathe, S/N 245701, 2013",
+      "description": "Mazak Quick Turn Smart QTS-250M CNC Lathe, S/N 245701, 2013, with 26\" - 27\" Max. Swing, 14.17\" - 15\" Max. Machining Diameter, 3\" Bar Capacity, 4,000-RPM, A2-8, 35-HP Spindle, 3.58\" Spindle Bore, 8.88\" X-Axis Travel, 23.75\" Z-Axis Travel, Kitagawa B-210 10\" 3-Jaw Chuck, 12-Station Turret, 4,500-RPM Live Milling, C-Axis, Tailstock, Tool Presetter, Royal Filtermist FX275, Chip Conveyor, Mazatrol Smart CNC Control",
+      "photo": "photos/438.jpg",
+      "page": 90
+    },
+    {
+      "lot": "439",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/439.jpg",
+      "page": 91
+    },
+    {
+      "lot": "440",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/440.jpg",
+      "page": 91
+    },
+    {
+      "lot": "441",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/441.jpg",
+      "page": 91
+    },
+    {
+      "lot": "442",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/442.jpg",
+      "page": 91
+    },
+    {
+      "lot": "443",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/443.jpg",
+      "page": 91
+    },
+    {
+      "lot": "444",
+      "title": "Box of Insert Boring Bars",
+      "description": "Box of Assorted Size Insert Boring Bars",
+      "photo": "photos/444.jpg",
+      "page": 91
+    },
+    {
+      "lot": "445",
+      "title": "Box of Insert Boring Bars",
+      "description": "Box of Assorted Size Insert Boring Bars",
+      "photo": "photos/445.jpg",
+      "page": 92
+    },
+    {
+      "lot": "446",
+      "title": "Box of Insert Boring Bars",
+      "description": "Box of Assorted Size Insert Boring Bars",
+      "photo": "photos/446.jpg",
+      "page": 92
+    },
+    {
+      "lot": "447",
+      "title": "Mazak QTS-250M CNC Lathe, S/N 238443, 2012",
+      "description": "Mazak Quick Turn Smart QTS-250M CNC Lathe, S/N 238443, 2012, with 4,000-RPM, 24\" Swing, 13.78\" Max. Diameter, 18.73\" Max. Length, Kitagawa B-210 10\" 3-Jaw Chuck, 12-Station Turret, C-Axis, 4,500-RPM Live Milling, Tailstock, Tool Presetter, Royal Filtermist FX275, Chip Conveyor, Mazatrol Smart Control",
+      "photo": "photos/447.jpg",
+      "page": 92
+    },
+    {
+      "lot": "448",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/448.jpg",
+      "page": 93
+    },
+    {
+      "lot": "449",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/449.jpg",
+      "page": 93
+    },
+    {
+      "lot": "450",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/450.jpg",
+      "page": 93
+    },
+    {
+      "lot": "451",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/451.jpg",
+      "page": 93
+    },
+    {
+      "lot": "452",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/452.jpg",
+      "page": 93
+    },
+    {
+      "lot": "453",
+      "title": "Box of Insert Boring Bars & Insert Drills",
+      "description": "Box of Assorted Insert Boring Bars & Insert Drills",
+      "photo": "photos/453.jpg",
+      "page": 93
+    },
+    {
+      "lot": "454",
+      "description": "(3) Large Through Coolant Insert Drills",
+      "photo": "photos/454.jpg",
+      "page": 94
+    },
+    {
+      "lot": "455",
+      "title": "Mazak SQT-100MSY CNC Lathe, S/N 149228, 2000",
+      "description": "Mazak Super Quick Turn SQT-100MSY CNC Lathe, S/N 149228, 2000, with 6,000-RPM, 11.02\" Max. Diameter, 2.4\" Bore, 20.67\" Swing, 3J Collet Chuck (Main), Kitagawa BL206 6\" 3-Jaw Sub-Spindle Chuck, 6,000-RPM Sub-Spindle, 12-Station Turret, Y-Axis, 4,500-RPM Live Milling, Tool Presetter, Chip Conveyor, External Transformer, 15-HP, Mazak PC-Fusion CNC Control",
+      "photo": "photos/455.jpg",
+      "page": 94
+    },
+    {
+      "lot": "456",
+      "title": "Mimatic Indexable Axial Live Holder, S/N 40359",
+      "description": "Mimatic 05.1914.7840.402/1 Indexable Axial Live Holder, S/N 40359, 3,750-RPM",
+      "photo": "photos/456.jpg",
+      "page": 95
+    },
+    {
+      "lot": "457",
+      "title": "Mimatic Indexable Axial Live Holder",
+      "description": "Mimatic 05.1914.7840.402/1 Indexable Axial Live Holder, 3,750-RPM",
+      "photo": "photos/457.jpg",
+      "page": 95
+    },
+    {
+      "lot": "458",
+      "title": "ITI 60.4032DSQT10X100 Dual Radial Live Holder",
+      "description": "ITI Tooling 60.4032DSQT10X100 Dual Radial Live Holder, S/N S-027093",
+      "photo": "photos/458.jpg",
+      "page": 95
+    },
+    {
+      "lot": "459",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/459.jpg",
+      "page": 95
+    },
+    {
+      "lot": "460",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/460.jpg",
+      "page": 95
+    },
+    {
+      "lot": "461",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/461.jpg",
+      "page": 95
+    },
+    {
+      "lot": "462",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/462.jpg",
+      "page": 96
+    },
+    {
+      "lot": "463",
+      "title": "(10) Insert Stick Holders",
+      "description": "(10) Assorted Size Insert Stick Holders",
+      "photo": "photos/463.jpg",
+      "page": 96
+    },
+    {
+      "lot": "464",
+      "title": "Mazak Quick Turn QTN-200/250 CNC Lathe, S/N 162411, 2003",
+      "description": "Mazak Quick Turn Nexus QTN-200/250 CNC Lathe, S/N 162411, 2003, with 4,000-RPM, 3.5\" Bore, 24\" Swing, 14\" Max. Diameter, 20\" Max. Length, ATS 3J Collet Nose Spindle, 12-Station Turret, Tailstock, Tool Presetter, Chip Conveyor, 35-HP, Mazatrol PC-Fusion-CNC 640T Nexus Control",
+      "photo": "photos/464.jpg",
+      "page": 96
+    },
+    {
+      "lot": "465",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/465.jpg",
+      "page": 97
+    },
+    {
+      "lot": "466",
+      "title": "(20) 3J Collets",
+      "description": "(20) Assorted Size 3J Collets",
+      "photo": "photos/466.jpg",
+      "page": 97
+    },
+    {
+      "lot": "467",
+      "title": "Box of 3J & ER-32 Collets with Boring Bar Sleeve",
+      "description": "Box of Assorted 3J Collets & ER-32 Collets, with Boring Bar Sleeve",
+      "photo": "photos/467.jpg",
+      "page": 97
+    },
+    {
+      "lot": "468",
+      "title": "Box of 3J Collets with Extensions",
+      "description": "Box of Assorted Size 3J Collets, with Extensions",
+      "photo": "photos/468.jpg",
+      "page": 97
+    },
+    {
+      "lot": "469",
+      "title": "Superior Cincinnati 6-1/2\" Collet Chuck with Pads",
+      "description": "Superior Cincinnati 6-1/2\" Collet Chuck, with Collet Pads",
+      "photo": "photos/469.jpg",
+      "page": 97
+    },
+    {
+      "lot": "470",
+      "title": "Kitagawa B-208 8\" & B-206 6\" 3-Jaw Chucks",
+      "description": "Kitagawa B-208 8\" 3-Jaw Chuck & Kitagawa B-206 6\" 3-Jaw Chuck",
+      "photo": "photos/470.jpg",
+      "page": 97
+    },
+    {
+      "lot": "471",
+      "title": "Mazak Quick Turn 10 CNC Chucker, S/N 147123750, 1996",
+      "description": "Mazak Quick Turn 10 CNC Lathe Chucker, S/N 147123750, 1996, with 6,000-RPM, 11.81\" Swing, 6.3\" Max. Diameter, 10.08\" Max. Length, 5C Collet Nose Chuck, 8-Station Turret, Tool Presetter, 10-HP, Mazatrol T Plus Control (NOT CONNECTED TO POWER)",
+      "photo": "photos/471.jpg",
+      "page": 98
+    },
+    {
+      "lot": "472",
+      "title": "Big Bear 35-Station 5C Collet Organizer with Collets",
+      "description": "Big Bear 35-Station 5C Collet Organizer, with Assorted 5C Collets",
+      "photo": "photos/472.jpg",
+      "page": 98
+    },
+    {
+      "lot": "473",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/473.jpg",
+      "page": 98
+    },
+    {
+      "lot": "474",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/474.jpg",
+      "page": 98
+    },
+    {
+      "lot": "475",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/475.jpg",
+      "page": 99
+    },
+    {
+      "lot": "476",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/476.jpg",
+      "page": 99
+    },
+    {
+      "lot": "477",
+      "title": "Box of Through Coolant Insert Spade Drills & Boring Bar Drills",
+      "description": "Box of Assorted Size Through Coolant Insert Spade Drills & Through Coolant Insert Boring Bar Drills",
+      "photo": "photos/477.jpg",
+      "page": 99
+    },
+    {
+      "lot": "478",
+      "title": "Box of Through Coolant Insert Boring Bar Drills",
+      "description": "Box of Assorted Size Through Coolant Insert Boring Bar Drills",
+      "photo": "photos/478.jpg",
+      "page": 99
+    },
+    {
+      "lot": "479",
+      "title": "Mazak Quick Turn 10 CNC Lathe, S/N 147124333, 1996",
+      "description": "Mazak Quick Turn 10 CNC Lathe, S/N 147124333, 1996, with 6,000-RPM, 11.81\" Swing, 6.3\" Max. Diameter, 10.08\" Max. Length, ATS 3J Collet Nose Chuck, 8-Station Turret, Tailstock, Tool Presetter, Parts Catcher, Chip Conveyor, 10-HP, Mazatrol T Plus Control",
+      "photo": "photos/479.jpg",
+      "page": 100
+    },
+    {
+      "lot": "480",
+      "title": "ATS 5C Collet Nose Chuck with 6\" Adapter Plate",
+      "description": "ATS 5C Collet Nose Chuck, with 6\" Adapter Plate",
+      "photo": "photos/480.jpg",
+      "page": 100
+    },
+    {
+      "lot": "481",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/481.jpg",
+      "page": 100
+    },
+    {
+      "lot": "482",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/482.jpg",
+      "page": 100
+    },
+    {
+      "lot": "483",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/483.jpg",
+      "page": 101
+    },
+    {
+      "lot": "484",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/484.jpg",
+      "page": 101
+    },
+    {
+      "lot": "485",
+      "title": "(25) 5C Collets",
+      "description": "(25) Assorted Size 5C Collets",
+      "photo": "photos/485.jpg",
+      "page": 101
+    },
+    {
+      "lot": "486",
+      "title": "Hardinge Conquest T42 SG-42 CNC Lathe, S/N SGA-1895-B",
+      "description": "Hardinge Conquest T42 Model SG-42 CNC Lathe, S/N SGA-1895-B, with 5,000-RPM, 21\" Swing, 9\" Max. Diameter, 13\" Max. Length, 5.31\" X-Axis Travel, 13.9\" Z-Axis Travel, 6\" 16C Collet Nose Chuck (Main), 5\" 16C Collet Nose Chuck (Sub), 12-Station Turret with Milling, (4) Additional Live Holders & Static Holders, Chip Conveyor, GE Fanuc 18T Control",
+      "photo": "photos/486.jpg",
+      "page": 101
+    },
+    {
+      "lot": "487",
+      "title": "Box of 5C Collets",
+      "description": "Box of Assorted 5C Collets",
+      "photo": "photos/487.jpg",
+      "page": 102
+    },
+    {
+      "lot": "488",
+      "title": "Box of New & Used 5C Collets",
+      "description": "Box of New & Used Assorted Size 5C Collets",
+      "photo": "photos/488.jpg",
+      "page": 102
+    },
+    {
+      "lot": "489",
+      "title": "Box of 16C Collets",
+      "description": "Box of Assorted Size 16C Collets",
+      "photo": "photos/489.jpg",
+      "page": 102
+    },
+    {
+      "lot": "490",
+      "title": "(20) 16C Collets",
+      "description": "(20) Assorted Size 16C Collets",
+      "photo": "photos/490.jpg",
+      "page": 102
+    },
+    {
+      "lot": "491",
+      "title": "(20) 16C Collets",
+      "description": "(20) Assorted Size 16C Collets",
+      "photo": "photos/491.jpg",
+      "page": 102
+    },
+    {
+      "lot": "492",
+      "title": "Mazak Quick Turn 18N CNC Lathe, S/N 109296, 1993",
+      "description": "Mazak Quick Turn 18N CNC Lathe, S/N 109296, 1993, with 3,600-RPM, 17\" Swing, 11.81\" Max. Diameter, 19.69\" Max. Length, 7.09\" X-Axis Travel, 20.08\" Z-Axis Travel, 3.15\" Bore, Kitagawa B-210 10\" 3-Jaw Chuck, 8-Station Turret, Tailstock, Tool Presetter, Jorgensen Chip Conveyor, 20-HP, Mazatrol T32B Control (NO POWER)",
+      "photo": "photos/492.jpg",
+      "page": 103
+    },
+    {
+      "lot": "493",
+      "title": "(9) Insert Stick Holders",
+      "description": "(9) Assorted Size Insert Stick Holders",
+      "photo": "photos/493.jpg",
+      "page": 103
+    },
+    {
+      "lot": "494",
+      "title": "(8) New & Lightly Used Insert Stick Holders",
+      "description": "(8) Assorted Size New & Lightly Used Insert Stick Holders",
+      "photo": "photos/494.jpg",
+      "page": 103
+    },
+    {
+      "lot": "495",
+      "title": "Lathe Collets with Boring Bar Sleeves",
+      "description": "Assorted Lathe Collets, with Boring Bar Sleeves",
+      "photo": "photos/495.jpg",
+      "page": 103
+    },
+    {
+      "lot": "496",
+      "title": "Box of Lathe Boring Bar Tool Holders",
+      "description": "Box of Assorted Size Lathe Boring Bar Tool Holders",
+      "photo": "photos/496.jpg",
+      "page": 104
+    },
+    {
+      "lot": "497",
+      "title": "Box of Straight Shank Collet Tool Holders",
+      "description": "Box of Assorted Size Straight Shank Collet Tool Holders",
+      "photo": "photos/497.jpg",
+      "page": 104
+    },
+    {
+      "lot": "498",
+      "title": "Mazak QT-250-HP-Universal CNC Lathe, S/N 142314, 1999",
+      "description": "Mazak QT-250-HP-Universal CNC Lathe, S/N 142314, 1999, with 5,000-RPM, 23.6\" Swing, 15.7\" Max. Diamter, 19.7\" Max. Length, 8.46\" X-Axis Travel, 20\" Z-Axis Travel, 2.5\" Bore, 3J Collet Chuck, 12-Station Turret, Tailstock, Tool Presetter, Parts Catcher, Chip Conveyor, 20-HP, Mazatrol PC-Fusion-CNC 640T Control",
+      "photo": "photos/498.jpg",
+      "page": 104
+    },
+    {
+      "lot": "499",
+      "title": "Mazak QT-250-HP-Universal CNC Lathe, S/N 150476, 2000",
+      "description": "Mazak QT-250-HP-Universal CNC Lathe, S/N 150476, 2000, with 5,000-RPM, 23.6\" Swing, 15.7\" Max. Diamter, 19.7\" Max. Length, 8.46\" X-Axis Travel, 20\" Z-Axis Travel, 2.5\" Bore, 3J Collet Chuck, 12-Station Turret, Tailstock, Tool Presetter, Parts Catcher, Chip Conveyor, 20-HP, Mazatrol PC-Fusion-CNC 640T Control (LOCKED OUT / TAGGED OUT)",
+      "photo": "photos/499.jpg",
+      "page": 105
+    },
+    {
+      "lot": "500",
+      "title": "Box of Dorian Knurling Tools & CNC Bar Pullers",
+      "description": "Box of Dorian CNC Knurling Tooling, including KH-6-4 & KH-3-M, with CNC Lathe Bar Pullers",
+      "photo": "photos/500.jpg",
+      "page": 105
+    },
+    {
+      "lot": "501",
+      "title": "Box of Fette Thread Rolling Heads & Dies",
+      "description": "Box of Fette Thread Rolling Heads, including K2 M8-M16 (5/16\"-5/8\") & K1 M6-M10 (1/4\"-3/8\"), with Assorted Threading Dies",
+      "photo": "photos/501.jpg",
+      "page": 105
+    },
+    {
+      "lot": "502",
+      "title": "Large Lot of Boring Bar Sleeves",
+      "description": "Large Lot of Assorted Size Boring Bar Sleeves",
+      "photo": "photos/502.jpg",
+      "page": 105
+    },
+    {
+      "lot": "503",
+      "title": "Large Lot of Boring Bar Sleeves",
+      "description": "Large Lot of Assorted Size Boring Bar Sleeves",
+      "photo": "photos/503.jpg",
+      "page": 106
+    },
+    {
+      "lot": "504",
+      "title": "Large Lot of Boring Bar Sleeves",
+      "description": "Large Lot of Assorted Size Boring Bar Sleeves",
+      "photo": "photos/504.jpg",
+      "page": 106
+    },
+    {
+      "lot": "505",
+      "description": "Box of Morse Taper Adapters",
+      "photo": "photos/505.jpg",
+      "page": 106
+    },
+    {
+      "lot": "506",
+      "title": "Pallet of Large Morse Taper Drills",
+      "description": "Pallet of Large Size Morse Taper Drills",
+      "photo": "photos/506.jpg",
+      "page": 106
+    },
+    {
+      "lot": "507",
+      "title": "(4) Morse Taper Drill Chucks",
+      "description": "(4) Morse Taper Jacobs Drill Chucks",
+      "photo": "photos/507.jpg",
+      "page": 106
+    },
+    {
+      "lot": "508",
+      "title": "(4) Morse Taper Drill Chucks",
+      "description": "(4) Morse Taper Jacobs Drill Chucks",
+      "photo": "photos/508.jpg",
+      "page": 106
+    },
+    {
+      "lot": "509",
+      "title": "(2) Morse Taper Drill Chucks & Live Centers",
+      "description": "(2) Morse Taper Jacobs Chucks & Morse Taper Live Centers",
+      "photo": "photos/509.jpg",
+      "page": 107
+    },
+    {
+      "lot": "510",
+      "title": "(2) Morse Taper Drill Chucks & Live Centers",
+      "description": "(2) Morse Taper Jacobs Chucks & Morse Taper Live Centers",
+      "photo": "photos/510.jpg",
+      "page": 107
+    },
+    {
+      "lot": "511",
+      "title": "Mori Seiki MS-850 Engine Lathe with Acu-Rite DRO & Tooling",
+      "description": "Mori Seiki MS-850 Engine Lathe, with 1,800-RPM, 17.13\" Swing, 33.46\" Centers. 9.84\" Swing over Cross Slide, 2\" Bore, Acu-Rite DRO, Tailstock, Steady Rest, 2-Station Dovetail Tool Post, Rolling Chuck Station with Assorted 4-Jaw & 3-Jaw Chucks & Adapter Plates, Large Table Top Dovetail Tooling Organizer with Dead & Live Centers & Large Amount of Dovetail Tool Holders, 5-HP",
+      "photo": "photos/511.jpg",
+      "page": 107
+    },
+    {
+      "lot": "512",
+      "title": "Box of New Carbide End Mills & Tooling",
+      "description": "Box of New Assorted Style Tooling, including Carbide End Mills & Others",
+      "photo": "photos/512.jpg",
+      "page": 108
+    },
+    {
+      "lot": "513",
+      "description": "Box of New Carbide End Mills & Drills",
+      "photo": "photos/513.jpg",
+      "page": 108
+    },
+    {
+      "lot": "514",
+      "title": "Box of New Stub & Jobber Drills",
+      "description": "Box of New Assorted Size Stub Drills & Jobber Drills",
+      "photo": "photos/514.jpg",
+      "page": 108
+    },
+    {
+      "lot": "515",
+      "title": "Box of New Stub & Jobber Drills",
+      "description": "Box of New Assorted Size Stub Drills & Jobber Drills",
+      "photo": "photos/515.jpg",
+      "page": 108
+    },
+    {
+      "lot": "516",
+      "title": "Box of New Jobber & Screw Machine Drills & Keyseat Cutters",
+      "description": "Box of New Assorted Size Jobber, Straight Shank & Screw Machine Drills, with Lightly Used Keyseat Cutters",
+      "photo": "photos/516.jpg",
+      "page": 108
+    },
+    {
+      "lot": "517",
+      "title": "Box of New Jobber & Screw Machine Drills",
+      "description": "Box of New Assorted Size Jobber Drills & Screw Machine Drills",
+      "photo": "photos/517.jpg",
+      "page": 108
+    },
+    {
+      "lot": "518",
+      "title": "Box of New Carbide End Mills, Taps & Others",
+      "description": "Box of New Assorted Size Carbide End Mills, Taps & Others",
+      "photo": "photos/518.jpg",
+      "page": 109
+    },
+    {
+      "lot": "519",
+      "title": "Box of New Carbide End Mills",
+      "description": "Box of New Assorted Carbide End Mills",
+      "photo": "photos/519.jpg",
+      "page": 109
+    },
+    {
+      "lot": "520",
+      "description": "Box of New Carbide End Mills, Taps & Reamers",
+      "photo": "photos/520.jpg",
+      "page": 109
+    },
+    {
+      "lot": "521",
+      "title": "Box of New Carbide End Mills, Drills & Taps",
+      "description": "Box of New Assorted Size Carbide End Mills, Drills & Taps",
+      "photo": "photos/521.jpg",
+      "page": 109
+    },
+    {
+      "lot": "522",
+      "title": "Box of New Coolant-Fed Carbide Drills, Noga Deburring & Others",
+      "description": "Box of New Carbide Drill Bits with Coolant Channels, Noga Deburring System, Taps, Reamers & End Mills",
+      "photo": "photos/522.jpg",
+      "page": 109
+    },
+    {
+      "lot": "523",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/523.jpg",
+      "page": 109
+    },
+    {
+      "lot": "524",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/524.jpg",
+      "page": 110
+    },
+    {
+      "lot": "525",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/525.jpg",
+      "page": 110
+    },
+    {
+      "lot": "526",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/526.jpg",
+      "page": 110
+    },
+    {
+      "lot": "527",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/527.jpg",
+      "page": 110
+    },
+    {
+      "lot": "528",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/528.jpg",
+      "page": 110
+    },
+    {
+      "lot": "529",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/529.jpg",
+      "page": 110
+    },
+    {
+      "lot": "530",
+      "title": "Large Box of New HSS Drills",
+      "description": "Large Box of New Assorted Size HSS Drills",
+      "photo": "photos/530.jpg",
+      "page": 111
+    },
+    {
+      "lot": "531",
+      "title": "Box of New Guhring SpyroTec Countersinks",
+      "description": "Box of New Assorted Size Guhring SpyroTec Countersinks",
+      "photo": "photos/531.jpg",
+      "page": 111
+    },
+    {
+      "lot": "532",
+      "title": "Box of New HSS Jobber & Stub Drills",
+      "description": "Box of New Assorted Size HSS Jobber & Stub Drills",
+      "photo": "photos/532.jpg",
+      "page": 111
+    },
+    {
+      "lot": "533",
+      "title": "Box of New Carbide End Mills & Taps",
+      "description": "Box of New Assorted Size Carbide End Mills & Taps",
+      "photo": "photos/533.jpg",
+      "page": 111
+    },
+    {
+      "lot": "534",
+      "title": "Box of New HSS Jobber & Stub Drills",
+      "description": "Box of New Assorted Size HSS Jobber & Stub Drills",
+      "photo": "photos/534.jpg",
+      "page": 111
+    },
+    {
+      "lot": "535",
+      "title": "Box of KEO Woodruff Keyseat Cutters & Ingersoll ChipSurfer Shanks",
+      "description": "Box of New & Lightly Used KEO Woodruff Keyseat Cutters & Ingersoll ChipSurfer Modular Milling Shanks",
+      "photo": "photos/535.jpg",
+      "page": 111
+    },
+    {
+      "lot": "536",
+      "title": "Box of New End Mills, Taps & Drills",
+      "description": "Box of New Assorted Size End Mills, Taps & Drills",
+      "photo": "photos/536.jpg",
+      "page": 112
+    },
+    {
+      "lot": "537",
+      "title": "Box of New & Lightly Used Drills, End Mills & Others",
+      "description": "Box of Assorted New & Lightly Used Drills, End Mills & Others",
+      "photo": "photos/537.jpg",
+      "page": 112
+    },
+    {
+      "lot": "538",
+      "title": "Box of New & Lightly Used Reamers, End Mills, Drills & Others",
+      "description": "Box of Assorted New & Lightly Used Reamers, End Mills, Drills & Others",
+      "photo": "photos/538.jpg",
+      "page": 112
+    },
+    {
+      "lot": "539",
+      "title": "Large Box of New & Lightly Used HSS Drills",
+      "description": "Large Box of New & Lightly Used Assorted Size HSS Drills",
+      "photo": "photos/539.jpg",
+      "page": 112
+    },
+    {
+      "lot": "540",
+      "title": "Large Box of New & Lightly Used HSS Drills",
+      "description": "Large Box of New & Lightly Used Assorted Size HSS Drills",
+      "photo": "photos/540.jpg",
+      "page": 112
+    },
+    {
+      "lot": "541",
+      "title": "Large Box of New & Lightly Used HSS Drills",
+      "description": "Large Box of New & Lightly Used Assorted Size HSS Drills",
+      "photo": "photos/541.jpg",
+      "page": 112
+    },
+    {
+      "lot": "542",
+      "title": "Large Box of New & Lightly Used HSS Drills",
+      "description": "Large Box of New & Lightly Used Assorted Size HSS Drills",
+      "photo": "photos/542.jpg",
+      "page": 113
+    },
+    {
+      "lot": "543",
+      "title": "Box of New & Used Carbide End Mills, Coolant Drills & Others",
+      "description": "Box of New & Some Used Carbide End Mills, Through Coolant Drills & Others",
+      "photo": "photos/543.jpg",
+      "page": 113
+    },
+    {
+      "lot": "544",
+      "title": "Box of Coolant Insert Drills, End Mill Finishers, Stub Drills & Others",
+      "description": "Box of New Flanged Shank Through Coolant Insert Drills, Large End Mill Finishers, HSS Stub Drills & Others",
+      "photo": "photos/544.jpg",
+      "page": 113
+    },
+    {
+      "lot": "545",
+      "title": "Box of New Taps, Spade Inserts, Deburring Tools & Others",
+      "description": "Box of New Taps, Spade Inserts, Deburring Tools, Micro Drills & Others",
+      "photo": "photos/545.jpg",
+      "page": 113
+    },
+    {
+      "lot": "546",
+      "title": "Box of New HSS, Cobalt & Carbide Spade Inserts & Others",
+      "description": "Box of New HSS, Cobalt & Carbide Spade Inserts, Flat Bottom Inserts & Others",
+      "photo": "photos/546.jpg",
+      "page": 113
+    },
+    {
+      "lot": "547",
+      "title": "Box of New Carbide End Mills, Coolant Drills & Others",
+      "description": "Box of New Assorted Size Carbide End Mills, Taps, Through Coolant Drills & Others",
+      "photo": "photos/547.jpg",
+      "page": 113
+    },
+    {
+      "lot": "548",
+      "title": "Box of New Spade & Flat Bottom Inserts",
+      "description": "Box of New Assorted Flat Bottom & Spade Inserts",
+      "photo": "photos/548.jpg",
+      "page": 114
+    },
+    {
+      "lot": "549",
+      "description": "Box of New & Used Taps, End Mills, Spot Drills, Inserts & Others",
+      "photo": "photos/549.jpg",
+      "page": 114
+    },
+    {
+      "lot": "550",
+      "description": "Box of New Taps, Carbide End Mills & Drills",
+      "photo": "photos/550.jpg",
+      "page": 114
+    },
+    {
+      "lot": "551",
+      "title": "Box of Carbide Spot Drills, Chamfer Drills, End Mills & Others",
+      "description": "Box of New & Some Lightly Used Assorted Carbide Spot Drills, Chamfer Drills, End Mills & Others",
+      "photo": "photos/551.jpg",
+      "page": 114
+    },
+    {
+      "lot": "552",
+      "title": "Box of New Carbide Ball Mills & End Mills",
+      "description": "Box of New Assorted Carbide Ball Mills & End Mills",
+      "photo": "photos/552.jpg",
+      "page": 114
+    },
+    {
+      "lot": "553",
+      "title": "Box of New Carbide End Mills, Coolant Insert Drill & Others",
+      "description": "Box of Assorted New Carbide End Mills, Through Coolant Insert Drill, Assorted Micro Drills & Others",
+      "photo": "photos/553.jpg",
+      "page": 114
+    },
+    {
+      "lot": "554",
+      "title": "Box of New Carbide End Mills, Micro Drills, Taps & Others",
+      "description": "Box of New Assorted Carbide End Mills, Micro Drills, Taps & Others",
+      "photo": "photos/554.jpg",
+      "page": 115
+    },
+    {
+      "lot": "555",
+      "title": "Box of New Coolant Drills, End Mills, Inserts & Others",
+      "description": "Box of New Assorted Through Coolant Drills, End Mills, Inserts & Others",
+      "photo": "photos/555.jpg",
+      "page": 115
+    },
+    {
+      "lot": "556",
+      "description": "Box of Lightly Used Carbide End Mills, Drills & Others",
+      "photo": "photos/556.jpg",
+      "page": 115
+    },
+    {
+      "lot": "557",
+      "title": "Box of New Coolant Insert Drills, End Mills, Inserts & Others",
+      "description": "Box of Assorted New Coolant Through Insert Drills, Carbide End Mills, Inserts, Deburring Tools, HSS Stub Drills & Others",
+      "photo": "photos/557.jpg",
+      "page": 115
+    },
+    {
+      "lot": "558",
+      "title": "Box of New Carbide End Mills, Precision Drills, Inserts & Others",
+      "description": "Box of New Assorted Size Carbide End Mills, Precision Drills, Inserts & Others",
+      "photo": "photos/558.jpg",
+      "page": 115
+    },
+    {
+      "lot": "559",
+      "title": "Box of Iscar 3-Flute Insert Mills, Inserts, Taps & Others",
+      "description": "Box of New & Lightly Used Iscar 1\" 3-Flute Insert Mills with Inserts, Taps & Others",
+      "photo": "photos/559.jpg",
+      "page": 115
+    },
+    {
+      "lot": "560",
+      "title": "Box of New Inserts, End Mills, Spot Drills & Chamfer Inserts",
+      "description": "Box of Assorted New Inserts, End Mills, Spot Drills, New & Lightly Used Chamfer Inserts & Others",
+      "photo": "photos/560.jpg",
+      "page": 116
+    },
+    {
+      "lot": "561",
+      "title": "Box of HSS Shanks, Chamfer Mills, End Mills & Others",
+      "description": "Box of New & Lightly Used Assorted HSS Shanks, Chamfer Mills, End Mills & Others",
+      "photo": "photos/561.jpg",
+      "page": 116
+    },
+    {
+      "lot": "562",
+      "title": "Box of New End Mills, Taps, Key Cutters, Inserts & Others",
+      "description": "Box of New Assorted End Mills, Taps, Carbide Head Key Cutters, Inserts, Drills & Others",
+      "photo": "photos/562.jpg",
+      "page": 116
+    },
+    {
+      "lot": "563",
+      "description": "Box of New End Mills, Taps, Inserts & Others",
+      "photo": "photos/563.jpg",
+      "page": 116
+    },
+    {
+      "lot": "564",
+      "title": "Box of Keyseat Cutters, Iscar Coolant Insert Drill & Others",
+      "description": "Box of New & Lightly Used Assorted Keyseat Cutters, Iscar Coolant Through Insert Drill, Carbide End Mills & Others",
+      "photo": "photos/564.jpg",
+      "page": 116
+    },
+    {
+      "lot": "565",
+      "title": "Box of Mitsubishi Insert Mill, Spade Inserts, Drills, Taps & Others",
+      "description": "Box of New Mitsubishi Coolant Through 2-Flute Insert Boring Mill, Spade Inserts, HSS Drills, Taps & Others",
+      "photo": "photos/565.jpg",
+      "page": 116
+    },
+    {
+      "lot": "566",
+      "title": "Box of New & Lightly Used End Mills, Drills & Others",
+      "description": "Box of New & Lightly Used Assorted End Mills, Drills & Others",
+      "photo": "photos/566.jpg",
+      "page": 117
+    },
+    {
+      "lot": "567",
+      "title": "Box of Carbide End Mills, Mitsubishi Coolant Insert Mill & Others",
+      "description": "Box of New & Lightly Used Carbide End Mills, Mitsubishi 2-Flute Through Coolant Insert Mill & Others",
+      "photo": "photos/567.jpg",
+      "page": 117
+    },
+    {
+      "lot": "568",
+      "title": "Box of New End Mills, Ball Mills, Chamfer Drills & Others",
+      "description": "Box of New Assorted End Mills, Ball Mills, Chamfer Drills & Others",
+      "photo": "photos/568.jpg",
+      "page": 117
+    },
+    {
+      "lot": "569",
+      "title": "Box of New Carbide End Mills & Others",
+      "description": "Box of New Assorted Size Carbide End Mills & Others",
+      "photo": "photos/569.jpg",
+      "page": 117
+    },
+    {
+      "lot": "570",
+      "title": "Box of New Inserts",
+      "description": "Box of New Assorted Size Inserts",
+      "photo": "photos/570.jpg",
+      "page": 117
+    },
+    {
+      "lot": "571",
+      "title": "Box of New Inserts",
+      "description": "Box of New Assorted Size Inserts",
+      "photo": "photos/571.jpg",
+      "page": 117
+    },
+    {
+      "lot": "572",
+      "title": "Box of New Inserts",
+      "description": "Box of New Assorted Size Inserts",
+      "photo": "photos/572.jpg",
+      "page": 118
+    },
+    {
+      "lot": "573",
+      "title": "Box of Metric Taps M1.6 - M8x1",
+      "description": "Box of New & Lightly Used Metric Taps M1.6 - M8x1",
+      "photo": "photos/573.jpg",
+      "page": 118
+    },
+    {
+      "lot": "574",
+      "title": "Box of Metric Taps M8x1.25 - M18x1",
+      "description": "Box of New & Lightly Used Metric Taps M8x1.25 - M18x1",
+      "photo": "photos/574.jpg",
+      "page": 118
+    },
+    {
+      "lot": "575",
+      "title": "Box of Fractional Taps 0-80 - 1/4\"-20",
+      "description": "Box of New & Lightly Used Fractional Taps 0-80 - 1/4\"-20",
+      "photo": "photos/575.jpg",
+      "page": 118
+    },
+    {
+      "lot": "576",
+      "title": "Box of Fractional Taps 0-80 - 1/4\"-20",
+      "description": "Box of New & Lightly Used Fractional Taps 0-80 - 1/4\"-20",
+      "photo": "photos/576.jpg",
+      "page": 118
+    },
+    {
+      "lot": "577",
+      "title": "Box of Fractional Taps 1/4\"-20 - 7/16\"-28",
+      "description": "Box of New & Lightly Used Fractional Taps 1/4\"-20 - 7/16\"-28",
+      "photo": "photos/577.jpg",
+      "page": 118
+    },
+    {
+      "lot": "578",
+      "title": "Box of Fractional Taps 1/4\"-20 - 7/16\"-28",
+      "description": "Box of New & Lightly Used Fractional Taps 1/4\"-20 - 7/16\"-28",
+      "photo": "photos/578.jpg",
+      "page": 119
+    },
+    {
+      "lot": "579",
+      "title": "Box of Fractional Taps 1/2\"-13 - 3/4\"-20",
+      "description": "Box of New & Lightly Used Fractional Taps 1/2\"-13 - 3/4\"-20",
+      "photo": "photos/579.jpg",
+      "page": 119
+    },
+    {
+      "lot": "580",
+      "title": "Box of Fractional Taps 1/2\"-13 - 3/4\"-20",
+      "description": "Box of New & Lightly Used Fractional Taps 1/2\"-13 - 3/4\"-20",
+      "photo": "photos/580.jpg",
+      "page": 119
+    },
+    {
+      "lot": "581",
+      "title": "Box of Fractional Taps 7/8\"-9 - 1\"-18",
+      "description": "Box of New & Lightly Used Fractional Taps 7/8\"-9 - 1\"-18",
+      "photo": "photos/581.jpg",
+      "page": 119
+    },
+    {
+      "lot": "582",
+      "title": "Box of Pipe Taps & Large Metric Taps M20x2.5 - M24x3",
+      "description": "Box of New & Lightly Used Pipe Taps & Large Metric Taps M20x2.5 - M24x3",
+      "photo": "photos/582.jpg",
+      "page": 119
+    },
+    {
+      "lot": "583",
+      "title": "Box of Thread Mills, Inserts & STI Taps",
+      "description": "Box of New & Lightly Used Thread Mills, Inserts & STI Taps",
+      "photo": "photos/583.jpg",
+      "page": 119
+    },
+    {
+      "lot": "584",
+      "description": "Box of Thread Mills & STI Taps",
+      "photo": "photos/584.jpg",
+      "page": 120
+    },
+    {
+      "lot": "585",
+      "title": "Box of New Inserts & Others",
+      "description": "Box of Assorted New Inserts & Others",
+      "photo": "photos/585.jpg",
+      "page": 120
+    },
+    {
+      "lot": "586",
+      "description": "Box of New & Lightly Used End Mills, Drills & Others",
+      "photo": "photos/586.jpg",
+      "page": 120
+    },
+    {
+      "lot": "587",
+      "title": "Box of Micro Drills, End Mills, Keyseat Cutters & Others",
+      "description": "Box of New & Lightly Used Micro Drills, End Mills, Keyseat Cutters & Others",
+      "photo": "photos/587.jpg",
+      "page": 120
+    },
+    {
+      "lot": "588",
+      "description": "Box of New & Lightly Used HSS Drills, End Mills & Others",
+      "photo": "photos/588.jpg",
+      "page": 120
+    },
+    {
+      "lot": "589",
+      "title": "Box of End Mills, Ball Mills, Micro Drills & Others",
+      "description": "Box of New & Lightly Used End Mills, Ball Mills, Micro Drills & Others",
+      "photo": "photos/589.jpg",
+      "page": 120
+    },
+    {
+      "lot": "590",
+      "title": "Box of Drills, Coolant Drills, Insert Countersinks, Collets & Others",
+      "description": "Box of Assorted Lightly Used Drills, Through Coolant Drills, Insert Countersinks, Collets & Others",
+      "photo": "photos/590.jpg",
+      "page": 121
+    },
+    {
+      "lot": "591",
+      "description": "Box of New & Used Drills, End Mills, Taps & Others",
+      "photo": "photos/591.jpg",
+      "page": 121
+    },
+    {
+      "lot": "592",
+      "description": "Box of Lightly Used End Mills & Others",
+      "photo": "photos/592.jpg",
+      "page": 121
+    },
+    {
+      "lot": "593",
+      "title": "(2) Boxes of Drills, Countersinks, End Mills & Others",
+      "description": "(2) Boxes of Assorted Size Drills, Countersinks, End Mills & Others",
+      "photo": "photos/593.jpg",
+      "page": 121
+    },
+    {
+      "lot": "594",
+      "title": "(2) Boxes of Drills, Countersinks, End Mills & Others",
+      "description": "(2) Boxes of Assorted Size Drills, Countersinks, End Mills & Others",
+      "photo": "photos/594.jpg",
+      "page": 121
+    },
+    {
+      "lot": "595",
+      "description": "Box of Lightly Used End Mills & Others",
+      "photo": "photos/595.jpg",
+      "page": 121
+    },
+    {
+      "lot": "596",
+      "description": "(2) Boxes of Lightly Used Drills, Taps, End Mills & Others",
+      "photo": "photos/596.jpg",
+      "page": 122
+    },
+    {
+      "lot": "597",
+      "title": "Box of Insert Face Mills, 4-6 Flute, 1-1/2\" - 3\"",
+      "description": "Box of New & Lightly Used Insert Face Mills & Through Coolant Insert Face Mills, 4, 5 & 6 Flute, 1-1/2\", 2\" & 3\", for Shell Mill Holders",
+      "photo": "photos/597.jpg",
+      "page": 122
+    },
+    {
+      "lot": "598",
+      "title": "(3) Through Coolant Drills, 1-1/4\" Flute",
+      "description": "(3) Assorted Size Through Coolant Drills: (2) 1\" 5xD with 1-1/4\" Flute & (1) 1\" 7xD with 1-1/4\" Flute",
+      "photo": "photos/598.jpg",
+      "page": 122
+    },
+    {
+      "lot": "599",
+      "title": "(3) Through Coolant Drills, 1-1/2\" Flute",
+      "description": "(3) Assorted Size Through Coolant Drills: (2) 1-1/2\" 5xD with 1-1/2\" Flute & (1) 1-1/2\" 7xD with 1-1/2\" Flute",
+      "photo": "photos/599.jpg",
+      "page": 122
+    },
+    {
+      "lot": "600",
+      "description": "Large Box of Lightly Used Countersinks, Carbide End Mills & Others",
+      "photo": "photos/600.jpg",
+      "page": 122
+    },
+    {
+      "lot": "601",
+      "title": "Large Box of Countersinks, Inserts, Ball Mills & Others",
+      "description": "Large Box of Lightly Used Countersinks, 3/4\" & 1\" Body Inserts, Ball Mills & Others",
+      "photo": "photos/601.jpg",
+      "page": 122
+    },
+    {
+      "lot": "602",
+      "title": "Large Box of Lightly Used End Mills",
+      "description": "Large Box of Lightly Used Assorted Size End Mills",
+      "photo": "photos/602.jpg",
+      "page": 123
+    },
+    {
+      "lot": "603",
+      "description": "Large Box of Lightly Used Fractional Drills",
+      "photo": "photos/603.jpg",
+      "page": 123
+    },
+    {
+      "lot": "604",
+      "title": "Large Box of Lightly Used Number Drills",
+      "description": "Large Box of Lightly Used Assorted Size Number Drills",
+      "photo": "photos/604.jpg",
+      "page": 123
+    },
+    {
+      "lot": "605",
+      "title": "Large Box of Lightly Used Letter Drills",
+      "description": "Large Box of Lightly Used Assorted Size Letter Drills",
+      "photo": "photos/605.jpg",
+      "page": 123
+    },
+    {
+      "lot": "606",
+      "title": "Large Box of Keyseat Cutters, Fly Cutters & Others",
+      "description": "Large Box of Assorted Size Keyseat Cutters, Fly Cutters & Others",
+      "photo": "photos/606.jpg",
+      "page": 123
+    },
+    {
+      "lot": "607",
+      "title": "Large Box of Keyseat Cutters, Fly Cutters & Others",
+      "description": "Large Box of Assorted Size Keyseat Cutters, Fly Cutters & Others",
+      "photo": "photos/607.jpg",
+      "page": 123
+    },
+    {
+      "lot": "608",
+      "title": "Large Lot of Taps",
+      "description": "Large Lot of Assorted Size Taps",
+      "photo": "photos/608.jpg",
+      "page": 124
+    },
+    {
+      "lot": "609",
+      "title": "Large Lot of Taps",
+      "description": "Large Lot of Assorted Size Taps",
+      "photo": "photos/609.jpg",
+      "page": 124
+    },
+    {
+      "lot": "610",
+      "title": "Box of Insert End Mills & Coolant Insert End Mills",
+      "description": "Box Full of Assorted Insert End Mills & Through Coolant Insert End Mills",
+      "photo": "photos/610.jpg",
+      "page": 124
+    },
+    {
+      "lot": "611",
+      "title": "Box of Insert End Mills & Coolant Insert End Mills",
+      "description": "Box Full of New, Lightly Used & Used Insert End Mills, Through Coolant Insert End Mills & Others",
+      "photo": "photos/611.jpg",
+      "page": 124
+    },
+    {
+      "lot": "612",
+      "title": "(2) Boxes of Used Drills & Keyseat Cutters",
+      "description": "(2) Boxes of Assorted Size Used Drills & Keyseat Cutters",
+      "photo": "photos/612.jpg",
+      "page": 124
+    },
+    {
+      "lot": "613",
+      "title": "Box of Through Coolant Insert Drills & Others",
+      "description": "Box of Assorted Through Coolant Insert Drills & Others",
+      "photo": "photos/613.jpg",
+      "page": 124
+    },
+    {
+      "lot": "614",
+      "title": "Box of Coolant Drills, Insert Face Mills, Micro Drills & Others",
+      "description": "Box of Assorted Size Through Coolant Drills, 4, 5 & 6 Flute Insert Face Mills of Assorted Sizes, Micro Drills & Others",
+      "photo": "photos/614.jpg",
+      "page": 125
+    },
+    {
+      "lot": "615",
+      "title": "(2) Boxes of Lightly Used End Mills, Coolant Drills & Others",
+      "description": "(2) Boxes of Assorted Lightly Used End Mills, Through Coolant Drills & Others",
+      "photo": "photos/615.jpg",
+      "page": 125
+    },
+    {
+      "lot": "616",
+      "title": "(2) Boxes of Coolant Drills, Drills, Carbide End Mills & Others",
+      "description": "(2) Boxes of Assorted Size Through Coolant Drills, Drills, Carbide End Mills & Others",
+      "photo": "photos/616.jpg",
+      "page": 125
+    },
+    {
+      "lot": "617",
+      "title": "(2) Boxes of Used Taps, Reamers, Hole Drills & Drills",
+      "description": "(2) Boxes of Assorted Used Taps, Reamers, Hole Drills, Drills & Fractional Drills",
+      "photo": "photos/617.jpg",
+      "page": 125
+    },
+    {
+      "lot": "618",
+      "title": "(2) Letter, Number & Fractional Drill Sets",
+      "description": "(2) Assorted Letter, Number & Fractional Drill Sets",
+      "photo": "photos/618.jpg",
+      "page": 125
+    },
+    {
+      "lot": "619",
+      "title": "Box of New & Used Deburring Tools, Inserts & Others",
+      "description": "Box of Assorted New & Used Deburring Tools, Inserts & Others",
+      "photo": "photos/619.jpg",
+      "page": 125
+    },
+    {
+      "lot": "620",
+      "title": "Box of Drills, Small Body Drills & Step Drills",
+      "description": "Box of Assorted Drills, Small Body Drills & Step Drills",
+      "photo": "photos/620.jpg",
+      "page": 126
+    },
+    {
+      "lot": "621",
+      "title": "Box of Drills, Twist Drills & Reamers",
+      "description": "Box of Assorted Drills, Twist Drills & Reamers",
+      "photo": "photos/621.jpg",
+      "page": 126
+    },
+    {
+      "lot": "622",
+      "title": "(2) Boxes of Drills & Twist Drills",
+      "description": "(2) Boxes of Assorted Drills & Twist Drills",
+      "photo": "photos/622.jpg",
+      "page": 126
+    },
+    {
+      "lot": "623",
+      "title": "(2) Boxes of Reamers",
+      "description": "(2) Boxes of Assorted Size Reamers",
+      "photo": "photos/623.jpg",
+      "page": 126
+    },
+    {
+      "lot": "624",
+      "title": "(2) Boxes of Reamers & Corner Rounding End Mills",
+      "description": "(2) Boxes of Assorted Size Reamers, with Corner Rounding End Mills & Others",
+      "photo": "photos/624.jpg",
+      "page": 126
+    },
+    {
+      "lot": "625",
+      "title": "Box of Reamers, Thread Mills & Others",
+      "description": "Box of Assorted Size Reamers, Thread Mills & Others",
+      "photo": "photos/625.jpg",
+      "page": 126
+    },
+    {
+      "lot": "626",
+      "title": "Box of Keyseat Cutters, End Mills & Reamers",
+      "description": "Box of New & Lightly Used Keyseat Cutters, End Mills & Reamers",
+      "photo": "photos/626.jpg",
+      "page": 127
+    },
+    {
+      "lot": "627",
+      "title": "Box of Drills, Reamers & Others",
+      "description": "Box of Assorted Drills, Reamers & Others",
+      "photo": "photos/627.jpg",
+      "page": 127
+    },
+    {
+      "lot": "628",
+      "title": "Lista 9-Drawer Cabinet with Reamers 0-1\" & Larger",
+      "description": "Lista 9-Drawer Cabinet Full of New & Lightly Used Assorted Size Reamers 0-1\" & Larger",
+      "photo": "photos/628.jpg",
+      "page": 127
+    },
+    {
+      "lot": "629",
+      "title": "Lista 11-Drawer Cabinet with Steel & Aluminum Jaws",
+      "description": "Lista 11-Drawer Cabinet, with Assorted Steel & Aluminum Jaws",
+      "photo": "photos/629.jpg",
+      "page": 127
+    },
+    {
+      "lot": "630",
+      "title": "Lista 13-Drawer Cabinet with Hand Tools, Hardware & Clamps",
+      "description": "Lista 13-Drawer Cabinet, with Vise Grips, Wrenches, Hardware, Clamps & Hex Wrenches",
+      "photo": "photos/630.jpg",
+      "page": 127
+    },
+    {
+      "lot": "631",
+      "title": "Watson 11-Drawer Cabinet with Hand Tools, Hardware & Clamps",
+      "description": "Watson 11-Drawer Cabinet, with Assorted Hand Tools, Hardware & Clamps",
+      "photo": "photos/631.jpg",
+      "page": 127
+    },
+    {
+      "lot": "632",
+      "description": "Lista 12-Drawer Cabinet (NO CONTENTS)",
+      "photo": "photos/632.jpg",
+      "page": 128
+    },
+    {
+      "lot": "633",
+      "description": "Lista 11-Drawer Cabinet (NO CONTENTS)",
+      "photo": "photos/633.jpg",
+      "page": 128
+    },
+    {
+      "lot": "634",
+      "description": "Lista 11-Drawer Cabinet (NO CONTENTS)",
+      "photo": "photos/634.jpg",
+      "page": 128
+    },
+    {
+      "lot": "635",
+      "description": "Kobalt 2-Section 9-Drawer Rolling Tool Box (NO CONTENTS)",
+      "photo": "photos/635.jpg",
+      "page": 128
+    },
+    {
+      "lot": "636",
+      "title": "Kobalt 3-Section 11-Drawer Rolling Tool Box with Reamers & Hand Tools",
+      "description": "Kobalt 3-Section 11-Drawer Rolling Tool Box, with Assorted Reamers & Hand Tools",
+      "photo": "photos/636.jpg",
+      "page": 128
+    },
+    {
+      "lot": "637",
+      "title": "Husky 9-Drawer Rolling Work Table with Pegboard & Hand Tools",
+      "description": "Husky 9-Drawer Wood Top Rolling Work Table, with Metal Pegboard Full of Hand Tools, Fixture Clamps & Others",
+      "photo": "photos/637.jpg",
+      "page": 128
+    },
+    {
+      "lot": "638",
+      "title": "Bott/Kennedy Rolling 2-Tier 5-Drawer Work Table with Tools",
+      "description": "Bott/Kennedy Rolling 2-Tier Work Table with 5 Drawers, with Assorted Hand Tools, Hardware, Fixture Clamps & Others",
+      "photo": "photos/638.jpg",
+      "page": 129
+    },
+    {
+      "lot": "639",
+      "title": "Husky 10-Drawer Rolling Work Table with Milwaukee Ratchet Sets",
+      "description": "Husky 10-Drawer Soft Close Rolling Work Table, Wood Top, Full of Milwaukee Ratchet Sets, Hand Tools, Torque Wrenches & Others",
+      "photo": "photos/639.jpg",
+      "page": 129
+    },
+    {
+      "lot": "640",
+      "title": "Waterloo 2-Drawer Work Table with CT 40 Tool Key & Hand Tools",
+      "description": "Waterloo Wood Top 2-Drawer Work Table, with CT 40 Tool Key & Assorted Hand Tools (Rego-Fix System NOT Included)",
+      "photo": "photos/640.jpg",
+      "page": 129
+    },
+    {
+      "lot": "641",
+      "title": "Heavy Duty Metal Rack with Vise Jaws",
+      "description": "Heavy Duty Metal Organizing Rack Full of Assorted Vise Jaws",
+      "photo": "photos/641.jpg",
+      "page": 129
+    },
+    {
+      "lot": "642",
+      "title": "Mr. Deburr 300 Deburring Machine with Media",
+      "description": "Mr. Deburr 300 Vibratory Deburring Machine, with 3 cu. ft. Capacity, 31\" x 13.5\" Tub, 13\" D, 100-Lb. Max. Load, 115-Volt, 1-HP, Media",
+      "photo": "photos/642.jpg",
+      "page": 129
+    },
+    {
+      "lot": "643",
+      "title": "Mr. Deburr 600 Deburring Machine with Media",
+      "description": "Mr. Deburr 600 Vibratory Deburring Machine, with 6.5 cu. ft. Capacity, 35\" x 18\" Tub, 18.75\" D, 208/230-Volt, 3-Phase, 3-HP, Media",
+      "photo": "photos/643.jpg",
+      "page": 129
+    },
+    {
+      "lot": "644",
+      "title": "Rampe Burr-Bowl BV-2 Vibratory Finisher, S/N 1188-9412",
+      "description": "Rampe Burr-Bowl BV-2 Vibratory Finisher, S/N 1188-9412, with 2 cu. ft. Capacity, 33\" Diameter, 10\" x 12\" D Channel, 110/220-Volt, 1-Phase",
+      "photo": "photos/644.jpg",
+      "page": 130
+    }
+  ]
+}

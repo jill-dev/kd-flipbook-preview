@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../../brand/brand.css" />
+<style>
+  /* Landscape lot page, 1400x900 (PAGE_W x PAGE_H in generate.js).
+     Readability first: the old portrait layout put 16px text and 150px
+     thumbnails on a page the viewer then shrank to ~55-70%, so on screen the
+     descriptions were ~9-11px. Here the page is shaped like a screen (so the
+     viewer barely shrinks it) and every lot is a card with a big photo and
+     24px description text. generate.js measures each description and sets
+     --photo-h per page so two rows always fit without clipping. */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  .sheet { width: 1400px; height: 900px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .head { flex: 0 0 auto; height: 68px; display: flex; align-items: center; gap: 22px; padding: 0 36px; border-bottom: 1px solid var(--kd-line); }
+  .head img { height: 38px; width: auto; display: block; }
+  .head .title { flex: 1; min-width: 0; font-family: var(--kd-font-primary); font-weight: 800; font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .head .meta { flex: 0 0 auto; text-align: right; font-family: var(--kd-font-primary); font-size: 16px; font-weight: 700; color: #fff; }
+  .head .meta b { color: var(--kd-yellow); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; display: block; margin-bottom: 1px; }
+
+  .grid {
+    flex: 1 1 auto; min-height: 0; padding: 18px 36px 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: max-content; gap: 18px 22px; align-content: start;
+  }
+  .card { background: var(--kd-panel-2); border: 1px solid var(--kd-line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+  .card .ph { position: relative; height: var(--photo-h, 250px); background: #111; border-bottom: 3px solid var(--kd-yellow); }
+  .card .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .lotno {
+    position: absolute; top: 10px; left: 10px; background: var(--kd-yellow); color: var(--kd-black);
+    font-family: var(--kd-font-primary); font-weight: 900; font-size: 22px; letter-spacing: 0.5px; line-height: 1;
+    padding: 8px 13px 7px; border-radius: 7px; box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  }
+  .card .lotno small { font-size: 13px; font-weight: 800; letter-spacing: 1.5px; margin-right: 5px; vertical-align: 2px; }
+  .card .bid {
+    position: absolute; top: 10px; right: 10px; background: rgba(20,20,20,0.82); color: var(--kd-yellow);
+    border: 1.5px solid var(--kd-yellow); font-family: var(--kd-font-primary); font-weight: 800; font-size: 14px;
+    letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 7px 12px; border-radius: 7px;
+  }
+  .card .bid:hover { background: var(--kd-yellow); color: var(--kd-black); }
+  .card .desc {
+    padding: 11px 16px 13px; font-family: var(--kd-font-secondary); font-weight: 500; font-size: 22px; line-height: 1.27;
+    color: #f4f4f2; overflow-wrap: anywhere;
+  }
+  /* Full-width card for long descriptions: photo left, text right */
+  .card.feature { grid-column: 1 / -1; flex-direction: row; height: var(--feat-h, 320px); }
+  .card.feature .ph { flex: 0 0 var(--feat-photo-w, 600px); height: auto; border-bottom: none; border-right: 3px solid var(--kd-yellow); }
+  .card.feature .desc { flex: 1 1 auto; min-width: 0; padding: 16px 22px 18px; }
+  .card .loc { display: inline-block; font-family: var(--kd-font-primary); font-weight: 800; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin-bottom: 4px; }
+
+  .footer {
+    flex: 0 0 auto; height: 50px; padding: 0 36px; display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid var(--kd-line); background: var(--kd-bg);
+  }
+  .footer .site { font-family: var(--kd-font-primary); font-weight: 900; font-size: 17px; letter-spacing: 2px; color: var(--kd-yellow); text-decoration: none; }
+  .footer .range { font-family: var(--kd-font-primary); font-weight: 700; font-size: 16px; color: #fff; letter-spacing: 0.5px; }
+  .footer .page { font-family: var(--kd-font-primary); font-weight: 600; font-size: 15px; color: var(--kd-grey); }
+</style>
+</head>
+<body>
+  <div class="sheet kd-page" style="--photo-h: 279px;">
+    <div class="kd-gradient-bar"></div>
+    <div class="head">
+      <a href="https://www.kdauctions.com" target="_blank" rel="noopener"><img src="../../../brand/logo-light.png" alt="KD Auctions" /></a>
+      <div class="title">Complete Closure of a Custom CNC Contract Machining Company</div>
+      <div class="meta"><b>Lots Begin Closing</b>Tuesday, November 17, 2026 · 10:00 AM MT</div>
+    </div>
+    <div class="grid">
+      <div class="card" id="lot-524" data-lot="524">
+        <div class="ph">
+          <img src="../photos/524.jpg" alt="Lot 524" />
+          <span class="lotno"><small>LOT</small>524</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="524">Bid &#8594;</a>
+        </div>
+        <div class="desc">Large Box of New Assorted Size HSS Drills</div>
+      </div>
+      <div class="card" id="lot-525" data-lot="525">
+        <div class="ph">
+          <img src="../photos/525.jpg" alt="Lot 525" />
+          <span class="lotno"><small>LOT</small>525</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="525">Bid &#8594;</a>
+        </div>
+        <div class="desc">Large Box of New Assorted Size HSS Drills</div>
+      </div>
+      <div class="card" id="lot-526" data-lot="526">
+        <div class="ph">
+          <img src="../photos/526.jpg" alt="Lot 526" />
+          <span class="lotno"><small>LOT</small>526</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="526">Bid &#8594;</a>
+        </div>
+        <div class="desc">Large Box of New Assorted Size HSS Drills</div>
+      </div>
+      <div class="card" id="lot-527" data-lot="527">
+        <div class="ph">
+          <img src="../photos/527.jpg" alt="Lot 527" />
+          <span class="lotno"><small>LOT</small>527</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="527">Bid &#8594;</a>
+        </div>
+        <div class="desc">Large Box of New Assorted Size HSS Drills</div>
+      </div>
+      <div class="card" id="lot-528" data-lot="528">
+        <div class="ph">
+          <img src="../photos/528.jpg" alt="Lot 528" />
+          <span class="lotno"><small>LOT</small>528</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="528">Bid &#8594;</a>
+        </div>
+        <div class="desc">Large Box of New Assorted Size HSS Drills</div>
+      </div>
+      <div class="card" id="lot-529" data-lot="529">
+        <div class="ph">
+          <img src="../photos/529.jpg" alt="Lot 529" />
+          <span class="lotno"><small>LOT</small>529</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="529">Bid &#8594;</a>
+        </div>
+        <div class="desc">Large Box of New Assorted Size HSS Drills</div>
+      </div>
+    </div>
+    <div class="footer">
+      <a class="site" href="https://www.kdauctions.com" target="_blank" rel="noopener">KDAUCTIONS.COM</a>
+      <span class="range">Lots 524 – 529</span>
+      <span class="page">Page 109 of 129</span>
+    </div>
+  </div>
+  <script src="../../../brand/track.js"></script>
+</body>
+</html>

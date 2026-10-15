@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../../brand/brand.css" />
+<style>
+  /* Landscape cover, 1400x900. Left: sale headline + key dates. Right: the
+     featured machines with big photos. Featured cards jump straight to that
+     lot's page in the flipbook. */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  .sheet {
+    width: 1400px; height: 900px; position: relative; overflow: hidden; display: flex; flex-direction: column;
+    background: radial-gradient(110% 100% at 0% 0%, #2a2a27 0%, var(--kd-bg) 60%);
+  }
+  .main { flex: 1 1 auto; min-height: 0; display: flex; gap: 34px; padding: 26px 40px 0; }
+  .left { flex: 0 0 590px; display: flex; flex-direction: column; min-height: 0; }
+  .logo-row { display: flex; align-items: center; justify-content: space-between; }
+  .logo-row img { height: 62px; width: auto; display: block; }
+  .badge {
+    font-family: var(--kd-font-primary); font-size: 14px; font-weight: 800; letter-spacing: 2.5px;
+    color: var(--kd-black); background: var(--kd-yellow); text-transform: uppercase; padding: 8px 16px; border-radius: 20px;
+  }
+  .eyebrow { margin: 18px 0 8px; font-family: var(--kd-font-primary); font-weight: 900; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; color: #fff; }
+  .headline { margin: 0 0 12px; font-size: 37px; line-height: 1.12; }
+  .subtitle { font-family: var(--kd-font-secondary); font-weight: 500; font-size: 18px; line-height: 1.42; color: #e8e8e6; margin: 0 0 16px; }
+  .details { display: flex; flex-direction: column; gap: 0; border: 1px solid rgba(221,179,5,0.3); border-radius: 12px; background: var(--kd-panel-2); overflow: hidden; }
+  .details .row { padding: 10px 18px; border-bottom: 1px solid var(--kd-line); }
+  .details .row:last-child { border-bottom: none; }
+  .details .label { font-family: var(--kd-font-primary); font-size: 14px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 3px; }
+  .details .value { font-family: var(--kd-font-primary); font-size: 20px; font-weight: 700; color: #fff; margin: 0; line-height: 1.35; }
+  .cta-row { margin-top: 16px; display: flex; align-items: center; gap: 18px; }
+  .cta-row .kd-btn { font-size: 18px; padding: 14px 30px; border-radius: 9px; }
+  .cta-row .hint { font-family: var(--kd-font-primary); font-weight: 700; font-size: 16px; color: var(--kd-grey-2); }
+
+  .right { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+  .section-label { display: flex; align-items: center; gap: 14px; margin: 6px 0 14px; }
+  .section-label .line { flex: 1; height: 1px; background: var(--kd-yellow-grey); }
+  .section-label span { font-family: var(--kd-font-primary); font-size: 16px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: var(--kd-yellow); white-space: nowrap; }
+  .grid { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr; gap: 14px; }
+  .fcard { position: relative; background: var(--kd-panel-2); border: 1px solid var(--kd-line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; min-height: 0; text-decoration: none; color: inherit; }
+  .fcard .ph { flex: 1 1 auto; min-height: 0; position: relative; border-bottom: 3px solid var(--kd-yellow); }
+  .fcard img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .fcard .lotno { position: absolute; top: 8px; left: 8px; background: var(--kd-yellow); color: var(--kd-black); font-family: var(--kd-font-primary); font-weight: 900; font-size: 15px; padding: 5px 9px 4px; border-radius: 6px; }
+  .fcard .cap { flex: 0 0 auto; padding: 8px 12px 9px; }
+  .fcard .name { font-family: var(--kd-font-primary); font-weight: 800; font-size: 17px; color: #fff; margin: 0; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fcard .sub { font-family: var(--kd-font-secondary); font-weight: 500; font-size: 15px; color: var(--kd-yellow-light); margin: 1px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fcard:hover { border-color: var(--kd-yellow); }
+
+  .footer {
+    flex: 0 0 auto; margin-top: 18px; height: 58px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    background: var(--kd-black); border-top: 3px solid var(--kd-yellow);
+  }
+  .footer .fee { font-family: var(--kd-font-secondary); font-weight: 600; font-size: 17px; color: #fff; margin: 0; }
+  .footer .fee a { color: var(--kd-yellow); }
+  .footer .site { font-family: var(--kd-font-primary); font-weight: 900; font-size: 22px; letter-spacing: 2px; color: var(--kd-yellow); margin: 0; text-decoration: none; white-space: nowrap; }
+</style>
+</head>
+<body>
+  <div class="sheet kd-page">
+    <div class="kd-gradient-bar"></div>
+    <div class="main">
+      <div class="left">
+        <div class="logo-row">
+          <a href="https://www.kdauctions.com" target="_blank" rel="noopener"><img src="../../../brand/logo-light.png" alt="KD Auctions" /></a>
+          <span class="badge">CNC &amp; Machine Tools</span>
+        </div>
+        <p class="eyebrow">Online Only Auction</p>
+        <h1 class="headline kd-heading">Complete Closure of a Custom CNC Contract Machining Company</h1>
+        <p class="subtitle">Logan, Utah — Late Model Mazak 5-Axis Variaxis &amp; VCC Machining Centers, Mazak HCN-5000 Palletech Horizontal Cell, Mazak &amp; Fadal CNC Verticals, Mori Seiki &amp; Mazak CNC Lathes, CMMs &amp; Hundreds of Lots of Tooling</p>
+        <div class="details">
+          <div class="row">
+            <p class="label">Lots Begin Closing</p>
+            <p class="value">Tuesday, November 17, 2026 · 10:00 AM MT</p>
+          </div>
+          <div class="row">
+            <p class="label">Inspection / Preview</p>
+            <p class="value">Monday, November 16, 2026, 8:00 AM – 4:00 PM MT, or earlier by appointment</p>
+          </div>
+          <div class="row">
+            <p class="label">Equipment Location</p>
+            <p class="value">844 W 400 N, Logan, UT 84321</p>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="kd-btn" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="bid_now">Bid Now &#8594;</a>
+          <span class="hint">Flip through every lot &#8594;</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="section-label"><span>Featured Equipment</span><div class="line"></div></div>
+        <div class="grid">
+          <a class="fcard" href="#lot-253" data-kd-track="lot_click" data-kd-goto="253" data-lot="253">
+            <div class="ph"><img src="../photos/253.jpg" alt="Mazak Palletech Cell, (2) HMCs" /><span class="lotno">LOT 253</span></div>
+            <div class="cap">
+              <p class="name">Mazak Palletech Cell, (2) HMCs</p>
+              <p class="sub">12-Pallet Horizontal Machining Cell</p>
+            </div>
+          </a>
+          <a class="fcard" href="#lot-203" data-kd-track="lot_click" data-kd-goto="203" data-lot="203">
+            <div class="ph"><img src="../photos/203.jpg" alt="2020 Mazak Variaxis i-300 AWC" /><span class="lotno">LOT 203</span></div>
+            <div class="cap">
+              <p class="name">2020 Mazak Variaxis i-300 AWC</p>
+              <p class="sub">5-Axis Machining Center</p>
+            </div>
+          </a>
+          <a class="fcard" href="#lot-151" data-kd-track="lot_click" data-kd-goto="151" data-lot="151">
+            <div class="ph"><img src="../photos/151.jpg" alt="2018 Mazak VTC-300C" /><span class="lotno">LOT 151</span></div>
+            <div class="cap">
+              <p class="name">2018 Mazak VTC-300C</p>
+              <p class="sub">Vertical Machining Center</p>
+            </div>
+          </a>
+          <a class="fcard" href="#lot-293" data-kd-track="lot_click" data-kd-goto="293" data-lot="293">
+            <div class="ph"><img src="../photos/293.jpg" alt="2013 Mazak VCC 5X 20K" /><span class="lotno">LOT 293</span></div>
+            <div class="cap">
+              <p class="name">2013 Mazak VCC 5X 20K</p>
+              <p class="sub">5-Axis Machining Center</p>
+            </div>
+          </a>
+          <a class="fcard" href="#lot-160" data-kd-track="lot_click" data-kd-goto="160" data-lot="160">
+            <div class="ph"><img src="../photos/160.jpg" alt="2011 Mazak Variaxis 500-5X-II" /><span class="lotno">LOT 160</span></div>
+            <div class="cap">
+              <p class="name">2011 Mazak Variaxis 500-5X-II</p>
+              <p class="sub">5-Axis Machining Center</p>
+            </div>
+          </a>
+          <a class="fcard" href="#lot-402" data-kd-track="lot_click" data-kd-goto="402" data-lot="402">
+            <div class="ph"><img src="../photos/402.jpg" alt="2013 Mori Seiki NLX2500SY/700" /><span class="lotno">LOT 402</span></div>
+            <div class="cap">
+              <p class="name">2013 Mori Seiki NLX2500SY/700</p>
+              <p class="sub">CNC Turning Center</p>
+            </div>
+          </a>
+          <a class="fcard" href="#lot-85" data-kd-track="lot_click" data-kd-goto="85" data-lot="85">
+            <div class="ph"><img src="../photos/85.jpg" alt="2025 Wenzel LH 107" /><span class="lotno">LOT 85</span></div>
+            <div class="cap">
+              <p class="name">2025 Wenzel LH 107</p>
+              <p class="sub">Coordinate Measuring Machine</p>
+            </div>
+          </a>
+          <a class="fcard" href="#lot-300" data-kd-track="lot_click" data-kd-goto="300" data-lot="300">
+            <div class="ph"><img src="../photos/300.jpg" alt="2023 Universal Robots UR10e" /><span class="lotno">LOT 300</span></div>
+            <div class="cap">
+              <p class="name">2023 Universal Robots UR10e</p>
+              <p class="sub">Collaborative Robot</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="fee">Want to sell your shop or business assets? Know someone who does? Call us at (480) 455-3910. We pay great finder’s fees!</p>
+      <a class="site" href="https://www.kdauctions.com" target="_blank" rel="noopener">KDAUCTIONS.COM</a>
+    </div>
+  </div>
+  <script src="../../../brand/track.js"></script>
+</body>
+</html>

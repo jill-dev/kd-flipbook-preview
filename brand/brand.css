@@ -1,3 +1,16 @@
+/* Brand fonts are bundled locally (brand/fonts/) so pages look identical
+   everywhere -- offline, in the PDF export, and when measuring text to pack
+   lots onto pages -- instead of depending on Google Fonts loading in time. */
+@font-face { font-family: 'Montserrat'; font-weight: 400; font-style: normal; font-display: block; src: url('fonts/montserrat-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-weight: 600; font-style: normal; font-display: block; src: url('fonts/montserrat-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-weight: 700; font-style: normal; font-display: block; src: url('fonts/montserrat-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-weight: 800; font-style: normal; font-display: block; src: url('fonts/montserrat-latin-800-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-weight: 900; font-style: normal; font-display: block; src: url('fonts/montserrat-latin-900-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Work Sans'; font-weight: 400; font-style: normal; font-display: block; src: url('fonts/work-sans-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Work Sans'; font-weight: 500; font-style: normal; font-display: block; src: url('fonts/work-sans-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Work Sans'; font-weight: 600; font-style: normal; font-display: block; src: url('fonts/work-sans-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Work Sans'; font-weight: 700; font-style: normal; font-display: block; src: url('fonts/work-sans-latin-700-normal.woff2') format('woff2'); }
+
 /* KD Auctions brand tokens — shared by generated catalog pages and the flipbook viewer chrome. */
 :root {
   --kd-black: #222222;

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" href="../../../brand/brand.css" />
+<style>
+  /* Landscape sale info page, 1400x900, sized for reading on screen. */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  .sheet { width: 1400px; height: 900px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .banner { position: relative; height: 112px; flex: 0 0 auto; }
+  .banner > img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(0.42); }
+  .banner .logo { filter: none; position: absolute; top: 50%; left: 40px; transform: translateY(-50%); height: 56px; width: auto; z-index: 2; }
+  .banner h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; margin: 0; font-size: 34px; white-space: nowrap; }
+  .banner .site { position: absolute; top: 50%; right: 40px; transform: translateY(-50%); z-index: 2; font-family: var(--kd-font-primary); font-weight: 900; font-size: 20px; letter-spacing: 2px; color: var(--kd-yellow); text-decoration: none; }
+  .inner { flex: 1 1 auto; min-height: 0; padding: 22px 40px 0; display: flex; flex-direction: column; gap: 18px; }
+  .cols { display: flex; gap: 34px; flex: 1 1 auto; min-height: 0; }
+  .col { flex: 1; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .block .label { font-family: var(--kd-font-primary); font-weight: 800; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 4px; }
+  .block .body { font-family: var(--kd-font-secondary); font-weight: 500; font-size: 17.5px; line-height: 1.42; color: #ececea; margin: 0; }
+  .block .body.big { font-family: var(--kd-font-primary); font-weight: 700; font-size: 20px; color: #fff; line-height: 1.35; }
+  .callout { background: var(--kd-panel-2); border: 1px solid var(--kd-yellow-grey); border-left: 5px solid var(--kd-yellow); border-radius: 8px; padding: 12px 16px; font-family: var(--kd-font-secondary); font-weight: 700; font-size: 17.5px; line-height: 1.4; color: #fff; }
+  .contacts { border-top: 1px solid var(--kd-line); padding-top: 12px; margin-top: 2px; }
+  .contacts .heading2 { font-family: var(--kd-font-primary); font-weight: 800; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 10px; }
+  .contacts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 12px; }
+  .ccard { background: var(--kd-panel-2); border: 1px solid var(--kd-line); border-radius: 8px; padding: 10px 14px; }
+  .ccard .clabel { font-family: var(--kd-font-primary); font-weight: 800; font-size: 12.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--kd-yellow); margin: 0 0 3px; }
+  .ccard .cname { font-family: var(--kd-font-primary); font-weight: 700; font-size: 17px; color: #fff; margin: 0 0 2px; line-height: 1.3; }
+  .ccard .cinfo { font-family: var(--kd-font-secondary); font-weight: 500; font-size: 15.5px; color: var(--kd-grey-2); margin: 0; line-height: 1.3; }
+  .footer { flex: 0 0 auto; margin-top: 16px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--kd-black); border-top: 3px solid var(--kd-yellow); }
+  .footer p { margin: 0; font-family: var(--kd-font-primary); font-weight: 800; font-size: 16px; letter-spacing: 2.5px; text-transform: uppercase; color: #fff; }
+  a { color: var(--kd-yellow-light); }
+</style>
+</head>
+<body>
+  <div class="sheet kd-page">
+    <div class="banner">
+      <img src="../../../brand/hero-cover.jpg" alt="" />
+      <a href="https://www.kdauctions.com" target="_blank" rel="noopener"><img class="logo" src="../../../brand/logo-light.png" alt="KD Auctions" /></a>
+      <h1 class="kd-heading">Important Sale Information</h1>
+      <a class="site" href="https://www.kdauctions.com" target="_blank" rel="noopener">KDAUCTIONS.COM</a>
+    </div>
+    <div class="kd-gradient-bar"></div>
+    <div class="inner">
+      <div class="cols">
+        <div class="col">
+          <div class="block">
+            <p class="label">Buyers Premium &amp; Payment Information</p>
+            <p class="body">18% BP for all purchases. All Sales will be conducted in US Dollars.</p>
+          </div>
+          <div class="callout">All items must be paid for within 24 hours of closing of the sale. No Exceptions.</div>
+          <div class="block">
+            <p class="label">International Bidders</p>
+            <p class="body">A refundable deposit of $3,000.00 US Dollars via bank wire is required to be approved to bid online with this sale. If unsuccessful, your deposit will be refunded within 24 hours post-auction. If successful, the deposit will be applied to your balance due and any excess funds refunded.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <p class="label">Sales Tax</p>
+            <p class="body">Sales Tax will be added to all transactions. If you are tax exempt please fax your exemption certificate to (480) 455-3911 or email <a href="mailto:service@kdauctions.com">service@kdauctions.com</a> before bidding. Utah requires sales tax unless the buyer provides a valid resale certificate or other accepted exemption (Utah accepts out-of-state resale certificates, including the MTC Uniform or SST Certificate). Utah&#x27;s manufacturing exemption applies only to qualifying equipment used in a Utah manufacturing facility (Form TC-721). Items removed from Utah by a third-party common carrier are generally exempt, provided neither you nor your agent takes possession in Utah; items hauled on the buyer&#x27;s own trucks are taxable. Exemption certificates must be submitted prior to invoicing and are subject to review and approval.</p>
+          </div>
+          <div class="block">
+            <p class="label">Machinery Removal Notes</p>
+            <p class="body">Customers are responsible for prepping, draining fluids, and locking and blocking all machinery for removal. KD Auctions will not be responsible for any onsite loading of machinery or other items.</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="block">
+            <p class="label">Inspection Location</p>
+            <p class="body big">844 W 400 N, Logan, UT 84321</p>
+          </div>
+          <div class="block">
+            <p class="label">Removal Dates</p>
+            <p class="body big" style="white-space: pre-line;">Wed., Nov. 18 – Tue., Nov. 24, 2026
+Mon., Nov. 30 – Fri., Dec. 11, 2026</p>
+          </div>
+          <div class="callout">Please do not wait until the last day to pick up your purchases. Items remaining onsite past the deadline will be considered abandoned.</div>
+          <div class="contacts">
+            <p class="heading2">Onsite Contacts &amp; Logistics</p>
+            <div class="contacts-grid">
+              <div class="ccard">
+                <p class="clabel">Onsite Removal Contact</p>
+                <p class="cname">To Be Announced</p>
+                
+              </div>
+              <div class="ccard">
+                <p class="clabel">Local Rigger</p>
+                <p class="cname">To Be Announced</p>
+              </div>
+              <div class="ccard">
+                <p class="clabel">Service Tech</p>
+                <p class="cname">To Be Announced</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Auctions, Liquidations, Appraisals, and Consulting Services</p>
+    </div>
+  </div>
+  <script src="../../../brand/track.js"></script>
+</body>
+</html>
