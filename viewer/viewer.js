@@ -124,18 +124,23 @@
       pageEl.dataset.pageIndex = i;
 
       const iframe = document.createElement('iframe');
-      iframe.src = `${outputBase}/${pagePath}`;
-      iframe.loading = i < 2 ? 'eager' : 'lazy';
+      // Don't set src yet: page-flip hides every page but the current one,
+      // and browsers download hidden iframes immediately (lazy-loading
+      // doesn't apply to them) -- that meant opening the link downloaded
+      // the WHOLE catalog (~50 MB, every page and photo) at once, which
+      // stalls or crashes phones. Pages load just ahead of where you are
+      // instead (see loadPagesAround).
+      iframe.dataset.src = `${outputBase}/${pagePath}`;
       pageEl.appendChild(iframe);
 
       const leftZone = document.createElement('div');
       leftZone.className = 'kd-edge-zone left';
-      leftZone.addEventListener('click', () => pageFlip && pageFlip.flipPrev());
+      leftZone.addEventListener('click', () => turnPage(-1));
       pageEl.appendChild(leftZone);
 
       const rightZone = document.createElement('div');
       rightZone.className = 'kd-edge-zone right';
-      rightZone.addEventListener('click', () => pageFlip && pageFlip.flipNext());
+      rightZone.addEventListener('click', () => turnPage(1));
       pageEl.appendChild(rightZone);
 
       bookEl.appendChild(pageEl);
@@ -153,6 +158,7 @@
     // floor is then always ~equal to the real available width, "e < 2x
     // minWidth" stays true regardless of device size, so this still always
     // renders single-page rather than flipping into a double-page spread.
+    loadPagesAround(startIndex || 0);
     const wrapBox = bookWrapEl.getBoundingClientRect();
     const fitWidth = Math.min(PAGE_W, Math.max(200, Math.floor(wrapBox.width)));
     const fitHeight = Math.min(PAGE_H, Math.max(260, Math.floor(wrapBox.height)));
@@ -166,6 +172,7 @@
       minHeight: fitHeight,
       maxHeight: PAGE_H,
       maxShadowOpacity: 0.4,
+      flippingTime: 700,
       showCover: true,
       usePortrait: true,
       mobileScrollSupport: false,
@@ -211,6 +218,7 @@
     });
 
     pageFlip.on('flip', () => {
+      loadPagesAround(pageFlip.getCurrentPageIndex());
       updatePageUI();
       // pageFlip.update() (called below when the thumbnail sidebar toggles)
       // fires this same 'flip' event internally even though the page didn't
@@ -227,13 +235,24 @@
 
   let lastSize = { w: window.innerWidth, h: window.innerHeight };
   let rebuildTimer = null;
+  let rebuildPending = false;
   window.addEventListener('resize', () => {
     clearTimeout(rebuildTimer);
     rebuildTimer = setTimeout(() => {
       const w = window.innerWidth;
       const h = window.innerHeight;
-      if (!pageFlip || !manifest || (Math.abs(w - lastSize.w) < 40 && Math.abs(h - lastSize.h) < 40)) return;
+      if (!pageFlip || !manifest) return;
+      // Phones change the window HEIGHT all the time (on-screen keyboard,
+      // address bar sliding away) -- rebuilding the book for that made typing
+      // in the search box janky. On touch devices only a real width change
+      // (rotating the phone) counts; on computers, a sizeable change either way.
+      const touch = window.matchMedia('(pointer: coarse)').matches;
+      const widthChanged = Math.abs(w - lastSize.w) >= 60;
+      const heightChanged = !touch && Math.abs(h - lastSize.h) >= 80;
+      if (!widthChanged && !heightChanged) return;
       lastSize = { w, h };
+      // While the lot list covers the book, wait and rebuild when it closes
+      if (!lotPanel.hidden) { rebuildPending = true; return; }
       rebuildBook();
     }, 250);
   });
@@ -277,6 +296,35 @@
     });
   }
 
+
+
+  // Next/previous, ignored while a page-turn animation is still running --
+  // a second tap mid-animation made the flip library throw errors.
+  function turnPage(dir) {
+    if (!pageFlip) return;
+    const state = pageFlip.getState && pageFlip.getState();
+    if (state && state !== 'read') return;
+    if (dir < 0) pageFlip.flipPrev(); else pageFlip.flipNext();
+  }
+
+  // Load the current page plus a couple either side (for the flip animation
+  // and quick paging). Everything else stays unloaded until it's needed.
+  function loadPagesAround(index) {
+    for (let i = index - 1; i <= index + 2; i++) {
+      const frame = bookEl.querySelector(`.kd-page-el[data-page-index="${i}"] iframe`);
+      if (frame && !frame.getAttribute('src') && frame.dataset.src) frame.src = frame.dataset.src;
+    }
+  }
+
+  const thumbObserver = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      const frame = en.target.querySelector('iframe');
+      if (frame && !frame.getAttribute('src')) frame.src = frame.dataset.src;
+      thumbObserver.unobserve(en.target);
+    });
+  }, { root: thumbRail, rootMargin: '300px 0px' });
+
   function buildThumbnails(data) {
     thumbRail.innerHTML = '';
     data.pages.forEach((pagePath, i) => {
@@ -284,15 +332,19 @@
       thumb.className = 'kd-thumb';
       thumb.dataset.index = i;
       const iframe = document.createElement('iframe');
-      iframe.loading = 'lazy';
-      iframe.src = `${outputBase}/${pagePath}`;
+      // Same hidden-iframe problem as the pages: only load a thumbnail when
+      // the rail is open and that thumbnail scrolls into view.
+      iframe.dataset.src = `${outputBase}/${pagePath}`;
+      thumbObserver.observe(thumb);
       thumb.appendChild(iframe);
       const num = document.createElement('span');
       num.className = 'num';
       num.textContent = i + 1;
       thumb.appendChild(num);
       thumb.addEventListener('click', () => {
-        pageFlip.flip(i);
+        loadPagesAround(i);
+        if (pageFlip.getState && pageFlip.getState() !== 'read') { pageFlip.turnToPage(i); updatePageUI(); }
+        else pageFlip.flip(i);
         thumbRail.hidden = true;
       });
       thumbRail.appendChild(thumb);
@@ -300,15 +352,16 @@
   }
 
   // ── Controls ─────────────────────────────────────────────────────────
-  prevBtn.addEventListener('click', () => pageFlip && pageFlip.flipPrev());
-  nextBtn.addEventListener('click', () => pageFlip && pageFlip.flipNext());
+  prevBtn.addEventListener('click', () => turnPage(-1));
+  nextBtn.addEventListener('click', () => turnPage(1));
 
   document.addEventListener('keydown', (e) => {
     if (!pageFlip) return;
     if (e.target.closest && e.target.closest('input')) return;
+    if (detailEl && !detailEl.hidden) { if (e.key === 'Escape') closeLotDetail(); return; }
     if (!lotPanel.hidden) { if (e.key === 'Escape') closeLotList(); return; }
-    if (e.key === 'ArrowLeft') pageFlip.flipPrev();
-    if (e.key === 'ArrowRight') pageFlip.flipNext();
+    if (e.key === 'ArrowLeft') turnPage(-1);
+    if (e.key === 'ArrowRight') turnPage(1);
   });
 
   thumbsBtn.addEventListener('click', () => {
@@ -502,9 +555,12 @@
     const lot = lotByNumber.get(String(lotNo).trim().toLowerCase().replace(/^#/, ''));
     if (!lot || lot.page == null || !pageFlip) return false;
     closeLotList();
-    if (opts.instant) pageFlip.turnToPage(lot.page);
+    loadPagesAround(lot.page);
+    // Jump instantly if asked, or if a page-turn is still animating
+    // (starting a second animation mid-turn makes the flip library error)
+    const busy = pageFlip.getState && pageFlip.getState() !== 'read';
+    if (opts.instant || busy) { pageFlip.turnToPage(lot.page); updatePageUI(); }
     else pageFlip.flip(lot.page);
-    if (opts.instant) updatePageUI();
     highlightLot(lot);
     trackEvent('lot_jump', { lot: lot.lot });
     return true;
@@ -564,7 +620,11 @@
           `<span class="kd-lotrow-desc">${escapeHtml(l.description)}</span></span>` +
         `</button>` +
         `<a class="kd-lotrow-bid" href="${escapeHtml(bid)}" target="_blank" rel="noopener">Bid &#8594;</a>`;
-      row.querySelector('.kd-lotrow-main').addEventListener('click', () => goToLot(l.lot));
+      row.querySelector('.kd-lotrow-main').addEventListener('click', () => {
+        // Phones: a flipbook page is too small to read, so show the lot itself
+        if (window.matchMedia('(max-width: 720px)').matches) openLotDetail(l);
+        else goToLot(l.lot);
+      });
       row.querySelector('.kd-lotrow-bid').addEventListener('click', () => trackEvent('lot_click', { lot: l.lot, from: 'list' }));
       frag.appendChild(row);
     });
@@ -577,6 +637,42 @@
     lotResults.replaceChildren(frag);
     listRendered = true;
   }
+
+
+  // ── Phone lot view ─────────────────────────────────────────────────────
+  // Full-screen view of one lot (big photo, full description, Bid) opened
+  // from the lot list on phones, instead of jumping to an unreadably small
+  // flipbook page.
+  let detailEl = null;
+  function openLotDetail(l) {
+    if (!detailEl) {
+      detailEl = document.createElement('div');
+      detailEl.className = 'kd-lotdetail';
+      detailEl.setAttribute('role', 'dialog');
+      document.body.appendChild(detailEl);
+      detailEl.addEventListener('click', (e) => {
+        if (e.target.closest('[data-close]')) closeLotDetail();
+        const go = e.target.closest('[data-goto]');
+        if (go) { closeLotDetail(); goToLot(go.getAttribute('data-goto')); }
+      });
+    }
+    const bid = l.bidUrl || (manifest && (manifest.bidUrl || manifest.siteUrl)) || '#';
+    detailEl.innerHTML =
+      `<div class="kd-lotdetail-bar"><span class="kd-lotdetail-no">LOT ${escapeHtml(l.lot)}</span>` +
+      `<button type="button" class="kd-lotdetail-close" data-close aria-label="Back to list">&#10005; Back to list</button></div>` +
+      `<div class="kd-lotdetail-body">` +
+        (l.photo ? `<img src="${outputBase}/${l.photo}" alt="Lot ${escapeHtml(l.lot)}" />` : '') +
+        (l.location ? `<p class="kd-lotdetail-loc">${escapeHtml(l.location)}</p>` : '') +
+        `<p class="kd-lotdetail-desc">${escapeHtml(l.description)}</p>` +
+        `<a class="kd-lotdetail-bid" href="${escapeHtml(bid)}" target="_blank" rel="noopener">Bid on Lot ${escapeHtml(l.lot)} &#8594;</a>` +
+        `<button type="button" class="kd-lotdetail-goto" data-goto="${escapeHtml(l.lot)}">See it in the catalog</button>` +
+      `</div>`;
+    detailEl.querySelector('.kd-lotdetail-bid').addEventListener('click', () => trackEvent('lot_click', { lot: l.lot, from: 'phone_detail' }));
+    detailEl.hidden = false;
+    detailEl.scrollTop = 0;
+    trackEvent('lot_detail_open', { lot: l.lot });
+  }
+  function closeLotDetail() { if (detailEl) detailEl.hidden = true; }
 
   function escapeHtml(v) {
     return String(v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -592,6 +688,7 @@
   function closeLotList() {
     lotPanel.hidden = true;
     lotListBtn.classList.remove('active');
+    if (rebuildPending && pageFlip) { rebuildPending = false; rebuildBook(); }
   }
 
   lotListBtn.addEventListener('click', () => (lotPanel.hidden ? openLotList() : closeLotList()));
