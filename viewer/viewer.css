@@ -1,5 +1,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; height: 100%; background: var(--kd-bg); overflow: hidden; }
+/* Phones: size to the visible screen (iPhone/Android toolbars excluded) */
+@supports (height: 100dvh) { body { height: 100dvh; } }
 body { display: flex; flex-direction: column; }
 
 /* ── Top bar ───────────────────────────────────────────── */
@@ -136,6 +138,31 @@ body { display: flex; flex-direction: column; }
 }
 .kd-lotrow-bid:hover { background: var(--kd-yellow); color: var(--kd-black); }
 .kd-lot-empty { font-family: var(--kd-font-secondary); font-size: 18px; color: var(--kd-grey); padding: 30px 0; }
+
+/* ── Phone lot view (opened from the lot list on phones) ─── */
+.kd-lotdetail { position: fixed; inset: 0; z-index: 100; background: var(--kd-bg); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.kd-lotdetail[hidden] { display: none; }
+.kd-lotdetail-bar {
+  position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 10px 12px; background: #141414; border-bottom: 3px solid var(--kd-yellow);
+}
+.kd-lotdetail-no { font-family: var(--kd-font-primary); font-weight: 900; font-size: 22px; color: var(--kd-yellow); }
+.kd-lotdetail-close {
+  height: 40px; padding: 0 14px; border: none; border-radius: 8px; background: var(--kd-yellow); color: var(--kd-black);
+  font-family: var(--kd-font-primary); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer;
+}
+.kd-lotdetail-body { padding: 0 0 30px; }
+.kd-lotdetail-body img { width: 100%; height: auto; display: block; background: #111; border-bottom: 3px solid var(--kd-yellow); }
+.kd-lotdetail-loc { margin: 14px 16px 0; font-family: var(--kd-font-primary); font-weight: 800; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--kd-grey); }
+.kd-lotdetail-desc { margin: 14px 16px 18px; font-family: var(--kd-font-secondary); font-weight: 500; font-size: 20px; line-height: 1.4; color: #f4f4f2; overflow-wrap: anywhere; }
+.kd-lotdetail-bid {
+  display: block; margin: 0 16px 12px; padding: 15px; text-align: center; border-radius: 10px; background: var(--kd-yellow); color: var(--kd-black);
+  font-family: var(--kd-font-primary); font-weight: 900; font-size: 17px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
+}
+.kd-lotdetail-goto {
+  display: block; width: calc(100% - 32px); margin: 0 16px; padding: 13px; border-radius: 10px; border: 1.5px solid var(--kd-yellow-grey);
+  background: transparent; color: var(--kd-grey-2); font-family: var(--kd-font-primary); font-weight: 700; font-size: 14px; cursor: pointer;
+}
 
 /* ── Thumbnail rail ────────────────────────────────────────
    A collapsible side panel (not an overlay) — it's a normal flex child of
