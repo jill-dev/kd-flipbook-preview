@@ -5,7 +5,7 @@
   const slug = params.get('auction') || 'south-bend';
   const outputBase = `../output/${slug}`;
 
-  const bookEl = document.getElementById('book');
+  let bookEl = document.getElementById('book'); // replaced when the book is rebuilt on resize
   const bookWrapEl = document.querySelector('.kd-book-wrap');
   const loadingEl = document.getElementById('loading');
   const titleEl = document.getElementById('auctionTitle');
@@ -89,6 +89,35 @@
     rootStyle.setProperty('--kd-thumb-scale', (THUMB_W / PAGE_W).toString());
     buildLotIndex(data);
 
+    buildBook(data, 0, true);
+
+    // Try to attach a PDF export if one has been generated for this auction.
+    const pdfHref = `${outputBase}/catalog.pdf`;
+    fetch(pdfHref, { method: 'HEAD' })
+      .then((r) => {
+        if (r.ok) {
+          downloadBtn.href = pdfHref;
+          downloadBtn.removeAttribute('disabled');
+        } else {
+          downloadBtn.style.opacity = '0.4';
+          downloadBtn.title = 'PDF not generated yet — run: node export-pdf.js examples/' + slug;
+          downloadBtn.addEventListener('click', (e) => e.preventDefault());
+        }
+      })
+      .catch(() => {});
+  }
+
+
+  // ── Book (re)build ─────────────────────────────────────────────────────
+  // page-flip measures the space it has once, when it's created, and never
+  // grows or shrinks again on its own. So if the window changes size after
+  // the page loads (restoring/snapping a browser window, rotating a phone,
+  // opening the link in a small window first), the book stayed stuck at the
+  // old size -- e.g. a tiny thumbnail in the corner. Fix: when the window
+  // size really changes, tear the book down and build it again at the new
+  // size, on the same page.
+  let resizeObserver = null;
+  function buildBook(data, startIndex, firstTime) {
     data.pages.forEach((pagePath, i) => {
       const pageEl = document.createElement('div');
       pageEl.className = 'kd-page-el';
@@ -152,7 +181,8 @@
     // Watch the actual page element so --kd-page-scale always tracks
     // whatever page-flip decides its real rendered size is, whenever that
     // settles.
-    const resizeObserver = new ResizeObserver(applyPageScale);
+    if (resizeObserver) resizeObserver.disconnect();
+    resizeObserver = new ResizeObserver(applyPageScale);
     resizeObserver.observe(bookEl);
     resizeObserver.observe(document.querySelector('.kd-page-el'));
 
@@ -160,6 +190,12 @@
       loadingEl.style.display = 'none';
       bookEl.style.visibility = 'visible';
       pageCountEl.textContent = data.pages.length;
+      if (!firstTime) {
+        if (startIndex) pageFlip.turnToPage(startIndex);
+        applyPageScale();
+        updatePageUI();
+        return;
+      }
       applyPageScale();
       updatePageUI();
       buildThumbnails(data);
@@ -187,20 +223,34 @@
       trackEvent('page_turn', { page: pageFlip.getCurrentPageIndex() + 1 });
     });
 
-    // Try to attach a PDF export if one has been generated for this auction.
-    const pdfHref = `${outputBase}/catalog.pdf`;
-    fetch(pdfHref, { method: 'HEAD' })
-      .then((r) => {
-        if (r.ok) {
-          downloadBtn.href = pdfHref;
-          downloadBtn.removeAttribute('disabled');
-        } else {
-          downloadBtn.style.opacity = '0.4';
-          downloadBtn.title = 'PDF not generated yet — run: node export-pdf.js examples/' + slug;
-          downloadBtn.addEventListener('click', (e) => e.preventDefault());
-        }
-      })
-      .catch(() => {});
+  }
+
+  let lastSize = { w: window.innerWidth, h: window.innerHeight };
+  let rebuildTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(rebuildTimer);
+    rebuildTimer = setTimeout(() => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      if (!pageFlip || !manifest || (Math.abs(w - lastSize.w) < 40 && Math.abs(h - lastSize.h) < 40)) return;
+      lastSize = { w, h };
+      rebuildBook();
+    }, 250);
+  });
+
+  function rebuildBook() {
+    const current = pageFlip.getCurrentPageIndex();
+    setZoom(1);
+    try { pageFlip.destroy(); } catch (err) { /* already gone */ }
+    // destroy() removes the book element itself -- put a fresh one back
+    const fresh = document.createElement('div');
+    fresh.className = 'kd-book';
+    fresh.id = 'book';
+    fresh.style.visibility = 'hidden';
+    bookWrapEl.querySelectorAll('#book').forEach((el) => el.remove());
+    bookWrapEl.appendChild(fresh);
+    bookEl = fresh;
+    buildBook(manifest, current, false);
   }
 
   function applyPageScale() {
