@@ -106,6 +106,17 @@ const PHOTO_MAX_TWO_ROWS = 285;
 const PHOTO_MIN_TWO_ROWS = 165; // below this, photos get too small -- give the row its own page instead
 const PHOTO_MAX_ONE_ROW = 360;
 
+// Lots with long descriptions (the big machines with full spec lists) get a
+// full-width "feature" card instead: large photo on the left, text beside it.
+// In a narrow card a 500+ character spec list runs ~17 lines and would take
+// a whole page by itself; full width it's ~9 lines and leaves room for a
+// regular row of 3 on the same page.
+const GRID_W = PAGE_W - 36 * 2;
+const FEATURE_IF_TALLER = 230; // px of description in a regular card (~7+ lines)
+const FEAT_PHOTO_W = 600;
+const FEAT_MIN_H = 300;
+const FEAT_MAX_H = 440;
+
 // Measure every lot's description block at the real card width with the
 // real (bundled) fonts in a headless browser -- exact, so nothing can ever
 // get clipped. Falls back to a conservative estimate if Playwright/Chromium
@@ -113,10 +124,10 @@ const PHOTO_MAX_ONE_ROW = 360;
 async function measureDescriptions(lots) {
   const tpl = fs.readFileSync(path.join(__dirname, 'templates', 'lot-page.html'), 'utf8');
   const pageCss = tpl.match(/<style>([\s\S]*?)<\/style>/)[1];
-  const body = lots.map((l, i) =>
-    `<div class="card" style="width:${CARD_W}px"><div class="desc" data-i="${i}">${
-      l.showLocation ? `<span class="loc">${Handlebars.escapeExpression(l.location)}</span><br />` : ''
-    }${Handlebars.escapeExpression(l.description)}</div></div>`).join('');
+  const descHtml = (l) => `${l.showLocation ? `<span class="loc">${Handlebars.escapeExpression(l.location)}</span><br />` : ''}${Handlebars.escapeExpression(l.description)}`;
+  const body =
+    lots.map((l) => `<div class="card" style="width:${CARD_W}px"><div class="desc m-reg">${descHtml(l)}</div></div>`).join('') +
+    lots.map((l) => `<div class="card feature" style="width:${GRID_W}px;height:auto;--feat-photo-w:${FEAT_PHOTO_W}px"><div class="ph"></div><div class="desc m-feat">${descHtml(l)}</div></div>`).join('');
   // Written next to brand/ and loaded as a real file (not setContent) so the
   // bundled fonts actually load -- measuring with a fallback font is wrong.
   const measureFile = path.join(__dirname, 'brand', '_measure.html');
@@ -130,15 +141,16 @@ async function measureDescriptions(lots) {
     await page.evaluate(() => document.fonts.ready);
     const fontsOk = await page.evaluate(() => document.fonts.check('500 22px "Work Sans"'));
     if (!fontsOk) throw new Error('brand fonts did not load');
-    const heights = await page.$$eval('.desc', (els) => els.map((e) => Math.ceil(e.getBoundingClientRect().height)));
-    console.log(`Measured ${heights.length} lot descriptions.`);
-    return heights;
+    const reg = await page.$$eval('.m-reg', (els) => els.map((e) => Math.ceil(e.getBoundingClientRect().height)));
+    const feat = await page.$$eval('.m-feat', (els) => els.map((e) => Math.ceil(e.getBoundingClientRect().height)));
+    console.log(`Measured ${reg.length} lot descriptions.`);
+    return reg.map((h, i) => ({ reg: h, feat: feat[i] }));
   } catch (err) {
     console.warn('! Could not measure text in a browser (' + err.message.split('\n')[0] + ') -- using a safe estimate instead.');
     return lots.map((l) => {
       const chars = l.description.length + (l.showLocation ? 40 : 0);
-      const lines = Math.max(1, Math.ceil(chars / 28)); // deliberately pessimistic (~33 fit in practice)
-      return 28 + lines * 32;
+      // deliberately pessimistic (~33 / ~60 chars per line fit in practice)
+      return { reg: 28 + Math.max(1, Math.ceil(chars / 28)) * 32, feat: 36 + Math.max(1, Math.ceil(chars / 52)) * 32 };
     });
   } finally {
     if (browser) await browser.close();
@@ -156,26 +168,62 @@ function chunk(arr, size) {
   return out;
 }
 
-// Lots go into rows of 3 (in lot order), and each page holds two rows when
-// their text leaves room for decent-sized photos, otherwise one row. The
-// photo height is then stretched/shrunk per page to use the space exactly.
+// Lots go into rows in lot order: regular rows of up to 3 cards, and a
+// full-width row for each "feature" lot (long description). Each page holds
+// two rows when everything fits with decent photo sizes, otherwise one; the
+// photo height (regular cards) and card height (feature cards) are then
+// stretched per page to use the space exactly.
+function buildRows(lots, heights) {
+  const rows = [];
+  let cur = [];
+  const flush = () => { if (cur.length) rows.push({ type: 'reg', lots: cur, textH: Math.max(...cur.map((l) => l.descH)) }); cur = []; };
+  lots.forEach((l, i) => {
+    const h = heights[i];
+    if (h.reg > FEATURE_IF_TALLER) {
+      flush();
+      rows.push({ type: 'feat', lots: [{ ...l, feature: true, descH: h.feat }], minH: Math.max(FEAT_MIN_H, h.feat + 2) });
+    } else {
+      cur.push({ ...l, descH: h.reg });
+      if (cur.length === LOT_COLS) flush();
+    }
+  });
+  flush();
+  return rows;
+}
+
+// Try to lay out these rows on one page. Returns the sizes, or null if they don't fit.
+function fitRows(rows) {
+  const gaps = ROW_GAP * (rows.length - 1);
+  const regs = rows.filter((r) => r.type === 'reg');
+  const feats = rows.filter((r) => r.type === 'feat');
+  const fixed = regs.reduce((a, r) => a + r.textH + CARD_CHROME, 0) + feats.reduce((a, r) => a + r.minH, 0);
+  let free = GRID_BUDGET - gaps - fixed;
+  if (free < 0) return null;
+  let photo = 0;
+  if (regs.length) {
+    const minPhoto = rows.length > 1 ? PHOTO_MIN_TWO_ROWS : 120;
+    const maxPhoto = rows.length > 1 ? PHOTO_MAX_TWO_ROWS : PHOTO_MAX_ONE_ROW;
+    photo = Math.floor(free / regs.length);
+    if (photo < minPhoto) return null;
+    photo = Math.min(maxPhoto, photo);
+    free -= photo * regs.length;
+  }
+  const extra = feats.length ? Math.floor(free / feats.length) : 0;
+  const featH = new Map(feats.map((r) => [r, Math.min(Math.max(FEAT_MAX_H, r.minH), r.minH + extra)]));
+  return { photo, featH };
+}
+
 function packRowsIntoPages(lots, heights) {
-  const rows = chunk(lots.map((l, i) => ({ ...l, descH: heights[i] })), LOT_COLS)
-    .map((r) => ({ lots: r, textH: Math.max(...r.map((l) => l.descH)) }));
+  const rows = buildRows(lots, heights);
   const pages = [];
   for (let i = 0; i < rows.length; i++) {
-    const a = rows[i];
-    const b = rows[i + 1];
-    if (b) {
-      const photo = Math.floor((GRID_BUDGET - ROW_GAP - a.textH - b.textH) / 2 - CARD_CHROME);
-      if (photo >= PHOTO_MIN_TWO_ROWS) {
-        pages.push({ lots: [...a.lots, ...b.lots], photoHeight: Math.min(PHOTO_MAX_TWO_ROWS, photo) });
-        i++;
-        continue;
-      }
-    }
-    const photo = Math.floor(GRID_BUDGET - a.textH - CARD_CHROME);
-    pages.push({ lots: a.lots, photoHeight: Math.max(120, Math.min(PHOTO_MAX_ONE_ROW, photo)) });
+    const pair = rows[i + 1] ? fitRows([rows[i], rows[i + 1]]) : null;
+    const use = pair ? [rows[i], rows[i + 1]] : [rows[i]];
+    const fit = pair || fitRows(use) || { photo: 120, featH: new Map(use.filter((r) => r.type === 'feat').map((r) => [r, r.minH])) };
+    if (pair) i++;
+    const pageLots = [];
+    use.forEach((r) => r.lots.forEach((l) => pageLots.push(r.type === 'feat' ? { ...l, featHeight: fit.featH.get(r) } : l)));
+    pages.push({ lots: pageLots, photoHeight: fit.photo || 250, rows: use.length, featureCount: use.filter((r) => r.type === 'feat').length });
   }
   return pages;
 }
@@ -302,8 +350,9 @@ async function main() {
     JSON.stringify(manifest, null, 2)
   );
 
-  const twoRow = lotPages.filter((p) => p.lots.length > LOT_COLS).length;
-  console.log(`${lots.length} lots on ${lotPages.length} lot pages (${twoRow} with 6 lots, ${lotPages.length - twoRow} with 3 or fewer).`);
+  const twoRow = lotPages.filter((p) => p.rows > 1).length;
+  const featured = lotPages.reduce((a, p) => a + p.featureCount, 0);
+  console.log(`${lots.length} lots on ${lotPages.length} lot pages (${twoRow} with two rows, ${lotPages.length - twoRow} with one; ${featured} long-description lots shown full width).`);
   console.log(`Generated ${pages.length} pages for "${auction.slug}" -> output/${auction.slug}/`);
 
   // Final safety check: open every page and make sure nothing got cut off

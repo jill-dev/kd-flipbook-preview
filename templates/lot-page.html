@@ -43,6 +43,10 @@
     padding: 11px 16px 13px; font-family: var(--kd-font-secondary); font-weight: 500; font-size: 22px; line-height: 1.27;
     color: #f4f4f2; overflow-wrap: anywhere;
   }
+  /* Full-width card for long descriptions: photo left, text right */
+  .card.feature { grid-column: 1 / -1; flex-direction: row; height: var(--feat-h, 320px); }
+  .card.feature .ph { flex: 0 0 var(--feat-photo-w, 600px); height: auto; border-bottom: none; border-right: 3px solid var(--kd-yellow); }
+  .card.feature .desc { flex: 1 1 auto; min-width: 0; padding: 16px 22px 18px; }
   .card .loc { display: inline-block; font-family: var(--kd-font-primary); font-weight: 800; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin-bottom: 4px; }
 
   .footer {
@@ -64,7 +68,7 @@
     </div>
     <div class="grid">
       {{#each lots}}
-      <div class="card" id="lot-{{lot}}" data-lot="{{lot}}">
+      <div class="card{{#if feature}} feature{{/if}}" id="lot-{{lot}}" data-lot="{{lot}}"{{#if feature}} style="--feat-h: {{featHeight}}px;"{{/if}}>
         <div class="ph">
           {{#if photo}}<img src="{{photo}}" alt="Lot {{lot}}" />{{/if}}
           <span class="lotno"><small>LOT</small>{{lot}}</span>

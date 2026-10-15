@@ -21,6 +21,10 @@ descriptions showed at about 9-11px. What changed:
 - **Lot cards, 3 across, 2 rows**: big photo with a yellow LOT # badge and a
   Bid button, and 22px description text underneath, about 18-19px on screen
   versus 11px before.
+- **Big machines get a full-width card**: any lot whose description would
+  run past ~7 lines in a regular card (the machines with full spec lists) is
+  shown full width with a large photo on the left and the text beside it, so
+  it shares the page with a normal row instead of taking a page by itself.
 - **Nothing ever gets cut off**: generate.js measures every description with
   the real fonts and only puts two rows on a page when they fit, then sizes
   the photos to use the space. `check-pages.js` re-opens every page afterwards
@@ -70,6 +74,12 @@ For a new auction, you need three things in a new folder under `examples/`
      the cell.
 3. **`photos/`** — the actual image files referenced by `lots.csv`, plus any
    extra photos used in `auction.json`'s `featuredLots` for the cover.
+
+**Description style (Tim, Oct 2026):** specs go value first, then the label,
+e.g. `35.43" x 16.14" Table Size, 1,100-Lbs. Max. Table Load, 22.05" X-Axis
+Travel, ... 12,000-RPM Spindle Speed, CT 40 Spindle Taper`. The CNC control is
+always last, followed only by notes in parentheses, e.g. (Location) or
+(Condition).
 
 For Logan, `lots.csv` was made straight from the Lot List Master Form
 (Lot # / TITLE / Description columns) and the photos are the `_first photos`

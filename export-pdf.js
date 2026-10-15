@@ -20,9 +20,9 @@ async function main() {
   const exampleDir = path.resolve(__dirname, exampleArg);
   const auction = JSON.parse(fs.readFileSync(path.join(exampleDir, 'auction.json'), 'utf8'));
   const pagesDir = path.join(__dirname, 'output', auction.slug, 'pages');
-  const files = fs.readdirSync(pagesDir).filter((f) => f.endsWith('.html')).sort();
 
-  if (!files.length) {
+  const manifestPath = path.join(__dirname, 'output', auction.slug, 'manifest.json');
+  if (!fs.existsSync(manifestPath) || !fs.existsSync(pagesDir)) {
     console.error(`No generated pages found in ${pagesDir} — run: node generate.js ${exampleArg}`);
     process.exit(1);
   }
@@ -31,6 +31,10 @@ async function main() {
   const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, 'output', auction.slug, 'manifest.json'), 'utf8'));
   const W = manifest.pageWidth || 1000;
   const H = manifest.pageHeight || 1100;
+  // Use the manifest's page list (not whatever .html files happen to be in
+  // the folder), so leftover pages from an earlier, longer build never end
+  // up in the PDF.
+  const files = manifest.pages.map((p) => path.basename(p));
 
   const browser = await launchBrowser();
   const page = await browser.newPage({ viewport: { width: W, height: H } });
