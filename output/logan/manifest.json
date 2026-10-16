@@ -838,7 +838,7 @@
     {
       "lot": "103",
       "title": "Mazak VCN-410A CNC Vertical Machining Center, S/N 160144, 2002",
-      "description": "Mazak VCN-410A CNC Vertical Machining Center, S/N 160144, 2002, with 35.43\" x 16.14\" Table Size, 1,100-Lbs. Max. Table Load, 22.05\" X-Axis Travel, 16.14\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25/20-HP (30 min/cont.) Spindle Motor, 30-Position Side-Mount Automatic Tool Changer, 1,417-IPM Rapid Traverse (X/Y/Z), Renishaw Probe & Tool Setter, Chip Conveyor, Mazatrol Fusion 640M Nexus CNC Control",
+      "description": "Mazak VCN-410A CNC Vertical Machining Center, S/N 160144, 2002, with 35.43\" x 16.14\" Table Size, 1,100-Lbs. Max. Table Load, 22.05\" X-Axis Travel, 16.14\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25/20-HP (30 min/cont.) Spindle Motor, 30-Position Side-Mount Automatic Tool Changer, 1,417-IPM Rapid Traverse (X/Y/Z), Renishaw Probe & Tool Setter, Chip Conveyor, Mazatrol 640M Nexus PC-Fusion CNC Control",
       "photo": "photos/103.jpg",
       "page": 20
     },
@@ -870,8 +870,8 @@
     },
     {
       "lot": "108",
-      "title": "Fadal VMC 4020A CNC Vertical Machining Center, S/N 12000101601, 2000",
-      "description": "Fadal VMC 4020A CNC Vertical Machining Center, 2000, S/N 12000101601, with 47.94\" x 20\" Table Size, 1,500-Lbs. Max. Table Load, 40\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 4\" - 24\" Spindle Nose to Table, CT 40 Spindle Taper, 15-HP (22.5-HP Peak on HT) Spindle Motor, 20-Position Automatic Tool Changer, 4th Axis Wired, Cool Power, Fadal Multi Processor CNC Control (Rotary Table Not Included)",
+      "title": "Fadal VMC 4020A CNC Vertical Machining Center, S/N 012000101601, 2000",
+      "description": "Fadal VMC 4020A CNC Vertical Machining Center, 2000, S/N 012000101601, with 47.94\" x 20\" Table Size, 1,500-Lbs. Max. Table Load, 40\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 4\" - 24\" Spindle Nose to Table, CT 40 Spindle Taper, 15-HP (22.5-HP Peak on HT) Spindle Motor, 20-Position Automatic Tool Changer, 4th Axis Wired, Cool Power, Fadal Multi Processor CNC Control (Rotary Table Not Included)",
       "photo": "photos/108.jpg",
       "page": 22
     },
@@ -943,8 +943,8 @@
     },
     {
       "lot": "119",
-      "title": "Mazak Nexus 510C CNC Vertical Machining Center, S/N 180322, 2005",
-      "description": "Mazak Nexus 510C CNC Vertical Machining Center, 2005, S/N 180322, with 51.2\" x 21.6\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), Remote Jog, Renishaw Probe & Tool Setter, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Fusion 640M Nexus CNC Control",
+      "title": "Mazak VCN-510C CNC Vertical Machining Center, S/N 180322, 2005",
+      "description": "Mazak VCN-510C CNC Vertical Machining Center, 2005, S/N 180322, with 51.2\" x 21.6\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20\" Y-Axis Travel, 20\" Z-Axis Travel, 12,000-RPM Spindle Speed, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), Remote Jog, Renishaw Probe & Tool Setter, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Fusion 640M Nexus CNC Control",
       "photo": "photos/119.jpg",
       "page": 25
     },
@@ -1121,8 +1121,8 @@
     },
     {
       "lot": "146",
-      "title": "Mazak VCN-430B CNC Vertical Machining Center, S/N 266153, 2015",
-      "description": "Mazak VCN-430B CNC Vertical Machining Center, S/N 266153, 2015, with 43.31\" x 16.93\" Table Size, 1,764-Lbs. Max. Table Weight Capacity, 30.0\" X-Axis Travel, 16.93\" Y-Axis Travel, 20.08\" Z-Axis Travel, 25-HP Spindle Motor, 1,654-IPM Rapid Traverse Rates (X/Y/Z), 0.04 - 315-IPM Cutting Feed Rate, 12,000-RPM Spindle, CT 40, Renishaw Probing, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Matrix Nexus 2 Control",
+      "title": "Mazak VCN-430B-II CNC Vertical Machining Center, S/N 266153, 2015",
+      "description": "Mazak VCN-430B-II CNC Vertical Machining Center, S/N 266153, 2015, with 43.31\" x 16.93\" Table Size, 1,764-Lbs. Max. Table Weight Capacity, 30.0\" X-Axis Travel, 16.93\" Y-Axis Travel, 20.08\" Z-Axis Travel, 25-HP Spindle Motor, 1,654-IPM Rapid Traverse Rates (X/Y/Z), 0.04 - 315-IPM Cutting Feed Rate, 12,000-RPM Spindle, CT 40, Renishaw Probing, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Chip Conveyor, Mazatrol Matrix Nexus 2 Control",
       "photo": "photos/146.jpg",
       "page": 32
     },
@@ -1155,7 +1155,7 @@
     {
       "lot": "151",
       "title": "Mazak VTC-300C CNC Vertical Machining Center, S/N 291757, 2018",
-      "description": "Mazak VTC-300C CNC Vertical Machining Center, S/N 291757, 2018, with 12,000-RPM Spindle Speed, 78.74\" x 30\" Table Size, 3,300-Lbs. Max. Table Load, 65.35\" X-Axis Travel, 30\" Y-Axis Travel, 26\" Z-Axis Travel, 7.09\" - 33.07\" Spindle Nose to Table, CT 40 Spindle Taper, 48-Position Automatic Tool Changer, 25/15-HP (5 min/30 min) Spindle Motor, ATC 24 Tools Std., 1,181-IPM Rapid Traverse (X/Y/Z), Mazak Superflow V8-A1000 1,000-PSI Through Spindle Coolant, P-Cool, Remote Jog, Chip Conveyor, Mazatrol Matrix Nexus 2 CNC Control",
+      "description": "Mazak VTC-300C CNC Vertical Machining Center, S/N 291757, 2018, with 12,000-RPM Spindle Speed, 78.74\" x 30\" Table Size, 3,300-Lbs. Max. Table Load, 65.35\" X-Axis Travel, 30\" Y-Axis Travel, 26\" Z-Axis Travel, 7.09\" - 33.07\" Spindle Nose to Table, CT 40 Spindle Taper, 25/15-HP (5 min/30 min) Spindle Motor, 1,181-IPM Rapid Traverse (X/Y/Z), Mazak Superflow V8-A1000 1,000-PSI Through Spindle Coolant, P-Cool, Remote Jog, Chip Conveyor, Mazatrol Matrix Nexus 2 CNC Control",
       "photo": "photos/151.jpg",
       "page": 34
     },
@@ -1276,7 +1276,7 @@
     {
       "lot": "170",
       "title": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 294631 (New 2018)",
-      "description": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 294631 (New 2018), with 13.78\" X-Axis Travel, 21.65\" Y-Axis Travel, 20.08\" Z-Axis Travel, -120 to +30 Deg. A-Axis Tilt, 360 Deg. C-Axis Rotation, 13.78\" Dia. x 12.4\" H, 135-Lbs. Max. Workpiece, 145-Position Automatic Tool Changer, 18,000-RPM Spindle Speed, CT 40 Spindle Taper, 30-HP Spindle Motor, 4.33\" - 24.41\" Table Top to Spindle Nose, 40-Station Pallet Changer, Mazak Superflow T8/1000 1,000-PSI High Pressure Coolant, Remote Jog, Mazak Smooth AWC CNC Control",
+      "description": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 294631 (New 2018), with 13.78\" X-Axis Travel, 21.65\" Y-Axis Travel, 20.08\" Z-Axis Travel, -120 to +30 Deg. A-Axis Tilt, 360 Deg. C-Axis Rotation, 13.78\" Dia. x 12.4\" H, 135-Lbs. Max. Workpiece, 145-Position Automatic Tool Changer, 18,000-RPM Spindle Speed, HSK 63 Spindle Taper, 30-HP Spindle Motor, 4.33\" - 24.41\" Table Top to Spindle Nose, 40-Station Pallet Changer, Mazak Superflow T8/1000 1,000-PSI High Pressure Coolant, Remote Jog, Mazak Smooth AWC CNC Control",
       "photo": "photos/170.jpg",
       "page": 38
     },
@@ -1500,7 +1500,7 @@
     {
       "lot": "203",
       "title": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 306887 (New 2020)",
-      "description": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 306887 (New 2020), with 13.78\" X-Axis Travel, 21.65\" Y-Axis Travel, 20.08\" Z-Axis Travel, -120 to +30 Deg. A-Axis Tilt, 360 Deg. C-Axis Rotation, 13.78\" Dia. x 12.4\" H, 135-Lbs. Max. Workpiece, 145-Position Automatic Tool Changer, 18,000-RPM Spindle Speed, CT 40 Spindle Taper, 30-HP Spindle Motor, 4.33\" - 24.41\" Table Top to Spindle Nose, 40-Station Pallet Changer, Mazak Superflow T8/1000 1,000-PSI High Pressure Coolant, Remote Jog, Mazak Smooth AWC CNC Control",
+      "description": "Mazak Variaxis i-300 AWC 5-Axis CNC Machining Center, S/N 306887 (New 2020), with 13.78\" X-Axis Travel, 21.65\" Y-Axis Travel, 20.08\" Z-Axis Travel, -120 to +30 Deg. A-Axis Tilt, 360 Deg. C-Axis Rotation, 13.78\" Dia. x 12.4\" H, 135-Lbs. Max. Workpiece, 145-Position Automatic Tool Changer, 18,000-RPM Spindle Speed, HSK 63 Spindle Taper, 30-HP Spindle Motor, 4.33\" - 24.41\" Table Top to Spindle Nose, 40-Station Pallet Changer, Mazak Superflow T8/1000 1,000-PSI High Pressure Coolant, Remote Jog, Mazak Smooth AWC CNC Control",
       "photo": "photos/203.jpg",
       "page": 44
     },
@@ -1761,8 +1761,8 @@
     },
     {
       "lot": "244",
-      "title": "Mazak Nexus 510C-II CNC Vertical Machining Center, S/N 219683, 2010",
-      "description": "Mazak Nexus 510C-II CNC Vertical Machining Center, S/N 219683, 2010, with 51.18\" x 21.65\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20.08\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), 4th Axis Wired, Remote Jog, Renishaw Probing, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Mazatrol Matrix Nexus CNC Control",
+      "title": "Mazak VCN-510C-II CNC Vertical Machining Center, S/N 219683, 2010",
+      "description": "Mazak VCN-510C-II CNC Vertical Machining Center, S/N 219683, 2010, with 51.18\" x 21.65\" Table Size, 2,646-Lbs. Max. Table Load, 41.3\" X-Axis Travel, 20.08\" Y-Axis Travel, 20.08\" Z-Axis Travel, 5.9\" - 25.98\" Spindle Nose to Table, CT 40 Spindle Taper, 25-HP Spindle Motor, 1,417-IPM Rapid Traverse (X/Y/Z), 4th Axis Wired, Remote Jog, Renishaw Probing, Renishaw OTS, 30-Position Side-Mount Automatic Tool Changer, Mazatrol Matrix Nexus CNC Control",
       "photo": "photos/244.jpg",
       "page": 51
     },
@@ -1818,8 +1818,8 @@
     },
     {
       "lot": "253",
-      "title": "Mazak Palletech Manufacturing Cell with Nexus 5000-III & HCN-5000 Horizontal Machining Centers, S/N 283419 / 261619, 2017/2015",
-      "description": "Mazak Palletech Manufacturing Cell, with 2015 Mazak Nexus 5000-III CNC Horizontal Machining Center & 2017 Mazak HCN-5000 Horizontal Machining Center, S/N 283419 / 261619, 2017/2015, with 19.69\" x 19.69\" (500 mm) Pallet Size, 1,543-Lbs. Max. Pallet Load, 28.74\" X-Axis Travel, 28.74\" Y-Axis Travel, 31.5\" Z-Axis Travel, CT 40, 120-Position Automatic Tool Changers, 12-Pallet Palletech Flexible Manufacturing Systems, Mazak Smooth G Control (2017), Mazak Mazatrol Matrix Nexus 2 Control (2015) (NO TOMBSTONES/FIXTURES/VISES)",
+      "title": "Mazak Palletech Manufacturing Cell with Nexus 5000-III & HCN-5000 Horizontal Machining Centers, S/N 261619/283419, 2015/2017",
+      "description": "Mazak Palletech Manufacturing Cell, with 2015 Mazak Nexus 5000-III CNC Horizontal Machining Center & 2017 Mazak HCN-5000 Horizontal Machining Center, S/N 261619/283419, 2015/2017, with 19.69\" x 19.69\" (500 mm) Pallet Size, 1,543-Lbs. Max. Pallet Load, 28.74\" X-Axis Travel, 28.74\" Y-Axis Travel, 31.5\" Z-Axis Travel, CT 40, 120-Position Automatic Tool Changers, 12-Pallet Palletech Flexible Manufacturing Systems, Mazak Smooth G Control (2017), Mazak Mazatrol Matrix Nexus 2 Control (2015) (NO TOMBSTONES/FIXTURES/VISES)",
       "photo": "photos/253.jpg",
       "page": 53
     },
@@ -1904,7 +1904,6 @@
     },
     {
       "lot": "265A",
-      "title": "Mazak Palletech 2-Position Modular Extension System, with (2) Pallets, Frame Extension",
       "description": "Mazak Palletech 2-Position Modular Extension System, with (2) 500mm Pallets, Frame Extension",
       "photo": "photos/265A.jpg",
       "page": 56
@@ -2934,8 +2933,8 @@
     },
     {
       "lot": "419",
-      "title": "Mori Seiki NLX2500Y/750 CNC Turning Center, S/N NL254120743, 2012",
-      "description": "Mori Seiki NLX2500Y/750 CNC Turning Center, S/N NL254120743, 2012, with 36.2\" Swing Over Bed, 14.4\" Max. Turning Diameter, 27.7\" Max. Turning Length, 3.1\" Bar Capacity, 4,000-RPM, A2-8, 25-HP Main Spindle, 12-Station BMT Turret, Live Tooling, C-Axis, 10.2\" X-Axis Travel, +/- 1.97\" Y-Axis Travel, 31.3\" Z-Axis Travel, 10\" 3-Jaw Chuck, Tailstock, Renishaw Probing, Tool Presetter, Parts Catcher, Chip Conveyor, Mori Seiki M730BM CNC Control",
+      "title": "Mori Seiki NLX2500Y/700 CNC Turning Center, S/N NL254120743, 2012",
+      "description": "Mori Seiki NLX2500Y/700 CNC Turning Center, S/N NL254120743, 2012, with 36.2\" Swing Over Bed, 14.4\" Max. Turning Diameter, 27.7\" Max. Turning Length, 3.1\" Bar Capacity, 4,000-RPM, A2-8, 25-HP Main Spindle, 12-Station BMT Turret, Live Tooling, C-Axis, 10.2\" X-Axis Travel, +/- 1.97\" Y-Axis Travel, 31.3\" Z-Axis Travel, 10\" 3-Jaw Chuck, Tailstock, Renishaw Probing, Tool Presetter, Parts Catcher, Chip Conveyor, Mori Seiki M730BM CNC Control",
       "photo": "photos/419.jpg",
       "page": 87
     },
@@ -3478,14 +3477,14 @@
     {
       "lot": "498",
       "title": "Mazak QT-250-HP-Universal CNC Lathe, S/N 142314, 1999",
-      "description": "Mazak QT-250-HP-Universal CNC Lathe, S/N 142314, 1999, with 5,000-RPM, 23.6\" Swing, 15.7\" Max. Diamter, 19.7\" Max. Length, 8.46\" X-Axis Travel, 20\" Z-Axis Travel, 2.5\" Bore, 3J Collet Chuck, 12-Station Turret, Tailstock, Tool Presetter, Parts Catcher, Chip Conveyor, 20-HP, Mazatrol PC-Fusion-CNC 640T Control",
+      "description": "Mazak QT-250-HP-Universal CNC Lathe, S/N 142314, 1999, with 5,000-RPM, 23.6\" Swing, 15.7\" Max. Diameter, 19.7\" Max. Length, 8.46\" X-Axis Travel, 20\" Z-Axis Travel, 2.5\" Bore, 3J Collet Chuck, 12-Station Turret, Tailstock, Tool Presetter, Parts Catcher, Chip Conveyor, 20-HP, Mazatrol PC-Fusion-CNC 640T Control",
       "photo": "photos/498.jpg",
       "page": 104
     },
     {
       "lot": "499",
       "title": "Mazak QT-250-HP-Universal CNC Lathe, S/N 150476, 2000",
-      "description": "Mazak QT-250-HP-Universal CNC Lathe, S/N 150476, 2000, with 5,000-RPM, 23.6\" Swing, 15.7\" Max. Diamter, 19.7\" Max. Length, 8.46\" X-Axis Travel, 20\" Z-Axis Travel, 2.5\" Bore, 3J Collet Chuck, 12-Station Turret, Tailstock, Tool Presetter, Parts Catcher, Chip Conveyor, 20-HP, Mazatrol PC-Fusion-CNC 640T Control (LOCKED OUT / TAGGED OUT)",
+      "description": "Mazak QT-250-HP-Universal CNC Lathe, S/N 150476, 2000, with 5,000-RPM, 23.6\" Swing, 15.7\" Max. Diameter, 19.7\" Max. Length, 8.46\" X-Axis Travel, 20\" Z-Axis Travel, 2.5\" Bore, 3J Collet Chuck, 12-Station Turret, Tailstock, Tool Presetter, Chip Conveyor, 20-HP, Mazatrol PC-Fusion-CNC 640T Control (LOCKED OUT / TAGGED OUT)",
       "photo": "photos/499.jpg",
       "page": 105
     },
