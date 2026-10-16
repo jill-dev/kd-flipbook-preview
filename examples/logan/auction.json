@@ -1,14 +1,14 @@
 {
   "slug": "logan",
   "title": "Complete Closure of a Custom CNC Contract Machining Company",
-  "subtitle": "Logan, Utah — Late Model Mazak 5-Axis Variaxis & VCC Machining Centers, Mazak HCN-5000 Palletech Horizontal Cell, Mazak & Fadal CNC Verticals, Mori Seiki & Mazak CNC Lathes, CMMs & Hundreds of Lots of Tooling",
+  "subtitle": "Logan, Utah — Late Model Mazak 5-Axis Variaxis & VCC Machining Centers, Mazak Nexus 5000-III & HCN-5000 Palletech Horizontal Cell, Mazak & Fadal CNC Verticals, Mori Seiki & Mazak CNC Lathes, CMMs & Hundreds of Lots of Tooling",
   "badge": "CNC & Machine Tools",
   "closing": {
     "label": "Lots Begin Closing",
     "day": "Tuesday, November 17, 2026",
     "time": "10:00 AM MT"
   },
-  "inspection": "Monday, November 16, 2026, 8:00 AM – 4:00 PM MT, or earlier by appointment",
+  "inspection": "Monday, November 16, 2026, 12:00 Noon – 4:00 PM MT, or earlier by appointment",
   "locations": [
     "844 W 400 N, Logan, UT 84321"
   ],
@@ -24,7 +24,7 @@
     {
       "lot": 253,
       "name": "Mazak Palletech Cell, (2) HMCs",
-      "sub": "12-Pallet Horizontal Machining Cell",
+      "sub": "Nexus 5000-III & HCN-5000, 12 Pallets",
       "photo": "photos/253.jpg"
     },
     {
@@ -80,11 +80,16 @@
     "removalDates": "Wed., Nov. 18 – Tue., Nov. 24, 2026\nMon., Nov. 30 – Fri., Dec. 11, 2026",
     "removalWarning": "Please do not wait until the last day to pick up your purchases. Items remaining onsite past the deadline will be considered abandoned.",
     "onsiteContact": {
-      "name": "To Be Announced",
-      "phone": ""
+      "name": "Aaron Levine",
+      "phone": "480.371.9009"
     },
     "machineryNotes": "Customers are responsible for prepping, draining fluids, and locking and blocking all machinery for removal. KD Auctions will not be responsible for any onsite loading of machinery or other items.",
-    "riggers": [],
+    "riggers": [
+      {
+        "name": "Pedowitz (Full Service Rigging & Prep)",
+        "phone": "(417) 217-0828 mobile"
+      }
+    ],
     "serviceTech": "To Be Announced",
     "truckingCompanies": [],
     "footerTagline": "Auctions, Liquidations, Appraisals, and Consulting Services",
