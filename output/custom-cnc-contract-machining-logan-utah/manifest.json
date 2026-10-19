@@ -180,7 +180,9 @@
     "pages/169-lots-167.html",
     "pages/170-lots-168.html",
     "pages/171-lots-169.html",
-    "pages/172-closing.html"
+    "pages/172-lots-170.html",
+    "pages/173-lots-171.html",
+    "pages/174-closing.html"
   ],
   "lots": [
     {
@@ -648,7 +650,7 @@
     {
       "lot": "69",
       "title": "Mitutoyo Bevel Protractor, Starrett Thickness Gage & N.C.K Dial Caliper Gage",
-      "description": "Mitutoyo 6\" Universal Bevel Protractor #187-904, Starrett 1015A Series Portable Dial Thickness Gage & N.C.K Internal Dial Caliper Gage",
+      "description": "Mitutoyo #187-904 6\" Universal Bevel Protractor, Starrett 1015A Series Portable Dial Thickness Gage & N.C.K Internal Dial Caliper Gage",
       "photo": "photos/69.jpg",
       "page": 13
     },
@@ -5051,8 +5053,8 @@
     },
     {
       "lot": "720",
-      "title": "Bridgeport Series I 2 HP Knee Mill with Acu-Rite DRO",
-      "description": "Bridgeport Series I 2 HP Vertical Knee Mill, with Acu-Rite DRO, Assorted R8 Tooling & ERON 6\" Vise",
+      "title": "Bridgeport Series I 2-HP Vertical Milling Machine, with Acu-Rite DRO",
+      "description": "Bridgeport Series I 2-HP Vertical Milling Machine, with Acu-Rite 2-Axis DRO, 4,200-RPM Variable Speed, 5\" Quill Travel, Shaper Attachment, Assorted R8 Tooling, ERON 6\" Vise",
       "photo": "photos/720.jpg",
       "page": 142
     },
@@ -5072,13 +5074,13 @@
     },
     {
       "lot": "723",
-      "description": "(2) Parlec 6\" Vises",
+      "description": "(2) Parlec 6\" Machine Vises",
       "photo": "photos/723.jpg",
       "page": 143
     },
     {
       "lot": "724",
-      "description": "Kurt 6\" Vise & Parlec 6\" Vise",
+      "description": "Kurt & Parlec 6\" Machine Vises",
       "photo": "photos/724.jpg",
       "page": 143
     },
@@ -5116,21 +5118,21 @@
     },
     {
       "lot": "730",
-      "description": "12\" Disc Sander on Heavy Duty Stand, 3/4 HP",
+      "description": "12\" Disc Sander on Heavy Duty Stand, 3/4-HP",
       "photo": "photos/730.jpg",
       "page": 144
     },
     {
       "lot": "731",
-      "title": "Duracraft UL-30 Drill Press, 1/4 HP, on Rolling Cart",
-      "description": "Duracraft Model UL-30 Drill Press, 1/4 HP, 115V, 1/2\" Chuck, S/N 384233, Mfg. 12/1983, for High Speed Drills, on Heavy Duty Steel Rolling Cart",
+      "title": "Duracraft UL-30 Bench-Top Drill Press, S/N 384233, 1983",
+      "description": "Duracraft Model UL-30 Bench-Top Drill Press, S/N 384233, 1983, with 1/4-HP, 115-Volt, 1/2\" Chuck, on Heavy Duty Steel Rolling Cart",
       "photo": "photos/731.jpg",
       "page": 144
     },
     {
       "lot": "732",
-      "title": "1989 Amada HA-500 Horizontal Band Saw with Roller Table",
-      "description": "1989 Amada HA-500 Horizontal Band Saw, with 156\" Roller Table & Extra Blades",
+      "title": "Amada HA-500 Automatic Horizontal Band Saw, 1989",
+      "description": "Amada HA-500 Automatic Horizontal Band Saw, 1989, with 20\" Round Capacity, 20\" x 20\" Square Capacity, Programmable Feed Length, Approx. 23\" Stroke, 1-1/2\" Blade, 156\" Roller Table & Extra Blades",
       "photo": "photos/732.jpg",
       "page": 144
     },
@@ -5143,31 +5145,31 @@
     },
     {
       "lot": "734",
-      "title": "Kalamazoo VT-18 Vertical Band Saw with (2) Rolling Tables",
-      "description": "Kalamazoo Model VT-18 Vertical Band Saw, with (2) 5' Rolling Tables",
+      "title": "Kalamazoo VT-18 18\" Vertical Band Saw with (2) Rolling Tables",
+      "description": "Kalamazoo VT-18 18\" Vertical Band Saw, with Manual Vise Clamping, (2) 5' Rolling Tables",
       "photo": "photos/734.jpg",
       "page": 145
     },
     {
       "lot": "735",
-      "title": "DoAll 4208 Belt & Disc Sander",
-      "description": "DoAll Model 4208 Belt & Disc Sander, with Extra Belts",
+      "title": "DoAll 4208 6\" x 48\" Belt & 12\" Disc Combination Sander, S/N 38466",
+      "description": "DoAll 4208 6\" x 48\" Belt & 12\" Disc Combination Sander, S/N 38466, with Tilting Table, Extra Belts",
       "photo": "photos/735.jpg",
       "page": 145
     },
     {
       "lot": "736",
-      "title": "Jet JDP-14M Drill Press & Central Machinery 5-Speed Bench Drill Press",
-      "description": "Jet Model JDP-14M Drill Press, 1/2 HP, on Rolling Steel Cart & Central Machinery 5-Speed Bench Drill Press on Rolling Cart",
+      "title": "Jet JDP-14M Bench-Top Drill Press & Central Machinery 5-Speed Bench Drill Press",
+      "description": "Jet JDP-14M 14\" Bench-Top Drill Press, S/N 5030115, 115-Volt, 1-Phase, 1/2-HP, on Rolling Steel Cart & Central Machinery 5-Speed Bench-Top Drill Press on Rolling Cart",
       "photo": "photos/736.jpg",
       "page": 145
     },
     {
       "lot": "737",
-      "title": "2014 Amada Dynasaw 430 CNC Band Saw",
-      "description": "2014 Amada Dynasaw 430 CNC Band Saw, with Amada CNC Control, Round Capacity 1.18\u201d - 16.93\u201d, Rectangle Capacity (W X H) 1.18\u201d x 1.18\u201d - 16.93\u201d x 16.93\u201d, Work Load Capacity 6,613 lbs., Material Index Stroke 27.559\u201d, Material Index Length 0.394\u201d - 99.999\u201d, Min Remnant Length 1.38\u201d Plus Length of Parts, Number Of Input Block/Station -99 / 1-30, Material Index Mechanism Shuttle Vise, Vice Opening 7.75\", Vice Height 9.0\", Bed To Blade 18.0\", Blade Size (L X T X W) 17\u20195\u201d x .050\u201d x 1 1/2\u201d, Blade Speed 49~394 ft/min, By Inverter, Blade Motor 7.5 HP, Hydraulic Pump Motor 2 HP, Cutting Fluid Pump Motor 1/4 HP, Wire Brush Motor 1/8 HP, Turbo Chip Conveyor, Auto Feed & 10' Rolling Table",
+      "title": "Amada Dynasaw 430 CNC Horizontal Band Saw, 2014",
+      "description": "2014 Amada Dynasaw 430 CNC Horizontal Band Saw, 2014, with Round Capacity 1.18” - 16.93”, Rectangle Capacity (W X H) 1.18” x 1.18” - 16.93” x 16.93”, Work Load Capacity 6,613-Lbs., Material Index Stroke 27.559”, Material Index Length 0.394” - 99.999”, Min Remnant Length 1.38” Plus Length of Parts, Number Of Input Block/Station -99 / 1-30, Material Index Mechanism Shuttle Vise, Vise Opening 7.75\", Vise Height 9.0\", Bed To Blade 18.0\", Blade Size (L X T X W) 17’5” x .050” x 1-1/2”, Blade Speed 49~394-fpm, Blade Motor 7.5-HP, Hydraulic Pump Motor 2-HP, Cutting Fluid Pump Motor 1/4-HP, Wire Brush Motor 1/8-HP, Turbo Chip Conveyor, Auto Feed & 10' Rolling Table, Blade Breakage Switch, Amada CNC Control",
       "photo": "photos/737.jpg",
-      "page": 145
+      "page": 146
     },
     {
       "lot": "738",
@@ -5178,7 +5180,7 @@
     {
       "lot": "739",
       "title": "Banded Box of (36) 304/304L Stainless Steel HRAP Rectangular Bar",
-      "description": "Banded Box of (36) Pieces of 304/304L Stainless Steel HRAP Rectangular Bar",
+      "description": "Banded Box of Approx. (36) Pieces of 304/304L Stainless Steel HRAP Rectangular Bar",
       "photo": "photos/739.jpg",
       "page": 146
     },
@@ -5194,21 +5196,21 @@
       "title": "Gillis Jarke 7-Tier Material Rack with Stainless, Aluminum & Alloy Steel",
       "description": "Gillis Jarke by SPG 7-Tier Adjustable Material Rack, 81\" x 40\" x 120\", (2) Sections, Full of 12' Pieces of 304 Stainless, 6061 Aluminum Round, E4340, 316, E9310 & 4130",
       "photo": "photos/741.jpg",
-      "page": 146
+      "page": 147
     },
     {
       "lot": "742",
       "title": "Gillis Jarke Dual Sided 7-Tier Material Rack with Alloy Steel & Aluminum",
       "description": "Gillis Jarke by SPG Dual Sided 7-Tier Material Rack, 200\" x 71\" x 120\", (3) Sections, with Assorted 12' & 231\" Material: 4140, 4340, E9310 AQ & 8620 Steel, 12' 6061 Aluminum Flat Bar",
       "photo": "photos/742.jpg",
-      "page": 146
+      "page": 147
     },
     {
       "lot": "743",
       "title": "Heavy Duty Dual Sided 9-Tier Material Rack with 6061 Aluminum Stock",
       "description": "Heavy Duty Adjustable Dual Sided 9-Tier Material Rack, 113\" x 60\" x 13', (4) Sections, Full of Assorted 6061-T6511 Aluminum Stock up to 12' & (1) 2024-T351 2-1/2\" x 4\" x 123\" Piece",
       "photo": "photos/743.jpg",
-      "page": 146
+      "page": 147
     },
     {
       "lot": "744",
@@ -5236,26 +5238,26 @@
       "title": "Material Rack with Brass, Stainless & 17-4 Bar Stock",
       "description": "Gillis Jarke by SPG 7-Tier Adjustable Material Rack, 81\" x 40\" x 120\", (2) Sections, with Assorted Length Brass, C36000 Brass, 303, 304, 316, 416 CF, 430 FR & 17-4 Stainless Bar Stock",
       "photo": "photos/747.jpg",
-      "page": 147
+      "page": 148
     },
     {
       "lot": "748",
       "title": "Material Rack with Plastic Round Bar",
       "description": "Heavy Duty Adjustable Dual Sided 9-Tier Material Rack, with Assorted Plastic Round Bar",
       "photo": "photos/748.jpg",
-      "page": 147
+      "page": 148
     },
     {
       "lot": "749",
       "title": "18-Section Material Rack with Stainless, Aluminum, Alloy Steel & Bronze",
       "description": "18-Section Material Rack, 112\" x 40\" x 102\", with Assorted Stainless, Hot Roll, Aluminum, 4340, 4140, 1018, 660 Bronze & Others",
       "photo": "photos/749.jpg",
-      "page": 147
+      "page": 148
     },
     {
       "lot": "750",
       "title": "Pallet of (15) New 6061-T651 Aluminum Plates 1-1/4\" x 25-1/2\" x 32-1/4\"",
-      "description": "Pallet of (15) New 6061-T651 Aluminum Plates, 1-1/4\" x 25-1/2\" x 32-1/4\", Approx. 1,650 Lbs.",
+      "description": "Pallet of Approx. (15) New 6061-T651 Aluminum Plates, 1-1/4\" x 25-1/2\" x 32-1/4\", Approx. 1,650-Lbs.",
       "photo": "photos/750.jpg",
       "page": 148
     },
@@ -5278,21 +5280,21 @@
       "title": "(7) 6061-T651 Aluminum Plates",
       "description": "Assorted 6061-T651 Aluminum Plate: (5) 1\" x 18-1/2\" x 15\" & (2) 1-1/4\" x 32\" x 25-1/2\"",
       "photo": "photos/753.jpg",
-      "page": 148
+      "page": 149
     },
     {
       "lot": "754",
       "title": "6061-T651 Aluminum Plate 2-1/2\" x 24-3/4\" x 24-3/4\"",
       "description": "6061-T651 Aluminum Plate, 2-1/2\" x 24-3/4\" x 24-3/4\"",
       "photo": "photos/754.jpg",
-      "page": 148
+      "page": 149
     },
     {
       "lot": "755",
       "title": "Pallet of 6061-T651 & 7075-T651 Aluminum Plate",
-      "description": "Pallet Full of Assorted Size Aluminum Plate, incl. 6061-T651 & (2) SLC Bundles of 7075-T651 Strips 0.75\" x 1.55\" (245 Pcs & 855 Pcs)",
+      "description": "Pallet Full of Assorted Size Aluminum Plate, incl. 6061-T651 & (2) SLC Bundles of 7075-T651 Strips 0.75\" x 1.55\" (Approx. 245 Pcs. & Approx. 855 Pcs.)",
       "photo": "photos/755.jpg",
-      "page": 148
+      "page": 149
     },
     {
       "lot": "756",
@@ -5320,21 +5322,21 @@
       "title": "(2) Steel Racks with E9310 AQ & 9310 Steel",
       "description": "(2) Steel Racks, with Assorted E9310 AQ, 9310 Steel & Others",
       "photo": "photos/759.jpg",
-      "page": 149
+      "page": 150
     },
     {
       "lot": "760",
       "title": "(4) Stackable Racks with Cold Roll Steel Bars",
       "description": "(4) Stackable Racks, with Cold Roll Steel Bars",
       "photo": "photos/760.jpg",
-      "page": 149
+      "page": 150
     },
     {
       "lot": "761",
       "title": "Approx. (32) Rollmill Stands",
       "description": "Approx. (32) Rollmill - Mill #1-6548 Stands ART",
       "photo": "photos/761.jpg",
-      "page": 149
+      "page": 150
     },
     {
       "lot": "762",
@@ -5362,21 +5364,21 @@
       "title": "(3) Rolling Material Racks & (14) Stacking Racks (NO CONTENTS)",
       "description": "(3) Rolling Material Racks, 50\" x 26\" x 26\", with (14) Stationary Stacking Racks (NO CONTENTS)",
       "photo": "photos/765.jpg",
-      "page": 150
+      "page": 151
     },
     {
       "lot": "766",
       "title": "Husky 9-Drawer Rolling Tool Cart with Broaches, Horns & Shims",
       "description": "Husky 9-Drawer Wood Top Rolling Tool Cart, Full of Assorted Size Broaches, Horns & Shims (see photos)",
       "photo": "photos/766.jpg",
-      "page": 150
+      "page": 151
     },
     {
       "lot": "767",
       "title": "Husky 9-Drawer Rolling Tool Cart with Hand Tools",
       "description": "Husky 9-Drawer Wood Top Rolling Tool Cart, with Assorted Hand Tools (see photos)",
       "photo": "photos/767.jpg",
-      "page": 150
+      "page": 151
     },
     {
       "lot": "768",
@@ -5404,20 +5406,20 @@
       "title": "Waterloo Traxx 14-Drawer Rolling Tool Cart (NO CONTENTS)",
       "description": "Waterloo Traxx Series 14-Drawer Rolling Tool Cart (NO CONTENTS)",
       "photo": "photos/771.jpg",
-      "page": 151
+      "page": 152
     },
     {
       "lot": "772",
       "description": "Kennedy 3-Drawer Rolling Tool Cart (NO CONTENTS)",
       "photo": "photos/772.jpg",
-      "page": 151
+      "page": 152
     },
     {
       "lot": "773",
       "title": "Lista 11-Drawer Tool Cabinet with Hardware",
       "description": "Lista 11-Drawer Tool Cabinet, with Misc. Hardware",
       "photo": "photos/773.jpg",
-      "page": 151
+      "page": 152
     },
     {
       "lot": "774",
@@ -5445,20 +5447,20 @@
       "title": "Lista 7-Drawer Wood Top Work Table with Hand Tools & Hardware",
       "description": "Lista 7-Drawer Wood Top Work Table, 60\" x 30\" x 35-1/2\", with Hand Tools & Some Hardware",
       "photo": "photos/777.jpg",
-      "page": 152
+      "page": 153
     },
     {
       "lot": "778",
       "description": "Lista 13-Drawer Storage Cabinet (NO CONTENTS)",
       "photo": "photos/778.jpg",
-      "page": 152
+      "page": 153
     },
     {
       "lot": "779",
       "title": "Husky 10-Drawer Rolling Tool Cart (NO CONTENTS)",
       "description": "Husky 10-Drawer Rolling Tool Cart/Cabinet (NO CONTENTS) (Dovetail Tooling NOT Included)",
       "photo": "photos/779.jpg",
-      "page": 152
+      "page": 153
     },
     {
       "lot": "780",
@@ -5485,21 +5487,21 @@
       "title": "Organizer Boxes on Stand with Hardware, Punches & Fittings",
       "description": "16-Section Organizer Boxes on Stand, Full of Assorted Hardware, Punches, Wire Terminals, Hose Clamps, Fittings, Pins & Others (See photos)",
       "photo": "photos/783.jpg",
-      "page": 153
+      "page": 154
     },
     {
       "lot": "784",
       "title": "4-Tier Storage Rack with Plastic Totes",
       "description": "4-Tier Storage Rack, 77\" x 24\" x 72\", with Plastic Totes",
       "photo": "photos/784.jpg",
-      "page": 153
+      "page": 154
     },
     {
       "lot": "785",
       "title": "4-Tier Storage Rack with Plastic Totes",
       "description": "4-Tier Storage Rack, 77\" x 24\" x 72\", with Plastic Totes",
       "photo": "photos/785.jpg",
-      "page": 153
+      "page": 154
     },
     {
       "lot": "786",
@@ -5524,23 +5526,23 @@
     {
       "lot": "789",
       "title": "(4) Boxes of Hand Tools",
-      "description": "(4) Boxes of Assorted Hand Tools: Soft Hammers, Wrenches, Hex Keys, Crescent Wrenches & Others",
+      "description": "(4) Boxes of Assorted Hand Tools, Hammers, Wrenches, Hex Keys, Crescent Wrenches & Others",
       "photo": "photos/789.jpg",
-      "page": 154
+      "page": 155
     },
     {
       "lot": "790",
       "title": "(2) Large Boxes of Files",
       "description": "(2) Large Boxes of Assorted Files",
       "photo": "photos/790.jpg",
-      "page": 154
+      "page": 155
     },
     {
       "lot": "791",
       "title": "(3) Boxes of Kant-Twist Clamps & C-Clamps",
       "description": "(3) Boxes of Assorted Size Kant-Twist Clamps & C-Clamps",
       "photo": "photos/791.jpg",
-      "page": 154
+      "page": 155
     },
     {
       "lot": "792",
@@ -5568,21 +5570,21 @@
       "title": "Tool Bag with Hand Tools, Scraper Handles, New Irwin Socket Adapters & Impact Sockets",
       "description": "Tool Bag, with Wall Hanging Tools, Scraper Handles, New Irwin Socket Adapters, New Impact Sockets, Hex Bit Sockets & Others",
       "photo": "photos/795.jpg",
-      "page": 155
+      "page": 156
     },
     {
       "lot": "796",
-      "title": "(2) WEN 1\" x 30\" Belt Sanders with 5\" Sanding Disc",
-      "description": "(2) WEN Model 6515T 1\" x 30\" Belt Sanders, with 5\" Sanding Disc, 120V",
+      "title": "(2) WEN 6515T 1\" x 30\" Belt x 5\" Disc Combination Sanders",
+      "description": "(2) WEN 6515T 1\" x 30\" Belt x 5\" Disc Combination Sanders, with 120-Volt, 3,260-RPM Belt Speed, 3,450-RPM Disc Speed",
       "photo": "photos/796.jpg",
-      "page": 155
+      "page": 156
     },
     {
       "lot": "797",
-      "title": "WEN 1\" x 30\" Belt Sander with 5\" Sanding Disc",
-      "description": "(1) WEN Model 6515T 1\" x 30\" Belt Sander, with 5\" Sanding Disc, 120V",
+      "title": "WEN 6515T 1\" x 30\" Belt x 5\" Disc Combination Sander, S/N 11984500801",
+      "description": "WEN 6515T 1\" x 30\" Belt x 5\" Disc Combination Sander, S/N 11984500801, with 120-Volt, 3,260-RPM Belt Speed, 3,450-RPM Disc Speed",
       "photo": "photos/797.jpg",
-      "page": 155
+      "page": 156
     },
     {
       "lot": "798",
@@ -5610,21 +5612,21 @@
       "title": "Box of Pneumatic Die Grinders & Drills",
       "description": "Box of Pneumatic Die Grinders, Angle Die Grinders, Drills & Others",
       "photo": "photos/801.jpg",
-      "page": 156
+      "page": 157
     },
     {
       "lot": "802",
       "title": "Box of Makita Cordless Drills with Batteries & Chargers",
       "description": "Box of Assorted Makita Cordless Drills, with Batteries & Chargers",
       "photo": "photos/802.jpg",
-      "page": 156
+      "page": 157
     },
     {
       "lot": "803",
       "title": "Box of Ridgid Cordless Drills with Batteries & Chargers",
       "description": "Box of Ridgid Cordless Drills, with Batteries & Chargers",
       "photo": "photos/803.jpg",
-      "page": 156
+      "page": 157
     },
     {
       "lot": "804",
@@ -5652,21 +5654,21 @@
       "title": "Box of Pneumatic Air Guns",
       "description": "Box of Assorted Pneumatic Air Guns",
       "photo": "photos/807.jpg",
-      "page": 157
+      "page": 158
     },
     {
       "lot": "808",
       "title": "Large Box of Wrenches & Pipe Wrench",
       "description": "Large Box of Assorted Size Wrenches & Pipe Wrench",
       "photo": "photos/808.jpg",
-      "page": 157
+      "page": 158
     },
     {
       "lot": "809",
       "title": "Makita Angle Grinder",
       "description": "Makita Angle Grinder, with Guard",
       "photo": "photos/809.jpg",
-      "page": 157
+      "page": 158
     },
     {
       "lot": "810",
@@ -5690,24 +5692,24 @@
     },
     {
       "lot": "813",
-      "title": "Central Machinery 18 Lb. Vibratory Bowl",
-      "description": "Central Machinery 18 Lb. Metal Vibratory Bowl",
+      "title": "Central Machinery 18-Lb. Batch-Type Vibratory Bowl Finisher",
+      "description": "Central Machinery 18-Lb. Batch-Type Vibratory Bowl Finisher,with 10-3/4\" Diameter, 7\" D Bowl, 120-Volt",
       "photo": "photos/813.jpg",
-      "page": 158
+      "page": 159
     },
     {
       "lot": "814",
       "title": "Uline Rolling Computer Workstations",
       "description": "Uline Rolling Computer Monitor Workstations, with Drawer",
       "photo": "photos/814.jpg",
-      "page": 158
+      "page": 159
     },
     {
       "lot": "815",
       "title": "(2) Uline Rolling Computer Workstations",
       "description": "(2) Uline Rolling Computer Monitor Workstations, with Drawer",
       "photo": "photos/815.jpg",
-      "page": 158
+      "page": 159
     },
     {
       "lot": "816",
@@ -5718,15 +5720,15 @@
     },
     {
       "lot": "817",
-      "title": "(2) Global Industrial 1,200 Lb. Permanent Magnetic Lifters",
-      "description": "(2) Global Industrial Permanent Magnetic Lifters, 1,200 Lb. Max, with Manual Material Grabbers",
+      "title": "(2) Global Industrial 1,200-Lb. Permanent Magnetic Lifters",
+      "description": "(2) Global Industrial Permanent Magnetic Lifters, 1,200-Lb. Max, with Manual Material Grabbers",
       "photo": "photos/817.jpg",
       "page": 159
     },
     {
       "lot": "818",
-      "title": "Global Industrial 1,200 Lb. Permanent Magnetic Lifter",
-      "description": "Global Industrial Permanent Magnetic Lifter, 1,200 Lb. Max, with Manual Material Grabber",
+      "title": "Global Industrial 1,200-Lb. Permanent Magnetic Lifter",
+      "description": "Global Industrial Permanent Magnetic Lifter, 1,200-Lb. Max, with Manual Material Grabber",
       "photo": "photos/818.jpg",
       "page": 159
     },
@@ -5735,26 +5737,26 @@
       "title": "(2) Heavy Duty Steel Rolling Carts, Crown & Dutro",
       "description": "(2) Heavy Duty Steel Rolling Carts: (1) Crown 3-Tier 23-1/2\" x 36-1/2\" x 34\" & (1) Dutro 2-Tier 18\" x 30\" x 34\"",
       "photo": "photos/819.jpg",
-      "page": 159
+      "page": 160
     },
     {
       "lot": "820",
       "title": "(2) Heavy Duty Steel Wood Top Work Tables",
       "description": "(2) Heavy Duty Steel Wood Top Work Tables, 42\" x 24\" x 37\" & 42\" x 24\" x 35-1/2\"",
       "photo": "photos/820.jpg",
-      "page": 159
+      "page": 160
     },
     {
       "lot": "821",
       "title": "(2) Heavy Duty 2-Tier Wood Top Work Tables, (1) with CT 40 Tool Key",
       "description": "(2) Heavy Duty 2-Tier Wood Top Work Tables, 42\" x 24\" x 35-1/2\", (1) with CT 40 Tool Key",
       "photo": "photos/821.jpg",
-      "page": 159
+      "page": 160
     },
     {
       "lot": "822",
-      "title": "Kendal Ultrasonic Cleaner & Steel Material on Rolling Cart",
-      "description": "Kendal Ultrasonic Cleaner, Model HB-S-821MHT, S/N 0150414C-1, 120V, 980W, with 1/4\" x 1/2\" x 3\" Steel Material, on 2-Tier Heavy Duty Rolling Cart",
+      "title": "Kendal HB-S-821MHT Ultrasonic Cleaner, S/N 0150414C-1",
+      "description": "Kendal HB-S-821MHT Ultrasonic Cleaner, S/N 0150414C-1, with 120-Volt, 42-kHZ Frequency, 480-Watt Ultrasonic Power, 500-Waat Heating, 2-Tier Heavy Duty Rolling Cart",
       "photo": "photos/822.jpg",
       "page": 160
     },
@@ -5767,30 +5769,30 @@
     },
     {
       "lot": "824",
-      "title": "Rolling Material Cart with Over (200) 6061-T6511 Aluminum Bars",
-      "description": "Rolling Material Cart, Full of 1-1/4\" x 3\" x 8-1/4\" 6061-T6511 Aluminum Rectangular Bar, Over (200) Pieces",
+      "title": "Rolling Material Cart with Approx. (200) 6061-T6511 Aluminum Bars",
+      "description": "Rolling Material Cart, Full of 1-1/4\" x 3\" x 8-1/4\" 6061-T6511 Aluminum Rectangular Bar, Approx. (200) Pcs.",
       "photo": "photos/824.jpg",
       "page": 160
     },
     {
       "lot": "825",
-      "description": "Condor 12 Gallon Safety Storage Cabinet (NO CONTENTS)",
+      "description": "Condor 12-Gallon Flammable Liquids Storage Cabinet (NO CONTENTS)",
       "photo": "photos/825.jpg",
-      "page": 160
+      "page": 161
     },
     {
       "lot": "826",
       "title": "Condor 24-Can Flammable Storage Cabinet",
       "description": "Condor 24-Can Capacity Flammable Storage Cabinet",
       "photo": "photos/826.jpg",
-      "page": 160
+      "page": 161
     },
     {
       "lot": "827",
       "title": "Condor 24-Can Flammable Storage Cabinet",
       "description": "Condor 24-Can Capacity Flammable Storage Cabinet",
       "photo": "photos/827.jpg",
-      "page": 160
+      "page": 161
     },
     {
       "lot": "828",
@@ -5808,8 +5810,7 @@
     },
     {
       "lot": "830",
-      "title": "Condor 30 Gallon Safety Storage Cabinet",
-      "description": "Condor 30 Gallon Capacity Safety Storage Cabinet",
+      "description": "Condor 30-Gallon Flammable Liquids Storage Cabinet",
       "photo": "photos/830.jpg",
       "page": 161
     },
@@ -5818,33 +5819,33 @@
       "title": "(2) Dutro Heavy Duty 2-Tier Steel Rolling Carts 48\" x 24\"",
       "description": "(2) Dutro Heavy Duty Steel 2-Tier Rolling Carts, 48\" x 24\" x 34\"",
       "photo": "photos/831.jpg",
-      "page": 161
+      "page": 162
     },
     {
       "lot": "832",
       "title": "(2) Dutro Heavy Duty 2-Tier Steel Rolling Carts 48\" x 24\"",
       "description": "(2) Dutro Heavy Duty Steel 2-Tier Rolling Carts, 48\" x 24\" x 34\"",
       "photo": "photos/832.jpg",
-      "page": 161
+      "page": 162
     },
     {
       "lot": "833",
-      "title": "Dutro Heavy Duty 2-Tier Rolling Shop Cart 30\" x 18\"",
-      "description": "Dutro Heavy Duty 2-Tier Rolling Shop Cart, 30\" x 18\" x 34\"",
+      "title": "(2) Dutro Heavy Duty 2-Tier Rolling Shop Carts, 30\" x 18\"",
+      "description": "(2) Dutro Heavy Duty 2-Tier Rolling Shop Carts, 30\" x 18\" x 34\"",
       "photo": "photos/833.jpg",
-      "page": 161
+      "page": 162
     },
     {
       "lot": "834",
-      "title": "Dutro Heavy Duty 2-Tier Rolling Shop Cart 30\" x 18\"",
-      "description": "Dutro Heavy Duty 2-Tier Rolling Shop Cart, 30\" x 18\" x 34\"",
+      "title": "(2) Dutro Heavy Duty 2-Tier Rolling Shop Carts, 30\" x 18\"",
+      "description": "(2) Dutro Heavy Duty 2-Tier Rolling Shop Carts, 30\" x 18\" x 34\"",
       "photo": "photos/834.jpg",
       "page": 162
     },
     {
       "lot": "835",
-      "title": "Dutro Heavy Duty 2-Tier Rolling Shop Cart 30\" x 18\"",
-      "description": "Dutro Heavy Duty 2-Tier Rolling Shop Cart, 30\" x 18\" x 34\"",
+      "title": "(2) Dutro Heavy Duty 2-Tier Rolling Shop Carts, 30\" x 18\"",
+      "description": "(2) Dutro Heavy Duty 2-Tier Rolling Shop Carts, 30\" x 18\" x 34\"",
       "photo": "photos/835.jpg",
       "page": 162
     },
@@ -5860,21 +5861,21 @@
       "title": "(3) Heavy Duty Steel Rolling Carts",
       "description": "(3) Heavy Duty Steel Rolling Carts: (2) 3-Tier & (1) 2-Tier, 36\" x 24\" x 34\"",
       "photo": "photos/837.jpg",
-      "page": 162
+      "page": 163
     },
     {
       "lot": "838",
       "title": "(2) Heavy Duty Steel Rolling Carts",
       "description": "(2) Heavy Duty Steel Rolling Carts: (1) 3-Tier & (1) 2-Tier, 36\" x 24\" x 34\"",
       "photo": "photos/838.jpg",
-      "page": 162
+      "page": 163
     },
     {
       "lot": "839",
       "title": "(2) Heavy Duty 2-Tier Steel Rolling Carts, incl. Dutro",
       "description": "Dutro Heavy Duty 2-Tier Steel Rolling Cart, 29-1/2\" x 17-1/2\" x 34\" & Heavy Duty 2-Tier Steel Rolling Cart, 36\" x 24\" x 34\"",
       "photo": "photos/839.jpg",
-      "page": 162
+      "page": 163
     },
     {
       "lot": "840",
@@ -5902,40 +5903,39 @@
       "title": "(3) Quantum Wire Racks with Plastic Bar Stock & Containers",
       "description": "(3) Quantum Storage Systems Wire Racks: (2) 6-Tier & (1) 3-Tier, with Box of (4) Extra Wire Rack Shelves, Plastic Bar Stock & New & Used Plastic Containers",
       "photo": "photos/843.jpg",
-      "page": 163
+      "page": 164
     },
     {
       "lot": "844",
-      "title": "Meco 1 Yard Rolling Steel Dump Hopper",
-      "description": "Meco Rolling Steel Dump Hopper, 1 Yard Capacity, 6,000 Lbs.",
+      "title": "Meco 1-Cu. Yd. Rolling Steel Dump Hopper",
+      "description": "Meco 1-Cu. Yd. Rolling Steel Dump Hopper, with 6,000-Lb. Capacity",
       "photo": "photos/844.jpg",
-      "page": 163
+      "page": 164
     },
     {
       "lot": "845",
-      "title": "1 Yard Rolling Steel Dump Hopper",
-      "description": "Rolling Steel Dump Hopper, 1 Yard, 6,000 Lbs.",
+      "title": "1-Cu. Yd. Rolling Steel Dump Hopper",
+      "description": "1-Cu. Yd. Rolling Steel Dump Hopper, with 6,000-Lb. Capacity",
       "photo": "photos/845.jpg",
-      "page": 163
+      "page": 164
     },
     {
       "lot": "846",
-      "title": "Meco 1 Yard Rolling Steel Dump Hopper",
-      "description": "Meco Rolling Steel Dump Hopper, 1 Yard Capacity, 6,000 Lbs.",
+      "title": "Meco 1-Cu. Yd. Rolling Steel Dump Hopper",
+      "description": "Meco 1-Cu. Yd. Rolling Steel Dump Hopper, with 6,000-Lb. Capacity",
       "photo": "photos/846.jpg",
       "page": 164
     },
     {
       "lot": "847",
-      "title": "1 Yard Rolling Steel Dump Hopper",
-      "description": "Rolling Steel Dump Hopper, 1 Yard Capacity, 6,000 Lbs.",
+      "title": "1-Cu. Yd. Rolling Steel Dump Hopper",
+      "description": "1-Cu. Yd. Rolling Steel Dump Hopper, with 6,000-Lb. Capacity",
       "photo": "photos/847.jpg",
       "page": 164
     },
     {
       "lot": "848",
-      "title": "Like New McCullough Rolling Steel Dump Hopper",
-      "description": "Like New McCullough Industries Rolling Steel Dump Hopper, Model 20055-GRY",
+      "description": "McCullough 20055-GRY Rolling Steel Dump Hopper (Like New)",
       "photo": "photos/848.jpg",
       "page": 164
     },
@@ -5943,21 +5943,21 @@
       "lot": "849",
       "description": "(2) Little Giant Rolling Hoppers",
       "photo": "photos/849.jpg",
-      "page": 164
+      "page": 165
     },
     {
       "lot": "850",
       "title": "UltraTech Ultra-IBC Spill Pallet Plus",
       "description": "UltraTech International 1157 Ultra-IBC Spill Pallet Plus, without Drain, Overall 62\" x 62\" x 27\"",
       "photo": "photos/850.jpg",
-      "page": 164
+      "page": 165
     },
     {
       "lot": "851",
       "title": "UltraTech Ultra-IBC Spill Pallet Plus",
       "description": "UltraTech International 1157 Ultra-IBC Spill Pallet Plus, without Drain, Overall 62\" x 62\" x 27\"",
       "photo": "photos/851.jpg",
-      "page": 164
+      "page": 165
     },
     {
       "lot": "852",
@@ -5976,7 +5976,7 @@
     {
       "lot": "854",
       "title": "(2) Barrel Dollies - Uline & Other, with Standard Dolly",
-      "description": "(2) Barrel Dollies: (1) Uline 1,000 Lb. Capacity & (1) Make Unknown, with Standard Dolly",
+      "description": "(2) Barrel Dollies: (1) Uline 1,000-Lb. Capacity & (1) Make Unknown, with Standard Dolly",
       "photo": "photos/854.jpg",
       "page": 165
     },
@@ -5985,21 +5985,19 @@
       "title": "(6) Shop Dollies",
       "description": "(6) Assorted Shop Dollies",
       "photo": "photos/855.jpg",
-      "page": 165
+      "page": 166
     },
     {
       "lot": "856",
-      "title": "Lee Engineering M366 1,000 Lb. Manual Hydraulic Barrel Lift",
-      "description": "Lee Engineering Company Model M366 Manual Rolling Hydraulic Barrel Lift, 1,000 Lb. Capacity",
+      "description": "Lee Engineering M366 1,000 Lb. Manual Hydraulic Barrel Lift",
       "photo": "photos/856.jpg",
-      "page": 165
+      "page": 166
     },
     {
       "lot": "857",
-      "title": "Lee Engineering M366 1,000 Lb. Manual Hydraulic Barrel Lift",
-      "description": "Lee Engineering Company Model M366 Manual Rolling Hydraulic Barrel Lift, 1,000 Lb. Capacity",
+      "description": "Lee Engineering M366 1,000 Lb. Manual Hydraulic Barrel Lift",
       "photo": "photos/857.jpg",
-      "page": 165
+      "page": 166
     },
     {
       "lot": "858",
@@ -6026,21 +6024,21 @@
       "title": "(4) Rolls of New Steel Strapping on Pallet",
       "description": "(4) Rolls of New Steel Strapping, on Pallet",
       "photo": "photos/861.jpg",
-      "page": 166
+      "page": 167
     },
     {
       "lot": "862",
-      "title": "NorthStar Rolling Heated Pressure Washer, Single Phase",
-      "description": "NorthStar \"Proven Performance\" Rolling Heated Pressure Washer, Single Phase",
+      "title": "NorthStar Rolling Heated Pressure Washer",
+      "description": "NorthStar \"Proven Performance\" Rolling Heated Pressure Washer, Single-Phase",
       "photo": "photos/862.jpg",
-      "page": 166
+      "page": 167
     },
     {
       "lot": "863",
-      "title": "NorthStar Rolling Heated Pressure Washer, 3 Phase",
-      "description": "NorthStar \"Proven Performance\" Rolling Heated Pressure Washer, 3 Phase",
+      "title": "NorthStar Rolling Heated Pressure Washer, 3-Phase",
+      "description": "NorthStar \"Proven Performance\" Rolling Heated Pressure Washer, 3-Phase",
       "photo": "photos/863.jpg",
-      "page": 166
+      "page": 167
     },
     {
       "lot": "864",
@@ -6059,7 +6057,7 @@
     {
       "lot": "866",
       "title": "Cecor SA5-60PL Sump Shark Sludge Vacuum",
-      "description": "Cecor Sump Shark \"The Sludge Predator\" Sludge Vacuum, Model SA5-60PL, S/N A5-161212-01, 75-120 PSI (CANNOT BE PICKED UP UNTIL THE LAST DAY)",
+      "description": "Cecor SA5-60PL Sump Shark \"The Sludge Predator\" Sludge Vacuum, S/N A5-161212-01, with 75-120-PSI (CANNOT BE PICKED UP UNTIL THE LAST DAY)",
       "photo": "photos/866.jpg",
       "page": 167
     },
@@ -6068,21 +6066,21 @@
       "title": "Entire Office Contents: (38) Chairs, (40) Monitors, Desks & More",
       "description": "Entire Office Contents: (38) Assorted Chairs, (40) Assorted Monitors, Conference Tables, (4) Desks, Filing Cabinets, Printers, Office Supplies & Others (See photos for more details)",
       "photo": "photos/867.jpg",
-      "page": 167
+      "page": 168
     },
     {
       "lot": "868",
       "title": "Entire Break Room: Lifetime Tables, Microwaves, Refrigerators & 65\" LG TV",
       "description": "Entire Break Room: (5) Lifetime Plastic Tables with Benches, (2) Microwaves, (2) Refrigerators with Freezers & 65\" LG TV",
       "photo": "photos/868.jpg",
-      "page": 167
+      "page": 168
     },
     {
       "lot": "869",
       "title": "Shop Lockers, (5) Sections, (25) Lockers",
       "description": "Shop Lockers, (5) Sections, (25) Lockers Total",
       "photo": "photos/869.jpg",
-      "page": 167
+      "page": 168
     },
     {
       "lot": "870",
@@ -6094,7 +6092,7 @@
     {
       "lot": "871",
       "title": "Winchester Gun Safe with Passcode",
-      "description": "Winchester Gun Safe, with Passcode",
+      "description": "Winchester Gun Safe, with 9L60 SecurArm Electronic Lock, Passcode",
       "photo": "photos/871.jpg",
       "page": 168
     },
@@ -6107,101 +6105,99 @@
     },
     {
       "lot": "873",
-      "title": "2001 Dodge Ram 2500 4x4 Pickup with Western Hydraulic Snow Plow",
-      "description": "2001 Dodge Ram 2500 V8 Magnum 4x4 Regular Cab Pickup Truck, Mileage 2,574, VIN 3B7KF26Z61M560161, with Western Hydraulic Snow Plow (Needs New Battery)",
+      "title": "2001 Dodge Ram 2500 3/4-Ton Pickup Truck, VIN 3B7KF26Z61M560161, with Western Hydraulic Snow Plow",
+      "description": "2001 Dodge Ram 2500 3/4-Ton Pickup Truck, VIN 3B7KF26Z61M560161, with V8 Magnum Engine, 4x4, Regular Cab 2,574 Miles, Western Hydraulic Snow Plow (Needs New Battery)",
       "photo": "photos/873.jpg",
-      "page": 168
+      "page": 169
     },
     {
       "lot": "874",
-      "title": "2013 Ford F-250 Super Duty XL with Moritz Flatbed, 156,995 Miles",
-      "description": "2013 Ford F-250 Super Duty XL Extended Cab, VIN 1FT7X2B69DEB74469, 156,995 Miles, with Moritz Flatbed with Side Rails (Needs New Battery)",
+      "title": "2013 Ford F-250SD XL Flatbed Truck, VIN 1FT7X2B69DEB74469",
+      "description": "2013 Ford F-250SD XL Flatbed Truck, VIN 1FT7X2B69DEB74469, with Extended Cab, 156,995 Miles, with Moritz Flatbed, Side Rails (Needs New Battery)",
       "photo": "photos/874.jpg",
-      "page": 168
+      "page": 169
     },
     {
       "lot": "875",
-      "title": "1998 Ford F-250 Triton V8 2-Door Pickup",
-      "description": "1998 Ford F-250 Triton V8 2-Door Pickup Truck, Mileage 178,187, VIN 1FTPF28W6WKB75772 (Needs New Battery)",
+      "title": "1998 Ford F-250 3/4-Ton Pickup Truck",
+      "description": "1998 Ford F-250 Pickup Truck, VIN 1FTPF28W6WKB75772, with Triton V8 Engine, 178,187 Miles (Needs New Battery)",
       "photo": "photos/875.jpg",
-      "page": 168
+      "page": 169
     },
     {
       "lot": "876",
-      "title": "Ingersoll Rand UP6-15cTAS-150 15 HP Rotary Screw Air Compressor, 120 Gal.",
-      "description": "Ingersoll Rand UP6-15cTAS-150 W/D 15 HP Tank-Mounted Rotary Screw Air Compressor, S/N CBV160770, 150 PSI Max, 230V/3-Phase, 120 Gallon Tank (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
+      "title": "Ingersoll Rand UP6-15cTAS-150 15-HP Rotary Screw Air Compressor",
+      "description": "Ingersoll Rand UP6-15cTAS-150 15-HP Tank-Mounted Rotary Screw Air Compressor, S/N CBV160770, with 150-PSI Max., 230-Volt, 3-Phase, 120-Gallon Tank (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
       "photo": "photos/876.jpg",
-      "page": 169
+      "page": 170
     },
     {
       "lot": "877",
-      "title": "Silvan Industries 240 Gallon Vertical Air Receiver Tank",
-      "description": "Silvan Industries 240 Gallon Vertical Air Receiver Tank, 200 PSI, Built 1993",
+      "title": "Silvan Industries 240-Gallon Vertical Air Receiver Tank, 1993",
+      "description": "Silvan Industries 240-Gallon Vertical Air Receiver Tank, 1993, with 200-PSI",
       "photo": "photos/877.jpg",
-      "page": 169
+      "page": 170
     },
     {
       "lot": "878",
-      "title": "Ingersoll Rand SSR UP6-25-125 25 HP Rotary Screw Air Compressor, 120 Gal.",
-      "description": "Ingersoll Rand SSR UP6-25-125 25 HP Tank-Mounted Rotary Screw Air Compressor, S/N PX3509U04177, 125 PSI, 3-Phase, 120 Gallon Tank (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
+      "title": "Ingersoll Rand SSR UP6-25-125 25-HP Rotary Screw Air Compressor",
+      "description": "Ingersoll Rand SSR UP6-25-125 25-HP Tank-Mounted Rotary Screw Air Compressor, S/N PX3509U04177, with 125-PSI, 3-Phase, 120-Gallon Tank (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
       "photo": "photos/878.jpg",
-      "page": 169
+      "page": 170
     },
     {
       "lot": "879",
-      "title": "Hankison SPX HPR 150 Air Dryer",
-      "description": "Hankison SPX Model HPR 150 Air Dryer",
+      "description": "Hankison SPX HPR 150 Refrigerated Air Dryer",
       "photo": "photos/879.jpg",
-      "page": 169
+      "page": 171
     },
     {
       "lot": "880",
-      "title": "2019 Quincy QGD-30P 30 HP Rotary Screw Air Compressor",
-      "description": "2019 Quincy QGD-30P 30 HP (22 kW) Rotary Screw Air Compressor, S/N ITJ272089, 460V/3-Phase, 125 PSI Working Pressure (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
+      "title": "Quincy QGD-30P 30-HP Rotary Screw Air Compressor, S/N ITJ272089 (New 2019)",
+      "description": "Quincy QGD-30P 30-HP Rotary Screw Air Compressor, S/N ITJ272089 (New 2019), with 125-PSI Working Pressure, 460-Volt, 3-Phase (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
       "photo": "photos/880.jpg",
-      "page": 169
+      "page": 171
     },
     {
       "lot": "881",
-      "title": "Quincy QSI-120 Air Compressor",
-      "description": "Quincy QSI-120 Air Compressor (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
+      "title": "Quincy QSI-120 25-HP Rotary Screw Air Compressor",
+      "description": "Quincy QSI-120 25-HP Rotary Screw Air Compressor, with 125-PSI (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
       "photo": "photos/881.jpg",
-      "page": 169
+      "page": 171
     },
     {
       "lot": "882",
-      "title": "Ingersoll Rand T30 Air Compressor, Model 2545N10",
-      "description": "Ingersoll Rand T30 Air Compressor, Model 2545N10 (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
+      "title": "Ingersoll Rand T30 Model 2545N10 2-Stage Vertical Tank-Mounted Air Compressor",
+      "description": "Ingersoll Rand T30 Model 2545N10 2-Stage Vertical Tank-Mounted Air Compressor, with 175-PSI Max. Pressure (CANNOT BE REMOVED UNTIL THE LAST DAY OF PICKUP)",
       "photo": "photos/882.jpg",
-      "page": 170
+      "page": 171
     },
     {
       "lot": "883",
-      "title": "2017 Beko Drypoint RA RAX250NA-E 250 SCFM Refrigerated Air Dryer",
-      "description": "2017 Beko Drypoint RA Refrigerated Air Dryer, Model RAX250NA-E OB, S/N 17R014510/17, 250 SCFM, 230V/1-Phase",
+      "title": "Beko Drypoint RA RAX250NA-E Refrigerated Air Dryer, S/N 17R014510, 2017",
+      "description": "Beko Drypoint RA RAX250NA-E Refrigerated Air Dryer, S/N 17R014510, 2017, with 250-SCFM, 230-Volt, 1-Phase",
       "photo": "photos/883.jpg",
-      "page": 170
+      "page": 171
     },
     {
       "lot": "884",
-      "title": "Large Air Receiver Tank, Over 600 Gallon",
-      "description": "Large Air Receiver Tank, Approx. Over 600 Gallon",
+      "description": "Large Air Receiver Tank, Approx. 600-Gallon",
       "photo": "photos/884.jpg",
-      "page": 170
+      "page": 171
     },
     {
       "lot": "885",
-      "title": "Apollo A-3031 1,200 Lb. Electric Stacker, 118\" Lift",
-      "description": "Apollo Model A-3031 Electric Stacker, 1,200 Lb. Capacity, 118\" Max Lift Height, 16\" Load Center, 24V (Needs New Battery)",
+      "title": "Apollo A-3031 1,200-Lb. 24-Volt Electric Stacker",
+      "description": "Apollo A-3031 1,200-Lb. 24-Volt Electric Stacker, with 118\" Max Lift Height, 16\" Load Center (Needs New Battery)",
       "photo": "photos/885.jpg",
-      "page": 170
+      "page": 172
     },
     {
       "lot": "886",
-      "title": "Nissan 60 Optimum Propane Forklift, 5,225 Lb. Capacity, Side Shift",
-      "description": "Nissan 60 Optimum Propane Forklift, Model UGJ02A30PV, 5,225 Lb. Capacity at 24\" Load Center, CT189 Mast, Side Shift, Air Tires (Needs New Battery) (CANNOT BE PICKED UP UNTIL THE LAST DAY)",
+      "title": "Nissan 60 Optimum 5,225-Lb. LPG Forklift Truck",
+      "description": "Nissan 60 Optimum 5,225-Lb. LPG Forklift Truck, with 189\" Lift, Side Shift, Air Tires (Needs New Battery) (CANNOT BE PICKED UP UNTIL THE LAST DAY)",
       "photo": "photos/886.jpg",
-      "page": 170
+      "page": 172
     }
   ]
 }
