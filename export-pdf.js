@@ -53,9 +53,11 @@ async function main() {
 
   await browser.close();
 
-  const outPath = path.join(__dirname, 'output', auction.slug, 'catalog.pdf');
+  // auction.json "pdfName" gives the public download a real name; falls back to catalog.pdf
+  const pdfName = auction.pdfName || 'catalog.pdf';
+  const outPath = path.join(__dirname, 'output', auction.slug, pdfName);
   fs.writeFileSync(outPath, await merged.save());
-  console.log(`\nWrote ${files.length}-page catalog.pdf -> ${outPath}`);
+  console.log(`\nWrote ${files.length}-page ${pdfName} -> ${outPath}`);
 }
 
 main().catch((err) => {

@@ -33,7 +33,7 @@ descriptions showed at about 9-11px. What changed:
   big text, searchable (e.g. "Mazak", "CMM", "vise"). It opens by default on
   phones, where any flipbook page is too small to read.
 - **Go to lot #** box, clickable featured lots on the cover, and shareable
-  links that open on a lot: `viewer/index.html?auction=logan#lot-170`
+  links that open on a lot: `viewer/index.html?auction=custom-cnc-contract-machining-logan-utah#lot-170`
 - Fonts (Montserrat + Work Sans) are now bundled in `brand/fonts/`, so pages
   look the same everywhere, including offline and in the PDF.
 
@@ -139,7 +139,7 @@ flipbook-system/
   browser.js          shared headless-Chrome launcher (set KD_CHROMIUM_PATH to use a different Chrome)
   export-pdf.js       output/<slug>/pages -> output/<slug>/catalog.pdf
   viewer/             the page-flip viewer app (index.html/viewer.js/viewer.css)
-  examples/logan/     Logan, UT 84321: 511 lots, rebuilt with the new readable layout
+  examples/custom-cnc-contract-machining-logan-utah/  Logan, UT 84321: 511 lots, rebuilt with the new readable layout
   examples/south-bend/, examples/portland/  older examples (regenerate to get the new layout)
   output/             generated results (not checked in — regenerate anytime)
 ```

@@ -328,6 +328,9 @@ async function main() {
   const manifest = {
     slug: auction.slug,
     title: auction.title,
+    // Public-facing name for the viewer header / browser tab (falls back to title)
+    displayTitle: auction.displayTitle || undefined,
+    pdfName: auction.pdfName || undefined,
     siteUrl: auction.siteUrl,
     measurementId: auction.measurementId,
     bidUrl: auction.bidUrl,
