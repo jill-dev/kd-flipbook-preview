@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../../brand/brand.css" />
+<style>
+  /* Landscape lot page, 1400x900 (PAGE_W x PAGE_H in generate.js).
+     Readability first: the old portrait layout put 16px text and 150px
+     thumbnails on a page the viewer then shrank to ~55-70%, so on screen the
+     descriptions were ~9-11px. Here the page is shaped like a screen (so the
+     viewer barely shrinks it) and every lot is a card with a big photo and
+     24px description text. generate.js measures each description and sets
+     --photo-h per page so two rows always fit without clipping. */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  .sheet { width: 1400px; height: 900px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .head { flex: 0 0 auto; height: 68px; display: flex; align-items: center; gap: 22px; padding: 0 36px; border-bottom: 1px solid var(--kd-line); }
+  .head img { height: 38px; width: auto; display: block; }
+  .head .title { flex: 1; min-width: 0; font-family: var(--kd-font-primary); font-weight: 800; font-size: 19px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .head .meta { flex: 0 0 auto; text-align: right; font-family: var(--kd-font-primary); font-size: 16px; font-weight: 700; color: #fff; }
+  .head .meta b { color: var(--kd-yellow); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; display: block; margin-bottom: 1px; }
+
+  .grid {
+    flex: 1 1 auto; min-height: 0; padding: 18px 36px 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: max-content; gap: 18px 22px; align-content: start;
+  }
+  .card { background: var(--kd-panel-2); border: 1px solid var(--kd-line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+  .card .ph { position: relative; height: var(--photo-h, 250px); background: #111; border-bottom: 3px solid var(--kd-yellow); }
+  .card .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .lotno {
+    position: absolute; top: 10px; left: 10px; background: var(--kd-yellow); color: var(--kd-black);
+    font-family: var(--kd-font-primary); font-weight: 900; font-size: 22px; letter-spacing: 0.5px; line-height: 1;
+    padding: 8px 13px 7px; border-radius: 7px; box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  }
+  .card .lotno small { font-size: 13px; font-weight: 800; letter-spacing: 1.5px; margin-right: 5px; vertical-align: 2px; }
+  .card .bid {
+    position: absolute; top: 10px; right: 10px; background: rgba(20,20,20,0.82); color: var(--kd-yellow);
+    border: 1.5px solid var(--kd-yellow); font-family: var(--kd-font-primary); font-weight: 800; font-size: 14px;
+    letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 7px 12px; border-radius: 7px;
+  }
+  .card .bid:hover { background: var(--kd-yellow); color: var(--kd-black); }
+  .card .desc {
+    padding: 11px 16px 13px; font-family: var(--kd-font-secondary); font-weight: 500; font-size: 22px; line-height: 1.27;
+    color: #f4f4f2; overflow-wrap: anywhere;
+  }
+  /* Full-width card for long descriptions: photo left, text right */
+  .card.feature { grid-column: 1 / -1; flex-direction: row; height: var(--feat-h, 320px); }
+  .card.feature .ph { flex: 0 0 var(--feat-photo-w, 600px); height: auto; border-bottom: none; border-right: 3px solid var(--kd-yellow); }
+  .card.feature .desc { flex: 1 1 auto; min-width: 0; padding: 16px 22px 18px; }
+  .card .loc { display: inline-block; font-family: var(--kd-font-primary); font-weight: 800; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--kd-yellow); margin-bottom: 4px; }
+
+  .footer {
+    flex: 0 0 auto; height: 50px; padding: 0 36px; display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid var(--kd-line); background: var(--kd-bg);
+  }
+  .footer .site { font-family: var(--kd-font-primary); font-weight: 900; font-size: 17px; letter-spacing: 2px; color: var(--kd-yellow); text-decoration: none; }
+  .footer .range { font-family: var(--kd-font-primary); font-weight: 700; font-size: 16px; color: #fff; letter-spacing: 0.5px; }
+  .footer .page { font-family: var(--kd-font-primary); font-weight: 600; font-size: 15px; color: var(--kd-grey); }
+</style>
+</head>
+<body>
+  <div class="sheet kd-page" style="--photo-h: 251px;">
+    <div class="kd-gradient-bar"></div>
+    <div class="head">
+      <a href="https://www.kdauctions.com" target="_blank" rel="noopener"><img src="../../../brand/logo-light.png" alt="KD Auctions" /></a>
+      <div class="title">Complete Closure of a Custom CNC Contract Machining Company</div>
+      <div class="meta"><b>Lots Begin Closing</b>Tuesday, November 17, 2026 · 10:00 AM MT</div>
+    </div>
+    <div class="grid">
+      <div class="card" id="lot-692" data-lot="692">
+        <div class="ph">
+          <img src="../photos/692.jpg" alt="Lot 692" />
+          <span class="lotno"><small>LOT</small>692</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="692">Bid &#8594;</a>
+        </div>
+        <div class="desc">Lot of Assorted Collets, including ER-16, DA-10 &amp; Others</div>
+      </div>
+      <div class="card" id="lot-693" data-lot="693">
+        <div class="ph">
+          <img src="../photos/693.jpg" alt="Lot 693" />
+          <span class="lotno"><small>LOT</small>693</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="693">Bid &#8594;</a>
+        </div>
+        <div class="desc">Lot of Assorted Collets, including Erickson 25, Hardinge TT &amp; DA-100</div>
+      </div>
+      <div class="card" id="lot-694" data-lot="694">
+        <div class="ph">
+          <img src="../photos/694.jpg" alt="Lot 694" />
+          <span class="lotno"><small>LOT</small>694</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="694">Bid &#8594;</a>
+        </div>
+        <div class="desc">Lot of Assorted Hardinge 180 Collets</div>
+      </div>
+      <div class="card" id="lot-695" data-lot="695">
+        <div class="ph">
+          <img src="../photos/695.jpg" alt="Lot 695" />
+          <span class="lotno"><small>LOT</small>695</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="695">Bid &#8594;</a>
+        </div>
+        <div class="desc">Lot of Assorted Collets, including Erickson KTC 6 &amp; Hardinge DA-10, with 20-Station Huot Collet Organizer</div>
+      </div>
+      <div class="card" id="lot-696" data-lot="696">
+        <div class="ph">
+          <img src="../photos/696.jpg" alt="Lot 696" />
+          <span class="lotno"><small>LOT</small>696</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="696">Bid &#8594;</a>
+        </div>
+        <div class="desc">Lot of Assorted Collets, including ER-32, ER-16 &amp; ER-40</div>
+      </div>
+      <div class="card" id="lot-697" data-lot="697">
+        <div class="ph">
+          <img src="../photos/697.jpg" alt="Lot 697" />
+          <span class="lotno"><small>LOT</small>697</span>
+          <a class="bid" href="https://www.kdauctions.com" target="_blank" rel="noopener" data-kd-track="lot_click" data-lot="697">Bid &#8594;</a>
+        </div>
+        <div class="desc">Box of Assorted ER-32 Collets</div>
+      </div>
+    </div>
+    <div class="footer">
+      <a class="site" href="https://www.kdauctions.com" target="_blank" rel="noopener">KDAUCTIONS.COM</a>
+      <span class="range">Lots 692 – 697</span>
+      <span class="page">Page 137 of 169</span>
+    </div>
+  </div>
+  <script src="../../../brand/track.js"></script>
+</body>
+</html>
