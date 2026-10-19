@@ -75,8 +75,9 @@
     });
 
   function init(data) {
-    titleEl.textContent = data.title || 'KD Auctions Catalog';
-    document.title = (data.title ? data.title + ' — ' : '') + 'KD Auctions Catalog';
+    const shownTitle = data.displayTitle || data.title;
+    titleEl.textContent = shownTitle || 'KD Auctions Catalog';
+    document.title = (shownTitle ? shownTitle + ' | ' : '') + 'KD Auctions';
     bidNowLink.href = data.bidUrl || data.siteUrl || '#';
     if (data.pageWidth && data.pageHeight) {
       PAGE_W = data.pageWidth;
@@ -92,11 +93,13 @@
     buildBook(data, 0, true);
 
     // Try to attach a PDF export if one has been generated for this auction.
-    const pdfHref = `${outputBase}/catalog.pdf`;
+    const pdfName = data.pdfName || 'catalog.pdf';
+    const pdfHref = `${outputBase}/${encodeURIComponent(pdfName)}`;
     fetch(pdfHref, { method: 'HEAD' })
       .then((r) => {
         if (r.ok) {
           downloadBtn.href = pdfHref;
+          downloadBtn.setAttribute('download', pdfName);
           downloadBtn.removeAttribute('disabled');
         } else {
           downloadBtn.style.opacity = '0.4';
@@ -207,7 +210,7 @@
       updatePageUI();
       buildThumbnails(data);
       trackEvent('flipbook_open', { pageCount: data.pages.length });
-      // Shared links like viewer/index.html?auction=logan#lot-150 open
+      // Shared links like viewer/index.html?auction=custom-cnc-contract-machining-logan-utah#lot-150 open
       // straight to that lot.
       const m = location.hash.match(/^#lot-(.+)$/);
       if (m) goToLot(decodeURIComponent(m[1]), { instant: true });
