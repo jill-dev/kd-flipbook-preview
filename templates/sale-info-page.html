@@ -66,6 +66,20 @@
             <p class="label">Machinery Removal Notes</p>
             <p class="body">{{linkify saleInfo.machineryNotes}}</p>
           </div>
+          {{#if saleInfo.truckingCompanies}}
+          <div class="contacts">
+            <p class="heading2">Trucking Companies</p>
+            <div class="contacts-grid">
+              {{#each saleInfo.truckingCompanies}}
+              <div class="ccard">
+                <p class="clabel">Trucking</p>
+                <p class="cname">{{name}}</p>
+                <p class="cinfo">{{contact}} &middot; <a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+          {{/if}}
         </div>
         <div class="col">
           <div class="block">
@@ -105,13 +119,6 @@
                 <p class="cname">{{saleInfo.serviceTech}}</p>
               </div>
               {{/if}}
-              {{#each saleInfo.truckingCompanies}}
-              <div class="ccard">
-                <p class="clabel">Trucking</p>
-                <p class="cname">{{name}}</p>
-                <p class="cinfo">{{contact}} &middot; <a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
-              </div>
-              {{/each}}
             </div>
           </div>
         </div>
