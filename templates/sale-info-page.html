@@ -31,6 +31,7 @@
   .footer { flex: 0 0 auto; margin-top: 16px; height: 50px; display: flex; align-items: center; justify-content: center; background: var(--kd-black); border-top: 3px solid var(--kd-yellow); }
   .footer p { margin: 0; font-family: var(--kd-font-primary); font-weight: 800; font-size: 16px; letter-spacing: 2.5px; text-transform: uppercase; color: #fff; }
   a { color: var(--kd-yellow-light); }
+  .ccard a[href^="tel:"] { white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -104,7 +105,7 @@
               <div class="ccard">
                 <p class="clabel">Local Rigger</p>
                 <p class="cname">{{name}}</p>
-                <p class="cinfo">{{#if email}}<a href="mailto:{{email}}" style="color:inherit;">{{email}}</a> &middot; {{/if}}<a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
+                <p class="cinfo">{{#if contact}}{{contact}} &middot; {{/if}}{{#if email}}<a href="mailto:{{email}}" style="color:inherit;">{{email}}</a> &middot; {{/if}}<a href="{{tel phone}}" style="color:inherit;">{{phone}}</a></p>
               </div>
               {{/each}}
               {{else}}
@@ -117,6 +118,7 @@
               <div class="ccard">
                 <p class="clabel">Service Tech</p>
                 <p class="cname">{{saleInfo.serviceTech}}</p>
+                {{#if saleInfo.serviceTechPhone}}<p class="cinfo"><a href="{{tel saleInfo.serviceTechPhone}}" style="color:inherit;">{{saleInfo.serviceTechPhone}}</a></p>{{/if}}
               </div>
               {{/if}}
             </div>

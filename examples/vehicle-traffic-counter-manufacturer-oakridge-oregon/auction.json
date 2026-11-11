@@ -86,8 +86,14 @@
       "phone": "541-954-5788"
     },
     "machineryNotes": "The seller is set up to handle pack & ship. Customers are responsible for prepping, draining fluids, and locking and blocking all machinery for removal. KD Auctions will not be responsible for any onsite loading of machinery or other items.",
-    "riggers": [],
-    "serviceTech": "",
+    "riggers": [
+      {
+        "name": "Mid Valley Rigging",
+        "contact": "Dan Oleman",
+        "phone": "541-990-9392"
+      }
+    ],
+    "serviceTech": "Jerry Spoon",
     "truckingCompanies": [
       {
         "name": "Bedrock Logistics",
@@ -120,7 +126,8 @@
         "phone": "260-918-1973"
       }
     ],
-    "footerTagline": "Auctions, Liquidations, Appraisals, and Consulting Services"
+    "footerTagline": "Auctions, Liquidations, Appraisals, and Consulting Services",
+    "serviceTechPhone": "541-377-8197"
   },
   "measurementId": null
 }
